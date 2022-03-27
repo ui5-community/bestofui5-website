@@ -23,7 +23,7 @@ export default class CustomControlXML extends Control {
 				renderer: {
 					type: "com.sap.ui5community.control.CustomControlXMLRenderer",
 					defaultValue: CustomControlXMLRenderer
-				}
+				},
         /**
          * Width
          */

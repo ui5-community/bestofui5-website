@@ -1,0 +1,28 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Use Node.js LTS (16.x)
+        uses: actions/setup-node@9ced9a43a244f3ac94f13bfd896db8c8f30da67a
+        with:
+          node-version: '16'
+      - run: npm install
+      - run: npm run build
+      - run: echo "$(tail -n +2 .gitignore)" > .gitignore
+      - name: Commit build
+        run: |
+          git config --global user.name 'marianfoo'
+          git config --global user.email '13335743+marianfoo@users.noreply.github.com'
+          git commit -am "build"
+          git push docs -f
