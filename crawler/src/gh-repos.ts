@@ -10,9 +10,6 @@ import { Artifact, Package, Type, Sources } from "./types";
 export default class GitHubRepositoriesProvider {
   static source = "github-packages";
 
-  static repos: string[] = ["ui5-community/ui5-ecosystem-showcase"];
-
-  // static octokitRest = new OctokitRest({ auth: "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" });
 
   static octokit = new MyOctokit({
     auth: process.env.GITHUB_TOKEN,
@@ -68,44 +65,36 @@ export default class GitHubRepositoriesProvider {
     };
   }
 
-  static async fetchOrgRepos(org: string, page = 1): Promise<Artifact[]> {
-    let repos: any[] = [];
-    while (true) {
-      let currentRepos = await GitHubRepositoriesProvider.octokit.request("GET /orgs/{org}/repos", {
-        per_page: 100,
-        org,
-        page,
-      });
-      repos = repos.concat(currentRepos.data);
-      if (currentRepos.data.length < 100) {
-        break;
+  static async getRepoInfo(source: Sources) {
+    let packageObject: Package = {
+      name: source.repo,
+      description: "",
+      type: "cc",
+      link: ``,
+      readme: "",
+      createdAt: "",
+      updatedAt: "",
+      author: "",
+      license: "",
+      stars: 0,
+      forks: 0
       }
-      page++;
-    }
-
-    return repos;
-  }
-
-  static async fetchUserRepos(user: string, page = 1): Promise<Artifact[]> {
-    let repos: any[] = [];
-    while (true) {
-      let currentRepos = await GitHubRepositoriesProvider.octokit.request("GET /users/{user}/repos", {
-        per_page: 100,
-        user,
-        page,
+    let repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
+      owner: source.owner,
+      repo: source.repo,
       });
-      if (currentRepos.data.length < 100) {
-        break;
-      }
-      page++;
-      repos = repos.concat(currentRepos.data);
-    }
-
-    return repos;
+    packageObject.createdAt = repo.data.created_at;
+    packageObject.updatedAt = repo.data.updated_at;
+    packageObject.link = repo.data.html_url;
+    packageObject.forks = repo.data.forks;
+    packageObject.stars = repo.data.stargazers_count;
+    packageObject.license = repo.data.license.key;
+    return packageObject;
   }
 
   static async fetchMonoRepos(source: Sources): Promise<Package[]> {
     let packagesReturn: Package[] = [];
+    let repoInfo = await this.getRepoInfo(source);
     let packages = await GitHubRepositoriesProvider.octokit.request(`GET /repos/${source.path}/contents/${source.subpath}`);
     for (const packageContent of packages.data) {
       try {
@@ -123,6 +112,12 @@ export default class GitHubRepositoriesProvider {
           let nameArray = packageJson.name.split("-");
           packageJson.type = nameArray[1];
         } catch (error) {}
+        packageJson.license = repoInfo.license;
+        packageJson.forks = repoInfo.forks;
+        packageJson.stars = repoInfo.stars;
+        packageJson.updatedAt = repoInfo.updatedAt;
+        packageJson.createdAt = repoInfo.createdAt;
+        packageJson.link = repoInfo.link;
         try {
             const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
                 mediaType: {
@@ -148,6 +143,8 @@ export default class GitHubRepositoriesProvider {
   }
 
   static async fetchSingleRepos(source: Sources): Promise<Package[]> {
+    let repoInfo = await this.getRepoInfo(source);
+
     let packagesReturn: Package[] = [];
       try {
         const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
@@ -160,6 +157,12 @@ export default class GitHubRepositoriesProvider {
         });
         let string = data.data.toString();
         let packageJson: Package = JSON.parse(string);
+        packageJson.license = repoInfo.license;
+        packageJson.forks = repoInfo.forks;
+        packageJson.stars = repoInfo.stars;
+        packageJson.updatedAt = repoInfo.updatedAt;
+        packageJson.createdAt = repoInfo.createdAt;
+        packageJson.link = repoInfo.link;
         try {
           // TODO: read from keywords
           packageJson.type = "cc";
@@ -184,6 +187,7 @@ export default class GitHubRepositoriesProvider {
       } catch (error) {
         console.log(error);
     }
+
     return packagesReturn;
   }
 
