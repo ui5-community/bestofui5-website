@@ -5,7 +5,7 @@ const MyOctokit = Octokit.plugin(throttling);
 
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
-import { Artifact, Package, Type } from "./types";
+import { Artifact, Package, Type, Sources } from "./types";
 
 export default class GitHubRepositoriesProvider {
   static source = "github-packages";
@@ -104,19 +104,18 @@ export default class GitHubRepositoriesProvider {
     return repos;
   }
 
-  static async fetchUI5EcossystemShowcase(): Promise<Package[]> {
-    let typesArray: Type[] = [];
+  static async fetchMonoRepos(source: Sources): Promise<Package[]> {
     let packagesReturn: Package[] = [];
-    let packages = await GitHubRepositoriesProvider.octokit.request(`GET /repos/ui5-community/ui5-ecosystem-showcase/contents/packages`);
+    let packages = await GitHubRepositoriesProvider.octokit.request(`GET /repos/${source.path}/contents/${source.subpath}`);
     for (const packageContent of packages.data) {
       try {
         const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
           mediaType: {
             format: "raw",
           },
-          owner: "ui5-community",
-          repo: "ui5-ecosystem-showcase",
-          path: `packages/${packageContent.name}/package.json`,
+          owner: source.owner,
+          repo: source.repo,
+          path: `${source.subpath}/${packageContent.name}/package.json`,
         });
         let string = data.data.toString();
         let packageJson: Package = JSON.parse(string);
@@ -129,9 +128,9 @@ export default class GitHubRepositoriesProvider {
                 mediaType: {
                   format: "raw",
                 },
-                owner: "ui5-community",
-                repo: "ui5-ecosystem-showcase",
-                path: `packages/${packageContent.name}/README.md`,
+                owner: source.owner,
+                repo: source.repo,
+                path: `${source.subpath}/${packageContent.name}/README.md`,
               });
               let readmeString = readme.data.toString();
               packageJson.readme = readmeString;
@@ -144,23 +143,68 @@ export default class GitHubRepositoriesProvider {
       } catch (error) {
         console.log(error);
       }
-     break;
     }
-    
-
     return packagesReturn;
   }
 
-  static async fetchSingleRepos(repo: string, page = 1): Promise<Artifact[]> {
-    let currentRepo = await GitHubRepositoriesProvider.octokit.request(`GET /repos/${repo}`);
+  static async fetchSingleRepos(source: Sources): Promise<Package[]> {
+    let packagesReturn: Package[] = [];
+      try {
+        const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
+          mediaType: {
+            format: "raw",
+          },
+          owner: source.owner,
+          repo: source.repo,
+          path: `package.json`,
+        });
+        let string = data.data.toString();
+        let packageJson: Package = JSON.parse(string);
+        try {
+          // TODO: read from keywords
+          packageJson.type = "cc";
+        } catch (error) {}
+        try {
+            const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
+                mediaType: {
+                  format: "raw",
+                },
+                owner: source.owner,
+                repo: source.repo,
+                path: `README.md`
+              });
+              let readmeString = readme.data.toString();
+              packageJson.readme = readmeString;
+        } catch (error) {
+            console.log("No README found");
+        }
 
-    return [currentRepo.data];
+
+        packagesReturn.push(packageJson);
+      } catch (error) {
+        console.log(error);
+    }
+    return packagesReturn;
   }
 
-  static async get(lastMonth: any): Promise<Artifact[]> {
-    const sources = readFileSync(`${__dirname}/../sources.json`, "utf8");
+  static async get(lastMonth: any): Promise<Package[]> {
+    let packages: Package[] = [];
 
-    var packages = await this.fetchUI5EcossystemShowcase();
+    const sourcesJsonString = readFileSync(`${__dirname}/../sources.json`, "utf8");
+    let Sources: Sources[] = JSON.parse(sourcesJsonString);
+
+    for (const source of Sources) {
+      source.path = `${source.owner}/${source.repo}`;
+      if (source.type === "mono") {
+        const monoRepos = await this.fetchMonoRepos(source);
+        packages = packages.concat(monoRepos);
+
+      } else if (source.type === "single") {
+        const singleRepos = await this.fetchSingleRepos(source);
+        packages = packages.concat(singleRepos);
+      }
+    }
+
     let typesArray: Type[] = [];
     for (const packageContent of packages) {
       let type: Type = {
@@ -173,6 +217,7 @@ export default class GitHubRepositoriesProvider {
     writeFileSync(`${__dirname}/../../uimodule/src/model/packages.json`, JSON.stringify(packages));
     writeFileSync(`${__dirname}/../../uimodule/src/model/types.json`, JSON.stringify(typesArray));
     
+    return packages;
 
 
   }

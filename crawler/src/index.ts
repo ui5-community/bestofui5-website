@@ -2,7 +2,7 @@
 // import { readFileSync, writeFileSync } from "fs";
 
 import GitHubRepositoriesProvider from "./gh-repos";
-import { Artifact } from "./types";
+import { Artifact, Package } from "./types";
 
 (async () => {
   // get current month data
@@ -31,7 +31,7 @@ import { Artifact } from "./types";
   const artifacts = await Promise.all(
     Providers.map(async (provider) => {
       // console.log(`Start provider '${provider.name}'.`);
-      const items: Artifact[] = await provider.get(currentTrendsJson);
+      const items: Package[] = await provider.get(currentTrendsJson);
       // console.log(`Provider '${provider.name}' returned ${items.length} items.`);
       return items;
     })
