@@ -15,7 +15,7 @@ export default class GitHubRepositoriesProvider {
   // static octokitRest = new OctokitRest({ auth: "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" });
 
   static octokit = new MyOctokit({
-    auth: process.env.GITHUB_TOKEN,
+    auth: "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",
     throttle: {
       onRateLimit: (retryAfter: any, options: any) => {
         GitHubRepositoriesProvider.octokit.log.warn(`Request quota exhausted for request ${options.method} ${options.url}`);
@@ -144,7 +144,9 @@ export default class GitHubRepositoriesProvider {
       } catch (error) {
         console.log(error);
       }
+     break;
     }
+    
 
     return packagesReturn;
   }
@@ -156,6 +158,8 @@ export default class GitHubRepositoriesProvider {
   }
 
   static async get(lastMonth: any): Promise<Artifact[]> {
+    const sources = readFileSync(`${__dirname}/../sources.json`, "utf8");
+
     var packages = await this.fetchUI5EcossystemShowcase();
     let typesArray: Type[] = [];
     for (const packageContent of packages) {
@@ -170,20 +174,6 @@ export default class GitHubRepositoriesProvider {
     writeFileSync(`${__dirname}/../../uimodule/src/model/types.json`, JSON.stringify(typesArray));
     
 
-    const artifacts = await Promise.all([...this.repos.map(async (repo: string) => await this.fetchSingleRepos(repo, 0))]);
 
-    const ids = new Set();
-
-    return artifacts
-      .flat()
-      .filter((rawRepo: any) => {
-        //filter dups
-        if (ids.has(rawRepo.full_name)) {
-          return false;
-        }
-        ids.add(rawRepo.full_name);
-        return true;
-      })
-      .map((rawRepo: any) => this.transformRepo(rawRepo, lastMonth));
   }
 }
