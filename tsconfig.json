@@ -1,7 +1,11 @@
 {
     "compilerOptions": {
-        "target": "es2015",
-        "module": "es2015",
+        "target": "es5",
+        "module": "commonjs",
+        "lib": [
+            "es2019"
+        ],
+        "types": ["node"],
         "skipLibCheck": true,
         "preserveConstEnums": true,
         "sourceMap": false,
@@ -14,13 +18,19 @@
         "baseUrl": "./",
         "typeRoots": [
             "./node_modules/@types",
+            "./crawler/node_modules/@types",
+            "./crawler/node_modules/@types/glob",
+            "./crawler/node_modules/@types/node",
+            "./crawler/node_modules/@types/minimatch",
             "./node_modules/@openui5/ts-types-esm"
         ],
         "paths": {
             "com/sap/ui5community/*": [
                 "./uimodule/src/*"
             ]
-        }
+        },
+        "forceConsistentCasingInFileNames": true, /* Disallow inconsistently-cased references to the same file. */
+        "useUnknownInCatchVariables": false
     },
     "include": [
         "./uimodule/src/**/*"

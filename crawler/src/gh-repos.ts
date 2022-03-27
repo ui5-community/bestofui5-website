@@ -15,14 +15,14 @@ export default class GitHubRepositoriesProvider {
   // static octokitRest = new OctokitRest({ auth: "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" });
 
   static octokit = new MyOctokit({
-    auth: "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",
+    auth: process.env.GITHUB_TOKEN,
     throttle: {
       onRateLimit: (retryAfter: any, options: any) => {
         GitHubRepositoriesProvider.octokit.log.warn(`Request quota exhausted for request ${options.method} ${options.url}`);
 
         // Retry four times after hitting a rate limit error, then give up
         if (options.request.retryCount <= 4) {
-          console.log(`Retrying after ${retryAfter} seconds!`);
+          // console.log(`Retrying after ${retryAfter} seconds!`);
           return true;
         }
       },
@@ -166,8 +166,9 @@ export default class GitHubRepositoriesProvider {
         typesArray.push(type);
       }
     }
-    writeFileSync(`${__dirname}/../../uimodule//webapp/model/packages.json`, JSON.stringify(packages));
-    writeFileSync(`${__dirname}/../../uimodule//webapp/model/types.json`, JSON.stringify(typesArray));
+    writeFileSync(`${__dirname}/../../uimodule/src/model/packages.json`, JSON.stringify(packages));
+    writeFileSync(`${__dirname}/../../uimodule/src/model/types.json`, JSON.stringify(typesArray));
+    
 
     const artifacts = await Promise.all([...this.repos.map(async (repo: string) => await this.fetchSingleRepos(repo, 0))]);
 
