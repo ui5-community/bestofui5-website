@@ -38,6 +38,11 @@ export interface Package {
     license: string;
     type: string;
     readme: string;
+    forks: number;
+    stars: number;
+    updatedAt: string;
+    createdAt: string;
+    link: string;
 }
 
 export interface Type {
