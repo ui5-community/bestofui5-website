@@ -25,4 +25,4 @@ jobs:
           git config --global user.name 'marianfoo'
           git config --global user.email '13335743+marianfoo@users.noreply.github.com'
           git commit -am "build"
-          git push docs -f
+          git push HEAD:docs --force
