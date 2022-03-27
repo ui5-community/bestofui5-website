@@ -1,11 +1,13 @@
 import BaseController from "./BaseController";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
+import formatter from "../model/formatter";
 
 /**
  * @namespace com.sap.ui5community.controller
  */
 export default class Main extends BaseController {
+	private formatter = formatter;
 
 	public onInit() : void {}
 
