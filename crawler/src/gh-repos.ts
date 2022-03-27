@@ -15,7 +15,7 @@ export default class GitHubRepositoriesProvider {
   // static octokitRest = new OctokitRest({ auth: "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" });
 
   static octokit = new MyOctokit({
-    auth: "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",
+    auth: process.env.GITHUB_TOKEN,
     throttle: {
       onRateLimit: (retryAfter: any, options: any) => {
         GitHubRepositoriesProvider.octokit.log.warn(`Request quota exhausted for request ${options.method} ${options.url}`);
