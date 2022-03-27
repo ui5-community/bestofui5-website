@@ -7,8 +7,8 @@
   "scripts": {
     "build": "npm-run-all build:ts build:ui5",
     "build:opt": "npm-run-all build:ts build:ui5:opt",
-    "build:ts": "babel uimodule/src --out-dir uimodule/webapp --source-maps true --extensions \".ts,.js\" --copy-files",
-    "build:ui5": "ui5 build --clean-dest",
+    "build:ts": "babel uimodule/src --out-dir docs --source-maps true --extensions \".ts,.js\" --copy-files",
+    "build:ui5": "ui5 build self-contained --all --clean-dest  --dest docs --config uimodule/ui5.yaml",
     "build:ui5:opt": "ui5 build self-contained --clean-dest --all",
     "start": "npm-run-all --parallel watch:ts start:ui5",
     "watch:ts": "babel uimodule/src --out-dir webapp --source-maps true --extensions \".ts,.js\" --copy-files --watch",
