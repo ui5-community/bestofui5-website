@@ -44,6 +44,14 @@ export interface Type {
     name: string;
 }
 
+export interface Sources {
+    path: string;
+    subpath: string;
+    owner: string;
+    repo:   string;
+    type: string;
+}
+
 // export type Provider{
 
 // }
