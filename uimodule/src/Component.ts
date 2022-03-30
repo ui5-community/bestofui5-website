@@ -19,6 +19,9 @@ export default class Component extends UIComponent {
 		// call the base component's init function
 		super.init();
 
+		// force english language
+		sap.ui.getCore().getConfiguration().setLanguage("en");
+
 		// create the views based on the url/hash
 		this.getRouter().initialize();
 
