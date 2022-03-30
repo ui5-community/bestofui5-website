@@ -21,6 +21,8 @@ export default class PackageListItemContent extends XMLComposite {
             link: { type: "string" },
             type: { type: "string" },
             tags: { type: "array" },
+            stars: { type: "string" },
+            forks: { type: "string" },
             createdAt: { type: "Date" },
             updatedAt: { type: "Date" },
             rank: { type: "int" },
