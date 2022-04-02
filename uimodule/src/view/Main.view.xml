@@ -20,10 +20,12 @@
                 </MultiInput>
                 <List id="_IDGenList1" headerText="Packages" mode="None" items="{path: 'packages>/'}">
                     <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
-                        <ui5cc:PackageListItemContent name="{packages>name}" description="{
+                        <ui5cc:PackageListItemContent name="{packages>name}" link="{packages>link}" description="{
                                         parts: ['packages>description', 'settings>/search'],
                                         formatter: '.formatter.formatHighlight'
-                                      }" type="{packages>type}"/>
+                                      }" type="{packages>type}" stars="{packages>stars}" forks="{packages>forks}"
+                                      updatedAt="{packages>updatedAt}" createdAt="{packages>createdAt}"
+                                      />
                     </CustomListItem>
                     <layoutData>
                         <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '800px' }" />

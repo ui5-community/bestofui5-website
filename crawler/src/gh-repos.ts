@@ -117,7 +117,7 @@ export default class GitHubRepositoriesProvider {
         packageJson.stars = repoInfo.stars;
         packageJson.updatedAt = repoInfo.updatedAt;
         packageJson.createdAt = repoInfo.createdAt;
-        packageJson.link = repoInfo.link;
+        packageJson.link = `${repoInfo.link}/tree/main/${source.subpath}/${packageContent.name}`;
         try {
             const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
                 mediaType: {
