@@ -29,7 +29,6 @@ jobs:
           git config --global user.name 'marianfoo'
           git config --global user.email '13335743+marianfoo@users.noreply.github.com'
           git add docs -f
-          git add uimodule/src/model/packages.json
-          git add uimodule/src/model/types.json
+          git add uimodule/src/model/data.json
           git commit -m "build"
           git push origin HEAD:docs --force

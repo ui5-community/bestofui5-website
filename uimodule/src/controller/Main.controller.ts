@@ -29,7 +29,7 @@ export default class Main extends BaseController {
 
 	public onPress(event) : void {
         // get object name from oevent
-        const objectName = event.getSource().getBindingContext("packages").getObject().name;
+        const objectName = event.getSource().getBindingContext("data").getObject().name;
         //route to object view
         this.navTo("RouteObjectView", {
           name: objectName,
