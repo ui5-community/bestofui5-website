@@ -6,7 +6,7 @@
       visible="{= !!${$this>rank} &amp;&amp; ${$this>showRank}}" withMargin="true" />
 
     <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
-      <Link id="trend-title" text="{$this>name}" href="{$this>link}" target="_blank" emphasized="true" />
+      <Link id="trend-title" text="{$this>name}" href="{= ${$this>npmlink} ? ${$this>npmlink} : ${$this>githublink} }" target="_blank" emphasized="true" />
       <FormattedText id="trend-desc" htmlText="{$this>description}" />
       <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
         <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow"
@@ -18,8 +18,8 @@
         <tnt:InfoLabel id="trend-item-tag1" class="sapUiTinyMarginEnd" text="FORKS {$this>forks}" renderMode="Narrow"
           colorScheme="5" displayOnly="false" visible="{= !!${$this>forks} }" />
 
-        <tnt:InfoLabel id="trend-item-tag2" class="sapUiTinyMarginEnd" text="{$this>tags/2}" renderMode="Narrow"
-          colorScheme="5" displayOnly="false" visible="{= !!${$this>tags/2} }" />
+        <tnt:InfoLabel id="trend-item-tag2" class="sapUiTinyMarginEnd" text="Downloads {$this>downloads}" renderMode="Narrow"
+          colorScheme="5" displayOnly="false" visible="{= !!${$this>downloads} }" />
 
         <tnt:InfoLabel id="trend-item-last-update" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="6"
           displayOnly="false" text="{= ${i18n>listItemTagUpdated}.replace('{0}', ${
@@ -33,7 +33,7 @@
                       relativeScale: 'auto',
                       relativeStyle: 'wide'
                     } 
-                  }) }" />
+                  }) }" visible="{= !!${$this>updatedAt} }"/>
 
         <tnt:InfoLabel id="trend-item-created" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="6"
           displayOnly="false" text="{= ${i18n>listItemTagCreated}.replace('{0}', ${

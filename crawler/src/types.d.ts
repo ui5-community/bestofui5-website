@@ -42,14 +42,16 @@ export interface Package {
     stars: number;
     updatedAt: string;
     createdAt: string;
-    link: string;
+    githublink: string;
+    npmlink: string;
+    downloads: number;
 }
 
 export interface Type {
     name: string;
 }
 
-export interface Sources {
+export interface Source {
     path: string;
     owner: string;
     repo:   string;
