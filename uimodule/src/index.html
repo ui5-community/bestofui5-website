@@ -19,9 +19,14 @@
 			data-sap-ui-async="true"
 			data-sap-ui-language="en"
 			data-sap-ui-frameOptions="trusted"
-			data-sap-ui-theme="sap_horizon_dark"
+			data-sap-ui-theme="sap_horizon"
 			data-sap-ui-xx-waitForTheme="true"
 			data-sap-ui-xx-supportedLanguages="en">
+	</script>
+	<script>
+		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+			sap.ui.getCore().applyTheme("sap_horizon_dark")
+		}
 	</script>
 
 </head>
