@@ -1,40 +1,36 @@
 // require("dotenv").config();
-// import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync } from "fs";
 
 import GitHubRepositoriesProvider from "./gh-repos";
-import { Artifact, Package } from "./types";
+import NPMProvider from "./npm";
+import { Artifact, Package, Source, Type, DataJson } from "./types";
 
 (async () => {
-  // get current month data
-  let currentTrendsJson: any = {};
-  // let currentAllItemsJson: any = {};
-  // try {
-  //   const filecontentTrends = readFileSync(`${__dirname}/../../frontend/trends/webapp/model/trends.json`, "utf8");
-  //   currentTrendsJson = JSON.parse(filecontentTrends);
-  // } catch (e) {
-  //   if (e.code !== "ENOENT") {
-  //       throw e;
-  //     }
-  // }
-  // try {
-  //   const filecontentAllItems = readFileSync(`${__dirname}/../../frontend/trends/webapp/model/allItems.json`, "utf8");
-  //   currentAllItemsJson = JSON.parse(filecontentAllItems);
-  // } catch (e) {
-  //   if (e.code !== "ENOENT") {
-  //     throw e;
-  //   }
-  // }
+  let dataJson: DataJson = {
+    types: [],
+    packages: [],
+  };
 
-  // update only github an npm
-  const Providers = [GitHubRepositoriesProvider];
+  const sourcesJsonString = readFileSync(`${__dirname}/../sources.json`, "utf8");
+  let sources: Source[] = JSON.parse(sourcesJsonString);
 
-  const artifacts = await Promise.all(
-    Providers.map(async (provider) => {
-      // console.log(`Start provider '${provider.name}'.`);
-      const items: Package[] = await provider.get(currentTrendsJson);
-      // console.log(`Provider '${provider.name}' returned ${items.length} items.`);
-      return items;
-    })
-  );
+  let githubPackages: Package[] = await GitHubRepositoriesProvider.get(sources);
+  githubPackages = await NPMProvider.get(githubPackages);
+
+  // extract type from packages info
+  let typesArray: Type[] = [];
+  for (const packageContent of githubPackages) {
+    let type: Type = {
+      name: packageContent.type,
+    };
+    if (!typesArray.find((type) => type.name === packageContent.type)) {
+      typesArray.push(type);
+    }
+  }
+
+  dataJson.packages = githubPackages;
+  dataJson.types = typesArray;
+
+  writeFileSync(`${__dirname}/../../uimodule/src/model/data.json`, JSON.stringify(dataJson));
 
 })();
