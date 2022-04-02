@@ -51,12 +51,9 @@ export interface Type {
 
 export interface Sources {
     path: string;
-    subpath: string;
     owner: string;
     repo:   string;
-    type: string;
+    subpath: string;
+    subpackages: string[];
+
 }
-
-// export type Provider{
-
-// }
