@@ -49,7 +49,7 @@ export interface Type {
     name: string;
 }
 
-export interface Sources {
+export interface Source {
     path: string;
     owner: string;
     repo:   string;
