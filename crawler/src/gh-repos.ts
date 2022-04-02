@@ -12,7 +12,8 @@ export default class GitHubRepositoriesProvider {
 
 
   static octokit = new MyOctokit({
-    auth: process.env.GITHUB_TOKEN,
+    // auth: process.env.GITHUB_TOKEN,
+    auth: "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",
     throttle: {
       onRateLimit: (retryAfter: any, options: any) => {
         GitHubRepositoriesProvider.octokit.log.warn(`Request quota exhausted for request ${options.method} ${options.url}`);
@@ -95,8 +96,7 @@ export default class GitHubRepositoriesProvider {
   static async fetchMonoRepos(source: Sources): Promise<Package[]> {
     let packagesReturn: Package[] = [];
     let repoInfo = await this.getRepoInfo(source);
-    let packages = await GitHubRepositoriesProvider.octokit.request(`GET /repos/${source.path}/contents/${source.subpath}`);
-    for (const packageContent of packages.data) {
+    for (const subpackage of source.subpackages) {
       try {
         const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
           mediaType: {
@@ -104,7 +104,7 @@ export default class GitHubRepositoriesProvider {
           },
           owner: source.owner,
           repo: source.repo,
-          path: `${source.subpath}/${packageContent.name}/package.json`,
+          path: `${source.subpath}/${subpackage}/package.json`,
         });
         let string = data.data.toString();
         let packageJson: Package = JSON.parse(string);
@@ -117,7 +117,7 @@ export default class GitHubRepositoriesProvider {
         packageJson.stars = repoInfo.stars;
         packageJson.updatedAt = repoInfo.updatedAt;
         packageJson.createdAt = repoInfo.createdAt;
-        packageJson.link = `${repoInfo.link}/tree/main/${source.subpath}/${packageContent.name}`;
+        packageJson.link = `${repoInfo.link}/tree/main/${source.subpath}/${subpackage}`;
         try {
             const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
                 mediaType: {
@@ -125,7 +125,7 @@ export default class GitHubRepositoriesProvider {
                 },
                 owner: source.owner,
                 repo: source.repo,
-                path: `${source.subpath}/${packageContent.name}/README.md`,
+                path: `${source.subpath}/${subpackage}/README.md`,
               });
               let readmeString = readme.data.toString();
               packageJson.readme = readmeString;
@@ -199,11 +199,11 @@ export default class GitHubRepositoriesProvider {
 
     for (const source of Sources) {
       source.path = `${source.owner}/${source.repo}`;
-      if (source.type === "mono") {
+      if (source.subpath && source.subpackages) {
         const monoRepos = await this.fetchMonoRepos(source);
         packages = packages.concat(monoRepos);
 
-      } else if (source.type === "single") {
+      } else {
         const singleRepos = await this.fetchSingleRepos(source);
         packages = packages.concat(singleRepos);
       }

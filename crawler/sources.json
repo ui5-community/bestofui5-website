@@ -2,10 +2,31 @@
     "owner" : "ui5-community",
     "repo" : "ui5-ecosystem-showcase",
     "subpath" : "packages",
-    "type" : "mono"
+    "subpackages": [
+        "ui5-app-module",
+        "ui5-middleware-cfdestination",
+        "ui5-middleware-iasync",
+        "ui5-middleware-index",
+        "ui5-middleware-livecompileless",
+        "ui5-middleware-livereload",
+        "ui5-middleware-livetranspile",
+        "ui5-middleware-onelogin",
+        "ui5-middleware-servestatic",
+        "ui5-middleware-simpleproxy",
+        "ui5-middleware-stringreplacer",
+        "ui5-middleware-webjars",
+        "ui5-task-compileless",
+        "ui5-task-flatten-library",
+        "ui5-task-i18ncheck",
+        "ui5-task-minify-xml",
+        "ui5-task-pwa-enabler",
+        "ui5-task-stringreplacer",
+        "ui5-task-transpile",
+        "ui5-task-zipper",
+        "ui5-tooling-modules"
+    ]
 },
 {
     "owner" : "ui5-community",
-    "repo" : "ui5-cc-md",
-    "type" : "single"
+    "repo" : "ui5-cc-md"
 }]
