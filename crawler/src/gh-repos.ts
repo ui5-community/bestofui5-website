@@ -30,18 +30,15 @@ export default class GitHubRepositoriesProvider {
     },
   });
 
-  static async get(lastMonth: any): Promise<Package[]> {
-    let dataJson: DataJson = {
-      types: [],
-      packages: [],
-    };
+  static async get(sources: Source[]): Promise<Package[]> {
+
 
     let packages: Package[] = [];
 
-    const sourcesJsonString = readFileSync(`${__dirname}/../sources.json`, "utf8");
-    let Sources: Source[] = JSON.parse(sourcesJsonString);
+    
+    
 
-    for (const source of Sources) {
+    for (const source of sources) {
       source.path = `${source.owner}/${source.repo}`;
       if (source.subpath && source.subpackages) {
         let repoInfo = await this.getRepoInfo(source);
@@ -57,22 +54,6 @@ export default class GitHubRepositoriesProvider {
       }
     }
 
-    // extract type from packages info
-    let typesArray: Type[] = [];
-    for (const packageContent of packages) {
-      let type: Type = {
-        name: packageContent.type,
-      };
-      if (!typesArray.find((type) => type.name === packageContent.type)) {
-        typesArray.push(type);
-      }
-    }
-
-    dataJson.packages = packages;
-    dataJson.types = typesArray;
-
-    writeFileSync(`${__dirname}/../../uimodule/src/model/data.json`, JSON.stringify(dataJson));
-
     return packages;
   }
 
@@ -81,7 +62,7 @@ export default class GitHubRepositoriesProvider {
       name: source.repo,
       description: "",
       type: "",
-      link: ``,
+      githublink: ``,
       readme: "",
       createdAt: "",
       updatedAt: "",
@@ -89,6 +70,8 @@ export default class GitHubRepositoriesProvider {
       license: "",
       stars: 0,
       forks: 0,
+      downloads: 0,
+      npmlink: ""
     };
     let repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
       owner: source.owner,
@@ -96,7 +79,7 @@ export default class GitHubRepositoriesProvider {
     });
     packageObject.createdAt = repo.data.created_at;
     packageObject.updatedAt = repo.data.updated_at;
-    packageObject.link = repo.data.html_url;
+    packageObject.githublink = repo.data.html_url;
     packageObject.forks = repo.data.forks;
     packageObject.stars = repo.data.stargazers_count;
     packageObject.license = repo.data.license.key;
@@ -115,7 +98,9 @@ export default class GitHubRepositoriesProvider {
       stars: 0,
       updatedAt: "",
       createdAt: "",
-      link: "",
+      githublink: "",
+      downloads: 0,
+      npmlink: ""
     };
     try {
       const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
@@ -136,9 +121,10 @@ export default class GitHubRepositoriesProvider {
       packageJson.license = repoInfo.license;
       packageJson.forks = repoInfo.forks;
       packageJson.stars = repoInfo.stars;
-      packageJson.updatedAt = repoInfo.updatedAt;
-      packageJson.createdAt = repoInfo.createdAt;
-      packageJson.link = `${repoInfo.link}/tree/main/${path}`;
+      // data only from npm
+      // packageJson.updatedAt = repoInfo.updatedAt;
+      // packageJson.createdAt = repoInfo.createdAt;
+      packageJson.githublink = `${repoInfo.githublink}/tree/main/${path}`;
       try {
         const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
           mediaType: {
@@ -151,7 +137,7 @@ export default class GitHubRepositoriesProvider {
         let readmeString = readme.data.toString();
         packageJson.readme = readmeString;
       } catch (error) {
-        console.log("No README found");
+        console.log(`No README.md found for ${packageJson.githublink}`);
       }
     } catch (error) {
       console.log(error);
