@@ -57,7 +57,9 @@ export default class NpmProvider {
         const downloads = await getMonthlyDownloads(name);
         if (downloads > 0) {
             source.downloads = downloads;
-          }
+        } else {
+            source.downloads = 0
+        }
       } catch (error) {
         console.error(`Error fetching npm downloads for ${source.name}`);
       }
