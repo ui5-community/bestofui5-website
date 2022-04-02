@@ -3,7 +3,6 @@ import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import formatter from "../model/formatter";
 import Sorter from "sap/ui/model/Sorter";
-import Sorter
 
 /**
  * @namespace com.sap.ui5community.controller
