@@ -11,8 +11,7 @@ export default class GitHubRepositoriesProvider {
   static source = "github-packages";
 
   static octokit = new MyOctokit({
-    // auth: process.env.GITHUB_TOKEN,
-    auth: "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",
+    auth: process.env.GITHUB_TOKEN,
     throttle: {
       onRateLimit: (retryAfter: any, options: any) => {
         GitHubRepositoriesProvider.octokit.log.warn(`Request quota exhausted for request ${options.method} ${options.url}`);
