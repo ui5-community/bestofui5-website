@@ -57,3 +57,8 @@ export interface Sources {
     subpackages: string[];
 
 }
+
+export interface DataJson {
+    packages: Package[];
+    types: Type[];
+}

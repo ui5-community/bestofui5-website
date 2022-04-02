@@ -12,17 +12,17 @@ export default class Main extends BaseController {
 
 	public onPatternMatched(event) : void {
         const objectName = event.getParameter("arguments").name;
-        let model = this.getModel("packages");
+        let model = this.getModel("data");
         let data = model.getData();
         // find object index in data
-        let objectIndex = data.findIndex((object) => object.name === objectName);
+        let objectIndex = data.packages.findIndex((object) => object.name === objectName);
         if (!objectIndex) {
           //object not found
           // return
         }
         this.getView().bindElement({
-          path: `/${objectIndex}`,
-          model: "packages",
+          path: `/packages/${objectIndex}`,
+          model: "data",
         });
 	}
 

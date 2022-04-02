@@ -10,21 +10,20 @@
         <content>
             <FlexBox id="_IDGenFlexBox1" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Center">
                 <MultiInput startSuggestion="0" placeholder="Search for..." class="enlargeSearchfield sapUiMediumMarginTopBottom" id="multiInput" width="100%" liveChange=".liveSearch" tokenUpdate=".onUpdateToken" showValueHelp="false" value="{settings>/search}" suggestionItems="{
-                                path: 'types>/',
-                                sorter: { path: 'name' }
+                                path: 'data>/types/'
                             }">
-                    <core:Item key="{types>name}" text="{types>name}" />
+                    <core:Item key="{data>name}" text="{data>name}" />
                     <layoutData>
                         <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
                     </layoutData>
                 </MultiInput>
-                <List id="_IDGenList1" headerText="Packages" mode="None" items="{path: 'packages>/'}">
+                <List id="_IDGenList1" headerText="Packages" mode="None" items="{path: 'data>/packages/'}">
                     <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
-                        <ui5cc:PackageListItemContent name="{packages>name}" link="{packages>link}" description="{
-                                        parts: ['packages>description', 'settings>/search'],
+                        <ui5cc:PackageListItemContent name="{data>name}" link="{data>link}" description="{
+                                        parts: ['data>description', 'settings>/search'],
                                         formatter: '.formatter.formatHighlight'
-                                      }" type="{packages>type}" stars="{packages>stars}" forks="{packages>forks}"
-                                      updatedAt="{packages>updatedAt}" createdAt="{packages>createdAt}"
+                                      }" type="{data>type}" stars="{data>stars}" forks="{data>forks}"
+                                      updatedAt="{data>updatedAt}" createdAt="{data>createdAt}"
                                       />
                     </CustomListItem>
                     <layoutData>
