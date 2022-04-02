@@ -14,11 +14,11 @@
 		busyIndicatorDelay="{objectView>/delay}">
 
 		<semantic:titleHeading>
-			<Title text="{packages>name}" />
+			<Title text="{data>name}" />
 		</semantic:titleHeading>
 
         <semantic:content>
-            <md:Markdown id="test" content="{packages>readme}" />
+            <md:Markdown id="test" content="{data>readme}" />
         </semantic:content>
 
 

@@ -15,12 +15,8 @@
       "fallbackLocale": "en"
     },
     "dataSources": {
-      "packages": {
-        "uri": "model/packages.json",
-        "type": "JSON"
-      },
-      "types": {
-        "uri": "model/types.json",
+      "data": {
+        "uri": "model/data.json",
         "type": "JSON"
       }
     }
@@ -79,13 +75,9 @@
           "fallbackLocale": "en"
         }
       },
-      "packages": {
+      "data": {
         "type": "sap.ui.model.json.JSONModel",
-        "dataSource": "packages"
-      },
-      "types": {
-        "type": "sap.ui.model.json.JSONModel",
-        "dataSource": "types"
+        "dataSource": "data"
       }
     },
 

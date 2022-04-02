@@ -5,15 +5,14 @@ const MyOctokit = Octokit.plugin(throttling);
 
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
-import { Artifact, Package, Type, Sources } from "./types";
+import { Artifact, Package, Type, Sources, DataJson } from "./types";
 
 export default class GitHubRepositoriesProvider {
   static source = "github-packages";
 
 
   static octokit = new MyOctokit({
-    // auth: process.env.GITHUB_TOKEN,
-    auth: "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",
+    auth: process.env.GITHUB_TOKEN,
     throttle: {
       onRateLimit: (retryAfter: any, options: any) => {
         GitHubRepositoriesProvider.octokit.log.warn(`Request quota exhausted for request ${options.method} ${options.url}`);
@@ -192,6 +191,12 @@ export default class GitHubRepositoriesProvider {
   }
 
   static async get(lastMonth: any): Promise<Package[]> {
+    // new DataJson
+    let dataJson: DataJson = {
+      types: [],
+      packages: [],
+    }
+
     let packages: Package[] = [];
 
     const sourcesJsonString = readFileSync(`${__dirname}/../sources.json`, "utf8");
@@ -218,8 +223,11 @@ export default class GitHubRepositoriesProvider {
         typesArray.push(type);
       }
     }
-    writeFileSync(`${__dirname}/../../uimodule/src/model/packages.json`, JSON.stringify(packages));
-    writeFileSync(`${__dirname}/../../uimodule/src/model/types.json`, JSON.stringify(typesArray));
+
+    dataJson.packages = packages;
+    dataJson.types = typesArray;
+
+    writeFileSync(`${__dirname}/../../uimodule/src/model/data.json`, JSON.stringify(dataJson));
     
     return packages;
 
