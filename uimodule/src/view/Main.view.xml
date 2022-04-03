@@ -1,35 +1,28 @@
 <mvc:View controllerName="com.sap.ui5community.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns:f="sap.f"
     xmlns="sap.m"
-    xmlns:tnt="sap.tnt"
-    xmlns:grid="sap.ui.layout.cssgrid"
     xmlns:ui5cc="com.sap.ui5community.control"
     xmlns:core="sap.ui.core">
-    <Page id="page" title="{i18n>title}">
+    <Page id="page" title="{i18n>title}" class="openui5header">
+        <subHeader>
+			<OverflowToolbar>
+                <core:Fragment id="IconTabHeaderMain" fragmentName="com.sap.ui5community.view.IconTabHeader" type="XML"/>
+			</OverflowToolbar>
+		</subHeader>
         <content>
-            <FlexBox id="_IDGenFlexBox1" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Center">
+            <FlexBox id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Center">
                 <MultiInput startSuggestion="0" placeholder="Search for..." class="enlargeSearchfield sapUiMediumMarginTopBottom" id="multiInput" width="100%" liveChange=".liveSearch" tokenUpdate=".onUpdateToken" showValueHelp="false" value="{settings>/search}" suggestionItems="{
-                                path: 'data>/types/'
-                            }">
+                    path: 'data>/types/'
+                }">
                     <core:Item key="{data>name}" text="{data>name}" />
-                    <layoutData>
-                        <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
-                    </layoutData>
+                <layoutData>
+                <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
+                </layoutData>
                 </MultiInput>
-                <List id="_IDGenList1" headerText="Packages" mode="None" items="{path: 'data>/packages/'}">
-                    <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
-                        <ui5cc:PackageListItemContent name="{data>name}" githublink="{data>githublink}" npmlink="{data>npmlink}" description="{
-                                        parts: ['data>description', 'settings>/search'],
-                                        formatter: '.formatter.formatHighlight'
-                                      }" type="{data>type}" stars="{data>stars}" forks="{data>forks}"
-                                      updatedAt="{data>updatedAt}" createdAt="{data>createdAt}" downloads="{data>downloads}"
-                                      />
-                    </CustomListItem>
-                    <layoutData>
-                        <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '800px' }" />
-                    </layoutData>
-                </List>
+            </FlexBox>
+            <FlexBox id="_IDGenFlexBox1" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Center">
+                <mvc:XMLView id="packagesView" viewName="com.sap.ui5community.view.packages" visible="{settings>/packagesVisible}"/>
+                <mvc:XMLView viewName="com.sap.ui5community.view.tags" visible="{settings>/tagsVisible}"/>
             </FlexBox>
         </content>
     </Page>

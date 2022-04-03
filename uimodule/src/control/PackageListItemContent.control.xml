@@ -19,7 +19,7 @@
           colorScheme="5" displayOnly="false" visible="{= !!${$this>forks} }" />
 
         <tnt:InfoLabel id="trend-item-tag2" class="sapUiTinyMarginEnd" text="Downloads {$this>downloads}" renderMode="Narrow"
-          colorScheme="5" displayOnly="false" visible="{= !!${$this>downloads} }" />
+          colorScheme="5" displayOnly="false" visible="{= ${$this>downloads} > 0 }" />
 
         <tnt:InfoLabel id="trend-item-last-update" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="6"
           displayOnly="false" text="{= ${i18n>listItemTagUpdated}.replace('{0}', ${

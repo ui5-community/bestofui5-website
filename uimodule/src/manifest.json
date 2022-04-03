@@ -99,8 +99,13 @@
         },
         {
           "name": "RouteObjectView",
-          "pattern": "RouteObjectView/{name}",
+          "pattern": "packages/{name}",
           "target": ["TargetObjectView"]
+        },
+        {
+          "name": "RouteTagsView",
+          "pattern": "tags",
+          "target": ["TargetMainView"]
         }
       ],
       "targets": {
