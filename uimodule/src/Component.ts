@@ -25,7 +25,8 @@ export default class Component extends UIComponent {
 		const settingsModel = new JSONModel({
 			filter: "all",
 			tokens: [],
-			search: ""
+			search: "",
+			selectedTab: "hot"
 		});
 		this.setModel(settingsModel, "settings");
 
