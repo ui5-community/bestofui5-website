@@ -9,8 +9,7 @@ export default class IconTabHeaderControl {
 
     switch (oTabKey) {
       case "hot":
-        that.getOwnerComponent().getModel("settings").setProperty("/packagesVisible", true);
-        that.getOwnerComponent().getModel("settings").setProperty("/tagsVisible", false);
+        this.setViewToPackages(true, that);
         that.getRouter().getHashChanger().setHash("");
         let oSorterHot = new Sorter({
           path: "downloads",
@@ -19,6 +18,7 @@ export default class IconTabHeaderControl {
         binding.sort(oSorterHot);
         break;
       case "recently":
+        this.setViewToPackages(true, that);
         let oSorterRecent = new Sorter({
           path: "createdAt",
           descending: true,
@@ -26,6 +26,7 @@ export default class IconTabHeaderControl {
         binding.sort(oSorterRecent);
         break;
       case "all":
+        this.setViewToPackages(true, that);
         let oSorterAll = new Sorter({
           path: "downloads",
           descending: true,
@@ -33,8 +34,7 @@ export default class IconTabHeaderControl {
         binding.sort(oSorterAll);
         break;
       case "tags":
-        that.getOwnerComponent().getModel("settings").setProperty("/packagesVisible", false);
-        that.getOwnerComponent().getModel("settings").setProperty("/tagsVisible", true);
+        this.setViewToPackages(false, that);
         that.getRouter().getHashChanger().setHash("tags");
         break;
       default: {
@@ -42,5 +42,10 @@ export default class IconTabHeaderControl {
         break;
       }
     }
+  }
+
+  private static setViewToPackages(setToPackageView, that): void {
+    that.getOwnerComponent().getModel("settings").setProperty("/packagesVisible", setToPackageView);
+    that.getOwnerComponent().getModel("settings").setProperty("/tagsVisible", !setToPackageView);
   }
 }
