@@ -11,4 +11,11 @@
        </items>
    </IconTabHeader>
    <ToolbarSpacer/>
+   <Button 
+  core:require="{ sapMLib: 'sap/m/library' }" 
+  text="Add your own package"
+  type="Emphasized"
+  icon="sap-icon://add-product"
+  press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/ui5-community.github.io/issues/new?assignees=&amp;labels=new%20package&amp;template=new_package.md&amp;title=Add%20new%20package:', true)"
+/>
 </core:FragmentDefinition>
