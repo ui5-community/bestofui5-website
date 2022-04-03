@@ -1,0 +1,14 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <ToolbarSpacer/>
+   <IconTabHeader mode="Inline" selectedKey="hot" select=".onTabHeaderselect">
+       <items>
+           <IconTabFilter key="hot" text="Hot Packages" tooltip="Downloads last 30 Days" />
+           <IconTabFilter key="recently" text="Recently Created"/>
+           <IconTabFilter key="all" text="All Packages" />
+           <IconTabFilter key="tags" text="All Tags"/>
+       </items>
+   </IconTabHeader>
+   <ToolbarSpacer/>
+</core:FragmentDefinition>
