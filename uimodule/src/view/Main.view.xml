@@ -21,8 +21,8 @@
                 </MultiInput>
             </FlexBox>
             <FlexBox id="_IDGenFlexBox1" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Center">
-                <mvc:XMLView id="packagesView" viewName="com.sap.ui5community.view.packages" visible="{settings>/packagesVisible}"/>
-                <mvc:XMLView viewName="com.sap.ui5community.view.tags" visible="{settings>/tagsVisible}"/>
+                <mvc:XMLView id="packagesView" viewName="com.sap.ui5community.view.Packages" visible="{settings>/packagesVisible}"/>
+                <mvc:XMLView viewName="com.sap.ui5community.view.Tags" visible="{settings>/tagsVisible}"/>
             </FlexBox>
         </content>
     </Page>
