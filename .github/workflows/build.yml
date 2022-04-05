@@ -20,12 +20,12 @@ jobs:
           node-version: '16'
       - name: npm install
         run: |
-          npm install
-          cd crawler && npm install
+          cd packages  && cd ui && npm install
+          cd .. && npm install
       - name: crawl data
         run: |
-          cd crawler && npm run fetch
-      - run: npm run build
+          cd packages  && cd crawler && npm run fetch
+      - run: cd packages  && cd ui && npm run build
       - name: Commit/Push build to docs branch
         run: |
           git config --global user.name 'marianfoo'
