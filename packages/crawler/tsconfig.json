@@ -5,6 +5,7 @@
         "lib": [
             "es2019"
         ],
+        "types": ["node"],
         "skipLibCheck": true,
         "preserveConstEnums": true,
         "sourceMap": false,
