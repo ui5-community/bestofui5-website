@@ -31,6 +31,6 @@ import { Artifact, Package, Source, Type, DataJson } from "./types";
   dataJson.packages = githubPackages;
   dataJson.types = typesArray;
 
-  writeFileSync(`${__dirname}/../../uimodule/src/model/data.json`, JSON.stringify(dataJson));
+  writeFileSync(`${__dirname}/../../ui/src/model/data.json`, JSON.stringify(dataJson));
 
 })();
