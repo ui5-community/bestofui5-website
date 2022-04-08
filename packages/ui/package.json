@@ -1,8 +1,9 @@
 {
-  "name": "ui5community.github.io-ui",
+  "name": "ui",
   "version": "1.0.0",
   "description": "UI5 Application: ui5community.github.io",
-  "author": "marianfoo",
+  "private": "true",
+  "author": "Marian Zeis",
   "license": "Apache-2.0",
   "scripts": {
     "build": "npm-run-all build:ts build:ui5",

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "ui5community.github.io mono repo",
   "private": true,
-  "author": "marianfoo",
+  "author": "Marian Zeis",
   "license": "Apache-2.0",
   "scripts": {
     "start": "yarn workspace ui5community.github.io-ui start"

@@ -1,14 +1,14 @@
 {
-    "name": "analyzer",
+    "name": "crawler",
     "version": "0.0.1",
     "description": "POC",
-    "main": "index.js",
+    "private": "true",
     "scripts": {
         "fetch": "ts-node src/index.ts",
         "watch": "tsc -w",
         "compile": "tsc"
     },
-    "author": "SAP SE",
+    "author": "Marian Zeis",
     "license": "Apache-2.0",
     "devDependencies": {
         "@types/glob": "^7.2.0",
