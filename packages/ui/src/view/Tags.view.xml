@@ -2,7 +2,7 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
-<List id="_IDGenList1" headerText="Tags" mode="None" items="{path: 'data>/types/'}" width="{= ${device>/system/phone} === true ? '' : '800px' }">
+<List id="_IDGenList1" headerText="Tags" mode="None" items="{path: 'data>/tags/'}" width="{= ${device>/system/phone} === true ? '' : '800px' }">
                     <ObjectListItem
                     title="{data>name}"
                     type="Inactive"

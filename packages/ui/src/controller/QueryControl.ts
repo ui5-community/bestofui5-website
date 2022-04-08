@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 export default class QueryControl {
@@ -34,27 +37,38 @@ export default class QueryControl {
       operator: FilterOperator.Contains,
       value1: value,
     });
-    let typeFilters = [];
-    for (let i = 0; i < valueTypes.length; i++) {
-      let typeFilter = new Filter({
-        path: "type",
-        operator: FilterOperator.Contains,
-        value1: valueTypes[i],
-      });
-      typeFilters.push(typeFilter);
-    }
-    const typeFilter = new Filter({
-      filters: typeFilters,
+    const tagsFilter = new Filter(
+      // currently types and tags are both in tags, may need to differ in future
+      "ui5-community/tags",
+      function (array) {
+        // check if the array contains values of another array
+        return valueTypes.some(function (value) {
+          return array.indexOf(value) > -1;
+        });
+      }.bind(this)
+    );
+    const typesFilter = new Filter(
+      // currently types and tags are both in tags, may need to differ in future
+      "ui5-community/types",
+      function (array) {
+        // check if the array contains values of another array
+        return valueTypes.some(function (value) {
+          return array.indexOf(value) > -1;
+        });
+      }.bind(this)
+    );
+    const typesTagsFilter = new Filter({
+      filters: [tagsFilter, typesFilter],
       and: false,
     });
     const searchFilter = new Filter({
       filters: [nameFilter, descFilter],
       and: false,
     });
-    if (typeFilters.length > 0) {
+    if (valueTypes.length > 0) {
       listBinding.filter(
         new Filter({
-          filters: [searchFilter, typeFilter],
+          filters: [searchFilter, typesTagsFilter],
           and: true,
         })
       );
