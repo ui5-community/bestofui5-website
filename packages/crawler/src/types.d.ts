@@ -1,16 +1,3 @@
-export interface Artifact {
-    id: string;
-    name: string;
-    description: string;
-    link: string;
-    aggregatedCount: number;
-    currentCount: number;
-    updatedAt: string;
-    createdAt?: string;
-    type: string;
-    tags: string[];
-}
-
 export interface Ranking {
     id: string;
     name: string;
@@ -45,10 +32,17 @@ export interface Package {
     githublink: string;
     npmlink: string;
     downloads: number;
+    "ui5-community": UI5Community;
 }
 
-export interface Type {
+export interface Tags {
     name: string;
+}export interface Types {
+    name: string;
+}
+export interface UI5Community {
+    types: string[];
+    tags: string[];
 }
 
 export interface Source {
@@ -63,4 +57,5 @@ export interface Source {
 export interface DataJson {
     packages: Package[];
     types: Type[];
+    tags: Tags[];
 }
