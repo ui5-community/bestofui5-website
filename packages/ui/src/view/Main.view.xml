@@ -12,7 +12,7 @@
         <content>
             <FlexBox id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Center">
                 <MultiInput startSuggestion="0" placeholder="Search for..." class="enlargeSearchfield sapUiMediumMarginTopBottom" id="multiInput" width="100%" liveChange=".liveSearch" tokenUpdate=".onUpdateToken" showValueHelp="false" value="{settings>/search}" suggestionItems="{
-                    path: 'data>/types/'
+                    path: 'data>/tags/'
                 }">
                     <core:Item key="{data>name}" text="{data>name}" />
                 <layoutData>
