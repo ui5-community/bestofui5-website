@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // import { Octokit } from "@octokit/core";
 import { Octokit } from "@octokit/rest";
 import { throttling } from "@octokit/plugin-throttling";
@@ -32,7 +34,7 @@ export default class GitHubRepositoriesProvider {
   static async get(sources: Source[]): Promise<Package[]> {
 
 
-    let packages: Package[] = [];
+    const packages: Package[] = [];
 
     
     
@@ -40,15 +42,15 @@ export default class GitHubRepositoriesProvider {
     for (const source of sources) {
       source.path = `${source.owner}/${source.repo}`;
       if (source.subpath && source.subpackages) {
-        let repoInfo = await this.getRepoInfo(source);
+        const repoInfo = await this.getRepoInfo(source);
         for (const subpackage of source.subpackages) {
-          let path: string = `${source.subpath}/${subpackage}/`;
-          let packageInfo = await this.fetchRepo(source, path, repoInfo);
+          const path = `${source.subpath}/${subpackage}/`;
+          const packageInfo = await this.fetchRepo(source, path, repoInfo);
           packages.push(packageInfo);
         }
       } else {
-        let repoInfo = await this.getRepoInfo(source);
-        let packageInfo = await this.fetchRepo(source, "", repoInfo);
+        const repoInfo = await this.getRepoInfo(source);
+        const packageInfo = await this.fetchRepo(source, "", repoInfo);
         packages.push(packageInfo);
       }
     }
@@ -57,7 +59,7 @@ export default class GitHubRepositoriesProvider {
   }
 
   static async getRepoInfo(source: Source) {
-    let packageObject: Package = {
+    const packageObject: Package = {
       name: source.repo,
       description: "",
       type: "",
@@ -72,7 +74,7 @@ export default class GitHubRepositoriesProvider {
       downloads: 0,
       npmlink: ""
     };
-    let repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
+    const repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
       owner: source.owner,
       repo: source.repo,
     });
@@ -110,11 +112,11 @@ export default class GitHubRepositoriesProvider {
         repo: source.repo,
         path: `${path}package.json`,
       });
-      let string = data.data.toString();
+      const string = data.data.toString();
       packageJson = JSON.parse(string);
       // TODO: replace with specific reference to type
       try {
-        let nameArray = packageJson.name.split("-");
+        const nameArray = packageJson.name.split("-");
         packageJson.type = nameArray[1];
       } catch (error) {}
       packageJson.license = repoInfo.license;
@@ -133,7 +135,7 @@ export default class GitHubRepositoriesProvider {
           repo: source.repo,
           path: `${path}README.md`,
         });
-        let readmeString = readme.data.toString();
+        const readmeString = readme.data.toString();
         packageJson.readme = readmeString;
       } catch (error) {
         console.log(`No README.md found for ${packageJson.githublink}`);

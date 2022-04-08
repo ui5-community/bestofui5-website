@@ -3,7 +3,6 @@ import { support } from "sap/ui/Device";
 import models from "./model/models";
 import JSONModel from "sap/ui/model/json/JSONModel";
 
-
 /**
  * @namespace org.openui5.ui5community
  */
