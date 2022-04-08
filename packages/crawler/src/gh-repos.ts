@@ -7,7 +7,7 @@ const MyOctokit = Octokit.plugin(throttling);
 
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
-import { Artifact, Package, Type, Source, DataJson } from "./types";
+import { Package, Source} from "./types";
 
 export default class GitHubRepositoriesProvider {
   static source = "github-packages";
@@ -72,7 +72,11 @@ export default class GitHubRepositoriesProvider {
       stars: 0,
       forks: 0,
       downloads: 0,
-      npmlink: ""
+      npmlink: "",
+      "ui5-community": {
+        "types": [],
+        "tags": []
+      }
     };
     const repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
       owner: source.owner,
@@ -88,7 +92,7 @@ export default class GitHubRepositoriesProvider {
   }
 
   static async fetchRepo(source: Source, path: string, repoInfo: any): Promise<Package> {
-    let packageJson: Package = {
+    let packageReturn: Package = {
       name: "",
       description: "",
       author: "",
@@ -101,7 +105,11 @@ export default class GitHubRepositoriesProvider {
       createdAt: "",
       githublink: "",
       downloads: 0,
-      npmlink: ""
+      npmlink: "",
+      "ui5-community": {
+        "types": [],
+        "tags": []
+      }
     };
     try {
       const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
@@ -113,19 +121,19 @@ export default class GitHubRepositoriesProvider {
         path: `${path}package.json`,
       });
       const string = data.data.toString();
-      packageJson = JSON.parse(string);
+      let packageJson = JSON.parse(string);
+      packageReturn = packageJson;
       // TODO: replace with specific reference to type
       try {
-        const nameArray = packageJson.name.split("-");
-        packageJson.type = nameArray[1];
+        packageReturn.type = packageJson["ui5-community"]["types"].join(',')
       } catch (error) {}
-      packageJson.license = repoInfo.license;
-      packageJson.forks = repoInfo.forks;
-      packageJson.stars = repoInfo.stars;
+      packageReturn.license = repoInfo.license;
+      packageReturn.forks = repoInfo.forks;
+      packageReturn.stars = repoInfo.stars;
       // data only from npm
       // packageJson.updatedAt = repoInfo.updatedAt;
       // packageJson.createdAt = repoInfo.createdAt;
-      packageJson.githublink = `${repoInfo.githublink}/tree/main/${path}`;
+      packageReturn.githublink = `${repoInfo.githublink}/tree/main/${path}`;
       try {
         const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
           mediaType: {
@@ -136,14 +144,14 @@ export default class GitHubRepositoriesProvider {
           path: `${path}README.md`,
         });
         const readmeString = readme.data.toString();
-        packageJson.readme = readmeString;
+        packageReturn.readme = readmeString;
       } catch (error) {
-        console.log(`No README.md found for ${packageJson.githublink}`);
+        console.log(`No README.md found for ${packageReturn.githublink}`);
       }
     } catch (error) {
       console.log(error);
     }
 
-    return packageJson;
+    return packageReturn;
   }
 }

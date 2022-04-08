@@ -3,7 +3,6 @@
     "repo" : "ui5-ecosystem-showcase",
     "subpath" : "packages",
     "subpackages": [
-        "ui5-app-module",
         "ui5-middleware-cfdestination",
         "ui5-middleware-iasync",
         "ui5-middleware-index",
