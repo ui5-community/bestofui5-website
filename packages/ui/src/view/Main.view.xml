@@ -1,0 +1,29 @@
+<mvc:View controllerName="org.openui5.ui5community.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:ui5cc="org.openui5.ui5community.control"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}" class="openui5header">
+        <subHeader>
+			<OverflowToolbar>
+                <core:Fragment id="IconTabHeaderMain" fragmentName="org.openui5.ui5community.view.IconTabHeader" type="XML"/>
+			</OverflowToolbar>
+		</subHeader>
+        <content>
+            <FlexBox id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Center">
+                <MultiInput startSuggestion="0" placeholder="Search for..." class="enlargeSearchfield sapUiMediumMarginTopBottom" id="multiInput" width="100%" liveChange=".liveSearch" tokenUpdate=".onUpdateToken" showValueHelp="false" value="{settings>/search}" suggestionItems="{
+                    path: 'data>/types/'
+                }">
+                    <core:Item key="{data>name}" text="{data>name}" />
+                <layoutData>
+                <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
+                </layoutData>
+                </MultiInput>
+            </FlexBox>
+            <FlexBox id="_IDGenFlexBox1" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Center">
+                <mvc:XMLView id="packagesView" viewName="org.openui5.ui5community.view.Packages" visible="{settings>/packagesVisible}"/>
+                <mvc:XMLView viewName="org.openui5.ui5community.view.Tags" visible="{settings>/tagsVisible}"/>
+            </FlexBox>
+        </content>
+    </Page>
+</mvc:View>

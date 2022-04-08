@@ -1,5 +1,0 @@
-templates/
-deployer/resources/
-node_modules/
-approuter/webapp/
-webapp/utils/locate-reuse-libs.js
