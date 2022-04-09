@@ -55,7 +55,6 @@ All notable changes to this project will be documented in this file.
 
 * **workflow:**  run build workflow every day at 4 UTC [#55](https://github.com/ui5-community/ui5-community.github.io/pull/55) ([5f347ce](https://github.com/ui5-community/ui5-community.github.io/commit/5f347cea4d7dd8437668f8fbffad60d16d6202de))
 
-## Crawler
 # 2022-04-03
 
 ## Frontend
