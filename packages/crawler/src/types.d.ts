@@ -29,9 +29,11 @@ export interface Package {
     stars: number;
     updatedAt: string;
     createdAt: string;
+    addedToBoUI5: string;
     githublink: string;
     npmlink: string;
-    downloads: number;
+    downloads365: number;
+    downloads30: number;
     "ui5-community": UI5Community;
 }
 
@@ -50,8 +52,13 @@ export interface Source {
     owner: string;
     repo:   string;
     subpath: string;
-    subpackages: string[];
+    addedToBoUI5: string;
+    subpackages: SubPackage[];
+}
 
+export interface SubPackage {
+    name: string;
+    addedToBoUI5: string;
 }
 
 export interface DataJson {
