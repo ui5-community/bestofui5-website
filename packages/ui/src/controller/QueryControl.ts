@@ -11,21 +11,18 @@ export default class QueryControl {
   }
 
   public liveSearch(event): void {
-    const model = this.view.getModel("settings");
-    let value = event.getParameter("value").trim();
-    let tokenArray = model.getProperty("/tokens");
-
-    this._applySearchFilter(value, tokenArray);
+    const value = event.getParameter("value").trim();
+    this.view.getModel("settings").setProperty("/search", value);
+    this.applySearchFilter();
   }
 
-  public _applySearchFilter(value, valueTypes): void {
+  public applySearchFilter(): void {
+    let value =  this.view.getModel("settings").getProperty("/search");
+    const valueTypes = this.view.getModel("settings").getProperty("/tokens");
     if (!value) {
       value = "";
     }
-    // make sure values are set in model, needed for formatter
-    this.view.getModel("settings").setProperty("/search", value);
-    this.view.getModel("settings").setProperty("/tokens", valueTypes);
-    const list = this.view.byId("packagesView").byId("_IDGenList1");
+    const list = this.view.byId("listAllPackages");
     const listBinding = list.getBinding("items");
     const nameFilter = new Filter({
       path: "name",
@@ -79,8 +76,6 @@ export default class QueryControl {
 
   public onUpdateToken(event): void {
     const model = this.view.getModel("settings");
-    let value = model.getProperty("/search");
-    value = value.trim();
     let tokenArray = model.getProperty("/tokens");
 
     let addOrRemove = event.getParameter("type");
@@ -90,6 +85,7 @@ export default class QueryControl {
       let removedToken = event.getParameter("removedTokens")[0].getProperty("key");
       tokenArray = tokenArray.filter((token) => token !== removedToken);
     }
-    this._applySearchFilter(value, tokenArray);
+    this.view.getModel("settings").setProperty("/tokens", tokenArray);
+    // this.applySearchFilter(value, tokenArray);
   }
 }

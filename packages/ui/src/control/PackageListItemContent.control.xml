@@ -12,14 +12,17 @@
         <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow"
           colorScheme="2" displayOnly="false" />
 
-        <tnt:InfoLabel id="trend-item-tag3" class="sapUiTinyMarginEnd" text=" STARS {$this>stars}" renderMode="Narrow"
+        <!-- <tnt:InfoLabel id="trend-item-tag3" class="sapUiTinyMarginEnd" text=" STARS {$this>stars}" renderMode="Narrow"
           colorScheme="5" displayOnly="false" visible="{= !!${$this>stars} }" />
 
         <tnt:InfoLabel id="trend-item-tag1" class="sapUiTinyMarginEnd" text="FORKS {$this>forks}" renderMode="Narrow"
-          colorScheme="5" displayOnly="false" visible="{= !!${$this>forks} }" />
+          colorScheme="5" displayOnly="false" visible="{= !!${$this>forks} }" /> -->
 
-        <tnt:InfoLabel id="trend-item-tag2" class="sapUiTinyMarginEnd" text="Downloads {$this>downloads}" renderMode="Narrow"
-          colorScheme="5" displayOnly="false" visible="{= ${$this>downloads} > 0 }" />
+        <tnt:InfoLabel id="downloads30" class="sapUiTinyMarginEnd" text="Downloads {$this>downloads30}" tooltip="Downloads last 30 days" renderMode="Narrow"
+          colorScheme="5" displayOnly="false" visible="{= ${$this>selectKey} === 'downloads30' }" />
+
+        <tnt:InfoLabel id="downloads365" class="sapUiTinyMarginEnd" text="Downloads {$this>downloads365}" tooltip="Downloads last 365 days" renderMode="Narrow"
+          colorScheme="5" displayOnly="false" visible="{= ${$this>selectKey} === 'downloads365'  }" />
 
         <tnt:InfoLabel id="trend-item-last-update" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="6"
           displayOnly="false" text="{= ${i18n>listItemTagUpdated}.replace('{0}', ${
