@@ -8,7 +8,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link type="image/x-icon" rel="icon" href="resources/img/favicon.png">
-	<title>UI5 Application ui5community</title>
+	<title>Best of UI5</title>
+	<script>
+        window["sap-ui-config"] = {};
+        // determine the proper theme for UI5 from current color scheme
+        window["sap-ui-config"]["theme"] = (function () {
+            try {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? "sap_horizon_dark" : "sap_horizon";
+            } catch (ex) {
+                console.warn("window.matchMedia not supported - keep default theme");
+                return "sap_horizon";
+            }
+        })();
+    </script>
 
 	<script id="sap-ui-bootstrap"
 			src="resources/sap-ui-core.js"
@@ -24,15 +36,10 @@
 			data-sap-ui-xx-waitForTheme="true"
 			data-sap-ui-xx-supportedLanguages="en">
 	</script>
-	<script>
-		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			sap.ui.getCore().applyTheme("sap_horizon_dark")
-		}
-	</script>
 
 </head>
 
 <body class="sapUiBody">
-	<div data-sap-ui-component data-name="org.openui5.ui5community"></div>
+	<div data-sap-ui-component data-name="org.openui5.ui5community" data-id="container"></div>
 </body>
 </html>
