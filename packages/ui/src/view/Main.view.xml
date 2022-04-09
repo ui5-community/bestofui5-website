@@ -6,7 +6,7 @@
     <Shell appWidthLimited="false">
         <Page id="page" title="{i18n>title}" titleAlignment="Center" class="openui5header">
             <subHeader>
-                <OverflowToolbar>
+                <OverflowToolbar class="doNotRoundMyToolBar">
                     <core:Fragment id="IconTabHeaderMain" fragmentName="org.openui5.ui5community.view.IconTabHeader" type="XML"/>
                 </OverflowToolbar>
             </subHeader>
@@ -20,7 +20,7 @@
                                 <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
                             </layoutData>
                     </MultiInput>
-                    <NavContainer width="{= ${device>/system/phone} === true ? '' : '800px' }" id="pageContainer">
+                    <NavContainer width="{= ${device>/system/phone} === true ? '' : '800px' }" id="pageContainer" class="fixOverflow">
                         <layoutData>
                             <FlexItemData minHeight="100%" minWidth="{= ${device>/system/phone} === true ? '' : '800px' }" />
                         </layoutData>
