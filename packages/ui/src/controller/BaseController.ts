@@ -86,6 +86,7 @@ export default abstract class BaseController extends Controller {
   }
 
   public onTabHeaderselect(event: sap.ui.base.Event): void {
-    IconTabHeaderControl.onTabHeaderselect(event, this);
+    // IconTabHeaderControl.onTabHeaderselect(event, this);
+    this.navTo(event.getParameter("key"));
   }
 }

@@ -7,15 +7,17 @@ import Sorter from "sap/ui/model/Sorter";
 /**
  * @namespace org.openui5.ui5community.controller
  */
-export default class Packages extends MainController {
+export default class HotPackages extends MainController {
   private formatter = formatter;
 
-  public onInit(): void {}
+  public onInit(): void {
+    console.log("HotPackages.controller.onInit");
+  }
 
   public onAfterRendering(event): void {
-    let binding = this.getView().byId("_IDGenList1").getBinding("items");
+    let binding = this.getView().byId("listHotPackages").getBinding("items");
     const oSorter = new Sorter({
-      path: "downloads",
+      path: "downloads30",
       descending: true,
     });
     binding.sort(oSorter);

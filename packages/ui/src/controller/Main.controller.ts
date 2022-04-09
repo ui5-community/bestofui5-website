@@ -13,28 +13,27 @@ export default class Main extends BaseController {
 
   public onInit(): void {
     this.queryControl = new QueryControl(this.getView());
-    this.oRouter = this.getRouter();
-    this.oRouter.getRoute("RouteMainView").attachMatched(this.onRouteMatchedMain, this);
-    this.oRouter.getRoute("RouteTagsView").attachMatched(this.onRouteMatchedTags, this);
   }
 
   public liveSearch(event): void {
-    this.queryControl.liveSearch(event);
+    let value = event.getParameter("value").trim();
+    this.getView().getModel("settings").setProperty("/search", value);
+    if (this.getRouter().getHashChanger().getHash() != "packages") {
+      this.getView().getModel("settings").setProperty("/iconTabHeaderKey", "allPackages");
+      this.navTo("allPackages");
+      
+    } else {
+      this.getView().getParent().byId("AllPackages").getController().onPatternMatched();
+    }
   }
 
   public onUpdateToken(event): void {
     this.queryControl.onUpdateToken(event);
-  }
-
-  public onRouteMatchedMain(event): void {
-    this.getOwnerComponent().getModel("settings").setProperty("/packagesVisible", true);
-    this.getOwnerComponent().getModel("settings").setProperty("/tagsVisible", false);
-    this.getRouter().getHashChanger().setHash("");
-  }
-
-  public onRouteMatchedTags(event): void {
-    this.getOwnerComponent().getModel("settings").setProperty("/packagesVisible", false);
-    this.getOwnerComponent().getModel("settings").setProperty("/tagsVisible", true);
-    this.getRouter().getHashChanger().setHash("tags");
+    if (this.getRouter().getHashChanger().getHash() != "packages") {
+      this.getView().getModel("settings").setProperty("/iconTabHeaderKey", "allPackages");
+      this.navTo("allPackages");
+    } else {
+      this.getView().getParent().byId("AllPackages").getController().onPatternMatched();
+    }
   }
 }
