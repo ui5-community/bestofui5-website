@@ -12,9 +12,9 @@ function sleep(ms: number) {
 
 // could use bulk API if needed, but no support for scoped packages
 // 2021-07-01:2021-07-31/express,generator-easy-ui5
-async function getMonthlyDownloads(packageName: string): Promise<number | null> {
+async function getDownloads(packageName: string, periode: string): Promise<number | null> {
   try {
-    const res = await axios(`https://api.npmjs.org/downloads/point/last-month/${packageName}`);
+    const res = await axios(`https://api.npmjs.org/downloads/point/${periode}/${packageName}`);
     if (res.data.package === packageName && res.data.downloads > -1) {
       return res.data.downloads;
     }
@@ -56,12 +56,10 @@ export default class NpmProvider {
 
       const { name } = source;
       try {
-        const downloads = await getMonthlyDownloads(name);
-        if (downloads > 0) {
-            source.downloads = downloads;
-        } else {
-            source.downloads = 0
-        }
+        const downloadsMonth = await getDownloads(name, 'last-month');
+        const downloadsYear = await getDownloads(name, 'last-year');
+        source.downloads30 = ( downloadsMonth > 0 ? downloadsMonth : 0 );
+        source.downloads365 = ( downloadsYear > 0 ? downloadsYear : 0 );
       } catch (error) {
         console.error(`Error fetching npm downloads for ${source.name}`);
       }

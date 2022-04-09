@@ -25,7 +25,9 @@ export default class Component extends UIComponent {
 			filter: "all",
 			tokens: [],
 			search: "",
-			selectedTab: "hot"
+			selectedTab: "hotPackagesView",
+			selectKey: "downloads365",
+			iconTabHeaderKey: "hotPackages"
 		});
 		this.setModel(settingsModel, "settings");
 
