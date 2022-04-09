@@ -26,21 +26,27 @@ import { Package, Source, Tags, Types, DataJson } from "./types";
   for (const packageContent of githubPackages) {
     
     for (const type of packageContent["ui5-community"].types) {
-      if (!typesArray.find((tag) => tag.name === type)) {
-        const tags: Tags = {
-          name: "",
+      const typeExists: Types = typesArray.find(typeObj => typeObj.name === type);
+      if (!typeExists) {
+        const typeObj: Types = {
+          name: type,
+          count: 1
         };
-        tags.name = type;
-        typesArray.push(tags);
+        typesArray.push(typeObj);
+      } else {
+        typeExists.count += 1;
       }
     }
     for (const tag of packageContent["ui5-community"].tags) {
-      if (!tagsArray.find((tagArray) => tagArray.name === tag)) {
-        const tags: Tags = {
-          name: "",
+      const tagExists: Tags = tagsArray.find(tagObj => tagObj.name === tag);
+      if (!tagExists) {
+        const tagObj: Types = {
+          name: tag,
+          count: 1
         };
-        tags.name = tag;
-        tagsArray.push(tags);
+        tagsArray.push(tagObj);
+      } else {
+        tagExists.count += 1;
       }
     }
   }

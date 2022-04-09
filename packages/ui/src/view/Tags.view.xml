@@ -1,12 +1,19 @@
 <mvc:View controllerName="org.openui5.ui5community.controller.Tags"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
-    xmlns:core="sap.ui.core">
-<List id="tagsLits" headerText="Tags" mode="None" items="{path: 'data>/tags/'}" width="{= ${device>/system/phone} === true ? '' : '800px' }">
-                    <ObjectListItem
-                    title="{data>name}"
-                    type="Inactive"
-                    press="onListItemPress">
-                </ObjectListItem>
-                </List>
+    xmlns:core="sap.ui.core"
+    xmlns:tnt="sap.tnt">
+    <List id="tagsLits" headerText="Types/Tags" mode="None" items="{path: 'data>/tags/', sorter : { path : 'count',descending: 'false' }}" width="{= ${device>/system/phone} === true ? '' : '800px' }">
+        <CustomListItem>
+            <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
+                <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
+                    <Title level="H3" text="{data>name}" />
+                    <FormattedText id="trend-desc" htmlText="{data>count} packages" />
+                    <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
+                        <!-- <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" /> -->
+                    </HBox>
+                </VBox>
+            </FlexBox>
+        </CustomListItem>
+    </List>
 </mvc:View>
