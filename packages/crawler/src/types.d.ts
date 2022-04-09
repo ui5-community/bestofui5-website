@@ -40,10 +40,9 @@ export interface Package {
 export interface Tags {
     name: string;
     count: number;
-}export interface Types {
-    name: string;
-    count: number;
+    type: string;
 }
+
 export interface UI5Community {
     types: string[];
     tags: string[];

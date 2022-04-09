@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync } from "fs";
 
 import GitHubRepositoriesProvider from "./gh-repos";
 import NPMProvider from "./npm";
-import { Package, Source, Tags, Types, DataJson } from "./types";
+import { Package, Source, Tags, DataJson } from "./types";
 
 (async () => {
   const dataJson: DataJson = {
@@ -22,15 +22,16 @@ import { Package, Source, Tags, Types, DataJson } from "./types";
 
   // extract tags from packages info
   const typesArray: Tags[] = [];
-  const tagsArray: Types[] = [];
+  const tagsArray: Tags[] = [];
   for (const packageContent of githubPackages) {
     
     for (const type of packageContent["ui5-community"].types) {
-      const typeExists: Types = typesArray.find(typeObj => typeObj.name === type);
+      const typeExists: Tags = typesArray.find(typeObj => typeObj.name === type);
       if (!typeExists) {
-        const typeObj: Types = {
+        const typeObj: Tags = {
           name: type,
-          count: 1
+          count: 1,
+          type: "type"
         };
         typesArray.push(typeObj);
       } else {
@@ -40,9 +41,10 @@ import { Package, Source, Tags, Types, DataJson } from "./types";
     for (const tag of packageContent["ui5-community"].tags) {
       const tagExists: Tags = tagsArray.find(tagObj => tagObj.name === tag);
       if (!tagExists) {
-        const tagObj: Types = {
+        const tagObj: Tags = {
           name: tag,
-          count: 1
+          count: 1,
+          type: "tag"
         };
         tagsArray.push(tagObj);
       } else {
@@ -52,9 +54,7 @@ import { Package, Source, Tags, Types, DataJson } from "./types";
   }
 
   dataJson.packages = githubPackages;
-  dataJson.types = typesArray;
-  // for now combine them
-  dataJson.tags = tagsArray.concat(typesArray);
+  dataJson.tags = typesArray.concat(tagsArray);
 
 
   writeFileSync(`${__dirname}/../../ui/src/model/data.json`, JSON.stringify(dataJson));
