@@ -10,5 +10,12 @@ import Sorter from "sap/ui/model/Sorter";
 export default class Tags extends MainController {
   private formatter = formatter;
 
-  public onInit(): void {}
+  public onInit(): void {
+    this.getRouter().getRoute("tags").attachPatternMatched(this.onPatternMatched, this);
+  }
+
+  public onPatternMatched(event): void {
+    // does not work
+    this.getView().getModel("settings").setProperty("/selectedTab", "tags");
+  }
 }

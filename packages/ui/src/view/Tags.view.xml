@@ -10,7 +10,8 @@
                     <Title level="H3" text="{data>name}" />
                     <FormattedText id="trend-desc" htmlText="{data>count} packages" />
                     <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
-                        <!-- <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" /> -->
+                        <tnt:InfoLabel id="type" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'tag' }" renderMode="Narrow" colorScheme="2" displayOnly="false" />
+                        <tnt:InfoLabel id="tag" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'type' }" renderMode="Loose" colorScheme="4" displayOnly="false" />
                     </HBox>
                 </VBox>
             </FlexBox>
