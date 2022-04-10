@@ -78,7 +78,9 @@ export default class GitHubRepositoriesProvider {
       },
       addedToBoUI5: "",
       downloads365: 0,
-      downloads30: 0
+      downloadsCurrentMonth: 0,
+      downloadsLastMonth: 0,
+      downloadsMonthlyGrowth: 0
     };
     const repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
       owner: source.owner,
@@ -113,7 +115,9 @@ export default class GitHubRepositoriesProvider {
       },
       addedToBoUI5: "",
       downloads365: 0,
-      downloads30: 0
+      downloadsCurrentMonth: 0,
+      downloadsLastMonth: 0,
+      downloadsMonthlyGrowth: 0
     };
     try {
       const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
