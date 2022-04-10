@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="expires" content="0"> 
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link type="image/x-icon" rel="icon" href="resources/img/favicon.png">
+	<title>Best of UI5</title>
+	<script>
+        window["sap-ui-config"] = {};
+        // determine the proper theme for UI5 from current color scheme
+        window["sap-ui-config"]["theme"] = (function () {
+            try {
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? "sap_horizon_dark" : "sap_horizon";
+            } catch (ex) {
+                console.warn("window.matchMedia not supported - keep default theme");
+                return "sap_horizon";
+            }
+        })();
+    </script>
+
+	<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-resourceroots='{
+				"org.openui5.ui5community": "./"
+			}'
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-async="true"
+			data-sap-ui-language="en"
+			data-sap-ui-frameOptions="trusted"
+			data-sap-ui-xx-waitForTheme="true"
+			data-sap-ui-xx-supportedLanguages="en">
+	</script>
+
+</head>
+
+<body class="sapUiBody">
+	<div data-sap-ui-component data-name="org.openui5.ui5community" data-id="container"></div>
+</body>
+</html>

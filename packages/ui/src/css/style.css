@@ -1,0 +1,8 @@
+.fixOverflow.sapMNav {
+    overflow: inherit;
+}
+
+.doNotRoundMyToolBar.sapMTB:not(.sapMTB-Info-CTX) {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}

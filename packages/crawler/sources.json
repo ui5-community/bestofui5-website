@@ -1,0 +1,92 @@
+[{
+    "owner" : "ui5-community",
+    "repo" : "ui5-ecosystem-showcase",
+    "subpath" : "packages",
+    "subpackages": [
+        {
+            "name" : "ui5-middleware-cfdestination",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-iasync",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-index",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-livecompileless",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-livereload",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-livetranspile",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-onelogin",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-servestatic",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-simpleproxy",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-stringreplacer",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-middleware-webjars",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-task-compileless",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-task-flatten-library",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-task-i18ncheck",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-task-minify-xml",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-task-pwa-enabler",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-task-stringreplacer",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-task-transpile",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-task-zipper",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        },
+        {
+            "name" : "ui5-tooling-modules",
+            "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+        }
+    ]
+},
+{
+    "owner" : "ui5-community",
+    "repo" : "ui5-cc-md",
+    "addedToBoUI5" : "2022-04-09T11:37:57.868Z"
+}]
