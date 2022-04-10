@@ -14,7 +14,7 @@
 					<core:Item key="createdAt" text="By date of creation" />
 					<core:Item key="addedToBoUI5" text="By date of addition on Best of UI5" />
 				</Select>
-                <List id="listAllPackages" headerText="Packages" mode="None" items="{path: 'data>/packages/'}" width="{= ${device>/system/phone} === true ? '' : '800px' }">
+                <List id="listAllPackages" headerText="Packages" mode="None" items="{path: 'data>/packages/'}" width="{= ${device>/system/phone} === true ? '' : '1024px' }">
                     <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
                         <ui5cc:PackageListItemContent name="{data>name}" githublink="{data>githublink}" npmlink="{data>npmlink}" description="{
                                         parts: ['data>description', 'settings>/search'],
