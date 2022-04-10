@@ -1,9 +1,9 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
   <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
 
-    <NumericContent id="trend-rank" value="{$this>rank}" valueColor="{$this>rankColor}"
-      indicator="{$this>rankIndicator}" tooltip="{$this>rankTooltip}" class="sapUiSmallMarginTop"
-      visible="{= !!${$this>rank} &amp;&amp; ${$this>showRank}}" withMargin="true" />
+    <!-- <NumericContent id="trend-rank" value="{$this>downloadsMonthlyGrowth}" valueColor="{$this>rankColor}"
+      indicator="{$this>rankIndicator}" class="sapUiSmallMarginTop" scale="%"
+      visible="{= !!${$this>downloadsMonthlyGrowth} &amp;&amp; ${$this>showRank}}" withMargin="true" /> -->
 
     <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
       <Link id="trend-title" text="{$this>name}" href="{= ${$this>npmlink} ? ${$this>npmlink} : ${$this>githublink} }" target="_blank" emphasized="true" />

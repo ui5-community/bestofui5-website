@@ -21,7 +21,7 @@
                                         formatter: '.formatter.formatHighlight'
                                       }" type="{data>type}" stars="{data>stars}" forks="{data>forks}"
                                       updatedAt="{data>updatedAt}" createdAt="{data>createdAt}" 
-                                      downloads30="{data>downloads30}" downloads365="{data>downloads365}" selectKey="{settings>/selectKey}"
+                                      downloads30="{data>downloadsLastMonth}" downloads365="{data>downloads365}" selectKey="{settings>/selectKey}"
                                       />
                     </CustomListItem>
                 </List>

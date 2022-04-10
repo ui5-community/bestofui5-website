@@ -19,15 +19,6 @@ export default class HotPackages extends MainController {
     this.getView().getModel("settings").setProperty("/search", "");
   }
 
-  public onAfterRendering(event): void {
-    let binding = this.getView().byId("listHotPackages").getBinding("items");
-    const oSorter = new Sorter({
-      path: "downloads30",
-      descending: true,
-    });
-    binding.sort(oSorter);
-  }
-
   public onPress(event): void {
     // get object name from oevent
     const objectName = event.getSource().getBindingContext("data").getObject().name;

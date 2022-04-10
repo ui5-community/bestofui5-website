@@ -26,13 +26,14 @@ export default class PackageListItemContent extends XMLComposite {
             forks: { type: "string" },
             downloads30: { type: "string" },
             downloads365: { type: "string" },
+            downloadsMonthlyGrowth: { type: "string" },
             selectKey: { type: "string" },
             createdAt: { type: "Date" },
             updatedAt: { type: "Date" },
             rank: { type: "int" },
             rankTooltip: { type: "string" },
             rankIndicator: { type: "sap.m.DeviationIndicator" },
-            showRank : {type : "boolean", defaultValue : true},
+            showRank : {type : "boolean", defaultValue : false},
             rankColor: { type: "sap.m.ValueColor" }, // this is a computed property
             typeImage: { type: "string" }, // this is a computed property
         },
