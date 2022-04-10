@@ -35,23 +35,24 @@ export default class QueryControl {
       value1: value,
     });
     const tagsFilter = new Filter(
-      // currently types and tags are both in tags, may need to differ in future
       "ui5-community/tags",
       function (array) {
-        // check if the array contains values of another array
-        return valueTypes.some(function (value) {
-          return array.indexOf(value) > -1;
-        });
+        for (const valueType of valueTypes) {
+          if(array.includes(valueType.key) && valueType.type === "tag") {
+            return true;
+          }
+        }
+        
       }.bind(this)
     );
     const typesFilter = new Filter(
-      // currently types and tags are both in tags, may need to differ in future
       "ui5-community/types",
       function (array) {
-        // check if the array contains values of another array
-        return valueTypes.some(function (value) {
-          return array.indexOf(value) > -1;
-        });
+        for (const valueType of valueTypes) {
+          if(array.includes(valueType.key) && valueType.type === "type") {
+            return true;
+          }
+        }
       }.bind(this)
     );
     const typesTagsFilter = new Filter({
@@ -80,10 +81,22 @@ export default class QueryControl {
 
     let addOrRemove = event.getParameter("type");
     if (addOrRemove === "added") {
-      tokenArray.push(event.getParameter("addedTokens")[0].getProperty("key"));
+      let keyArray = event.getParameter("addedTokens")[0].getProperty("key").split(";")
+      let tokenObject = {
+        key : keyArray[0],
+        type : keyArray[1]
+      }
+      tokenArray.push(tokenObject);
     } else if (addOrRemove === "removed") {
-      let removedToken = event.getParameter("removedTokens")[0].getProperty("key");
-      tokenArray = tokenArray.filter((token) => token !== removedToken);
+      let keyArray = event.getParameter("removedTokens")[0].getProperty("key").split(";")
+      let tokenObject = {
+        key : keyArray[0],
+        type : keyArray[1]
+      }
+      // filter token object array with key and type values
+      tokenArray = tokenArray.filter(function(obj) {
+        return obj.key !== tokenObject.key && obj.type !== tokenObject.type;
+      });
     }
     this.view.getModel("settings").setProperty("/tokens", tokenArray);
     // this.applySearchFilter(value, tokenArray);

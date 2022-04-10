@@ -16,11 +16,18 @@ All notable changes to this project will be documented in this file.
 * **views:** Searchfield will navigate always to "All Packages" [#67](https://github.com/ui5-community/ui5-community.github.io/pull/67) ([df47645](https://github.com/ui5-community/ui5-community.github.io/commit/df4764510f539e49aeea61be4d9cfea2277596f7))
 * **theme:** theme load dynamic on oss settings  [#67](https://github.com/ui5-community/ui5-community.github.io/pull/67) ([df47645](https://github.com/ui5-community/ui5-community.github.io/commit/df4764510f539e49aeea61be4d9cfea2277596f7))
 * **list:** show yearly downloads on all view  [#67](https://github.com/ui5-community/ui5-community.github.io/pull/67) ([df47645](https://github.com/ui5-community/ui5-community.github.io/commit/df4764510f539e49aeea61be4d9cfea2277596f7))
+* **tags:**  show count on tags/types and sort by count [#72](https://github.com/ui5-community/ui5-community.github.io/pull/72) ([aca4375](https://github.com/ui5-community/ui5-community.github.io/commit/aca43758f19b0ac00251df58a40552c47f9950ab))
+
+
+### Bug Fixes
+
+* **theme:** fix theme load on oss settings  [#69](https://github.com/ui5-community/ui5-community.github.io/pull/69) ([9a977ee](https://github.com/ui5-community/ui5-community.github.io/commit/9a977ee477440625ad016cc6ede19347c421b311))
 
 ## Crawler
 
 ### Features
 
+* **tags:**  add count to tags and types [#72](https://github.com/ui5-community/ui5-community.github.io/pull/72) ([aca4375](https://github.com/ui5-community/ui5-community.github.io/commit/aca43758f19b0ac00251df58a40552c47f9950ab))
 * **sources:**  add field `addedToBoUI5` to sources file for every package [#67](https://github.com/ui5-community/ui5-community.github.io/pull/67) ([409c60f](https://github.com/ui5-community/ui5-community.github.io/commit/409c60f2cc16297e9ccc5ddbcaa4061114c86de2))
 * **npm:**  added downloads last 365 days to npm crawler [#67](https://github.com/ui5-community/ui5-community.github.io/pull/67) ([409c60f](https://github.com/ui5-community/ui5-community.github.io/commit/409c60f2cc16297e9ccc5ddbcaa4061114c86de2))
 
