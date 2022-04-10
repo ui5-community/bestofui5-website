@@ -12,13 +12,21 @@
             </subHeader>
             <content>
                 <FlexBox width="100%" height="100%" id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
-                    <MultiInput startSuggestion="0" placeholder="Search for..." class="sapUiMediumMarginTopBottom" id="multiInput" width="100%" liveChange=".liveSearch" tokenUpdate=".onUpdateToken" showValueHelp="false" value="{settings>/search}" suggestionItems="{
-                    path: 'data>/tags/'
-                }">
-                        <core:Item key="{data>name}" text="{data>name}" />
-                            <layoutData>
-                                <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
-                            </layoutData>
+                    <MultiInput startSuggestion="0" placeholder="Search for..." class="sapUiMediumMarginTopBottom" id="multiInput" width="100%" liveChange=".liveSearch" tokenUpdate=".onUpdateToken" showSuggestion="true" showValueHelp="false" showTableSuggestionValueHelp="false" value="{settings>/search}" suggestionItems="{
+                    path: 'data>/tags/',
+                    sorter: {
+                        path: 'count', 
+                        descending: true
+                        }
+                    }"
+                    tokens="{settings>/tokens/}">
+                        <core:ListItem key="{data>name};{data>type}" text="{data>name}" additionalText="{data>type}" />
+                        <tokens>
+                            <Token key="{settings>key}" text="{settings>key}" />
+                        </tokens>
+                        <layoutData>
+                            <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
+                        </layoutData>
                     </MultiInput>
                     <NavContainer width="{= ${device>/system/phone} === true ? '' : '800px' }" id="pageContainer">
                         <layoutData>
@@ -26,7 +34,7 @@
                         </layoutData>
                     </NavContainer>
                 </FlexBox>
-                
+
             </content>
         </Page>
     </Shell>
