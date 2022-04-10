@@ -33,7 +33,9 @@ export interface Package {
     githublink: string;
     npmlink: string;
     downloads365: number;
-    downloads30: number;
+    downloadsCurrentMonth: number;
+    downloadsLastMonth: number;
+    downloadsMonthlyGrowth: number;
     "ui5-community": UI5Community;
 }
 

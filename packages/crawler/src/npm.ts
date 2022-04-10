@@ -3,7 +3,6 @@
 import { Package } from "./types";
 // import { getPackageManifest, searchPackages } from "query-registry";
 import axios from "axios";
-// import { getFirstDayOfMonth, getLastDayOfMonth } from "../helper";
 // import removeMarkdown from "markdown-to-text";
 
 function sleep(ms: number) {
@@ -51,15 +50,23 @@ async function getMetaData(packageName: string): Promise<any | null> {
 
 export default class NpmProvider {
   static async get(packages: Package[]): Promise<Package[]> {
+    const dates = this.getDates();
     for (const { idx, source } of packages.map((source, idx) => ({ idx, source }))) {
       await sleep(Math.floor(idx / 20) * 1000);
 
       const { name } = source;
       try {
-        const downloadsMonth = await getDownloads(name, 'last-month');
+        const downlodsPreviousMonth = await getDownloads(name, dates.lastMonth);
+        const downloadsMonth = await getDownloads(name, dates.currentMonth);
         const downloadsYear = await getDownloads(name, 'last-year');
-        source.downloads30 = ( downloadsMonth > 0 ? downloadsMonth : 0 );
+        source.downloadsCurrentMonth = ( downloadsMonth > 0 ? downloadsMonth : 0 );
+        source.downloadsLastMonth = ( downlodsPreviousMonth > 0 ? downlodsPreviousMonth : 0 );
         source.downloads365 = ( downloadsYear > 0 ? downloadsYear : 0 );
+        try {
+          source.downloadsMonthlyGrowth = Math.round((( source.downloadsCurrentMonth / source.downloadsLastMonth  * 100 ) - 100 ) * 100 ) / 100
+        } catch (error) {
+          console.log("Error calculating growth", error);
+        }
       } catch (error) {
         console.error(`Error fetching npm downloads for ${source.name}`);
       }
@@ -74,5 +81,25 @@ export default class NpmProvider {
 
     }
     return packages;
+  }
+
+  static getDates() {
+    // date minus 30 days
+    const currentMonthEnd = new Date();
+    currentMonthEnd.setDate(currentMonthEnd.getDate() - 1);
+    const currentMonthStart = new Date();
+    currentMonthStart.setDate(currentMonthStart.getDate() - 31);
+    const lastMonthEnd = new Date();
+    lastMonthEnd.setDate(lastMonthEnd.getDate() - 32);
+    const lastMonthStart = new Date();
+    lastMonthStart.setDate(lastMonthStart.getDate() - 62);
+    return {
+      currentMonth: `${this.formatDate(currentMonthStart)}:${this.formatDate(currentMonthEnd)}`,
+      lastMonth: `${this.formatDate(lastMonthStart)}:${this.formatDate(lastMonthEnd)}`
+    }
+  }
+
+  static formatDate(date: Date): string {
+    return date.getFullYear() + '-' + ('0' + (date.getMonth()+1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2)
   }
 }
