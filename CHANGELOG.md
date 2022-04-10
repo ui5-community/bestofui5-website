@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+# 2022-04-10
+
+## Frontend
+
+### Features
+
+* **tagsview:**  show type in tags view (tag, type) [#74](https://github.com/ui5-community/ui5-community.github.io/pull/74) ([c5a7171](https://github.com/ui5-community/ui5-community.github.io/commit/c5a717146ebd63aeae0f1613fe7c3a87fa2318b1))
+* **tagsview:**  filter in tags view by type [#74](https://github.com/ui5-community/ui5-community.github.io/pull/74) ([c5a7171](https://github.com/ui5-community/ui5-community.github.io/commit/c5a717146ebd63aeae0f1613fe7c3a87fa2318b1))
+* **tagsview:**  navigate from tags view to all packages and filter by tag/type [#74](https://github.com/ui5-community/ui5-community.github.io/pull/74) ([c5a7171](https://github.com/ui5-community/ui5-community.github.io/commit/c5a717146ebd63aeae0f1613fe7c3a87fa2318b1))
+* **objectview:** switch to ObjectPageLayout on Object Page [#75](https://github.com/ui5-community/ui5-community.github.io/pull/75) ([b81e14d](https://github.com/ui5-community/ui5-community.github.io/commit/b81e14d72f25c55d27c45eecb9fd64b138c27271))
+* **objectview:** add more info to Object Page [#75](https://github.com/ui5-community/ui5-community.github.io/pull/75) ([b81e14d](https://github.com/ui5-community/ui5-community.github.io/commit/b81e14d72f25c55d27c45eecb9fd64b138c27271))
+* **hotview:** sort "Hot Packages" View by npm package downloads growth [#77](https://github.com/ui5-community/ui5-community.github.io/pull/77) ([b81e14d](https://github.com/ui5-community/ui5-community.github.io/commit/b81e14d72f25c55d27c45eecb9fd64b138c27271))
+
+### Bug Fixes
+* **theme:**  fix small css error on toolbar [#70](https://github.com/ui5-community/ui5-community.github.io/pull/70) ([b1d4558](https://github.com/ui5-community/ui5-community.github.io/commit/b1d4558a085b9d1cf12d436d6b09d19a38045c62))
+
+## Crawler
+
+### Features
+
+* **crawler:**  combine tags/types into one --> seperate by additional field `type` [#74](https://github.com/ui5-community/ui5-community.github.io/pull/74) ([c5a7171](https://github.com/ui5-community/ui5-community.github.io/commit/c5a717146ebd63aeae0f1613fe7c3a87fa2318b1))
+* **npm:** get downloads of previous month [#77](https://github.com/ui5-community/ui5-community.github.io/pull/77) ([b81e14d](https://github.com/ui5-community/ui5-community.github.io/commit/b81e14d72f25c55d27c45eecb9fd64b138c27271))
+* **npm:** add calculated field of growth between current and last month [#77](https://github.com/ui5-community/ui5-community.github.io/pull/77) ([b81e14d](https://github.com/ui5-community/ui5-community.github.io/commit/b81e14d72f25c55d27c45eecb9fd64b138c27271))
+
 # 2022-04-09
 
 ## Frontend

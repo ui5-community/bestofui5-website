@@ -1,112 +1,85 @@
 # ui5community
 
-## Description
+"Best of UI5" is the new entry page for the ui5-community.  
+It will show the best of community projects, be it applications, libraries, custom controls, tooling extensions, middlewares, tasks or Easy UI5 generators.  
+Everyone can be able to register their projects at Best of UI5.  
+The projects will be ranked by various information about the projects and filterable by important criteria.  
+This should help to find you the best suited reuse project for your development needs!  
 
-This app demonstrates a TypeScript setup for developing UI5 applications.
+## Add your package
 
-**The template is inspired by the [`SAP-samples/ui5-typescript-helloworld`](https://github.com/SAP-samples/ui5-typescript-helloworld) project which also contains [a detailed step-by-step guide](https://github.com/SAP-samples/ui5-typescript-helloworld/blob/main/step-by-step.md). It explains how this setup is created and how all the bits and pieces fit together.**
+Just create a [issue with this template](https://github.com/ui5-community/ui5-community.github.io/issues/new?assignees=&labels=new%20package&template=new_package.md&title=Add%20new%20package:) with your package and just check if you meet the prerequisites
 
-| :point_up: Overview of TypeScript-related Entities |
-|:---------------------------|
-| The UI5 type definitions (`*.d.ts` files) are loaded as dev dependency from [npm](https://www.npmjs.com/package/@openui5/ts-types-esm). They are a work in progress, so while they should be working well already, we are still improving them, which might also lead to breaking changes. |
-| The file [tsconfig.json](tsconfig.json) contains the configuration for the TypeScript compilation, including a reference to the UI5 `*.d.ts` files. |
-| Normally, the UI5 JavaScript files (controllers, Component.js etc.) would reside in the `webapp` folder. Now they are in the [src](src) folder. The TypeScript compilation will create the `webapp` folder and put all output there. |
-| In addition to the TypeScript compilation, there is also a conversion from the ES6 module and class syntax used in the source files to the classic UI5 module loading and class definition syntax (`sap.ui.define(...)` and `superClass.extend(...)`). This conversion is using the [babel-plugin-transform-modules-ui5](https://github.com/r-murphy/babel-plugin-transform-modules-ui5) project from Ryan Murphy. |
-| Both, the TypeScript compilation and the ES6 syntax transformation, are executed by Babel, as configured in the file [.babelrc.json](.babelrc.json) |
-| This combined transformation is triggered by both the `build:ts` and `watch:ts` scripts in [package.json](package.json). |
+## Views
+
+### Hot Packages
+
+Overview of the most popular packages.  
+The packages are sorted by the growth of downloads in the last 30 days.
+
+### All Packages
+
+You can here search/filter/sort the packages.  
+Each packages has metadata added what type it is and what tags are associated with it.  
+Most data is coming from GitHub and NPM.
+
+### Tags
+
+Here are all types and tags list that are used in the packages.  
+If you click on a tag, you will see all the packages that have this tag.
+
+### Object View
+
+You can click on any package to get more information about it.  
+If there is a readme available, it will be displayed.
+
+# Technical
+
+## Frontend
+
+The frontend is generated with the [UI5-TS-App Generator](https://github.com/ui5-community/generator-ui5-ts-app).
+In the folder `packages/ui` is the source code in Typescript.
+
+### Build & Deployment
+
+Build is automated with GitHub Actions.  
+On every push to `main`, the [`build`](https://github.com/ui5-community/ui5-community.github.io/blob/main/.github/workflows/build.yml) workflow is triggered.  
+This will transpile typescript to javascript and will also run `ui5 build self-contained --all`.  
+The result will be moved to the new folder `docs` and force pushed to the `docs` branch.  
+From there, GitHub Pages will automatically deploy the new version to the webpage <https://ui5-community.github.io/> .
+
+## Backend
+
+We crawl data from GitHub and NPM.  
+The source code is written in typescript and in folder `packages/crawler`.
+It creates a json file which will be used as a model in the UI5 App.  
+The file is located at `packages/ui/src/model/data.json`.  
+The packages are crawled from are located in `crawler/sources.json`.
 
 ## Requirements
 
 Either [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) for dependency management.
 
-## Preparation
+## Run local
 
-Use `npm` (or `yarn`) to install the dependencies:
+git clone:
+`git clone https://github.com/ui5-community/ui5-community.github.io`
 
-```sh
-npm i
-```
+Install `yarn`:
+`> npm install yarn --global`
 
-(To use yarn, just do `yarn` instead.)
+Install all modules:
+`> yarn`
 
-## Run the App
+Run crawler to fetch current data:
+`>  yarn workspace crawler fetch`
 
-Execute the following command to run the app locally for development in watch mode (the browser reloads the app automatically when there are changes in the source code):
+Start UI5 App:
+`> yarn workspace ui start`
 
-```sh
-npm start
-```
+## Changelog
 
-As shown in the terminal after executing this command, the app is then running on http://localhost:8080/index.html. A browser window with this URL should automatically open.
-
-(When using yarn, do `yarn start` instead.)
-
-## Debug the App
-
-In the browser, you can directly debug the original TypeScript code, which is supplied via sourcemaps (need to be enabled in the browser's developer console if it does not work straight away). If the browser doesn't automatically jump to the TypeScript code when setting breakpoints, use e.g. `Ctrl`/`Cmd` + `P` in Chrome to open the `*.ts` file you want to debug.
-
-## Build the App
-
-### Unoptimized (but quick)
-
-Execute the following command to build the project and get an app that can be deployed:
-
-```sh
-npm run build
-```
-
-The result is placed into the `dist` folder. To start the generated package, just run
-
-```sh
-npm run start:dist
-```
-
-Note that `index.html` still loads the UI5 framework from the relative URL `resources/...`, which does not physically exist, but is only provided dynamically by the UI5 tooling. So for an actual deployment you should change this URL to either [the CDN](https://openui5.hana.ondemand.com/#/topic/2d3eb2f322ea4a82983c1c62a33ec4ae) or your local deployment of UI5.
-
-(When using yarn, do `yarn build` and `yarn start:dist` instead.)
-
-### Optimized
-
-For an optimized self-contained build (takes longer because the UI5 resources are built, too), do:
-
-```sh
-npm run build:opt
-```
-
-To start the generated package, again just run:
-
-```sh
-npm run start:dist
-```
-
-In this case, all UI5 framework resources are also available within the `dist` folder, so the folder can be deployed as-is to any static web server, without changing the bootstrap URL.
-
-With the self-contained build, the bootstrap URL in `index.html` has already been modified to load the newly created `sap-ui-custom.js` for bootstrapping, which contains all app resources as well as all needed UI5 JavaScript resources. Most UI5 resources inside the `dist` folder are for this reason actually **not** needed to run the app. Only the non-JS-files, like translation texts and CSS files, are used and must also be deployed. (Only when for some reason JS files are missing from the optimized self-contained bundle, they are also loaded separately.)
-
-(When using yarn, do `yarn build:opt` and `yarn start:dist` instead.)
-
-## Check the Code
-
-Do the following to run a TypeScript check:
-
-```sh
-npm run ts-typecheck
-```
-
-This checks the application code for any type errors (but will also complain in case of fundamental syntax issues which break the parsing).
-
-To lint the TypeScript code, do:
-
-```sh
-npm run lint
-```
-
-(Again, when using yarn, do `yarn ts-typecheck` and `yarn lint` instead.)
-
-## References
-
-Once you have understood the setup and want to inspect the code of a slightly more comprehensive UI5 app written in TypeScript, you can check out the [TypeScript version of the UI5 CAP Event App Sample](https://github.com/SAP-samples/ui5-cap-event-app/tree/typescript).
-
+View the [Changelog here](CHANGELOG.md)
 
 ## License
 
