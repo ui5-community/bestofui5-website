@@ -18,8 +18,12 @@
                         path: 'count', 
                         descending: true
                         }
-                    }">
+                    }"
+                    tokens="{settings>/tokens/}">
                         <core:ListItem key="{data>name};{data>type}" text="{data>name}" additionalText="{data>type}" />
+                        <tokens>
+                            <Token key="{settings>key}" text="{settings>key}" />
+                        </tokens>
                         <layoutData>
                             <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
                         </layoutData>
