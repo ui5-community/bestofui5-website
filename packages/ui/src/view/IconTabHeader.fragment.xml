@@ -2,7 +2,7 @@
    xmlns="sap.m"
    xmlns:core="sap.ui.core" >
    <ToolbarSpacer/>
-   <IconTabHeader mode="Inline" selectedKey="{settings>/iconTabHeaderKey}" select=".onTabHeaderselect">
+   <IconTabHeader id="iconTabHeader" mode="Inline" selectedKey="{settings>/iconTabHeaderKey}" select=".onTabHeaderselect">
        <items>
            <IconTabFilter key="hotPackages" text="Hot Packages" tooltip="Downloads last 30 Days" />
            <IconTabFilter key="allPackages" text="All Packages" />

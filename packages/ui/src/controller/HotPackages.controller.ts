@@ -11,7 +11,12 @@ export default class HotPackages extends MainController {
   private formatter = formatter;
 
   public onInit(): void {
-    console.log("HotPackages.controller.onInit");
+    this.getRouter().getRoute("default").attachPatternMatched(this.onPatternMatched, this);
+  }
+
+  public onPatternMatched(event): void {
+    this.getView().getModel("settings").setProperty("/tokens", []);
+    this.getView().getModel("settings").setProperty("/search", "");
   }
 
   public onAfterRendering(event): void {
