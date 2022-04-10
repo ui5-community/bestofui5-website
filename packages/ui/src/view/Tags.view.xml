@@ -10,7 +10,7 @@
             <SegmentedButtonItem text="Types" key="type" />
         </items>
     </SegmentedButton>
-    <List id="tagsLits" headerText="Types/Tags" mode="None"  items="{path: 'data>/tags/', sorter : { path : 'count',descending: 'false' }}" width="{= ${device>/system/phone} === true ? '' : '800px' }">
+    <List id="tagsLits" headerText="Types/Tags" mode="None"  items="{path: 'data>/tags/', sorter : { path : 'count',descending: 'false' }}" width="{= ${device>/system/phone} === true ? '' : '1024px' }">
         <CustomListItem type="Navigation" press="onPress" counter="{data>count}">
             <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
                 <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">

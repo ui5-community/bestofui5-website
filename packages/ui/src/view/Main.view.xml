@@ -28,9 +28,9 @@
                             <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
                         </layoutData>
                     </MultiInput>
-                    <NavContainer width="{= ${device>/system/phone} === true ? '' : '800px' }" id="pageContainer">
+                    <NavContainer width="{= ${device>/system/phone} === true ? '' : '1024px' }" id="pageContainer">
                         <layoutData>
-                            <FlexItemData minHeight="100%" minWidth="{= ${device>/system/phone} === true ? '' : '800px' }" />
+                            <FlexItemData minHeight="100%" minWidth="{= ${device>/system/phone} === true ? '' : '1024px' }" />
                         </layoutData>
                     </NavContainer>
                 </FlexBox>
