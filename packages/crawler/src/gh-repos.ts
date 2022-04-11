@@ -4,10 +4,11 @@
 import { Octokit } from "@octokit/rest";
 import { throttling } from "@octokit/plugin-throttling";
 const MyOctokit = Octokit.plugin(throttling);
+import * as jsdoc2md from "jsdoc-to-markdown";
 
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
-import { Package, Source, SubPackage} from "./types";
+import { Package, Source, SubPackage } from "./types";
 
 export default class GitHubRepositoriesProvider {
   static source = "github-packages";
@@ -32,12 +33,7 @@ export default class GitHubRepositoriesProvider {
   });
 
   static async get(sources: Source[]): Promise<Package[]> {
-
-
     const packages: Package[] = [];
-
-    
-    
 
     for (const source of sources) {
       source.path = `${source.owner}/${source.repo}`;
@@ -45,12 +41,16 @@ export default class GitHubRepositoriesProvider {
         const repoInfo = await this.getRepoInfo(source);
         for (const subpackage of source.subpackages) {
           const path = `${source.subpath}/${subpackage.name}/`;
-          const packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5);
+          let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5);
+          packageInfo = await this.fetchParams(source, path, packageInfo);
+
           packages.push(packageInfo);
         }
       } else {
         const repoInfo = await this.getRepoInfo(source);
-        const packageInfo = await this.fetchRepo(source, "", repoInfo, source.addedToBoUI5);
+        let packageInfo = await this.fetchRepo(source, "", repoInfo, source.addedToBoUI5);
+        packageInfo = await this.fetchParams(source, "", packageInfo);
+
         packages.push(packageInfo);
       }
     }
@@ -73,14 +73,14 @@ export default class GitHubRepositoriesProvider {
       forks: 0,
       npmlink: "",
       "ui5-community": {
-        "types": [],
-        "tags": []
+        types: [],
+        tags: [],
       },
       addedToBoUI5: "",
       downloads365: 0,
       downloadsCurrentMonth: 0,
       downloadsLastMonth: 0,
-      downloadsMonthlyGrowth: 0
+      downloadsMonthlyGrowth: 0,
     };
     const repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
       owner: source.owner,
@@ -95,7 +95,7 @@ export default class GitHubRepositoriesProvider {
     return packageObject;
   }
 
-  static async fetchRepo(source: Source, path: string, repoInfo: any, addedToBoUI5:string): Promise<Package> {
+  static async fetchRepo(source: Source, path: string, repoInfo: any, addedToBoUI5: string): Promise<Package> {
     let packageReturn: Package = {
       name: "",
       description: "",
@@ -110,14 +110,15 @@ export default class GitHubRepositoriesProvider {
       githublink: "",
       npmlink: "",
       "ui5-community": {
-        "types": [],
-        "tags": []
+        types: [],
+        tags: [],
       },
       addedToBoUI5: "",
       downloads365: 0,
       downloadsCurrentMonth: 0,
       downloadsLastMonth: 0,
-      downloadsMonthlyGrowth: 0
+      downloadsMonthlyGrowth: 0,
+      main: "",
     };
     try {
       const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
@@ -133,12 +134,13 @@ export default class GitHubRepositoriesProvider {
       packageReturn = packageJson;
       // TODO: replace with specific reference to type
       try {
-        packageReturn.type = packageJson["ui5-community"]["types"].join(',')
+        packageReturn.type = packageJson["ui5-community"]["types"].join(",");
       } catch (error) {}
       packageReturn.license = repoInfo.license;
       packageReturn.forks = repoInfo.forks;
       packageReturn.stars = repoInfo.stars;
       packageReturn.addedToBoUI5 = addedToBoUI5;
+
       // data only from npm
       // packageJson.updatedAt = repoInfo.updatedAt;
       // packageJson.createdAt = repoInfo.createdAt;
@@ -162,5 +164,34 @@ export default class GitHubRepositoriesProvider {
     }
 
     return packageReturn;
+  }
+
+  static async fetchParams(source: Source, path: string, packageInfo: Package): Promise<any> {
+    try {
+      const indexJs = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
+        mediaType: {
+          format: "raw",
+        },
+        owner: source.owner,
+        repo: source.repo,
+        path: `${path}${packageInfo.main}`,
+      });
+      const indexString = indexJs.data.toString();
+      const opt: jsdoc2md.JsdocOptions = {
+        source: indexString,
+      };
+      const data = jsdoc2md.getTemplateDataSync(opt);
+      const typedef: any = data.filter((x: any) => x.kind === "typedef");
+      let arr: any = [];
+      typedef[0].properties.forEach((property: any) => {
+        const obj = { ...property };
+        obj.type = obj.type.names[0];
+        arr.push(obj);
+      });
+      packageInfo.params = arr;
+      return packageInfo;
+    } catch (error) {
+      console.log(`No main defined for ${packageInfo.name}`);
+    }
   }
 }

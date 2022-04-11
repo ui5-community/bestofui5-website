@@ -23,7 +23,9 @@
         "@octokit/core": "^3.6.0",
         "@octokit/plugin-throttling": "^3.6.2",
         "@octokit/rest": "^18.12.0",
+        "@types/jsdoc-to-markdown": "^7.0.3",
         "axios": "^0.26.1",
-        "dotenv": "^16.0.0"
+        "dotenv": "^16.0.0",
+        "jsdoc-to-markdown": "^7.1.1"
     }
 }
