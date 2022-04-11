@@ -24,7 +24,7 @@ export interface Package {
   author: string;
   license: string;
   main?: string;
-  params?: any;
+  jsdoc?: any;
   type: string;
   readme: string;
   forks: number;

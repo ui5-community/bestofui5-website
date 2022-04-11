@@ -54,11 +54,10 @@ export default class NpmProvider {
     for (const { idx, source } of packages.map((source, idx) => ({ idx, source }))) {
       await sleep(Math.floor(idx / 20) * 1000);
 
-      const { name } = source;
       try {
-        const downlodsPreviousMonth = await getDownloads(name, dates.lastMonth);
-        const downloadsMonth = await getDownloads(name, dates.currentMonth);
-        const downloadsYear = await getDownloads(name, 'last-year');
+        const downlodsPreviousMonth = await getDownloads(source.name, dates.lastMonth);
+        const downloadsMonth = await getDownloads(source.name, dates.currentMonth);
+        const downloadsYear = await getDownloads(source.name, 'last-year');
         source.downloadsCurrentMonth = ( downloadsMonth > 0 ? downloadsMonth : 0 );
         source.downloadsLastMonth = ( downlodsPreviousMonth > 0 ? downlodsPreviousMonth : 0 );
         source.downloads365 = ( downloadsYear > 0 ? downloadsYear : 0 );
@@ -71,10 +70,10 @@ export default class NpmProvider {
         console.error(`Error fetching npm downloads for ${source.name}`);
       }
       try {
-        const metaData = await getMetaData(name);
+        const metaData = await getMetaData(source.name);
         source.createdAt = metaData?.data?.time?.created;
         source.updatedAt = metaData?.data?.time?.modified;
-        source.npmlink = `https://www.npmjs.com/package/${name}`;
+        source.npmlink = `https://www.npmjs.com/package/${source.name}`;
       } catch (error) {
         console.error(`Error fetching npm metadata for ${source.name}`);
       }

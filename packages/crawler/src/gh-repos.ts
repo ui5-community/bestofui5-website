@@ -5,6 +5,7 @@ import { Octokit } from "@octokit/rest";
 import { throttling } from "@octokit/plugin-throttling";
 const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
+import *  as yaml from "js-yaml";
 
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
@@ -42,14 +43,14 @@ export default class GitHubRepositoriesProvider {
         for (const subpackage of source.subpackages) {
           const path = `${source.subpath}/${subpackage.name}/`;
           let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5);
-          packageInfo = await this.fetchParams(source, path, packageInfo);
+          packageInfo["jsdoc"] = await this.getJsdoc(source, path);
 
           packages.push(packageInfo);
         }
       } else {
         const repoInfo = await this.getRepoInfo(source);
         let packageInfo = await this.fetchRepo(source, "", repoInfo, source.addedToBoUI5);
-        packageInfo = await this.fetchParams(source, "", packageInfo);
+        packageInfo["jsdoc"] = await this.getJsdoc(source, "");
 
         packages.push(packageInfo);
       }
@@ -166,7 +167,27 @@ export default class GitHubRepositoriesProvider {
     return packageReturn;
   }
 
-  static async fetchParams(source: Source, path: string, packageInfo: Package): Promise<any> {
+  static async getJsdoc(source: Source, path: string): Promise<any> {
+    let entryPath = "";
+    const yamlArray = await this.parseYaml(source, path);
+      let jsdoc:any = {};
+      for (const yaml of yamlArray) {
+        if (yaml.type === "server-middleware"){
+          yaml.type = "middleware";
+          entryPath = yaml["middleware"].path;
+        } else if (yaml.type === "task") {
+          entryPath = yaml["task"].path;
+        }
+        const returnObject = await this.fetchParams(source, path, entryPath);
+        jsdoc[yaml.type]= {};
+        jsdoc[yaml.type]["params"] = returnObject.params;
+        jsdoc[yaml.type]["markdown"] = returnObject.markdown;
+       }
+       return jsdoc;
+  }
+
+  static async parseYaml(source: Source, path: string): Promise<any[]> {
+    const yamlArray: any[] = [];
     try {
       const indexJs = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
         mediaType: {
@@ -174,24 +195,57 @@ export default class GitHubRepositoriesProvider {
         },
         owner: source.owner,
         repo: source.repo,
-        path: `${path}${packageInfo.main}`,
+        path: `${path}ui5.yaml`,
+      });
+      const indexString = indexJs.data.toString();
+      const yamlStringArray = indexString.split('---');
+      for (const yamlString of yamlStringArray) {
+        if (yamlString.length > 0) {
+          const yamlObject = yaml.load(yamlString);
+          yamlArray.push(yamlObject);
+        }
+      }
+      return yamlArray;
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  static async fetchParams(source: Source, path: string, entryPath: string): Promise<any> {
+    let returnObject: any = {
+      params: undefined,
+      markdown: ""
+    }
+    let arr: any[] = [];
+    try {
+      const indexJs = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
+        mediaType: {
+          format: "raw",
+        },
+        owner: source.owner,
+        repo: source.repo,
+        path: `${path}${entryPath}`,
       });
       const indexString = indexJs.data.toString();
       const opt: jsdoc2md.JsdocOptions = {
         source: indexString,
+        files: undefined
       };
+      const markdown = jsdoc2md.renderSync(opt);
       const data = jsdoc2md.getTemplateDataSync(opt);
       const typedef: any = data.filter((x: any) => x.kind === "typedef");
-      let arr: any = [];
+      
       typedef[0].properties.forEach((property: any) => {
         const obj = { ...property };
         obj.type = obj.type.names[0];
         arr.push(obj);
       });
-      packageInfo.params = arr;
-      return packageInfo;
+      returnObject.params = arr;
+      returnObject.markdown = markdown;
+      return returnObject;
     } catch (error) {
-      console.log(`No main defined for ${packageInfo.name}`);
+      console.log(error);
     }
   }
 }

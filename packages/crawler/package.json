@@ -26,6 +26,8 @@
         "@types/jsdoc-to-markdown": "^7.0.3",
         "axios": "^0.26.1",
         "dotenv": "^16.0.0",
+        "@types/js-yaml": "^4.0.5",
+        "js-yaml": "^4.1.0",
         "jsdoc-to-markdown": "^7.1.1"
     }
 }
