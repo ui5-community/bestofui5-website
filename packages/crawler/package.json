@@ -11,6 +11,7 @@
     "author": "Marian Zeis",
     "license": "Apache-2.0",
     "devDependencies": {
+        "@actions/core": "^1.6.0",
         "@types/glob": "^7.2.0",
         "@types/node": "^17.0.23",
         "prettier": "2.6.1",
@@ -23,10 +24,10 @@
         "@octokit/core": "^3.6.0",
         "@octokit/plugin-throttling": "^3.6.2",
         "@octokit/rest": "^18.12.0",
+        "@types/js-yaml": "^4.0.5",
         "@types/jsdoc-to-markdown": "^7.0.3",
         "axios": "^0.26.1",
         "dotenv": "^16.0.0",
-        "@types/js-yaml": "^4.0.5",
         "js-yaml": "^4.1.0",
         "jsdoc-to-markdown": "^7.1.1"
     }
