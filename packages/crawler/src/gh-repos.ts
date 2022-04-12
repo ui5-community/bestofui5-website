@@ -43,19 +43,27 @@ export default class GitHubRepositoriesProvider {
         const repoInfo = await this.getRepoInfo(source);
         for (const subpackage of source.subpackages) {
           const path = `${source.subpath}/${subpackage.name}/`;
-          const repoProm: Promise<Package> = new Promise(async (resolve, reject) => {
-            const result = await Promise.all([this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5), this.getJsdoc(source, path)]);
-            resolve(Object.assign({}, ...result));
-          });
-          packagesPromise.push(repoProm);
+          // const repoProm: Promise<Package> = new Promise(async (resolve, reject) => {
+          //   const result = await Promise.all([this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5), this.getJsdoc(source, path)]);
+          //   resolve(Object.assign({}, ...result));
+          // });
+          // packagesPromise.push(repoProm);
+          let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5);
+          packageInfo["jsdoc"] = await this.getJsdoc(source, path);
         }
       } else {
-        const repoProm: Promise<Package> = new Promise(async (resolve, reject) => {
-          const repoInfo = this.getRepoInfo(source);
-          const result = await Promise.all([this.fetchRepo(source, "", repoInfo, source.addedToBoUI5), this.getJsdoc(source, "")]);
-          resolve(Object.assign({}, ...result));
-        });
-        packagesPromise.push(repoProm);
+        // const repoProm: Promise<Package> = new Promise(async (resolve, reject) => {
+        //   const repoInfo = this.getRepoInfo(source);
+        //   const result = await Promise.all([this.fetchRepo(source, "", repoInfo, source.addedToBoUI5), this.getJsdoc(source, "")]);
+        //   resolve(Object.assign({}, ...result));
+        // });
+        // packagesPromise.push(repoProm);
+        const repoInfo = await this.getRepoInfo(source);
+
+        let packageInfo = await this.fetchRepo(source, "", repoInfo, source.addedToBoUI5);
+        packageInfo["jsdoc"] = await this.getJsdoc(source, "");
+
+        packages.push(packageInfo);
         // packages.push(packageInfo);
       }
     }
