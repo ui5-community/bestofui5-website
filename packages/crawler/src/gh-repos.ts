@@ -5,7 +5,7 @@ import { Octokit } from "@octokit/rest";
 import { throttling } from "@octokit/plugin-throttling";
 const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
-import *  as yaml from "js-yaml";
+import * as yaml from "js-yaml";
 
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
@@ -34,7 +34,8 @@ export default class GitHubRepositoriesProvider {
   });
 
   static async get(sources: Source[]): Promise<Package[]> {
-    const packages: Package[] = [];
+    const packagesPromise: Promise<Package>[] = [];
+    let packages: Package[] = [];
 
     for (const source of sources) {
       source.path = `${source.owner}/${source.repo}`;
@@ -42,20 +43,23 @@ export default class GitHubRepositoriesProvider {
         const repoInfo = await this.getRepoInfo(source);
         for (const subpackage of source.subpackages) {
           const path = `${source.subpath}/${subpackage.name}/`;
-          let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5);
-          packageInfo["jsdoc"] = await this.getJsdoc(source, path);
-
-          packages.push(packageInfo);
+          const repoProm: Promise<Package> = new Promise(async (resolve, reject) => {
+            const result = await Promise.all([this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5), this.getJsdoc(source, path)]);
+            resolve(Object.assign({}, ...result));
+          });
+          packagesPromise.push(repoProm);
         }
       } else {
-        const repoInfo = await this.getRepoInfo(source);
-        let packageInfo = await this.fetchRepo(source, "", repoInfo, source.addedToBoUI5);
-        packageInfo["jsdoc"] = await this.getJsdoc(source, "");
-
-        packages.push(packageInfo);
+        const repoProm: Promise<Package> = new Promise(async (resolve, reject) => {
+          const repoInfo = this.getRepoInfo(source);
+          const result = await Promise.all([this.fetchRepo(source, "", repoInfo, source.addedToBoUI5), this.getJsdoc(source, "")]);
+          resolve(Object.assign({}, ...result));
+        });
+        packagesPromise.push(repoProm);
+        // packages.push(packageInfo);
       }
     }
-
+    packages = await Promise.all(packagesPromise);
     return packages;
   }
 
@@ -182,10 +186,8 @@ export default class GitHubRepositoriesProvider {
       const returnObject = await this.fetchParams(source, path, entryPath);
       if (returnObject && returnObject.params && returnObject.markdown) {
         jsdoc = {};
-        jsdoc[yaml.type] = {
-          params: returnObject.params,
-          markdown: returnObject.markdown,
-        };
+        jsdoc[yaml.type]["params"] = returnObject.params;
+        jsdoc[yaml.type]["markdown"] = returnObject.markdown;
       }
     }
     return jsdoc;
@@ -203,7 +205,7 @@ export default class GitHubRepositoriesProvider {
         path: `${path}ui5.yaml`,
       });
       const indexString = indexJs.data.toString();
-      const yamlStringArray = indexString.split('---');
+      const yamlStringArray = indexString.split("---");
       for (const yamlString of yamlStringArray) {
         if (yamlString.length > 0) {
           const yamlObject = yaml.load(yamlString);
@@ -211,18 +213,21 @@ export default class GitHubRepositoriesProvider {
         }
       }
       return yamlArray;
-      
     } catch (error) {
       console.log(error);
     }
   }
 
   static async fetchParams(source: Source, path: string, entryPath: string): Promise<any> {
+    // const js2md =
     let returnObject: any = {
       params: undefined,
-      markdown: ""
-    }
+      markdown: "",
+    };
     let arr: any[] = [];
+    if (!entryPath && !path) {
+      return returnObject;
+    }
     try {
       const indexJs = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
         mediaType: {
@@ -235,20 +240,23 @@ export default class GitHubRepositoriesProvider {
       const indexString = indexJs.data.toString();
       const opt: jsdoc2md.JsdocOptions = {
         source: indexString,
-        files: undefined
+        files: undefined,
       };
-      const markdown = jsdoc2md.renderSync(opt);
-      const data = jsdoc2md.getTemplateDataSync(opt);
+
+      // await jsdoc2md.clear();
+      const markdown = await jsdoc2md.render(opt);
+      const data = await jsdoc2md.getTemplateData(opt);
       const typedef: any = data.filter((x: any) => x.kind === "typedef");
-      if(typedef.length > 0) {
-      
+      if (typedef.length === 0) {
+        return returnObject;
+      }
       typedef[0].properties.forEach((property: any) => {
         const obj = { ...property };
         obj.type = obj.type.names[0];
         arr.push(obj);
       });
       returnObject.params = arr;
-     }
+
       returnObject.markdown = markdown;
       return returnObject;
     } catch (error) {
