@@ -1,3 +1,10 @@
+enum BoUI5Types {
+  task = "task",
+  middleware = "middleware",
+  tooling = "tooling",
+  customControl = "customControl"
+}
+
 export interface Ranking {
   id: string;
   name: string;
@@ -26,6 +33,7 @@ export interface Package {
   main?: string;
   jsdoc?: any;
   type: string;
+  tags: string[];
   readme: string;
   forks: number;
   stars: number;
@@ -38,7 +46,6 @@ export interface Package {
   downloadsCurrentMonth: number;
   downloadsLastMonth: number;
   downloadsMonthlyGrowth: number;
-  "ui5-community": UI5Community;
 }
 
 export interface Tags {
@@ -47,23 +54,22 @@ export interface Tags {
   type: string;
 }
 
-export interface UI5Community {
-  types: string[];
-  tags: string[];
-}
-
 export interface Source {
   path: string;
   owner: string;
   repo: string;
-  subpath: string;
+  subpath?: string;
   addedToBoUI5: string;
-  subpackages: SubPackage[];
+  subpackages?: SubPackage[];
+  type: BoUI5Types;
+  tags: string[];
 }
 
 export interface SubPackage {
   name: string;
   addedToBoUI5: string;
+  type: BoUI5Types;
+  tags: string[];
 }
 
 export interface DataJson {
