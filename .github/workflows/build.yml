@@ -32,8 +32,6 @@ jobs:
           yarn workspace crawler fetch
       - run: |
           yarn workspace ui build
-          with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Commit/Push build to docs branch
         run: |
           git config --global user.name 'marianfoo'
