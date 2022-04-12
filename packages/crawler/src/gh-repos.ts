@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // import { Octokit } from "@octokit/core";
 import { Octokit } from "@octokit/rest";
 import { throttling } from "@octokit/plugin-throttling";
@@ -40,14 +38,14 @@ export default class GitHubRepositoriesProvider {
         const repoInfo = await this.getRepoInfo(source);
         for (const subpackage of source.subpackages) {
           const path = `${source.subpath}/${subpackage.name}/`;
-          let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
+          const packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
           packageInfo["jsdoc"] = await this.getJsdoc(source, path);
 
           packages.push(packageInfo);
         }
       } else {
         const repoInfo = await this.getRepoInfo(source);
-        let packageInfo = await this.fetchRepo(source, "", repoInfo, source);
+        const packageInfo = await this.fetchRepo(source, "", repoInfo, source);
         packageInfo["jsdoc"] = await this.getJsdoc(source, "");
 
         packages.push(packageInfo);
@@ -123,7 +121,7 @@ export default class GitHubRepositoriesProvider {
         path: `${path}package.json`,
       });
       const string = data.data.toString();
-      let packageJson = JSON.parse(string);
+      const packageJson = JSON.parse(string);
       packageReturn = packageJson;
       packageReturn.type = sourcePackage.type;
       packageReturn.tags = sourcePackage.tags;
@@ -208,11 +206,11 @@ export default class GitHubRepositoriesProvider {
   }
 
   static async fetchParams(source: Source, path: string, entryPath: string): Promise<any> {
-    let returnObject: any = {
+    const returnObject: any = {
       params: undefined,
       markdown: "",
     };
-    let arr: any[] = [];
+    const arr: any[] = [];
 
     try {
       const indexJs = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({

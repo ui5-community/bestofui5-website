@@ -3,6 +3,11 @@ import { support } from "sap/ui/Device";
 import models from "./model/models";
 import JSONModel from "sap/ui/model/json/JSONModel";
 
+// import additional dependencies to bundle them properly
+import "sap/ui/core/ComponentSupport";
+import "sap/ui/core/date/Gregorian";
+import "sap/ui/model/type/Date";
+
 /**
  * @namespace org.openui5.ui5community
  */

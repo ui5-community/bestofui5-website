@@ -1,5 +1,6 @@
 import BaseController from "./BaseController";
 import History from "sap/ui/core/History";
+import UI5Event from "sap/ui/base/Event";
 
 /**
  * @namespace org.openui5.ui5community.controller
@@ -9,12 +10,12 @@ export default class Main extends BaseController {
     this.getRouter().getRoute("RouteObjectView").attachPatternMatched(this.onPatternMatched, this);
   }
 
-  public onPatternMatched(event): void {
+  public onPatternMatched(event: UI5Event): void {
     const objectName = event.getParameter("arguments").name;
-    let model = this.getModel("data");
-    let data = model.getData();
+    const model = this.getModel("data");
+    const data = model.getData();
     // find object index in data
-    let objectIndex = data.packages.findIndex((object) => object.name === objectName);
+    const objectIndex = data.packages.findIndex((object) => object.name === objectName);
     if (!objectIndex) {
       //object not found
       // return
@@ -25,8 +26,8 @@ export default class Main extends BaseController {
     });
   }
 
-  public onNavBack(event): void {
-    var sPreviousHash = History.getInstance().getPreviousHash();
+  public onNavBack(event: UI5Event): void {
+    const sPreviousHash = History.getInstance().getPreviousHash();
 
     if (sPreviousHash !== undefined) {
       history.go(-1);
