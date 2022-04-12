@@ -6,7 +6,6 @@ import { throttling } from "@octokit/plugin-throttling";
 const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
 import * as yaml from "js-yaml";
-import * as core from "@actions/core";
 
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
@@ -16,7 +15,7 @@ export default class GitHubRepositoriesProvider {
   static source = "github-packages";
 
   static octokit = new MyOctokit({
-    auth: this.getToken(),
+    auth: process.env.GITHUB_TOKEN,
     throttle: {
       onRateLimit: (retryAfter: any, options: any) => {
         GitHubRepositoriesProvider.octokit.log.warn(`Request quota exhausted for request ${options.method} ${options.url}`);
@@ -34,9 +33,6 @@ export default class GitHubRepositoriesProvider {
     },
   });
 
-  static getToken(): string {
-    return process.env.GITHUB_TOKEN || core.getInput("repo-token");
-  }
   static async get(sources: Source[]): Promise<Package[]> {
     const packagesPromise: Promise<Package>[] = [];
     let packages: Package[] = [];
