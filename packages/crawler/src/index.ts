@@ -25,11 +25,10 @@ import { Package, Source, Tags, DataJson } from "./types";
   const tagsArray: Tags[] = [];
   for (const packageContent of githubPackages) {
     
-    for (const type of packageContent["ui5-community"].types) {
-      const typeExists: Tags = typesArray.find(typeObj => typeObj.name === type);
+      const typeExists: Tags = typesArray.find(typeObj => typeObj.name === packageContent.type);
       if (!typeExists) {
         const typeObj: Tags = {
-          name: type,
+          name: packageContent.type,
           count: 1,
           type: "type"
         };
@@ -37,8 +36,7 @@ import { Package, Source, Tags, DataJson } from "./types";
       } else {
         typeExists.count += 1;
       }
-    }
-    for (const tag of packageContent["ui5-community"].tags) {
+    for (const tag of packageContent.tags) {
       const tagExists: Tags = tagsArray.find(tagObj => tagObj.name === tag);
       if (!tagExists) {
         const tagObj: Tags = {
