@@ -5,7 +5,7 @@ type: application
 resources:
   configuration:
     paths:
-      webapp: dist
+      webapp: ../../docs
 framework:
   name: OpenUI5
   version: "1.100.0"

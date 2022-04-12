@@ -6,8 +6,8 @@ import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import Router from "sap/ui/core/routing/Router";
 import History from "sap/ui/core/routing/History";
+import UI5Event from "sap/ui/base/Event";
 import formatter from "../model/formatter";
-import IconTabHeaderControl from "./IconTabHeaderControl";
 
 /**
  * @namespace org.openui5.ui5community.controller
@@ -76,7 +76,7 @@ export default abstract class BaseController extends Controller {
    * It there is a history entry we go one step back in the browser history
    * If not, it will replace the current entry of the browser history with the master route.
    */
-  public onNavBack(): void {
+  public onNavBack(event: UI5Event): void {
     const sPreviousHash = History.getInstance().getPreviousHash();
     if (sPreviousHash !== undefined) {
       window.history.go(-1);
@@ -85,8 +85,7 @@ export default abstract class BaseController extends Controller {
     }
   }
 
-  public onTabHeaderselect(event: sap.ui.base.Event): void {
-    // IconTabHeaderControl.onTabHeaderselect(event, this);
+  public onTabHeaderselect(event: UI5Event): void {
     this.navTo(event.getParameter("key"));
   }
 }

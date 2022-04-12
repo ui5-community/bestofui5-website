@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-floating-promises */
 // require("dotenv").config();
 import { readFileSync, writeFileSync } from "fs";
 

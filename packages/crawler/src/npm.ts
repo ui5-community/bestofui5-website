@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-floating-promises */
 import { Package } from "./types";
 // import { getPackageManifest, searchPackages } from "query-registry";
 import axios from "axios";

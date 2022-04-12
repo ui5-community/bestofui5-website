@@ -54,13 +54,13 @@ export default class CustomControlXML extends Control {
   };
 
   _loadFragmentControls = function (): any[] {
-    var vFragment = null;
+    let vFragment = null;
 
-    var sFragmentContent = this.getFragmentContent();
+    const sFragmentContent = this.getFragmentContent();
     if (sFragmentContent) {
 
         // load fragment content
-        var oFragmentConfig = {
+        const oFragmentConfig = {
             sId: this.getId(),
             fragmentContent: sFragmentContent
         };
@@ -73,7 +73,7 @@ export default class CustomControlXML extends Control {
     }
 
     // ensure array
-    var aFragmentControls = Array.isArray(vFragment) ? vFragment : [vFragment];
+    const aFragmentControls = Array.isArray(vFragment) ? vFragment : [vFragment];
 
     return aFragmentControls;
   };
