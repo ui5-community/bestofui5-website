@@ -22,7 +22,7 @@ export default class GitHubRepositoriesProvider {
 
         // Retry four times after hitting a rate limit error, then give up
         if (options.request.retryCount <= 4) {
-          // console.log(`Retrying after ${retryAfter} seconds!`);
+          console.log(`Retrying after ${retryAfter} seconds!`);
           return true;
         }
       },
@@ -170,20 +170,25 @@ export default class GitHubRepositoriesProvider {
   static async getJsdoc(source: Source, path: string): Promise<any> {
     let entryPath = "";
     const yamlArray = await this.parseYaml(source, path);
-      let jsdoc:any = {};
-      for (const yaml of yamlArray) {
-        if (yaml.type === "server-middleware"){
-          yaml.type = "middleware";
-          entryPath = yaml["middleware"].path;
-        } else if (yaml.type === "task") {
-          entryPath = yaml["task"].path;
-        }
-        const returnObject = await this.fetchParams(source, path, entryPath);
-        jsdoc[yaml.type]= {};
-        jsdoc[yaml.type]["params"] = returnObject.params;
-        jsdoc[yaml.type]["markdown"] = returnObject.markdown;
-       }
-       return jsdoc;
+    let jsdoc: any = {};
+    for (const yaml of yamlArray) {
+      if (yaml.type === "server-middleware") {
+        yaml.type = "middleware";
+        entryPath = yaml["middleware"].path;
+      } else if (yaml.type === "task") {
+        entryPath = yaml["task"].path;
+      }
+
+      const returnObject = await this.fetchParams(source, path, entryPath);
+      if (returnObject && returnObject.params && returnObject.markdown) {
+        jsdoc = {};
+        jsdoc[yaml.type] = {
+          params: returnObject.params,
+          markdown: returnObject.markdown,
+        };
+      }
+    }
+    return jsdoc;
   }
 
   static async parseYaml(source: Source, path: string): Promise<any[]> {
@@ -235,6 +240,7 @@ export default class GitHubRepositoriesProvider {
       const markdown = jsdoc2md.renderSync(opt);
       const data = jsdoc2md.getTemplateDataSync(opt);
       const typedef: any = data.filter((x: any) => x.kind === "typedef");
+      if(typedef.length > 0) {
       
       typedef[0].properties.forEach((property: any) => {
         const obj = { ...property };
@@ -242,6 +248,7 @@ export default class GitHubRepositoriesProvider {
         arr.push(obj);
       });
       returnObject.params = arr;
+     }
       returnObject.markdown = markdown;
       return returnObject;
     } catch (error) {
