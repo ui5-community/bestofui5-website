@@ -5,7 +5,7 @@ import { Octokit } from "@octokit/rest";
 import { throttling } from "@octokit/plugin-throttling";
 const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
-import *  as yaml from "js-yaml";
+import * as yaml from "js-yaml";
 
 import axios from "axios";
 import { readFileSync, writeFileSync } from "fs";
@@ -177,6 +177,8 @@ export default class GitHubRepositoriesProvider {
         entryPath = yaml["middleware"].path;
       } else if (yaml.type === "task") {
         entryPath = yaml["task"].path;
+      } else {
+        continue;
       }
 
       const returnObject = await this.fetchParams(source, path, entryPath);
@@ -203,7 +205,7 @@ export default class GitHubRepositoriesProvider {
         path: `${path}ui5.yaml`,
       });
       const indexString = indexJs.data.toString();
-      const yamlStringArray = indexString.split('---');
+      const yamlStringArray = indexString.split("---");
       for (const yamlString of yamlStringArray) {
         if (yamlString.length > 0) {
           const yamlObject = yaml.load(yamlString);
@@ -211,7 +213,6 @@ export default class GitHubRepositoriesProvider {
         }
       }
       return yamlArray;
-      
     } catch (error) {
       console.log(error);
     }
@@ -220,9 +221,10 @@ export default class GitHubRepositoriesProvider {
   static async fetchParams(source: Source, path: string, entryPath: string): Promise<any> {
     let returnObject: any = {
       params: undefined,
-      markdown: ""
-    }
+      markdown: "",
+    };
     let arr: any[] = [];
+
     try {
       const indexJs = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
         mediaType: {
@@ -235,20 +237,19 @@ export default class GitHubRepositoriesProvider {
       const indexString = indexJs.data.toString();
       const opt: jsdoc2md.JsdocOptions = {
         source: indexString,
-        files: undefined
+        files: undefined,
       };
-      const markdown = jsdoc2md.renderSync(opt);
-      const data = jsdoc2md.getTemplateDataSync(opt);
+      const markdown = await jsdoc2md.render(opt);
+      const data = await jsdoc2md.getTemplateData(opt);
       const typedef: any = data.filter((x: any) => x.kind === "typedef");
-      if(typedef.length > 0) {
-      
-      typedef[0].properties.forEach((property: any) => {
-        const obj = { ...property };
-        obj.type = obj.type.names[0];
-        arr.push(obj);
-      });
-      returnObject.params = arr;
-     }
+      if (typedef.length > 0) {
+        typedef[0].properties.forEach((property: any) => {
+          const obj = { ...property };
+          obj.type = obj.type.names[0];
+          arr.push(obj);
+        });
+        returnObject.params = arr;
+      }
       returnObject.markdown = markdown;
       return returnObject;
     } catch (error) {
