@@ -190,8 +190,10 @@ export default class GitHubRepositoriesProvider {
       const returnObject = await this.fetchParams(source, path, entryPath);
       if (returnObject && returnObject.params && returnObject.markdown) {
         jsdoc = {};
-        jsdoc[yaml.type]["params"] = returnObject.params;
-        jsdoc[yaml.type]["markdown"] = returnObject.markdown;
+        jsdoc[yaml.type] = {
+          params: returnObject.params,
+          markdown: returnObject.markdown,
+        };
       }
     }
     return jsdoc;
