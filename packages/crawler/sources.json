@@ -93,5 +93,10 @@
 {
     "owner" : "js-soft",
     "repo" : "wdi5",
-    "addedToBoUI5" : "2022-04-12T00:00:00.007Z"
+    "addedToBoUI5" : "2022-04-12T00:00:00.007Z",
+    "type" : "module",
+    "tags" : [
+        "testing",
+        "wdi5"
+    ]
 }]
