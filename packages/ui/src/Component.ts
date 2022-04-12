@@ -52,6 +52,13 @@ export default class Component extends UIComponent {
 	}
 
 	/**
+	 * Remove the Splash screen after the application has been loaded!
+	 */
+	public onAfterRendering(): void {
+		document.body.classList.remove("splash");
+	}
+
+	/**
 	 * This method can be called to determine whether the sapUiSizeCompact or sapUiSizeCozy
 	 * design mode class should be set, which influences the size appearance of some controls.
 	 *

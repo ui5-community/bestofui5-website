@@ -9,6 +9,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link type="image/x-icon" rel="icon" href="resources/img/favicon.png" />
 		<title>Best of UI5</title>
+
+		<style>
+			html, body {
+				height: 100%;
+			}
+			body.splash {
+				display: inline-block;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			@media (prefers-color-scheme: dark) {
+				body.splash {
+					background-image: url('img/B_UI5_V.svg');
+				}
+			}
+			@media (prefers-color-scheme: light) {
+				body.splash {
+					background-image: url('img/O_UI5_V.svg');
+				}
+			}
+			body.splash > div {
+				visibility: hidden;
+			}
+		</style>
+
 		<script>
 			window["sap-ui-config"] = {};
 			// determine the proper theme for UI5 from current color scheme
@@ -39,11 +65,11 @@
 				"sap_horizon" : "https://openui5.hana.ondemand.com/1.101.0/resources/",
 				"sap_horizon_dark" : "https://openui5.hana.ondemand.com/1.101.0/resources/"
 			}'
-			
+
 		></script>
 	</head>
 
-	<body class="sapUiBody">
+	<body class="sapUiBody splash">
 		<div data-sap-ui-component data-name="org.openui5.bestofui5" data-id="container"></div>
 	</body>
 </html>
