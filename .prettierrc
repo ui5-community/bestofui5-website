@@ -1,8 +1,18 @@
 {
     "singleQuote": false,
-    "bracketSpacing": true,
     "printWidth": 200,
-    "endOfLine": "auto",
-    "tabWidth": 2,
-    "xmlWhitespaceSensitivity": "ignore"
+    "endOfLine": "lf",
+    "tabWidth": 4,
+    "useTabs": true,
+    "xmlWhitespaceSensitivity": "ignore",
+    "editorconfig": false,
+    "overrides": [
+      {
+        "files": ["*.yaml", "*.yml", "*.json", "*.md"],
+        "options": {
+          "useTabs": false,
+          "tabWidth": 2
+        }
+      }
+  ]
 }
