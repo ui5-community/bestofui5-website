@@ -33,7 +33,7 @@
   },
 
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "rootView": {
       "viewName": "org.openui5.ui5community.view.Main",
       "type": "XML",
