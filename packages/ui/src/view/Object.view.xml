@@ -5,8 +5,10 @@
 	xmlns:md="cc.md"
 	xmlns="sap.uxap"
 	xmlns:layout="sap.ui.layout"
-	xmlns:tnt="sap.tnt">
-	<ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+	xmlns:tnt="sap.tnt"
+	displayBlock="true" height="100%">
+	<m:FlexBox width="100%" height="100%" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
+	<ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="true" useIconTabBar="true" height="100%" >
 		<headerTitle>
 			<ObjectPageHeader id="headerForTest"
 							  objectTitle="{data>name}"
@@ -100,4 +102,5 @@
 			</ObjectPageSection> -->
 		</sections>
 	</ObjectPageLayout>
+</m:FlexBox>
 </mvc:View>
