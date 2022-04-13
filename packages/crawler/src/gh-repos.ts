@@ -41,15 +41,25 @@ export default class GitHubRepositoriesProvider {
         for (const subpackage of source.subpackages) {
           const path = `${source.subpath}/${subpackage.name}/`;
           let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
-          packageInfo["jsdoc"] = await this.getJsdoc(source, path);
-
+          if (source.type === "task" || source.type === "middleware" || source.type === "tooling") {
+            try {
+              packageInfo["jsdoc"] = await this.getJsdoc(source, path);
+            } catch (error) {
+              console.log(`Error while fetching jsdoc for ${source.path}`);
+            }
+          }
           packages.push(packageInfo);
         }
       } else {
         const repoInfo = await this.getRepoInfo(source);
         let packageInfo = await this.fetchRepo(source, "", repoInfo, source);
-        packageInfo["jsdoc"] = await this.getJsdoc(source, "");
-
+        if (source.type === "task" || source.type === "middleware" || source.type === "tooling") {
+          try {
+            packageInfo["jsdoc"] = await this.getJsdoc(source, "");
+          } catch (error) {
+            console.log(`Error while fetching jsdoc for ${source.path}`);
+          }
+        }
         packages.push(packageInfo);
       }
     }
