@@ -7,9 +7,7 @@ const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
 import * as yaml from "js-yaml";
 
-import axios from "axios";
-import { readFileSync, writeFileSync } from "fs";
-import { Package, Source, SubPackage } from "./types";
+import { Package, Source, } from "./types";
 
 export default class GitHubRepositoriesProvider {
   static source = "github-packages";
@@ -42,14 +40,14 @@ export default class GitHubRepositoriesProvider {
         const repoInfo = await this.getRepoInfo(source);
         for (const subpackage of source.subpackages) {
           const path = `${source.subpath}/${subpackage.name}/`;
-          let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage.addedToBoUI5);
+          let packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
           packageInfo["jsdoc"] = await this.getJsdoc(source, path);
 
           packages.push(packageInfo);
         }
       } else {
         const repoInfo = await this.getRepoInfo(source);
-        let packageInfo = await this.fetchRepo(source, "", repoInfo, source.addedToBoUI5);
+        let packageInfo = await this.fetchRepo(source, "", repoInfo, source);
         packageInfo["jsdoc"] = await this.getJsdoc(source, "");
 
         packages.push(packageInfo);
@@ -73,15 +71,12 @@ export default class GitHubRepositoriesProvider {
       stars: 0,
       forks: 0,
       npmlink: "",
-      "ui5-community": {
-        types: [],
-        tags: [],
-      },
       addedToBoUI5: "",
       downloads365: 0,
       downloadsCurrentMonth: 0,
       downloadsLastMonth: 0,
       downloadsMonthlyGrowth: 0,
+      tags: []
     };
     const repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
       owner: source.owner,
@@ -96,7 +91,7 @@ export default class GitHubRepositoriesProvider {
     return packageObject;
   }
 
-  static async fetchRepo(source: Source, path: string, repoInfo: any, addedToBoUI5: string): Promise<Package> {
+  static async fetchRepo(source: Source, path: string, repoInfo: any, sourcePackage: any): Promise<Package> {
     let packageReturn: Package = {
       name: "",
       description: "",
@@ -110,16 +105,13 @@ export default class GitHubRepositoriesProvider {
       createdAt: "",
       githublink: "",
       npmlink: "",
-      "ui5-community": {
-        types: [],
-        tags: [],
-      },
       addedToBoUI5: "",
       downloads365: 0,
       downloadsCurrentMonth: 0,
       downloadsLastMonth: 0,
       downloadsMonthlyGrowth: 0,
       main: "",
+      tags: []
     };
     try {
       const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
@@ -133,18 +125,15 @@ export default class GitHubRepositoriesProvider {
       const string = data.data.toString();
       let packageJson = JSON.parse(string);
       packageReturn = packageJson;
-      // TODO: replace with specific reference to type
-      try {
-        packageReturn.type = packageJson["ui5-community"]["types"].join(",");
-      } catch (error) {}
+      packageReturn.type = sourcePackage.type;
+      packageReturn.tags = sourcePackage.tags;
       packageReturn.license = repoInfo.license;
       packageReturn.forks = repoInfo.forks;
       packageReturn.stars = repoInfo.stars;
-      packageReturn.addedToBoUI5 = addedToBoUI5;
+      packageReturn.addedToBoUI5 = sourcePackage.addedToBoUI5;
 
       // data only from npm
-      // packageJson.updatedAt = repoInfo.updatedAt;
-      // packageJson.createdAt = repoInfo.createdAt;
+
       packageReturn.githublink = `${repoInfo.githublink}/tree/main/${path}`;
       try {
         const readme = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
