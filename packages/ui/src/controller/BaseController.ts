@@ -60,7 +60,7 @@ export default abstract class BaseController extends Controller {
           this.getView().getModel(sName).attachRequestCompleted(() => {
             resolve(this.getModel(sName));
           });
-        }
+        })
 
     }
 
