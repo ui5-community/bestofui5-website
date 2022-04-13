@@ -48,18 +48,31 @@ export default abstract class BaseController extends Controller {
 	public getModel(sName?: string): Model {
 		return this.getView().getModel(sName);
 	}
+    /**
+   * Convenience method for getting the view model by name in every controller of the application.
+   * @param [sName] The model name
+   * @returns The model instance
+   */
+     public getModelAwait(sName?: string): Promise<Model> {
+       // wrap in promise
+        return new Promise((resolve, reject) => {
+          this.getView().getModel(sName).attachRequestCompleted(() => {
+            resolve(this.getModel(sName));
+          });
+        })
 
-	/**
-	 * Convenience method for setting the view model in every controller of the application.
-	 * @param oModel The model instance
-	 * @param [sName] The model name
-	 * @returns The current base controller instance
-	 */
-	public setModel(oModel: Model, sName?: string): BaseController {
-		this.getView().setModel(oModel, sName);
-		return this;
-	}
+    }
 
+  /**
+   * Convenience method for setting the view model in every controller of the application.
+   * @param oModel The model instance
+   * @param [sName] The model name
+   * @returns The current base controller instance
+   */
+  public setModel(oModel: Model, sName?: string): BaseController {
+    this.getView().setModel(oModel, sName);
+    return this;
+  }
 	/**
 	 * Convenience method for triggering the navigation to a specific target.
 	 * @public
