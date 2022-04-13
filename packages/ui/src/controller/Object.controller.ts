@@ -9,12 +9,12 @@ export default class Main extends BaseController {
     this.getRouter().getRoute("RouteObjectView").attachPatternMatched(this.onPatternMatched, this);
   }
 
-  public onPatternMatched(event): void {
+  public async onPatternMatched(event): Promise<void> {
     const objectName = event.getParameter("arguments").name;
-    let model = this.getModel("data");
-    let data = model.getData();
+    const model = await this.getModelAwait("data");
+    const data = model.getData();
     // find object index in data
-    let objectIndex = data.packages.findIndex((object) => object.name === objectName);
+    const objectIndex = data.packages.findIndex((object) => object.name === objectName);
     if (!objectIndex) {
       //object not found
       // return
