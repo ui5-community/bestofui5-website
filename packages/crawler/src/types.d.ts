@@ -2,7 +2,9 @@ enum BoUI5Types {
   task = "task",
   middleware = "middleware",
   tooling = "tooling",
-  customControl = "customControl"
+  customControl = "customControl",
+  module = "module",
+  generator = "generator"
 }
 
 export interface Ranking {
