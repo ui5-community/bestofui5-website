@@ -49,6 +49,21 @@ export default abstract class BaseController extends Controller {
     return this.getView().getModel(sName);
   }
 
+    /**
+   * Convenience method for getting the view model by name in every controller of the application.
+   * @param [sName] The model name
+   * @returns The model instance
+   */
+     public getModelAwait(sName?: string): Promise<Model> {
+       // wrap in promise
+        return new Promise((resolve, reject) => {
+          this.getView().getModel(sName).attachRequestCompleted(() => {
+            resolve(this.getModel(sName));
+          });
+        }
+
+    }
+
   /**
    * Convenience method for setting the view model in every controller of the application.
    * @param oModel The model instance
