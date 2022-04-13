@@ -1,60 +1,69 @@
-<mvc:View
-  controllerName="org.openui5.ui5community.controller.Object"
-  xmlns:m="sap.m"
-  xmlns:mvc="sap.ui.core.mvc"
-  xmlns:form="sap.ui.layout.form"
-  xmlns:md="cc.md"
-  xmlns="sap.uxap"
-  xmlns:layout="sap.ui.layout"
-  xmlns:tnt="sap.tnt"
->
-  <ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
-    <headerTitle>
-      <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" titleSelectorTooltip="Custom Tooltip" />
-    </headerTitle>
-    <headerContent>
-      <layout:VerticalLayout>
-        <m:ObjectStatus title="Author" text="{data>author}" />
-        <m:ObjectStatus title="License" text="{data>license}" />
-        <m:Link text="GitHub" href="{data>githublink}" />
-        <m:Link text="NPM" href="{data>npmlink}" />
-      </layout:VerticalLayout>
-      <layout:VerticalLayout>
-        <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" />
-        <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloads30}" renderMode="Loose" colorScheme="5" />
-        <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" />
-      </layout:VerticalLayout>
-      <layout:VerticalLayout>
-        <m:ObjectStatus title="Created At" text="{
+<mvc:View controllerName="org.openui5.ui5community.controller.Object"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:md="cc.md"
+	xmlns="sap.uxap"
+	xmlns:layout="sap.ui.layout"
+	xmlns:tnt="sap.tnt"
+	displayBlock="true" height="100%">
+	<m:FlexBox width="100%" height="100%" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
+	<ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="true" useIconTabBar="true" height="100%" >
+		<headerTitle>
+			<ObjectPageHeader id="headerForTest"
+							  objectTitle="{data>name}"
+							  objectSubtitle="{data>description}"
+							  titleSelectorTooltip="Custom Tooltip">
+			</ObjectPageHeader>
+		</headerTitle>
+		<headerContent>
+			<layout:VerticalLayout>
+				<m:ObjectStatus title="Author" text="{data>author}"/>
+				<m:ObjectStatus title="License" text="{data>license}"/>
+				<m:Link text="GitHub" href="{data>githublink}"/>
+				<m:Link text="NPM" href="{data>npmlink}"/>
+			</layout:VerticalLayout>
+			<layout:VerticalLayout>
+				<tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose"
+					colorScheme="5" />
+					<tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloads30}" renderMode="Loose"
+						colorScheme="5" />
+					<tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose"
+					colorScheme="3" />
+			</layout:VerticalLayout>
+			<layout:VerticalLayout>
+				<m:ObjectStatus title="Created At" text="{
 					path: 'data>createdAt',
 					type: 'sap.ui.model.type.DateTime',
 					formatOptions: {
 						source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
 						pattern: 'dd.MM.yyyy'
 					}
-				}" />
-        <m:ObjectStatus title="Last update" text="{
+				}"/>
+				<m:ObjectStatus title="Last update" text="{
 					path: 'data>updatedAt',
 					type: 'sap.ui.model.type.DateTime',
 					formatOptions: {
 						source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
 						pattern: 'dd.MM.yyyy'
 					}
-				}" />
-      </layout:VerticalLayout>
-    </headerContent>
-    <sections>
-      <ObjectPageSection titleUppercase="true" title="README">
-        <subSections>
-          <ObjectPageSubSection titleUppercase="false">
-            <blocks>
-              <md:Markdown id="test" content="{data>readme}" />
-            </blocks>
-          </ObjectPageSubSection>
-        </subSections>
-      </ObjectPageSection>
+				}"/>
+			</layout:VerticalLayout>
 
-      <!-- <ObjectPageSection titleUppercase="false" title="Dependencies">
+		</headerContent>
+		<sections>
+
+			<ObjectPageSection titleUppercase="true" title="README">
+				<subSections>
+					<ObjectPageSubSection titleUppercase="false">
+						<blocks>
+							<md:Markdown id="test" content="{data>readme}" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<!-- <ObjectPageSection titleUppercase="false" title="Dependencies">
 				<subSections>
 					<ObjectPageSubSection titleUppercase="false">
 						<blocks>
@@ -91,6 +100,7 @@
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection> -->
-    </sections>
-  </ObjectPageLayout>
+		</sections>
+	</ObjectPageLayout>
+</m:FlexBox>
 </mvc:View>
