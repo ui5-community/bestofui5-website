@@ -2,7 +2,7 @@ name: build
 
 on:
   schedule:
-    - cron: '0 4 * * *' # runs every day at 4 UTC
+    - cron: "0 4 * * *" # runs every day at 4 UTC
   push:
     branches: [main]
   workflow_dispatch:
@@ -12,7 +12,6 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,7 +19,7 @@ jobs:
       - name: Use Node.js LTS (16.x)
         uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "16"
       - name: install yarn
         run: |
           npm install yarn --global
@@ -38,5 +37,5 @@ jobs:
           git config --global user.email '13335743+marianfoo@users.noreply.github.com'
           git add docs -f
           git add packages/ui/src/model/data.json
-          git commit -m "build"
+          git commit -m "chore: build"
           git push origin HEAD:docs --force
