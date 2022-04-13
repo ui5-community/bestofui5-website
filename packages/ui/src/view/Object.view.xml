@@ -19,8 +19,8 @@
         <layout:VerticalLayout>
           <m:ObjectStatus title="Author" text="{data>author}" />
           <m:ObjectStatus title="License" text="{data>license}" />
-          <m:Link text="GitHub" href="{data>githublink}" />
-          <m:Link text="NPM" href="{data>npmlink}" />
+          <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
+          <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
         </layout:VerticalLayout>
         <layout:VerticalLayout>
           <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" />
