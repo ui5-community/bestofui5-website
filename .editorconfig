@@ -1,8 +1,27 @@
+# EditorConfig helps developers define and maintain consistent
+# coding styles between different editors and IDEs
+# editorconfig.org
+
 root = true
 
 [*]
-indent_style = space
-indent_size = 2
+# We recommend you to keep these unchanged
+end_of_line = lf
 charset = utf-8
-# editorconfig-tools is unable to ignore longs strings or urls
-max_line_length = off
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# Change these settings to your own preference
+indent_style = tab
+
+[*.md]
+trim_trailing_whitespace = false
+indent_style = space
+
+[*.json]
+indent_size = 2
+indent_style = space
+
+[ui5*.yaml]
+indent_size = 2
+indent_style = space

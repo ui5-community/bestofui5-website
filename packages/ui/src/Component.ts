@@ -3,18 +3,25 @@ import { support } from "sap/ui/Device";
 import models from "./model/models";
 import JSONModel from "sap/ui/model/json/JSONModel";
 
+// import additional dependencies to bundle them properly
+import "sap/ui/core/ComponentSupport";
+import "sap/ui/core/date/Gregorian";
+import "sap/ui/model/type/Date";
+
 /**
  * @namespace org.openui5.ui5community
  */
 export default class Component extends UIComponent {
-
 	public static metadata = {
-		manifest: "json"
+		manifest: "json",
+		// marker to identify async content creation
+		// makes async: true for rootView obsolete!
+		interfaces: ["sap.ui.core.IAsyncContentCreation"],
 	};
 
-	private contentDensityClass : string;
+	private contentDensityClass: string;
 
-	public init() : void {
+	public init(): void {
 		// call the base component's init function
 		super.init();
 
@@ -28,7 +35,7 @@ export default class Component extends UIComponent {
 			selectedTab: "hotPackagesView",
 			selectKey: "downloads365",
 			iconTabHeaderKey: "hotPackages",
-			tagFilter: "tag"
+			tagFilter: "tag",
 		});
 		this.setModel(settingsModel, "settings");
 
@@ -43,12 +50,13 @@ export default class Component extends UIComponent {
 	 * @public
 	 * @return {string} css class, either 'sapUiSizeCompact' or 'sapUiSizeCozy' - or an empty string if no css class should be set
 	 */
-	public getContentDensityClass() : string {
+	public getContentDensityClass(): string {
 		if (this.contentDensityClass === undefined) {
 			// check whether FLP has already set the content density class; do nothing in this case
 			if (document.body.classList.contains("sapUiSizeCozy") || document.body.classList.contains("sapUiSizeCompact")) {
 				this.contentDensityClass = "";
-			} else if (!support.touch) { // apply "compact" mode if touch is not supported
+			} else if (!support.touch) {
+				// apply "compact" mode if touch is not supported
 				this.contentDensityClass = "sapUiSizeCompact";
 			} else {
 				// "cozy" in case of touch support; default for most sap.m controls, but needed for desktop-first controls like sap.ui.table.Table
@@ -57,5 +65,4 @@ export default class Component extends UIComponent {
 		}
 		return this.contentDensityClass;
 	}
-
 }
