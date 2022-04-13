@@ -35,7 +35,7 @@ export default class QueryControl {
 			value1: value,
 		});
 		const tagsFilter = new Filter(
-			"ui5-community/tags",
+			"tags",
 			function (array) {
 				for (const valueType of valueTypes) {
 					if (array.includes(valueType.key) && valueType.type === "tag") {
@@ -44,18 +44,21 @@ export default class QueryControl {
 				}
 			}.bind(this)
 		);
-		const typesFilter = new Filter(
-			"ui5-community/types",
-			function (array) {
-				for (const valueType of valueTypes) {
-					if (array.includes(valueType.key) && valueType.type === "type") {
-						return true;
-					}
-				}
-			}.bind(this)
-		);
+		const typeFilters = [];
+		for (let i = 0; i < valueTypes.length; i++) {
+			const typeFilter = new Filter({
+				path: "type",
+				operator: FilterOperator.Contains,
+				value1: valueTypes[i].key,
+			});
+			typeFilters.push(typeFilter);
+		}
+		const typeFilter = new Filter({
+			filters: typeFilters,
+			and: false,
+		});
 		const typesTagsFilter = new Filter({
-			filters: [tagsFilter, typesFilter],
+			filters: [tagsFilter, typeFilter],
 			and: false,
 		});
 		const searchFilter = new Filter({
