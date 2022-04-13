@@ -1,6 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
   <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
-
     <!-- <NumericContent id="trend-rank" value="{$this>downloadsMonthlyGrowth}" valueColor="{$this>rankColor}"
       indicator="{$this>rankIndicator}" class="sapUiSmallMarginTop" scale="%"
       visible="{= !!${$this>downloadsMonthlyGrowth} &amp;&amp; ${$this>showRank}}" withMargin="true" /> -->
@@ -9,8 +8,7 @@
       <Link id="trend-title" text="{$this>name}" href="{= ${$this>npmlink} ? ${$this>npmlink} : ${$this>githublink} }" target="_blank" emphasized="true" />
       <FormattedText id="trend-desc" htmlText="{$this>description}" />
       <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
-        <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow"
-          colorScheme="2" displayOnly="false" />
+        <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" />
 
         <!-- <tnt:InfoLabel id="trend-item-tag3" class="sapUiTinyMarginEnd" text=" STARS {$this>stars}" renderMode="Narrow"
           colorScheme="5" displayOnly="false" visible="{= !!${$this>stars} }" />
@@ -18,14 +16,35 @@
         <tnt:InfoLabel id="trend-item-tag1" class="sapUiTinyMarginEnd" text="FORKS {$this>forks}" renderMode="Narrow"
           colorScheme="5" displayOnly="false" visible="{= !!${$this>forks} }" /> -->
 
-        <tnt:InfoLabel id="downloads30" class="sapUiTinyMarginEnd" text="Downloads {$this>downloads30}" tooltip="Downloads last 30 days" renderMode="Narrow"
-          colorScheme="5" displayOnly="false" visible="{= ${$this>selectKey} === 'downloads30' }" />
+        <tnt:InfoLabel
+          id="downloads30"
+          class="sapUiTinyMarginEnd"
+          text="Downloads {$this>downloads30}"
+          tooltip="Downloads last 30 days"
+          renderMode="Narrow"
+          colorScheme="5"
+          displayOnly="false"
+          visible="{= ${$this>selectKey} === 'downloads30' }"
+        />
 
-        <tnt:InfoLabel id="downloads365" class="sapUiTinyMarginEnd" text="Downloads {$this>downloads365}" tooltip="Downloads last 365 days" renderMode="Narrow"
-          colorScheme="5" displayOnly="false" visible="{= ${$this>selectKey} === 'downloads365'  }" />
+        <tnt:InfoLabel
+          id="downloads365"
+          class="sapUiTinyMarginEnd"
+          text="Downloads {$this>downloads365}"
+          tooltip="Downloads last 365 days"
+          renderMode="Narrow"
+          colorScheme="5"
+          displayOnly="false"
+          visible="{= ${$this>selectKey} === 'downloads365'  }"
+        />
 
-        <tnt:InfoLabel id="trend-item-last-update" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="6"
-          displayOnly="false" text="{= ${i18n>listItemTagUpdated}.replace('{0}', ${
+        <tnt:InfoLabel
+          id="trend-item-last-update"
+          class="sapUiTinyMarginEnd"
+          renderMode="Narrow"
+          colorScheme="6"
+          displayOnly="false"
+          text="{= ${i18n>listItemTagUpdated}.replace('{0}', ${
                     path: '$this>updatedAt',
                     type: 'sap.ui.model.type.Date', 
                     formatOptions: { 
@@ -36,10 +55,17 @@
                       relativeScale: 'auto',
                       relativeStyle: 'wide'
                     } 
-                  }) }" visible="{= !!${$this>updatedAt} }"/>
+                  }) }"
+          visible="{= !!${$this>updatedAt} }"
+        />
 
-        <tnt:InfoLabel id="trend-item-created" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="6"
-          displayOnly="false" text="{= ${i18n>listItemTagCreated}.replace('{0}', ${
+        <tnt:InfoLabel
+          id="trend-item-created"
+          class="sapUiTinyMarginEnd"
+          renderMode="Narrow"
+          colorScheme="6"
+          displayOnly="false"
+          text="{= ${i18n>listItemTagCreated}.replace('{0}', ${
                     path: '$this>createdAt',
                     type:'sap.ui.model.type.Date', 
                     formatOptions: { 
@@ -50,7 +76,9 @@
                       relativeScale: 'auto',
                       relativeStyle: 'wide'
                     } 
-                  }) }" visible="{= !!${$this>createdAt} }" />
+                  }) }"
+          visible="{= !!${$this>createdAt} }"
+        />
       </HBox>
     </VBox>
 

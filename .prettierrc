@@ -6,10 +6,11 @@
 	"useTabs": true,
 	"overrides": [
 		{
-			"files": ["*.yaml", "*.yml", "*.json", "*.md"],
+			"files": ["*.yaml", "*.md", "*.json", "*.xml"],
 			"options": {
 				"useTabs": false,
-				"tabWidth": 2
+				"tabWidth": 2,
+				"xmlWhitespaceSensitivity": "ignore"
 			}
 		}
 	]

@@ -1,41 +1,56 @@
-<mvc:View controllerName="org.openui5.ui5community.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m"
-    xmlns:ui5cc="org.openui5.ui5community.control"
-    xmlns:core="sap.ui.core">
-    <Shell appWidthLimited="false">
-        <Page id="page" title="{i18n>title}" titleAlignment="Center" class="openui5header">
-            <subHeader>
-                <OverflowToolbar class="doNotRoundMyToolBar">
-                    <core:Fragment id="IconTabHeaderMain" fragmentName="org.openui5.ui5community.view.IconTabHeader" type="XML"/>
-                </OverflowToolbar>
-            </subHeader>
-            <content>
-                <FlexBox width="100%" height="100%" id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
-                    <MultiInput startSuggestion="0" placeholder="Search for..." class="sapUiMediumMarginTopBottom" id="multiInput" width="100%" liveChange=".liveSearch" tokenUpdate=".onUpdateToken" showSuggestion="true" showValueHelp="false" showTableSuggestionValueHelp="false" value="{settings>/search}" suggestionItems="{
+<mvc:View
+  controllerName="org.openui5.ui5community.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:ui5cc="org.openui5.ui5community.control"
+  xmlns:core="sap.ui.core"
+>
+  <Shell appWidthLimited="false">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center" class="openui5header">
+      <subHeader>
+        <OverflowToolbar class="doNotRoundMyToolBar">
+          <core:Fragment id="IconTabHeaderMain" fragmentName="org.openui5.ui5community.view.IconTabHeader" type="XML" />
+        </OverflowToolbar>
+      </subHeader>
+      <content>
+        <FlexBox width="100%" height="100%" id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
+          <MultiInput
+            startSuggestion="0"
+            placeholder="Search for..."
+            class="sapUiMediumMarginTopBottom"
+            id="multiInput"
+            width="100%"
+            liveChange=".liveSearch"
+            tokenUpdate=".onUpdateToken"
+            showSuggestion="true"
+            showValueHelp="false"
+            showTableSuggestionValueHelp="false"
+            value="{settings>/search}"
+            suggestionItems="{
                     path: 'data>/tags/',
                     sorter: {
-                        path: 'count', 
+                        path: 'count',
                         descending: true
                         }
                     }"
-                    tokens="{settings>/tokens/}">
-                        <core:ListItem key="{data>name};{data>type}" text="{data>name}" additionalText="{data>type}" />
-                        <tokens>
-                            <Token key="{settings>key}" text="{settings>key}" />
-                        </tokens>
-                        <layoutData>
-                            <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
-                        </layoutData>
-                    </MultiInput>
-                    <NavContainer width="{= ${device>/system/phone} === true ? '' : '1024px' }" id="pageContainer" class="fixOverflow">
-                        <layoutData>
-                            <FlexItemData minHeight="100%" minWidth="{= ${device>/system/phone} === true ? '' : '1024px' }" />
-                        </layoutData>
-                    </NavContainer>
-                </FlexBox>
-
-            </content>
-        </Page>
-    </Shell>
+            tokens="{settings>/tokens/}"
+          >
+            <core:ListItem key="{data>name};{data>type}" text="{data>name}" additionalText="{data>type}" />
+            <tokens>
+              <Token key="{settings>key}" text="{settings>key}" />
+            </tokens>
+            <layoutData>
+              <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
+            </layoutData>
+          </MultiInput>
+          <NavContainer width="{= ${device>/system/phone} === true ? '' : '1024px' }" id="pageContainer" class="fixOverflow">
+            <layoutData>
+              <FlexItemData minHeight="100%" minWidth="{= ${device>/system/phone} === true ? '' : '1024px' }" />
+            </layoutData>
+          </NavContainer>
+        </FlexBox>
+      </content>
+    </Page>
+  </Shell>
 </mvc:View>
