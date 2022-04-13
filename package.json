@@ -24,8 +24,8 @@
     "lint:commit": "commitlint -e",
     "lint:crawler": "yarn workspace crawler lint",
     "lint:ui": "yarn workspace ui lint",
-    "husky:pre-commit": "pretty-quick --staged",
-    "husky:pre-push": "npm-run-all --sequential lint:ui lint:crawler lint:commit"
+    "hooks:pre-commit": "pretty-quick --staged",
+    "hooks:pre-push": "npm-run-all --sequential lint:ui lint:crawler lint:commit"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",

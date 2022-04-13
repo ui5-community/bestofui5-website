@@ -22,6 +22,6 @@ indent_style = space
 indent_size = 2
 indent_style = space
 
-[{ui5.yaml}]
+[ui5*.yaml]
 indent_size = 2
 indent_style = space
