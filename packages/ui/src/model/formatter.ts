@@ -6,7 +6,7 @@ export default {
 	 * @param {string} value value to be formatted
 	 * @returns {string} formatted currency value with 2 digits
 	 */
-	formatValue: (value:string) => {
+	formatValue: (value: string) => {
 		if (!value) {
 			return "";
 		}
@@ -32,9 +32,7 @@ export default {
 	},
 
 	formatPastRankTooltip: function (pastRank) {
-		const resourceBundle = this.getView()
-			.getModel("i18n")
-			.getResourceBundle();
+		const resourceBundle = this.getView().getModel("i18n").getResourceBundle();
 		if (isNaN(pastRank)) {
 			return resourceBundle.getText("noPrevListing");
 		}
@@ -46,14 +44,17 @@ export default {
 	},
 
 	containsNpmPackages: function (allItem) {
-		return allItem && allItem.some(function (item) {
-			return item.type === "npm-package";
-		});
+		return (
+			allItem &&
+			allItem.some(function (item) {
+				return item.type === "npm-package";
+			})
+		);
 	},
 
 	formatHighlight: function (string, highlight) {
-		if(!string){
-			return ""
+		if (!string) {
+			return "";
 		}
 		if (!highlight) {
 			return string;
@@ -67,20 +68,29 @@ export default {
 	},
 
 	containsDockerImages: function (allItem) {
-		return allItem && allItem.some(function (item) {
-			return item.type === "docker-image";
-		});
+		return (
+			allItem &&
+			allItem.some(function (item) {
+				return item.type === "docker-image";
+			})
+		);
 	},
 
 	containsPypiPackages: function (allItem) {
-		return allItem && allItem.some(function (item) {
-			return item.type === "pypi-package";
-		});
+		return (
+			allItem &&
+			allItem.some(function (item) {
+				return item.type === "pypi-package";
+			})
+		);
 	},
 
 	containsCodeRepositories: function (allItem) {
-		return allItem && allItem.some(function (item) {
-			return item.type === "code-repository";
-		});
-	}
-}
+		return (
+			allItem &&
+			allItem.some(function (item) {
+				return item.type === "code-repository";
+			})
+		);
+	},
+};

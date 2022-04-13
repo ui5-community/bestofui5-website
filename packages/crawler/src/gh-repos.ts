@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 // import { Octokit } from "@octokit/core";
 import { Octokit } from "@octokit/rest";
 import { throttling } from "@octokit/plugin-throttling";
@@ -7,7 +5,7 @@ const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
 import * as yaml from "js-yaml";
 
-import { Package, Source, } from "./types";
+import { Package, Source } from "./types";
 
 export default class GitHubRepositoriesProvider {
   static source = "github-packages";
