@@ -63,7 +63,7 @@ Either [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) for depende
 ## Run local
 
 git clone:
-`git clone https://github.com/ui5-community/ui5-community.github.io`
+`> git clone https://github.com/ui5-community/ui5-community.github.io`
 
 Install `yarn`:
 `> npm install yarn --global`
@@ -71,8 +71,10 @@ Install `yarn`:
 Install all modules:
 `> yarn`
 
-Run crawler to fetch current data:
+Run crawler to fetch current data (optional):
 `>  yarn workspace crawler fetch`
+
+You might want to set your GITHUB_TOKEN as a enviroment variable to avoid hitting rate limits.
 
 Start UI5 App:
 `> yarn workspace ui start`
