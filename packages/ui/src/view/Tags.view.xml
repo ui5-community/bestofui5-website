@@ -1,26 +1,22 @@
-<mvc:View controllerName="org.openui5.ui5community.controller.Tags"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m"
-    xmlns:core="sap.ui.core"
-    xmlns:tnt="sap.tnt">
-    <SegmentedButton selectedKey="kids" selectionChange=".onSelectionChange" width="100%">
-        <items>
-            <SegmentedButtonItem text="All" key="all" />
-            <SegmentedButtonItem text="Tags" key="tag" />
-            <SegmentedButtonItem text="Types" key="type" />
-        </items>
-    </SegmentedButton>
-    <List id="tagsLits" headerText="Types/Tags" mode="None"  items="{path: 'data>/tags/', sorter : { path : 'count',descending: 'false' }}" width="{= ${device>/system/phone} === true ? '' : '1024px' }">
-        <CustomListItem type="Navigation" press="onPress" counter="{data>count}">
-            <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
-                <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
-                    <Title level="H3" text="{data>name}" />
-                    <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
-                        <tnt:InfoLabel id="type" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'tag' }" renderMode="Narrow" colorScheme="2" displayOnly="false" />
-                        <tnt:InfoLabel id="tag" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'type' }" renderMode="Loose" colorScheme="4" displayOnly="false" />
-                    </HBox>
-                </VBox>
-            </FlexBox>
-        </CustomListItem>
-    </List>
+<mvc:View controllerName="org.openui5.ui5community.controller.Tags" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+  <SegmentedButton selectedKey="kids" selectionChange=".onSelectionChange" width="100%">
+    <items>
+      <SegmentedButtonItem text="All" key="all" />
+      <SegmentedButtonItem text="Tags" key="tag" />
+      <SegmentedButtonItem text="Types" key="type" />
+    </items>
+  </SegmentedButton>
+  <List id="tagsLits" headerText="Types/Tags" mode="None" items="{path: 'data>/tags/', sorter : { path : 'count',descending: 'false' }}" width="{= ${device>/system/phone} === true ? '' : '1024px' }">
+    <CustomListItem type="Navigation" press="onPress" counter="{data>count}">
+      <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
+        <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
+          <Title level="H3" text="{data>name}" />
+          <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
+            <tnt:InfoLabel id="type" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'tag' }" renderMode="Narrow" colorScheme="2" displayOnly="false" />
+            <tnt:InfoLabel id="tag" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'type' }" renderMode="Loose" colorScheme="4" displayOnly="false" />
+          </HBox>
+        </VBox>
+      </FlexBox>
+    </CustomListItem>
+  </List>
 </mvc:View>
