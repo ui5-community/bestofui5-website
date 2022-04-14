@@ -51,6 +51,12 @@ export default class NpmProvider {
 		const dates = this.getDates();
 		for (const { idx, source } of packages.map((source, idx) => ({ idx, source }))) {
 			await sleep(Math.floor(idx / 20) * 1000);
+			if (source.type === "generator") {
+				source.downloadsCurrentMonth = -1;
+				source.downloadsLastMonth = -1;
+				source.downloads365 = -1;
+				continue;
+			}
 
 			try {
 				const downlodsPreviousMonth = await getDownloads(source.name, dates.lastMonth);
@@ -66,6 +72,7 @@ export default class NpmProvider {
 				}
 			} catch (error) {
 				console.error(`Error fetching npm downloads for ${source.name}`);
+				continue;
 			}
 			try {
 				const metaData = await getMetaData(source.name);

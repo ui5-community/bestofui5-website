@@ -130,7 +130,7 @@
     "owner": "ui5-community",
     "repo": "ui5-cc-md",
     "addedToBoUI5": "2022-04-09T11:37:57.868Z",
-    "type": "tooling",
+    "type": "customControl",
     "tags": ["markdown"]
   },
   {
@@ -139,5 +139,54 @@
     "addedToBoUI5": "2022-04-12T00:00:00.007Z",
     "type": "module",
     "tags": ["testing", "wdi5"]
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-project",
+    "addedToBoUI5": "2022-04-14T00:00:00.007Z",
+    "type": "generator",
+    "tags": ["project"]
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-ts-app",
+    "addedToBoUI5": "2022-04-14T00:00:00.007Z",
+    "type": "generator",
+    "tags": ["typescript"]
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "create-easy-ui5",
+    "addedToBoUI5": "2022-04-14T00:00:00.007Z",
+    "type": "module",
+    "tags": ["generator"]
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-ts-app-fcl",
+    "addedToBoUI5": "2022-04-14T00:00:00.007Z",
+    "type": "generator",
+    "tags": ["typescript"]
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-flp-plugin",
+    "addedToBoUI5": "2022-04-14T00:00:00.007Z",
+    "type": "generator",
+    "tags": ["flp"]
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-library",
+    "addedToBoUI5": "2022-04-14T00:00:00.007Z",
+    "type": "generator",
+    "tags": ["library"]
+  },
+  {
+    "owner": "ui5-community",
+    "repo": "generator-ui5-control",
+    "addedToBoUI5": "2022-04-14T00:00:00.007Z",
+    "type": "generator",
+    "tags": ["control"]
   }
 ]

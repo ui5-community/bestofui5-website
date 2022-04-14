@@ -24,7 +24,7 @@
           renderMode="Narrow"
           colorScheme="5"
           displayOnly="false"
-          visible="{= ${$this>selectKey} === 'downloads30' }"
+          visible="{= ${$this>downloads30} >= 0}"
         />
 
         <tnt:InfoLabel
@@ -35,7 +35,7 @@
           renderMode="Narrow"
           colorScheme="5"
           displayOnly="false"
-          visible="{= ${$this>selectKey} === 'downloads365'  }"
+          visible="{= ${$this>downloads365} >= 0 }"
         />
 
         <tnt:InfoLabel
