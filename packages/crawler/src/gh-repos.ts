@@ -85,6 +85,8 @@ export default class GitHubRepositoriesProvider {
 			downloadsLastMonth: 0,
 			downloadsMonthlyGrowth: 0,
 			tags: [],
+			gitHubOwner: "",
+			gitHubRepo: "",
 		};
 		const repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
 			owner: source.owner,
@@ -120,6 +122,8 @@ export default class GitHubRepositoriesProvider {
 			downloadsMonthlyGrowth: 0,
 			main: "",
 			tags: [],
+			gitHubOwner: "",
+			gitHubRepo: "",
 		};
 		try {
 			const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
@@ -135,6 +139,8 @@ export default class GitHubRepositoriesProvider {
 			packageReturn = packageJson;
 			packageReturn.type = sourcePackage.type;
 			packageReturn.tags = sourcePackage.tags;
+			packageReturn.gitHubOwner = source.owner;
+			packageReturn.gitHubRepo = source.repo;
 			packageReturn.license = repoInfo.license;
 			packageReturn.forks = repoInfo.forks;
 			packageReturn.stars = repoInfo.stars;

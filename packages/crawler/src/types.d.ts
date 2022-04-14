@@ -48,6 +48,8 @@ export interface Package {
 	downloadsCurrentMonth: number;
 	downloadsLastMonth: number;
 	downloadsMonthlyGrowth: number;
+	gitHubOwner: string;
+	gitHubRepo: string;
 }
 
 export interface Tags {
