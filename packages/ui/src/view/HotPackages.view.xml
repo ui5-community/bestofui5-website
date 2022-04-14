@@ -10,7 +10,11 @@
     id="listHotPackages"
     headerText="Packages"
     mode="None"
-    items="{path: 'data>/packages/', sorter : { path : 'downloadsMonthlyGrowth',descending: 'false' }}"
+    items="{path: 'data>/packages/', sorter : { path : 'downloadsMonthlyGrowth',descending: 'false' },
+        filters : [
+            { path : 'type', operator : 'NE', value1 : 'generator'}
+        ]
+  }"
     width="{= ${device>/system/phone} === true ? '' : '1024px' }"
   >
     <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">

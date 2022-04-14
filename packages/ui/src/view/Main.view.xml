@@ -46,7 +46,7 @@
           </MultiInput>
           <NavContainer width="{= ${device>/system/phone} === true ? '' : '1024px' }" id="pageContainer" class="fixOverflow">
             <layoutData>
-              <FlexItemData minHeight="100%" minWidth="{= ${device>/system/phone} === true ? '' : '1024px' }" />
+              <FlexItemData minHeight="100%" maxWidth="{= ${device>/system/phone} === true ? '' : '1024px' }" />
             </layoutData>
           </NavContainer>
         </FlexBox>
