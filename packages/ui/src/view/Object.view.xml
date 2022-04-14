@@ -10,8 +10,14 @@
   displayBlock="true"
   height="100%"
 >
-  <m:FlexBox width="100%" height="100%" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
-    <ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="true" useIconTabBar="true" height="100%">
+  <m:FlexBox
+    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+    height="100%"
+    direction="Column"
+    alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }"
+    justifyContent="Start"
+  >
+    <ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="true" useIconTabBar="true" height="100%" class="fixImageWidth">
       <headerTitle>
         <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" titleSelectorTooltip="Custom Tooltip" />
       </headerTitle>
@@ -23,9 +29,9 @@
           <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
         </layout:VerticalLayout>
         <layout:VerticalLayout>
-          <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" />
-          <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloads30}" renderMode="Loose" colorScheme="5" />
-          <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" />
+          <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
+          <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloads30}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads30} >= 0}" />
+          <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
         </layout:VerticalLayout>
         <layout:VerticalLayout>
           <m:ObjectStatus title="Created At" text="{

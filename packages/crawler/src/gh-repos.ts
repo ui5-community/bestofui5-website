@@ -145,8 +145,8 @@ export default class GitHubRepositoriesProvider {
 			packageReturn.forks = repoInfo.forks;
 			packageReturn.stars = repoInfo.stars;
 			packageReturn.addedToBoUI5 = sourcePackage.addedToBoUI5;
-
-			// data only from npm
+			packageReturn.createdAt = repoInfo.createdAt;
+			packageReturn.updatedAt = repoInfo.updatedAt;
 
 			packageReturn.githublink = `${repoInfo.githublink}/tree/main/${path}`;
 			try {
