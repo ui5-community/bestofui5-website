@@ -9,3 +9,8 @@
 .fixImageWidth.sapUxAPObjectPageLayout img {
 	max-width: 100%;
 }
+
+.sapUxAPObjectPageSection .sapUxAPObjectPageSectionContainer .sapUxAPObjectPageSubSection .sapUxAPBlockContainer {
+	margin-left: 0rem !important;
+	margin-right: 0rem !important;
+}
