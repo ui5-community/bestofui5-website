@@ -4983,11 +4983,6 @@ markdown-it@^12.3.2:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
-marked@^2.0.0:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-2.1.3.tgz#bd017cef6431724fd4b27e0657f5ceb14bff3753"
-  integrity sha512-/Q+7MGzaETqifOMWYEA7HVMaZb4XbcRfaOzcSsHZEith83KGlvaSG33u0SKu89Mj5h+T8V2hM+8O45Qc5XTgwA==
-
 marked@^4.0.10:
   version "4.0.12"
   resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.12.tgz#2262a4e6fd1afd2f13557726238b69a48b982f7d"
@@ -4997,6 +4992,11 @@ marked@^4.0.12:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.13.tgz#4fd46ca93da46448f3d83f054d938c4f905a258d"
   integrity sha512-lS/ZCa4X0gsRcfWs1eoh6dLnHr9kVH3K1t2X4M/tTtNouhZ7anS1Csb6464VGLQHv8b2Tw1cLeZQs58Jav8Rzw==
+
+marked@^4.0.14:
+  version "4.0.14"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-4.0.14.tgz#7a3a5fa5c80580bac78c1ed2e3b84d7bd6fc3870"
+  integrity sha512-HL5sSPE/LP6U9qKgngIIPTthuxC0jrfxpYMZ3LdGDD3vTnLs59m2Z7r6+LNDR3ToqEQdkKd6YaaEfJhodJmijQ==
 
 mdurl@^1.0.1:
   version "1.0.1"
@@ -7046,12 +7046,12 @@ uglify-js@^3.1.4:
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.15.4.tgz#fa95c257e88f85614915b906204b9623d4fa340d"
   integrity sha512-vMOPGDuvXecPs34V74qDKk4iJ/SN4vL3Ow/23ixafENYvtrNvtbcgUeugTcUGRGsOF/5fU8/NYSL5Hyb3l1OJA==
 
-ui5-cc-md@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/ui5-cc-md/-/ui5-cc-md-0.0.4.tgz#53da46a52e475c836c87c3155a16df35bac3c86f"
-  integrity sha512-gZ6EU8n2smq1WYg1iNIywtX80ug5M6M63bjehX00GnL8SlyEU4JHTTeqQ9vHXgh1coGmhxsKeOxWSF5ST6tubQ==
+ui5-cc-md@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/ui5-cc-md/-/ui5-cc-md-0.0.6.tgz#bd2040fe28bfe189d36ce7c6a354a5c286f1cb33"
+  integrity sha512-dtQQBuPL59SBk9wcEeuELHKRzhDI6cAaPXKfZyYnTS11YENhIW8McSoPgz7Z5ZHwXMsuMQZJVCMxRqzOvrLm2w==
   dependencies:
-    marked "^2.0.0"
+    marked "^4.0.14"
 
 ui5-middleware-livereload@^0.5.9:
   version "0.5.9"

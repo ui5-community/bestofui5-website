@@ -44,7 +44,7 @@
     ]
   },
   "dependencies": {
-    "ui5-cc-md": "^0.0.4",
+    "ui5-cc-md": "^0.0.6",
     "xml-formatter": "^2.6.1"
   }
 }
