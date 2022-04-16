@@ -11,7 +11,6 @@ framework:
     - name: sap.m
     - name: sap.f
     - name: sap.tnt
-    - name: themelib_sap_horizon
     - name: sap.uxap
     - name: sap.ui.webc.fiori
     - name: sap.ui.webc.main
