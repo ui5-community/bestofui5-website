@@ -47,7 +47,8 @@
         "sap.ui.core": {},
         "sap.ui.layout": {},
         "sap.ui.unified": {},
-        "sap.m": {}
+        "sap.m": {},
+        "sap.ui.webc.main": {}
       }
     },
 
@@ -116,6 +117,11 @@
           "name": "RouteObjectView",
           "pattern": "packages/{name}",
           "target": ["TargetObjectView"]
+        },
+        {
+          "name": "RouteTimelineView",
+          "pattern": "timeline",
+          "target": ["TargetTimelineView"]
         }
       ],
       "targets": {
@@ -143,6 +149,13 @@
           "viewLevel": 2,
           "viewId": "Object",
           "viewName": "Object"
+        },
+        "TargetTimelineView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 2,
+          "viewId": "Timeline",
+          "viewName": "Timeline"
         }
       }
     }
