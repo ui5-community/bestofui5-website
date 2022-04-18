@@ -24,5 +24,5 @@ export default class Package implements IPackage {
 	gitHubOwner: string;
 	gitHubRepo: string;
 	defaultBranch: string;
-	downloadsHistory: PackageDownloadsHistory[];
+	downloadsHistory?: PackageDownloadsHistory[];
 }
