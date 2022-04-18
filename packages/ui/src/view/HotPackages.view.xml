@@ -10,7 +10,7 @@
     id="listHotPackages"
     headerText="Packages"
     mode="None"
-    items="{path: 'data>/packages/', sorter : { path : 'downloadsMonthlyGrowth',descending: 'false' },
+    items="{path: 'data>/packages/', sorter : { path : 'downloadsFortnightGrowth',descending: 'false' },
         filters : [
             { path : 'type', operator : 'NE', value1 : 'generator'}
         ]
@@ -31,8 +31,8 @@
         forks="{data>forks}"
         updatedAt="{data>updatedAt}"
         createdAt="{data>createdAt}"
-        downloads30="{data>downloadsLastMonth}"
-        selectKey="downloads30"
+        downloads14="{data>downloadsCurrentFortnight}"
+        selectKey="downloads14"
         showRank="true"
         downloadsMonthlyGrowth="{data>downloadsMonthlyGrowth}"
       />
