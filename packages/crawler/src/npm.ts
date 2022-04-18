@@ -53,20 +53,21 @@ export default class NpmProvider {
 			await sleep(Math.floor(idx / 20) * 1000);
 			if (source.type === "generator") {
 				source.downloadsCurrentMonth = -1;
-				source.downloadsLastMonth = -1;
+				source.downloadsCurrentFortnight = -1;
 				source.downloads365 = -1;
 				continue;
 			}
 
 			try {
-				const downlodsPreviousMonth = await getDownloads(source.name, dates.lastMonth);
-				const downloadsMonth = await getDownloads(source.name, dates.currentMonth);
+				const downlodsPreviousFortnight = await getDownloads(source.name, dates.lastFortnight);
+				const downlodsCurrentFortnight = await getDownloads(source.name, dates.currentFortnight);
+				const downloadsMonth = await getDownloads(source.name, "last-month");
 				const downloadsYear = await getDownloads(source.name, "last-year");
 				source.downloadsCurrentMonth = downloadsMonth > 0 ? downloadsMonth : 0;
-				source.downloadsLastMonth = downlodsPreviousMonth > 0 ? downlodsPreviousMonth : 0;
+				source.downloadsCurrentFortnight = downlodsCurrentFortnight > 0 ? downlodsCurrentFortnight : 0;
 				source.downloads365 = downloadsYear > 0 ? downloadsYear : 0;
 				try {
-					source.downloadsMonthlyGrowth = Math.round(((source.downloadsCurrentMonth / source.downloadsLastMonth) * 100 - 100) * 100) / 100;
+					source.downloadsFortnightGrowth = Math.round(((downlodsCurrentFortnight / downlodsPreviousFortnight) * 100 - 100) * 100) / 100;
 				} catch (error) {
 					console.log("Error calculating growth", error);
 				}
@@ -87,18 +88,17 @@ export default class NpmProvider {
 	}
 
 	static getDates() {
-		// date minus 30 days
-		const currentMonthEnd = new Date();
-		currentMonthEnd.setDate(currentMonthEnd.getDate() - 1);
-		const currentMonthStart = new Date();
-		currentMonthStart.setDate(currentMonthStart.getDate() - 31);
-		const lastMonthEnd = new Date();
-		lastMonthEnd.setDate(lastMonthEnd.getDate() - 32);
-		const lastMonthStart = new Date();
-		lastMonthStart.setDate(lastMonthStart.getDate() - 62);
+		const currentFortnightEnd = new Date();
+		currentFortnightEnd.setDate(currentFortnightEnd.getDate() - 1);
+		const currentFortnightStart = new Date();
+		currentFortnightStart.setDate(currentFortnightStart.getDate() - 15);
+		const lastFortnightEnd = new Date();
+		lastFortnightEnd.setDate(lastFortnightEnd.getDate() - 16);
+		const lastFortnightStart = new Date();
+		lastFortnightStart.setDate(lastFortnightStart.getDate() - 30);
 		return {
-			currentMonth: `${this.formatDate(currentMonthStart)}:${this.formatDate(currentMonthEnd)}`,
-			lastMonth: `${this.formatDate(lastMonthStart)}:${this.formatDate(lastMonthEnd)}`,
+			currentFortnight: `${this.formatDate(currentFortnightStart)}:${this.formatDate(currentFortnightEnd)}`,
+			lastFortnight: `${this.formatDate(lastFortnightStart)}:${this.formatDate(lastFortnightEnd)}`,
 		};
 	}
 
