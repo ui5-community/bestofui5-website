@@ -50,6 +50,7 @@ export interface Package {
 	downloadsFortnightGrowth: number;
 	gitHubOwner: string;
 	gitHubRepo: string;
+	defaultBranch: string;
 }
 
 export interface Tags {
