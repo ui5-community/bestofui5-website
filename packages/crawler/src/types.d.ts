@@ -27,7 +27,7 @@ export interface TrendsFile {
 	newlyAdded: Ranking[];
 }
 
-export interface Package {
+export interface IPackage {
 	name: string;
 	description: string;
 	author: string;
@@ -78,7 +78,38 @@ export interface SubPackage {
 }
 
 export interface DataJson {
-	packages: Package[];
-	types: Type[];
+	packages: IPackage[];
 	tags: Tags[];
+}
+
+export interface Jsdoc {
+	middleware?: JsdocType;
+	task?: JsdocType;
+}
+
+export interface JsdocType {
+	markdown: string;
+	params: Params[];
+}
+
+export interface Params {
+	type: string;
+	description: string;
+	name: string;
+	optional: boolean;
+}
+
+export interface UI5Yaml {
+	specVersion: string;
+	kind: string;
+	type: string;
+	metadata: {
+		name: string;
+	};
+	middleware?: {
+		path: string;
+	};
+	task?: {
+		path: string;
+	};
 }
