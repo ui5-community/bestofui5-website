@@ -21,17 +21,18 @@
         githublink="{data>githublink}"
         npmlink="{data>npmlink}"
         description="{
-                                        parts: ['data>description', 'settings>/search'],
-                                        formatter: '.formatter.formatHighlight'
-                                      }"
+          parts: ['data>description', 'settings>/search'],
+          formatter: '.formatter.formatHighlight'
+        }"
         type="{data>type}"
         stars="{data>stars}"
         forks="{data>forks}"
-        updatedAt="{data>updatedAt}"
-        createdAt="{data>createdAt}"
-        downloads30="{data>downloadsCurrentMonth}"
-        downloads365="{data>downloads365}"
-        selectKey="{settings>/selectKey}"
+        updatedAt="{= ${settings>/selectKey} === 'updatedAt' ? ${data>updatedAt} : undefined }"
+        createdAt="{= ${settings>/selectKey} === 'createdAt' ? ${data>createdAt} : undefined }"
+        addedToBoUI5="{= ${settings>/selectKey} === 'addedToBoUI5' ? ${data>addedToBoUI5} : undefined }"
+        downloads14="{= ${settings>/selectKey} === 'downloads14' ? ${data>downloadsCurrentFortnight} : -1 }"
+        downloads30="{= ${settings>/selectKey} === 'downloads30' ? ${data>downloadsCurrentMonth} : -1 }"
+        downloads365="{= ${settings>/selectKey} === 'downloads365' ? ${data>downloads365} : -1 }"
       />
     </CustomListItem>
   </List>
