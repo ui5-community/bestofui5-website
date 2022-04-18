@@ -71,6 +71,27 @@
         />
 
         <tnt:InfoLabel
+          id="added-to-bestofui5"
+          class="sapUiTinyMarginEnd"
+          renderMode="Narrow"
+          colorScheme="6"
+          displayOnly="false"
+          text="{= ${i18n>addedToBestOfUI5}.replace('{0}', ${
+                  path: '$this>addedToBoUI5',
+                  type: 'sap.ui.model.type.Date', 
+                  formatOptions: { 
+                    source : { 
+                      pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ' 
+                    },
+                    relative: true,
+                    relativeScale: 'auto',
+                    relativeStyle: 'wide'
+                  } 
+                }) }"
+          visible="{= !!${$this>addedToBoUI5} }"
+        />
+
+        <tnt:InfoLabel
           id="trend-item-created"
           class="sapUiTinyMarginEnd"
           renderMode="Narrow"
