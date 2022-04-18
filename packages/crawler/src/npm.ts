@@ -1,6 +1,7 @@
-import { IPackage } from "./types";
+import { IPackage, NPMDownloads } from "./types";
 // import { getPackageManifest, searchPackages } from "query-registry";
 import axios from "axios";
+import { type } from "os";
 // import removeMarkdown from "markdown-to-text";
 
 function sleep(ms: number) {
@@ -12,13 +13,32 @@ function sleep(ms: number) {
 async function getDownloads(packageName: string, periode: string): Promise<number | null> {
 	try {
 		const res = await axios(`https://api.npmjs.org/downloads/point/${periode}/${packageName}`);
-		if (res.data.package === packageName && res.data.downloads > -1) {
-			return res.data.downloads;
+		const npmDownloads = res.data as NPMDownloads;
+		if (npmDownloads.package === packageName && npmDownloads.downloads > -1) {
+			return npmDownloads.downloads;
 		}
 		throw `Invalid reponse from npm-stat.com ${packageName}.`;
 	} catch (err: any) {
 		if (err?.response?.status === 404) {
 			return 0; //return 0 for packages that were just added and don't have downloads yet
+		}
+		if (err?.response?.status === 429) {
+			throw "Too Many Requests";
+		}
+		// console.error(`Error reponse from npm-stat.com ${packageName} https://api.npmjs.org/downloads/point/${start}:${end}/${packageName}}.`)
+		console.error(err);
+		return null;
+	}
+}
+
+async function getDownloadsBulk(bulkNamesConcat: string, periode: string): Promise<NPMDownloads[]> {
+	try {
+		const res = await axios(`https://api.npmjs.org/downloads/point/${periode}/${bulkNamesConcat}`);
+		return res.data as NPMDownloads[];
+		throw `Invalid reponse from npm-stat.com ${bulkNamesConcat}.`;
+	} catch (err: any) {
+		if (err?.response?.status === 404) {
+			return null; //return 0 for packages that were just added and don't have downloads yet
 		}
 		if (err?.response?.status === 429) {
 			throw "Too Many Requests";
@@ -49,6 +69,23 @@ async function getMetaData(packageName: string): Promise<any | null> {
 export default class NpmProvider {
 	static async get(packages: IPackage[]): Promise<IPackage[]> {
 		const dates = this.getDates();
+		let downlodsPreviousFortnight = 0;
+		let downlodsCurrentFortnight = 0;
+		let downloadsMonth = 0;
+		let downloadsYear = 0;
+
+		const bulkDownloads: IPackage[] = packages
+			.filter((p) => p.name.charAt(0) !== "@" && p.type !== "generator")
+			.map((p) => {
+				return p;
+			});
+		const bulkNamesConcat: string = bulkDownloads.map((p) => p.name).join(",");
+		// maximum of 128 packages per request
+		const bulkDataCurrentFortnight = await getDownloadsBulk(bulkNamesConcat, dates.currentFortnight);
+		const bulkDataPreviousFortnight = await getDownloadsBulk(bulkNamesConcat, dates.lastFortnight);
+		const bulkDataMonth = await getDownloadsBulk(bulkNamesConcat, "last-month");
+		const bulkDataYear = await getDownloadsBulk(bulkNamesConcat, "last-year");
+
 		for (const { idx, source } of packages.map((source, idx) => ({ idx, source }))) {
 			await sleep(Math.floor(idx / 20) * 1000);
 			if (source.type === "generator") {
@@ -59,10 +96,18 @@ export default class NpmProvider {
 			}
 
 			try {
-				const downlodsPreviousFortnight = await getDownloads(source.name, dates.lastFortnight);
-				const downlodsCurrentFortnight = await getDownloads(source.name, dates.currentFortnight);
-				const downloadsMonth = await getDownloads(source.name, "last-month");
-				const downloadsYear = await getDownloads(source.name, "last-year");
+				// packages with `@` are scoped packages are can not be in bulk API
+				if (source.name.charAt(0) === "@") {
+					downlodsPreviousFortnight = bulkDataPreviousFortnight.filter((d) => d.package === source.name)[0].downloads;
+					downlodsCurrentFortnight = bulkDataCurrentFortnight.filter((d) => d.package === source.name)[0].downloads;
+					downloadsMonth = bulkDataMonth.filter((d) => d.package === source.name)[0].downloads;
+					downloadsYear = bulkDataYear.filter((d) => d.package === source.name)[0].downloads;
+				} else {
+					downlodsPreviousFortnight = await getDownloads(source.name, dates.lastFortnight);
+					downlodsCurrentFortnight = await getDownloads(source.name, dates.currentFortnight);
+					downloadsMonth = await getDownloads(source.name, "last-month");
+					downloadsYear = await getDownloads(source.name, "last-year");
+				}
 				source.downloadsCurrentMonth = downloadsMonth > 0 ? downloadsMonth : 0;
 				source.downloadsCurrentFortnight = downlodsCurrentFortnight > 0 ? downlodsCurrentFortnight : 0;
 				source.downloads365 = downloadsYear > 0 ? downloadsYear : 0;

@@ -113,3 +113,10 @@ export interface UI5Yaml {
 		path: string;
 	};
 }
+
+export interface NPMDownloads {
+	downloads: number;
+	start: string;
+	end: string;
+	package: string;
+}
