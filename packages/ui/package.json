@@ -27,6 +27,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@openui5/ts-types-esm": "1.100.0",
     "@types/jquery": "3.5.14",
+    "@types/chart.js": "2.9.36",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
     "@ui5/cli": "^2.14.7",
@@ -39,12 +40,15 @@
   },
   "ui5": {
     "dependencies": [
+      "ui5-tooling-modules",
       "ui5-middleware-livereload",
       "ui5-cc-md"
     ]
   },
   "dependencies": {
+    "ui5-tooling-modules": "^0.2.7",
     "ui5-cc-md": "^0.0.6",
-    "xml-formatter": "^2.6.1"
+    "xml-formatter": "^2.6.1",
+    "chart.js": "^3.7.1"
   }
 }

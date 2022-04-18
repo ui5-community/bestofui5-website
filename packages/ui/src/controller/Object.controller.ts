@@ -1,6 +1,7 @@
 import BaseController from "./BaseController";
 import History from "sap/ui/core/History";
 import UI5Event from "sap/ui/base/Event";
+import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
  * @namespace org.openui5.ui5community.controller
