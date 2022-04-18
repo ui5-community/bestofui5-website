@@ -1,4 +1,4 @@
-import { Package } from "./types";
+import { IPackage } from "./types";
 // import { getPackageManifest, searchPackages } from "query-registry";
 import axios from "axios";
 // import removeMarkdown from "markdown-to-text";
@@ -47,7 +47,7 @@ async function getMetaData(packageName: string): Promise<any | null> {
 }
 
 export default class NpmProvider {
-	static async get(packages: Package[]): Promise<Package[]> {
+	static async get(packages: IPackage[]): Promise<IPackage[]> {
 		const dates = this.getDates();
 		for (const { idx, source } of packages.map((source, idx) => ({ idx, source }))) {
 			await sleep(Math.floor(idx / 20) * 1000);

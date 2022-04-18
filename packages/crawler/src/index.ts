@@ -4,11 +4,10 @@ import { readFileSync, writeFileSync } from "fs";
 
 import GitHubRepositoriesProvider from "./gh-repos";
 import NPMProvider from "./npm";
-import { Package, Source, Tags, DataJson } from "./types";
+import { IPackage, Source, Tags, DataJson } from "./types";
 
 (async () => {
 	const dataJson: DataJson = {
-		types: [],
 		packages: [],
 		tags: [],
 	};
@@ -16,7 +15,7 @@ import { Package, Source, Tags, DataJson } from "./types";
 	const sourcesJsonString = readFileSync(`${__dirname}/../sources.json`, "utf8");
 	const sources: Source[] = JSON.parse(sourcesJsonString);
 
-	let githubPackages: Package[] = await GitHubRepositoriesProvider.get(sources);
+	let githubPackages: IPackage[] = await GitHubRepositoriesProvider.get(sources);
 	githubPackages = await NPMProvider.get(githubPackages);
 
 	// extract tags from packages info

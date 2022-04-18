@@ -5,7 +5,8 @@ const MyOctokit = Octokit.plugin(throttling);
 import * as jsdoc2md from "jsdoc-to-markdown";
 import * as yaml from "js-yaml";
 
-import { Package, Source } from "./types";
+import { IPackage, Jsdoc, JsdocType, Params, Source, SubPackage, UI5Yaml } from "./types";
+import Package from "./Package";
 
 export default class GitHubRepositoriesProvider {
 	static source = "github-packages";
@@ -29,8 +30,8 @@ export default class GitHubRepositoriesProvider {
 		},
 	});
 
-	static async get(sources: Source[]): Promise<Package[]> {
-		const packages: Package[] = [];
+	static async get(sources: Source[]): Promise<IPackage[]> {
+		const packages: IPackage[] = [];
 
 		for (const source of sources) {
 			source.path = `${source.owner}/${source.repo}`;
@@ -39,7 +40,7 @@ export default class GitHubRepositoriesProvider {
 				for (const subpackage of source.subpackages) {
 					const path = `${source.subpath}/${subpackage.name}/`;
 					const packageInfo = await this.fetchRepo(source, path, repoInfo, subpackage);
-					if (source.type === "task" || source.type === "middleware" || source.type === "tooling") {
+					if (packageInfo.type === "task" || packageInfo.type === "middleware" || packageInfo.type === "tooling") {
 						try {
 							packageInfo["jsdoc"] = await this.getJsdoc(source, path);
 						} catch (error) {
@@ -51,7 +52,7 @@ export default class GitHubRepositoriesProvider {
 			} else {
 				const repoInfo = await this.getRepoInfo(source);
 				const packageInfo = await this.fetchRepo(source, "", repoInfo, source);
-				if (source.type === "task" || source.type === "middleware" || source.type === "tooling") {
+				if (packageInfo.type === "task" || packageInfo.type === "middleware" || packageInfo.type === "tooling") {
 					try {
 						packageInfo["jsdoc"] = await this.getJsdoc(source, "");
 					} catch (error) {
@@ -65,30 +66,8 @@ export default class GitHubRepositoriesProvider {
 		return packages;
 	}
 
-	static async getRepoInfo(source: Source) {
-		const packageObject: Package = {
-			name: source.repo,
-			description: "",
-			type: "",
-			githublink: ``,
-			readme: "",
-			createdAt: "",
-			updatedAt: "",
-			author: "",
-			license: "",
-			stars: 0,
-			forks: 0,
-			npmlink: "",
-			addedToBoUI5: "",
-			downloads365: 0,
-			downloadsCurrentMonth: 0,
-			tags: [],
-			gitHubOwner: "",
-			gitHubRepo: "",
-			downloadsCurrentFortnight: 0,
-			downloadsFortnightGrowth: 0,
-			defaultBranch: "",
-		};
+	static async getRepoInfo(source: Source): Promise<IPackage> {
+		const packageObject: IPackage = new Package();
 		const repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
 			owner: source.owner,
 			repo: source.repo,
@@ -115,31 +94,8 @@ export default class GitHubRepositoriesProvider {
 		return packageObject;
 	}
 
-	static async fetchRepo(source: Source, path: string, repoInfo: any, sourcePackage: any): Promise<Package> {
-		let packageReturn: Package = {
-			name: "",
-			description: "",
-			author: "",
-			license: "",
-			type: "",
-			readme: "",
-			forks: 0,
-			stars: 0,
-			updatedAt: "",
-			createdAt: "",
-			githublink: "",
-			npmlink: "",
-			addedToBoUI5: "",
-			downloads365: 0,
-			downloadsCurrentMonth: 0,
-			main: "",
-			tags: [],
-			gitHubOwner: "",
-			gitHubRepo: "",
-			downloadsCurrentFortnight: 0,
-			downloadsFortnightGrowth: 0,
-			defaultBranch: "",
-		};
+	static async fetchRepo(source: Source, path: string, repoInfo: Package, sourcePackage: Source | SubPackage): Promise<IPackage> {
+		let packageReturn: IPackage = new Package();
 		try {
 			const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
 				mediaType: {
@@ -150,8 +106,7 @@ export default class GitHubRepositoriesProvider {
 				path: `${path}package.json`,
 			});
 			const string = data.data.toString();
-			const packageJson = JSON.parse(string);
-			packageReturn = packageJson;
+			packageReturn = JSON.parse(string) as Package;
 			packageReturn.type = sourcePackage.type;
 			packageReturn.tags = sourcePackage.tags;
 			packageReturn.gitHubOwner = source.owner;
@@ -185,10 +140,10 @@ export default class GitHubRepositoriesProvider {
 		return packageReturn;
 	}
 
-	static async getJsdoc(source: Source, path: string): Promise<any> {
+	static async getJsdoc(source: Source, path: string): Promise<Jsdoc> {
 		let entryPath = "";
 		const yamlArray = await this.parseYaml(source, path);
-		let jsdoc: any = {};
+		const jsdoc: Jsdoc = {};
 		for (const yaml of yamlArray) {
 			if (yaml.type === "server-middleware") {
 				yaml.type = "middleware";
@@ -201,18 +156,24 @@ export default class GitHubRepositoriesProvider {
 
 			const returnObject = await this.fetchParams(source, path, entryPath);
 			if (returnObject && returnObject.params && returnObject.markdown) {
-				jsdoc = {};
-				jsdoc[yaml.type] = {
-					params: returnObject.params,
-					markdown: returnObject.markdown,
-				};
+				if (yaml.type === "middleware") {
+					jsdoc.middleware = {
+						params: returnObject.params,
+						markdown: returnObject.markdown,
+					};
+				} else if (yaml.type === "task") {
+					jsdoc.task = {
+						params: returnObject.params,
+						markdown: returnObject.markdown,
+					};
+				}
 			}
 		}
 		return jsdoc;
 	}
 
-	static async parseYaml(source: Source, path: string): Promise<any[]> {
-		const yamlArray: any[] = [];
+	static async parseYaml(source: Source, path: string): Promise<UI5Yaml[]> {
+		const yamlArray: UI5Yaml[] = [];
 		try {
 			const indexJs = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
 				mediaType: {
@@ -226,7 +187,7 @@ export default class GitHubRepositoriesProvider {
 			const yamlStringArray = indexString.split("---");
 			for (const yamlString of yamlStringArray) {
 				if (yamlString.length > 0) {
-					const yamlObject = yaml.load(yamlString);
+					const yamlObject = yaml.load(yamlString) as UI5Yaml;
 					yamlArray.push(yamlObject);
 				}
 			}
@@ -236,12 +197,12 @@ export default class GitHubRepositoriesProvider {
 		}
 	}
 
-	static async fetchParams(source: Source, path: string, entryPath: string): Promise<any> {
-		const returnObject: any = {
+	static async fetchParams(source: Source, path: string, entryPath: string): Promise<JsdocType> {
+		const returnObject: JsdocType = {
 			params: undefined,
 			markdown: "",
 		};
-		const arr: any[] = [];
+		const arr: Params[] = [];
 
 		try {
 			const indexJs = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
@@ -259,12 +220,20 @@ export default class GitHubRepositoriesProvider {
 			};
 			const markdown = await jsdoc2md.render(opt);
 			const data = await jsdoc2md.getTemplateData(opt);
-			const typedef: any = data.filter((x: any) => x.kind === "typedef");
+			const typedef: any[] = data.filter((x: any) => x.kind === "typedef");
 			if (typedef.length > 0) {
 				typedef[0].properties.forEach((property: any) => {
-					const obj = { ...property };
-					obj.type = obj.type.names[0];
-					arr.push(obj);
+					const param: Params = {
+						type: "",
+						description: "",
+						name: "",
+						optional: false,
+					};
+					param.name = property.name as string;
+					param.description = property.description as string;
+					param.optional = property.optional as boolean;
+					param.type = property.type.names[0] as string;
+					arr.push(param);
 				});
 				returnObject.params = arr;
 			}
