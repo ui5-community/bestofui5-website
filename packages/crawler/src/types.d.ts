@@ -51,6 +51,7 @@ export interface IPackage {
 	gitHubOwner: string;
 	gitHubRepo: string;
 	defaultBranch: string;
+	downloadsHistory?: PackageDownloadsHistory[];
 }
 
 export interface Tags {
@@ -119,4 +120,20 @@ export interface NPMDownloads {
 	start: string;
 	end: string;
 	package: string;
+}
+
+export interface PackageDownloadsHistory {
+	yearMonth: string;
+	downloads: number;
+}
+export interface NPMDownloadsHistory {
+	downloads: NPMDownloadsHistoryDownloads[];
+	start: string;
+	end: string;
+	package: string;
+}
+
+export interface NPMDownloadsHistoryDownloads {
+	downloads: number;
+	day: string;
 }
