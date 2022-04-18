@@ -1,4 +1,4 @@
-import { IPackage, NPMDownloads } from "./types";
+import { IPackage, NPMDownloads, NPMDownloadsHistory, NPMDownloadsHistoryDownloads, PackageDownloadsHistory } from "./types";
 // import { getPackageManifest, searchPackages } from "query-registry";
 import axios from "axios";
 import { type } from "os";
@@ -21,6 +21,27 @@ async function getDownloads(packageName: string, periode: string): Promise<numbe
 	} catch (err: any) {
 		if (err?.response?.status === 404) {
 			return 0; //return 0 for packages that were just added and don't have downloads yet
+		}
+		if (err?.response?.status === 429) {
+			throw "Too Many Requests";
+		}
+		// console.error(`Error reponse from npm-stat.com ${packageName} https://api.npmjs.org/downloads/point/${start}:${end}/${packageName}}.`)
+		console.error(err);
+		return null;
+	}
+}
+
+async function getDownloadsHistory(packageName: string, periode: string): Promise<NPMDownloadsHistory> {
+	try {
+		const res = await axios(`https://api.npmjs.org/downloads/range/${periode}/${packageName}`);
+		const npmDownloads = res.data as NPMDownloadsHistory;
+		if (npmDownloads.package === packageName && npmDownloads.downloads.length > -1) {
+			return npmDownloads;
+		}
+		throw `Invalid reponse from npm-stat.com ${packageName}.`;
+	} catch (err: any) {
+		if (err?.response?.status === 404) {
+			return null; //return 0 for packages that were just added and don't have downloads yet
 		}
 		if (err?.response?.status === 429) {
 			throw "Too Many Requests";
@@ -69,6 +90,7 @@ async function getMetaData(packageName: string): Promise<any | null> {
 export default class NpmProvider {
 	static async get(packages: IPackage[]): Promise<IPackage[]> {
 		const dates = this.getDates();
+		const datePeriodHistory = this.getDatesHistory();
 		let downlodsPreviousFortnight = 0;
 		let downlodsCurrentFortnight = 0;
 		let downloadsMonth = 0;
@@ -88,13 +110,14 @@ export default class NpmProvider {
 
 		for (const { idx, source } of packages.map((source, idx) => ({ idx, source }))) {
 			await sleep(Math.floor(idx / 20) * 1000);
+			// set values for generator because there is no npm package
 			if (source.type === "generator") {
 				source.downloadsCurrentMonth = -1;
 				source.downloadsCurrentFortnight = -1;
 				source.downloads365 = -1;
 				continue;
 			}
-
+			// get downloads
 			try {
 				// packages with `@` are scoped packages are can not be in bulk API
 				if (source.name.charAt(0) === "@") {
@@ -120,6 +143,14 @@ export default class NpmProvider {
 				console.error(`Error fetching npm downloads for ${source.name}`);
 				continue;
 			}
+			// get npm downloads history for each month
+			try {
+				const NPMDownloadsHistory = await getDownloadsHistory(source.name, datePeriodHistory);
+				source.downloadsHistory = this.groupNPMDownloadsHistoryByMonth(NPMDownloadsHistory.downloads);
+			} catch (error) {
+				console.log(error);
+			}
+			// get metadata
 			try {
 				const metaData = await getMetaData(source.name);
 				source.createdAt = metaData?.data?.time?.created;
@@ -147,7 +178,37 @@ export default class NpmProvider {
 		};
 	}
 
+	static getDatesHistory(): string {
+		// get last day of last month
+		const endMonth = new Date();
+		endMonth.setDate(1);
+		endMonth.setMonth(endMonth.getMonth());
+		endMonth.setDate(endMonth.getDate() - 1);
+		// get first day of last month
+		const startMonth = new Date();
+		startMonth.setDate(1);
+		startMonth.setMonth(startMonth.getMonth() - 11);
+		return `${this.formatDate(startMonth)}:${this.formatDate(endMonth)}`;
+	}
+
 	static formatDate(date: Date): string {
 		return date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2) + "-" + ("0" + date.getDate()).slice(-2);
+	}
+
+	static groupNPMDownloadsHistoryByMonth(NPMDownloadsHistory: NPMDownloadsHistoryDownloads[]): PackageDownloadsHistory[] {
+		const groupedByYearMonth: PackageDownloadsHistory[] = [];
+		for (const { downloads, day } of NPMDownloadsHistory) {
+			const yearMonth = day.substring(0, 7);
+			const yearMonthIndex = groupedByYearMonth.findIndex((m) => m.yearMonth === yearMonth);
+			if (yearMonthIndex === -1) {
+				groupedByYearMonth.push({
+					yearMonth: yearMonth,
+					downloads: downloads,
+				});
+			} else {
+				groupedByYearMonth[yearMonthIndex].downloads += downloads;
+			}
+		}
+		return groupedByYearMonth;
 	}
 }
