@@ -46,8 +46,8 @@ export interface Package {
 	npmlink: string;
 	downloads365: number;
 	downloadsCurrentMonth: number;
-	downloadsLastMonth: number;
-	downloadsMonthlyGrowth: number;
+	downloadsCurrentFortnight: number;
+	downloadsFortnightGrowth: number;
 	gitHubOwner: string;
 	gitHubRepo: string;
 }

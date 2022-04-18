@@ -7,6 +7,7 @@
   xmlns:core="sap.ui.core"
 >
   <Select id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
+    <core:Item key="downloads14" text="By downloads last 14 days" />
     <core:Item key="downloads30" text="By downloads last 30 days" />
     <core:Item key="downloads365" text="By downloads last 365 days" />
     <core:Item key="updatedAt" text="By date of last update" />
@@ -28,7 +29,7 @@
         forks="{data>forks}"
         updatedAt="{data>updatedAt}"
         createdAt="{data>createdAt}"
-        downloads30="{data>downloadsLastMonth}"
+        downloads30="{data>downloadsCurrentMonth}"
         downloads365="{data>downloads365}"
         selectKey="{settings>/selectKey}"
       />

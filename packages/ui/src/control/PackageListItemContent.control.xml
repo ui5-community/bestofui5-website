@@ -17,6 +17,17 @@
           colorScheme="5" displayOnly="false" visible="{= !!${$this>forks} }" /> -->
 
         <tnt:InfoLabel
+          id="downloads14"
+          class="sapUiTinyMarginEnd"
+          text="Downloads {$this>downloads14}"
+          tooltip="Downloads last 14 days"
+          renderMode="Narrow"
+          colorScheme="5"
+          displayOnly="false"
+          visible="{= ${$this>downloads14} >= 0}"
+        />
+
+        <tnt:InfoLabel
           id="downloads30"
           class="sapUiTinyMarginEnd"
           text="Downloads {$this>downloads30}"
