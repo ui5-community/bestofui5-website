@@ -87,17 +87,31 @@ export default class GitHubRepositoriesProvider {
 			gitHubRepo: "",
 			downloadsCurrentFortnight: 0,
 			downloadsFortnightGrowth: 0,
+			defaultBranch: "",
 		};
 		const repo = await GitHubRepositoriesProvider.octokit.rest.repos.get({
 			owner: source.owner,
 			repo: source.repo,
 		});
 		packageObject.createdAt = repo.data.created_at;
-		packageObject.updatedAt = repo.data.updated_at;
+		// generator don´t have a npm module, get updatedat from last commit
+		if (source.type === "generator") {
+			try {
+				packageObject.updatedAt = await this.getLastCommitDate(source, repo.data.default_branch);
+			} catch (error) {
+				console.log(error);
+				console.log(`Error while fetching last commit date for ${source.path}`);
+				packageObject.updatedAt = repo.data.updated_at;
+			}
+		} else {
+			packageObject.updatedAt = repo.data.updated_at;
+		}
+
 		packageObject.githublink = repo.data.html_url;
 		packageObject.forks = repo.data.forks;
 		packageObject.stars = repo.data.stargazers_count;
 		packageObject.license = repo.data.license.key;
+		packageObject.defaultBranch = repo.data.default_branch;
 		return packageObject;
 	}
 
@@ -124,6 +138,7 @@ export default class GitHubRepositoriesProvider {
 			gitHubRepo: "",
 			downloadsCurrentFortnight: 0,
 			downloadsFortnightGrowth: 0,
+			defaultBranch: "",
 		};
 		try {
 			const data = await GitHubRepositoriesProvider.octokit.rest.repos.getContent({
@@ -258,5 +273,20 @@ export default class GitHubRepositoriesProvider {
 		} catch (error) {
 			console.log(error);
 		}
+	}
+
+	static async getLastCommitDate(source: Source, defaultBranch: string): Promise<string> {
+		const defaultBranchReference = await GitHubRepositoriesProvider.octokit.rest.git.getRef({
+			owner: source.owner,
+			repo: source.repo,
+			ref: `heads/${defaultBranch}`,
+		});
+		const latestCommit = await GitHubRepositoriesProvider.octokit.rest.git.getCommit({
+			owner: source.owner,
+			repo: source.repo,
+			commit_sha: defaultBranchReference.data.object.sha,
+		});
+
+		return latestCommit.data.committer.date;
 	}
 }
