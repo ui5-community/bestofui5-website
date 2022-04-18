@@ -28,6 +28,19 @@
       "downloadsCurrentFortnight": 1390,
       "downloads365": 22393,
       "downloadsFortnightGrowth": 45.7,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 2713 },
+        { "yearMonth": "2021-06", "downloads": 2004 },
+        { "yearMonth": "2021-07", "downloads": 1352 },
+        { "yearMonth": "2021-08", "downloads": 1631 },
+        { "yearMonth": "2021-09", "downloads": 1393 },
+        { "yearMonth": "2021-10", "downloads": 1586 },
+        { "yearMonth": "2021-11", "downloads": 1531 },
+        { "yearMonth": "2021-12", "downloads": 1377 },
+        { "yearMonth": "2022-01", "downloads": 1546 },
+        { "yearMonth": "2022-02", "downloads": 1947 },
+        { "yearMonth": "2022-03", "downloads": 2378 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-cfdestination"
     },
     {
@@ -55,6 +68,19 @@
       "downloadsCurrentFortnight": 54,
       "downloads365": 509,
       "downloadsFortnightGrowth": 1700,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 98 },
+        { "yearMonth": "2021-06", "downloads": 19 },
+        { "yearMonth": "2021-07", "downloads": 21 },
+        { "yearMonth": "2021-08", "downloads": 90 },
+        { "yearMonth": "2021-09", "downloads": 36 },
+        { "yearMonth": "2021-10", "downloads": 65 },
+        { "yearMonth": "2021-11", "downloads": 34 },
+        { "yearMonth": "2021-12", "downloads": 18 },
+        { "yearMonth": "2022-01", "downloads": 6 },
+        { "yearMonth": "2022-02", "downloads": 38 },
+        { "yearMonth": "2022-03", "downloads": 29 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-iasync"
     },
     {
@@ -82,6 +108,19 @@
       "downloadsCurrentFortnight": 137,
       "downloads365": 5330,
       "downloadsFortnightGrowth": -26.34,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 452 },
+        { "yearMonth": "2021-06", "downloads": 419 },
+        { "yearMonth": "2021-07", "downloads": 392 },
+        { "yearMonth": "2021-08", "downloads": 442 },
+        { "yearMonth": "2021-09", "downloads": 433 },
+        { "yearMonth": "2021-10", "downloads": 418 },
+        { "yearMonth": "2021-11", "downloads": 393 },
+        { "yearMonth": "2021-12", "downloads": 447 },
+        { "yearMonth": "2022-01", "downloads": 480 },
+        { "yearMonth": "2022-02", "downloads": 735 },
+        { "yearMonth": "2022-03", "downloads": 449 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-index"
     },
     {
@@ -109,6 +148,19 @@
       "downloadsCurrentFortnight": 78,
       "downloads365": 1058,
       "downloadsFortnightGrowth": 59.18,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 63 },
+        { "yearMonth": "2021-06", "downloads": 11 },
+        { "yearMonth": "2021-07", "downloads": 37 },
+        { "yearMonth": "2021-08", "downloads": 132 },
+        { "yearMonth": "2021-09", "downloads": 116 },
+        { "yearMonth": "2021-10", "downloads": 89 },
+        { "yearMonth": "2021-11", "downloads": 141 },
+        { "yearMonth": "2021-12", "downloads": 64 },
+        { "yearMonth": "2022-01", "downloads": 91 },
+        { "yearMonth": "2022-02", "downloads": 144 },
+        { "yearMonth": "2022-03", "downloads": 90 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-livecompileless"
     },
     {
@@ -136,6 +188,19 @@
       "downloadsCurrentFortnight": 6551,
       "downloads365": 121601,
       "downloadsFortnightGrowth": -0.7,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 7486 },
+        { "yearMonth": "2021-06", "downloads": 9045 },
+        { "yearMonth": "2021-07", "downloads": 8591 },
+        { "yearMonth": "2021-08", "downloads": 8297 },
+        { "yearMonth": "2021-09", "downloads": 8446 },
+        { "yearMonth": "2021-10", "downloads": 10168 },
+        { "yearMonth": "2021-11", "downloads": 11536 },
+        { "yearMonth": "2021-12", "downloads": 9355 },
+        { "yearMonth": "2022-01", "downloads": 9997 },
+        { "yearMonth": "2022-02", "downloads": 13307 },
+        { "yearMonth": "2022-03", "downloads": 14568 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-livereload"
     },
     {
@@ -163,6 +228,19 @@
       "downloadsCurrentFortnight": 257,
       "downloads365": 8131,
       "downloadsFortnightGrowth": -14.05,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 827 },
+        { "yearMonth": "2021-06", "downloads": 848 },
+        { "yearMonth": "2021-07", "downloads": 859 },
+        { "yearMonth": "2021-08", "downloads": 876 },
+        { "yearMonth": "2021-09", "downloads": 562 },
+        { "yearMonth": "2021-10", "downloads": 598 },
+        { "yearMonth": "2021-11", "downloads": 548 },
+        { "yearMonth": "2021-12", "downloads": 267 },
+        { "yearMonth": "2022-01", "downloads": 310 },
+        { "yearMonth": "2022-02", "downloads": 996 },
+        { "yearMonth": "2022-03", "downloads": 628 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-livetranspile"
     },
     {
@@ -222,6 +300,19 @@
       "downloadsCurrentFortnight": 144,
       "downloads365": 579,
       "downloadsFortnightGrowth": 476,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 0 },
+        { "yearMonth": "2021-06", "downloads": 0 },
+        { "yearMonth": "2021-07", "downloads": 0 },
+        { "yearMonth": "2021-08", "downloads": 0 },
+        { "yearMonth": "2021-09", "downloads": 0 },
+        { "yearMonth": "2021-10", "downloads": 0 },
+        { "yearMonth": "2021-11", "downloads": 0 },
+        { "yearMonth": "2021-12", "downloads": 0 },
+        { "yearMonth": "2022-01", "downloads": 206 },
+        { "yearMonth": "2022-02", "downloads": 155 },
+        { "yearMonth": "2022-03", "downloads": 73 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-onelogin"
     },
     {
@@ -249,6 +340,19 @@
       "downloadsCurrentFortnight": 1291,
       "downloads365": 26762,
       "downloadsFortnightGrowth": 13.64,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 1054 },
+        { "yearMonth": "2021-06", "downloads": 1741 },
+        { "yearMonth": "2021-07", "downloads": 1780 },
+        { "yearMonth": "2021-08", "downloads": 1565 },
+        { "yearMonth": "2021-09", "downloads": 1838 },
+        { "yearMonth": "2021-10", "downloads": 3240 },
+        { "yearMonth": "2021-11", "downloads": 2779 },
+        { "yearMonth": "2021-12", "downloads": 2689 },
+        { "yearMonth": "2022-01", "downloads": 2247 },
+        { "yearMonth": "2022-02", "downloads": 3229 },
+        { "yearMonth": "2022-03", "downloads": 2700 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-servestatic"
     },
     {
@@ -276,6 +380,19 @@
       "downloadsCurrentFortnight": 5846,
       "downloads365": 93160,
       "downloadsFortnightGrowth": 2.06,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 6016 },
+        { "yearMonth": "2021-06", "downloads": 7657 },
+        { "yearMonth": "2021-07", "downloads": 7481 },
+        { "yearMonth": "2021-08", "downloads": 6076 },
+        { "yearMonth": "2021-09", "downloads": 6601 },
+        { "yearMonth": "2021-10", "downloads": 6588 },
+        { "yearMonth": "2021-11", "downloads": 7539 },
+        { "yearMonth": "2021-12", "downloads": 5999 },
+        { "yearMonth": "2022-01", "downloads": 8276 },
+        { "yearMonth": "2022-02", "downloads": 9967 },
+        { "yearMonth": "2022-03", "downloads": 11983 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-simpleproxy"
     },
     {
@@ -303,6 +420,19 @@
       "downloadsCurrentFortnight": 83,
       "downloads365": 1083,
       "downloadsFortnightGrowth": 151.52,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 99 },
+        { "yearMonth": "2021-06", "downloads": 31 },
+        { "yearMonth": "2021-07", "downloads": 30 },
+        { "yearMonth": "2021-08", "downloads": 90 },
+        { "yearMonth": "2021-09", "downloads": 93 },
+        { "yearMonth": "2021-10", "downloads": 110 },
+        { "yearMonth": "2021-11", "downloads": 90 },
+        { "yearMonth": "2021-12", "downloads": 111 },
+        { "yearMonth": "2022-01", "downloads": 77 },
+        { "yearMonth": "2022-02", "downloads": 153 },
+        { "yearMonth": "2022-03", "downloads": 94 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-stringreplacer"
     },
     {
@@ -330,6 +460,19 @@
       "downloadsCurrentFortnight": 50,
       "downloads365": 435,
       "downloadsFortnightGrowth": 316.67,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 76 },
+        { "yearMonth": "2021-06", "downloads": 11 },
+        { "yearMonth": "2021-07", "downloads": 16 },
+        { "yearMonth": "2021-08", "downloads": 57 },
+        { "yearMonth": "2021-09", "downloads": 19 },
+        { "yearMonth": "2021-10", "downloads": 66 },
+        { "yearMonth": "2021-11", "downloads": 29 },
+        { "yearMonth": "2021-12", "downloads": 15 },
+        { "yearMonth": "2022-01", "downloads": 7 },
+        { "yearMonth": "2022-02", "downloads": 62 },
+        { "yearMonth": "2022-03", "downloads": 25 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-middleware-webjars"
     },
     {
@@ -357,6 +500,19 @@
       "downloadsCurrentFortnight": 65,
       "downloads365": 691,
       "downloadsFortnightGrowth": 30,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 60 },
+        { "yearMonth": "2021-06", "downloads": 65 },
+        { "yearMonth": "2021-07", "downloads": 17 },
+        { "yearMonth": "2021-08", "downloads": 54 },
+        { "yearMonth": "2021-09", "downloads": 66 },
+        { "yearMonth": "2021-10", "downloads": 86 },
+        { "yearMonth": "2021-11", "downloads": 53 },
+        { "yearMonth": "2021-12", "downloads": 29 },
+        { "yearMonth": "2022-01", "downloads": 40 },
+        { "yearMonth": "2022-02", "downloads": 84 },
+        { "yearMonth": "2022-03", "downloads": 72 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-task-compileless"
     },
     {
@@ -384,6 +540,19 @@
       "downloadsCurrentFortnight": 86,
       "downloads365": 946,
       "downloadsFortnightGrowth": 145.71,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 119 },
+        { "yearMonth": "2021-06", "downloads": 32 },
+        { "yearMonth": "2021-07", "downloads": 33 },
+        { "yearMonth": "2021-08", "downloads": 20 },
+        { "yearMonth": "2021-09", "downloads": 42 },
+        { "yearMonth": "2021-10", "downloads": 82 },
+        { "yearMonth": "2021-11", "downloads": 177 },
+        { "yearMonth": "2021-12", "downloads": 58 },
+        { "yearMonth": "2022-01", "downloads": 74 },
+        { "yearMonth": "2022-02", "downloads": 79 },
+        { "yearMonth": "2022-03", "downloads": 127 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-task-flatten-library"
     },
     {
@@ -411,6 +580,19 @@
       "downloadsCurrentFortnight": 451,
       "downloads365": 11857,
       "downloadsFortnightGrowth": 69.55,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 992 },
+        { "yearMonth": "2021-06", "downloads": 1118 },
+        { "yearMonth": "2021-07", "downloads": 1151 },
+        { "yearMonth": "2021-08", "downloads": 1105 },
+        { "yearMonth": "2021-09", "downloads": 992 },
+        { "yearMonth": "2021-10", "downloads": 956 },
+        { "yearMonth": "2021-11", "downloads": 946 },
+        { "yearMonth": "2021-12", "downloads": 649 },
+        { "yearMonth": "2022-01", "downloads": 746 },
+        { "yearMonth": "2022-02", "downloads": 1481 },
+        { "yearMonth": "2022-03", "downloads": 615 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-task-i18ncheck"
     },
     {
@@ -438,6 +620,19 @@
       "downloadsCurrentFortnight": 46,
       "downloads365": 344,
       "downloadsFortnightGrowth": 475,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 0 },
+        { "yearMonth": "2021-06", "downloads": 0 },
+        { "yearMonth": "2021-07", "downloads": 0 },
+        { "yearMonth": "2021-08", "downloads": 41 },
+        { "yearMonth": "2021-09", "downloads": 14 },
+        { "yearMonth": "2021-10", "downloads": 64 },
+        { "yearMonth": "2021-11", "downloads": 34 },
+        { "yearMonth": "2021-12", "downloads": 17 },
+        { "yearMonth": "2022-01", "downloads": 14 },
+        { "yearMonth": "2022-02", "downloads": 78 },
+        { "yearMonth": "2022-03", "downloads": 32 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-task-minify-xml"
     },
     {
@@ -465,6 +660,19 @@
       "downloadsCurrentFortnight": 71,
       "downloads365": 589,
       "downloadsFortnightGrowth": 273.68,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 100 },
+        { "yearMonth": "2021-06", "downloads": 18 },
+        { "yearMonth": "2021-07", "downloads": 29 },
+        { "yearMonth": "2021-08", "downloads": 66 },
+        { "yearMonth": "2021-09", "downloads": 21 },
+        { "yearMonth": "2021-10", "downloads": 63 },
+        { "yearMonth": "2021-11", "downloads": 39 },
+        { "yearMonth": "2021-12", "downloads": 10 },
+        { "yearMonth": "2022-01", "downloads": 11 },
+        { "yearMonth": "2022-02", "downloads": 122 },
+        { "yearMonth": "2022-03", "downloads": 33 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-task-pwa-enabler"
     },
     {
@@ -492,6 +700,19 @@
       "downloadsCurrentFortnight": 112,
       "downloads365": 2446,
       "downloadsFortnightGrowth": -0.88,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 215 },
+        { "yearMonth": "2021-06", "downloads": 210 },
+        { "yearMonth": "2021-07", "downloads": 231 },
+        { "yearMonth": "2021-08", "downloads": 227 },
+        { "yearMonth": "2021-09", "downloads": 216 },
+        { "yearMonth": "2021-10", "downloads": 103 },
+        { "yearMonth": "2021-11", "downloads": 321 },
+        { "yearMonth": "2021-12", "downloads": 196 },
+        { "yearMonth": "2022-01", "downloads": 174 },
+        { "yearMonth": "2022-02", "downloads": 182 },
+        { "yearMonth": "2022-03", "downloads": 189 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-task-stringreplacer"
     },
     {
@@ -526,6 +747,19 @@
       "downloadsCurrentFortnight": 1410,
       "downloads365": 33863,
       "downloadsFortnightGrowth": -3.62,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 2274 },
+        { "yearMonth": "2021-06", "downloads": 2313 },
+        { "yearMonth": "2021-07", "downloads": 2171 },
+        { "yearMonth": "2021-08", "downloads": 2535 },
+        { "yearMonth": "2021-09", "downloads": 2919 },
+        { "yearMonth": "2021-10", "downloads": 3203 },
+        { "yearMonth": "2021-11", "downloads": 3719 },
+        { "yearMonth": "2021-12", "downloads": 2292 },
+        { "yearMonth": "2022-01", "downloads": 3046 },
+        { "yearMonth": "2022-02", "downloads": 3462 },
+        { "yearMonth": "2022-03", "downloads": 3150 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-task-transpile"
     },
     {
@@ -555,6 +789,19 @@
       "downloadsCurrentFortnight": 10697,
       "downloads365": 123984,
       "downloadsFortnightGrowth": 6.94,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 7545 },
+        { "yearMonth": "2021-06", "downloads": 4489 },
+        { "yearMonth": "2021-07", "downloads": 4821 },
+        { "yearMonth": "2021-08", "downloads": 5822 },
+        { "yearMonth": "2021-09", "downloads": 8227 },
+        { "yearMonth": "2021-10", "downloads": 9378 },
+        { "yearMonth": "2021-11", "downloads": 10188 },
+        { "yearMonth": "2021-12", "downloads": 10053 },
+        { "yearMonth": "2022-01", "downloads": 12875 },
+        { "yearMonth": "2022-02", "downloads": 14574 },
+        { "yearMonth": "2022-03", "downloads": 21842 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-task-zipper"
     },
     {
@@ -594,6 +841,19 @@
       "downloadsCurrentFortnight": 201,
       "downloads365": 1215,
       "downloadsFortnightGrowth": -9.05,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 0 },
+        { "yearMonth": "2021-06", "downloads": 0 },
+        { "yearMonth": "2021-07", "downloads": 0 },
+        { "yearMonth": "2021-08", "downloads": 0 },
+        { "yearMonth": "2021-09", "downloads": 0 },
+        { "yearMonth": "2021-10", "downloads": 0 },
+        { "yearMonth": "2021-11", "downloads": 64 },
+        { "yearMonth": "2021-12", "downloads": 73 },
+        { "yearMonth": "2022-01", "downloads": 158 },
+        { "yearMonth": "2022-02", "downloads": 295 },
+        { "yearMonth": "2022-03", "downloads": 413 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-tooling-modules"
     },
     {
@@ -632,6 +892,19 @@
       "downloadsCurrentFortnight": 378,
       "downloads365": 1341,
       "downloadsFortnightGrowth": 14.2,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 6 },
+        { "yearMonth": "2021-06", "downloads": 7 },
+        { "yearMonth": "2021-07", "downloads": 47 },
+        { "yearMonth": "2021-08", "downloads": 18 },
+        { "yearMonth": "2021-09", "downloads": 23 },
+        { "yearMonth": "2021-10", "downloads": 25 },
+        { "yearMonth": "2021-11", "downloads": 123 },
+        { "yearMonth": "2021-12", "downloads": 79 },
+        { "yearMonth": "2022-01", "downloads": 46 },
+        { "yearMonth": "2022-02", "downloads": 42 },
+        { "yearMonth": "2022-03", "downloads": 512 }
+      ],
       "npmlink": "https://www.npmjs.com/package/ui5-cc-md"
     },
     {
@@ -713,6 +986,19 @@
       "downloadsCurrentFortnight": 3541,
       "downloads365": 26447,
       "downloadsFortnightGrowth": 98.15,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 463 },
+        { "yearMonth": "2021-06", "downloads": 981 },
+        { "yearMonth": "2021-07", "downloads": 444 },
+        { "yearMonth": "2021-08", "downloads": 1260 },
+        { "yearMonth": "2021-09", "downloads": 2002 },
+        { "yearMonth": "2021-10", "downloads": 2299 },
+        { "yearMonth": "2021-11", "downloads": 2151 },
+        { "yearMonth": "2021-12", "downloads": 1867 },
+        { "yearMonth": "2022-01", "downloads": 3704 },
+        { "yearMonth": "2022-02", "downloads": 3469 },
+        { "yearMonth": "2022-03", "downloads": 4016 }
+      ],
       "npmlink": "https://www.npmjs.com/package/wdio-ui5-service"
     },
     {
@@ -828,6 +1114,19 @@
       "downloadsCurrentFortnight": 11,
       "downloads365": 83,
       "downloadsFortnightGrowth": 10,
+      "downloadsHistory": [
+        { "yearMonth": "2021-05", "downloads": 0 },
+        { "yearMonth": "2021-06", "downloads": 0 },
+        { "yearMonth": "2021-07", "downloads": 0 },
+        { "yearMonth": "2021-08", "downloads": 0 },
+        { "yearMonth": "2021-09", "downloads": 0 },
+        { "yearMonth": "2021-10", "downloads": 0 },
+        { "yearMonth": "2021-11", "downloads": 0 },
+        { "yearMonth": "2021-12", "downloads": 0 },
+        { "yearMonth": "2022-01", "downloads": 0 },
+        { "yearMonth": "2022-02", "downloads": 0 },
+        { "yearMonth": "2022-03", "downloads": 71 }
+      ],
       "npmlink": "https://www.npmjs.com/package/create-easy-ui5"
     },
     {
