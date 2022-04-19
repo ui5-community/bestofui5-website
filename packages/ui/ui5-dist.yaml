@@ -8,7 +8,7 @@ resources:
       webapp: ../../docs
 framework:
   name: OpenUI5
-  version: "1.100.0"
+  version: "1.101.0"
   libraries:
     - name: sap.m
     - name: sap.ui.core
