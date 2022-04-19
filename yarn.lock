@@ -7230,10 +7230,10 @@ ui5-middleware-livereload@^0.5.9:
     portfinder "^1.0.28"
     yargs "^17.3.1"
 
-ui5-tooling-modules@^0.2.7:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/ui5-tooling-modules/-/ui5-tooling-modules-0.2.7.tgz#04e29c961afd27508beeece82d093bd5348cf590"
-  integrity sha512-3pm0ag81+xSa+GuOYAtwWu0z5dBMN6sF3qTEN8Rvh7aRTUdNMsZMv3Fwdp17ugVdk2jJPcKH2vMQglkvABZcVA==
+ui5-tooling-modules@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ui5-tooling-modules/-/ui5-tooling-modules-0.3.0.tgz#fa0884a00b1e6a42cbb386c8ca5e3893fe57b6b9"
+  integrity sha512-0fZQJjOJNwf0CdKK6c8B4tdwPumGZJYAIN7MKBFx5ligdkLoW/Ta59sLhktwhxgOYwa2BsUUTv/EI2LHDJjURA==
   dependencies:
     "@rollup/plugin-commonjs" "^21.0.1"
     "@rollup/plugin-json" "^4.1.0"

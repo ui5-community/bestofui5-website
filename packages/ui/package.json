@@ -46,7 +46,7 @@
     ]
   },
   "dependencies": {
-    "ui5-tooling-modules": "^0.2.7",
+    "ui5-tooling-modules": "^0.3.0",
     "ui5-cc-md": "^0.0.6",
     "xml-formatter": "^2.6.1",
     "chart.js": "^3.7.1"
