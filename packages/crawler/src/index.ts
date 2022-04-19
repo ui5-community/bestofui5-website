@@ -21,6 +21,7 @@ import { IPackage, Source, Tags, DataJson } from "./types";
 	// extract tags from packages info
 	const typesArray: Tags[] = [];
 	const tagsArray: Tags[] = [];
+	const versionsArray: any[] = [];
 	for (const packageContent of githubPackages) {
 		const typeExists: Tags = typesArray.find((typeObj) => typeObj.name === packageContent.type);
 		if (!typeExists) {
@@ -46,10 +47,25 @@ import { IPackage, Source, Tags, DataJson } from "./types";
 				tagExists.count += 1;
 			}
 		}
+		// create verions array
+		if (packageContent.versions) {
+			// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+			for (const [key, value] of Object.entries(packageContent.versions)) {
+				if (key !== "created" && key !== "modified") {
+					const versionObject = {
+						name: packageContent.name,
+						version: key,
+						date: value,
+					};
+					versionsArray.push(versionObject);
+				}
+			}
+		}
 	}
 
 	dataJson.packages = githubPackages;
 	dataJson.tags = typesArray.concat(tagsArray);
 
 	writeFileSync(`${__dirname}/../../ui/src/model/data.json`, JSON.stringify(dataJson));
+	writeFileSync(`${__dirname}/../../ui/src/model/versions.json`, JSON.stringify(versionsArray));
 })();
