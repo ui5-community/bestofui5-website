@@ -35,7 +35,7 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "org.openui5.ui5community.view.Main",
+      "viewName": "org.openui5.ui5community.view.App",
       "type": "XML",
       "async": true,
       "id": "rootView"
@@ -119,12 +119,6 @@
         }
       ],
       "targets": {
-        "TargetMainView": {
-          "viewType": "XML",
-          "viewLevel": 1,
-          "viewId": "Main",
-          "viewName": "Main"
-        },
         "TargetAllPackagesView": {
           "viewType": "XML",
           "viewLevel": 1,
