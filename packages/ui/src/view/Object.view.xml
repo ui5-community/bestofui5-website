@@ -7,34 +7,28 @@
   xmlns="sap.uxap"
   xmlns:layout="sap.ui.layout"
   xmlns:tnt="sap.tnt"
+  xmlns:cc="org.openui5.ui5community.control"
   displayBlock="true"
   height="100%"
 >
-  <m:FlexBox
-    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
-    height="100%"
-    direction="Column"
-    alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }"
-    justifyContent="Start"
-  >
-    <ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="true" useIconTabBar="true" height="100%" class="fixImageWidth">
-      <headerTitle>
-        <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" titleSelectorTooltip="Custom Tooltip" />
-      </headerTitle>
-      <headerContent>
-        <layout:VerticalLayout>
-          <m:ObjectStatus title="Author" text="{data>author}" />
-          <m:ObjectStatus title="License" text="{data>license}" />
-          <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
-          <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
-        </layout:VerticalLayout>
-        <layout:VerticalLayout>
-          <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
-          <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloads30}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads30} >= 0}" />
-          <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
-        </layout:VerticalLayout>
-        <layout:VerticalLayout>
-          <m:ObjectStatus title="Created At" text="{
+  <ObjectPageLayout alwaysShowContentHeader="true" id="ObjectPageLayout" upperCaseAnchorBar="false" height="100%" class="fixImageWidth">
+    <headerTitle>
+      <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" titleSelectorTooltip="Custom Tooltip" />
+    </headerTitle>
+    <headerContent>
+      <layout:VerticalLayout>
+        <m:ObjectStatus title="Author" text="{data>author}" />
+        <m:ObjectStatus title="License" text="{data>license}" />
+        <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
+        <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
+      </layout:VerticalLayout>
+      <layout:VerticalLayout>
+        <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
+        <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloads30}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads30} >= 0}" />
+        <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
+      </layout:VerticalLayout>
+      <layout:VerticalLayout>
+        <m:ObjectStatus title="Created At" text="{
 					path: 'data>createdAt',
 					type: 'sap.ui.model.type.DateTime',
 					formatOptions: {
@@ -42,7 +36,7 @@
 						pattern: 'dd.MM.yyyy'
 					}
 				}" />
-          <m:ObjectStatus title="Last update" text="{
+        <m:ObjectStatus title="Last update" text="{
 					path: 'data>updatedAt',
 					type: 'sap.ui.model.type.DateTime',
 					formatOptions: {
@@ -50,57 +44,25 @@
 						pattern: 'dd.MM.yyyy'
 					}
 				}" />
-        </layout:VerticalLayout>
-      </headerContent>
-      <sections>
-        <ObjectPageSection titleUppercase="true" title="README">
-          <subSections>
-            <ObjectPageSubSection titleUppercase="false">
-              <blocks>
-                <md:Markdown id="test" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" />
-              </blocks>
-            </ObjectPageSubSection>
-          </subSections>
-        </ObjectPageSection>
-
-        <!-- <ObjectPageSection titleUppercase="false" title="Dependencies">
-				<subSections>
-					<ObjectPageSubSection titleUppercase="false">
-						<blocks>
-							<m:Table id="dependenciesTable"
-							inset="false"
-							items="{
-								path: 'data>dependencies/',
-								sorter: {
-									path: 'Name'
-								}
-							}">
-							<m:columns>
-								<m:Column>
-									<m:Text text="Name" />
-								</m:Column>
-								<m:Column>
-									<m:Text text="Version" />
-								</m:Column>
-							</m:columns>
-							<m:items>
-								<m:ColumnListItem vAlign="Middle">
-									<m:cells>
-										<m:ObjectIdentifier
-											title="{Name}"
-											text="{value}"/>
-										<m:Text
-											text="{data>livereload}" />
-
-									</m:cells>
-								</m:ColumnListItem>
-							</m:items>
-						</m:Table>
-						</blocks>
-					</ObjectPageSubSection>
-				</subSections>
-			</ObjectPageSection> -->
-      </sections>
-    </ObjectPageLayout>
-  </m:FlexBox>
+      </layout:VerticalLayout>
+    </headerContent>
+    <sections>
+      <ObjectPageSection id="npmSection">
+        <subSections>
+          <ObjectPageSubSection title="npm downloads" id="npmDownloadsSection">
+            <blocks>
+              <cc:BarChart title="NPM Downloads per Month" color="#0070f2" records="{data>downloadsHistory}">
+                <cc:ChartRecord label='{data>yearMonth}' value="{data>downloads}" />
+              </cc:BarChart>
+            </blocks>
+          </ObjectPageSubSection>
+          <ObjectPageSubSection title="readme" id="readme" titleUppercase="false">
+            <blocks>
+              <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
 </mvc:View>
