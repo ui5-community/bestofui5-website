@@ -1,12 +1,12 @@
 <mvc:View
-  controllerName="org.openui5.ui5community.controller.Main"
+  controllerName="org.openui5.ui5community.controller.App"
   xmlns:mvc="sap.ui.core.mvc"
   displayBlock="true"
   xmlns="sap.m"
   xmlns:ui5cc="org.openui5.ui5community.control"
   xmlns:core="sap.ui.core"
 >
-  <Shell appWidthLimited="false">
+  <App>
     <Page id="page" title="{i18n>title}" titleAlignment="Center" class="openui5header">
       <subHeader>
         <OverflowToolbar class="doNotRoundMyToolBar">
@@ -52,5 +52,5 @@
         </FlexBox>
       </content>
     </Page>
-  </Shell>
+  </App>
 </mvc:View>
