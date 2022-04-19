@@ -7,4 +7,10 @@ export default class Timeline extends BaseController {
 	public onInit(): void {
 		console.log("Timeline.onInit");
 	}
+
+	public onNameClick(event: sap.ui.base.Event): void {
+		this.navTo("RouteObjectView", {
+			name: event.getSource().getBindingContext("versions").getObject().name,
+		});
+	}
 }

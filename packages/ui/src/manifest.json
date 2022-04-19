@@ -18,6 +18,10 @@
       "data": {
         "uri": "model/data.json",
         "type": "JSON"
+      },
+      "versions": {
+        "uri": "model/versions.json",
+        "type": "JSON"
       }
     }
   },
@@ -79,6 +83,10 @@
       "data": {
         "type": "sap.ui.model.json.JSONModel",
         "dataSource": "data"
+      },
+      "versions": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "versions"
       }
     },
 
@@ -119,7 +127,7 @@
           "target": ["TargetObjectView"]
         },
         {
-          "name": "RouteTimelineView",
+          "name": "timeline",
           "pattern": "timeline",
           "target": ["TargetTimelineView"]
         }

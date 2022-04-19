@@ -1,6 +1,6 @@
 <mvc:View
   xmlns:commons="sap.suite.ui.commons"
-  controllerName="org.openui5.ui5community.controller.Object"
+  controllerName="org.openui5.ui5community.controller.Timeline"
   xmlns:m="sap.m"
   xmlns="sap.ui.webc.fiori"
   xmlns:webcm="sap.ui.webc.main"
@@ -15,10 +15,25 @@
     alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }"
     justifyContent="Start"
   >
-    <Timeline>
-      <TimelineItem id="test-item" titleText="called" subtitleText="20.02.2017 11:30" icon="phone" name="John Smith" />
-      <TimelineItem titleText="Weekly Sync - CP Design" subtitleText="27.07.2017 (11:00 - 12:30)" icon="calendar" />
-      <TimelineItem titleText="Video Converence Call - UI5" subtitleText="31.01.2018 (12:00 - 13:00)" icon="calendar" />
+    <Timeline items="{path: 'versions>/', sorter : { path : 'date',descending: 'false' }}">
+      <TimelineItem
+        titleText="{versions>version}"
+        name="{versions>name}"
+        nameClickable="true"
+        nameClick=".onNameClick($event, 'mycustomString')"
+        subtitleText="{= ${i18n>listItemTagUpdated}.replace('{0}', ${
+          path: 'versions>date',
+          type: 'sap.ui.model.type.Date', 
+          formatOptions: { 
+            source : { 
+              pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ' 
+            },
+            relative: true,
+            relativeScale: 'auto',
+            relativeStyle: 'wide'
+          } 
+        }) }"
+      />
     </Timeline>
   </m:FlexBox>
 </mvc:View>

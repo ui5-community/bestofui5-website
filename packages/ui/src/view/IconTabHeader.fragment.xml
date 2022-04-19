@@ -2,9 +2,10 @@
   <ToolbarSpacer />
   <IconTabHeader id="iconTabHeader" mode="Inline" selectedKey="{settings>/iconTabHeaderKey}" select=".onTabHeaderselect">
     <items>
-      <IconTabFilter key="hotPackages" text="Hot Packages" tooltip="Downloads last 30 Days" />
-      <IconTabFilter key="allPackages" text="All Packages" />
-      <IconTabFilter key="tags" text="All Tags" />
+      <IconTabFilter key="hotPackages" text="Hot" tooltip="Downloads last 30 Days" />
+      <IconTabFilter key="allPackages" text="All" />
+      <IconTabFilter key="tags" text="Tags" />
+      <IconTabFilter key="timeline" text="Timeline" />
     </items>
   </IconTabHeader>
   <ToolbarSpacer />
