@@ -1,4 +1,4 @@
-import MainController from "./Main.controller";
+import AppController from "./App.controller";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import formatter from "../model/formatter";
@@ -8,7 +8,7 @@ import QueryControl from "./QueryControl";
 /**
  * @namespace org.openui5.ui5community.controller
  */
-export default class AllPackages extends MainController {
+export default class AllPackages extends AppController {
 	private formatter = formatter;
 
 	public onInit(): void {

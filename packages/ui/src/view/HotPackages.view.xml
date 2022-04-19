@@ -32,7 +32,6 @@
         updatedAt="{data>updatedAt}"
         createdAt="{data>createdAt}"
         downloads14="{data>downloadsCurrentFortnight}"
-        selectKey="downloads14"
         showRank="true"
         downloadsMonthlyGrowth="{data>downloadsMonthlyGrowth}"
       />
