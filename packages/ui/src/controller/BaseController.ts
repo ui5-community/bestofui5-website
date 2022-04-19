@@ -79,7 +79,7 @@ export default abstract class BaseController extends Controller {
 		if (sPreviousHash !== undefined) {
 			window.history.go(-1);
 		} else {
-			this.getRouter().navTo("main", {}, undefined, true);
+			this.getRouter().navTo("default", {}, undefined, true);
 		}
 	}
 

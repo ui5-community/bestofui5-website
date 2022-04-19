@@ -6,7 +6,7 @@ import JSONModel from "sap/ui/model/json/JSONModel";
 /**
  * @namespace org.openui5.ui5community.controller
  */
-export default class Main extends BaseController {
+export default class Object extends BaseController {
 	public onInit(): void {
 		this.getRouter().getRoute("RouteObjectView").attachPatternMatched(this.onPatternMatched, this);
 	}
@@ -34,7 +34,7 @@ export default class Main extends BaseController {
 		if (sPreviousHash !== undefined) {
 			history.go(-1);
 		} else {
-			this.getRouter().navTo("RouteMainView", {}, true);
+			this.getRouter().navTo("default", {}, true);
 		}
 	}
 }
