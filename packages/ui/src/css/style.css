@@ -14,3 +14,14 @@
 	margin-left: 0rem !important;
 	margin-right: 0rem !important;
 }
+
+/*
+ * Fix scrollbar issue with ObjectPageLayout
+ */
+.sapUxAPObjectPageWrapperTransform {
+	overflow: inherit !important;
+}
+
+.sapMScrollBarOuterDiv {
+	height: auto;
+}
