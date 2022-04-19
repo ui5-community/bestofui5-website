@@ -18,6 +18,10 @@
       "data": {
         "uri": "model/data.json",
         "type": "JSON"
+      },
+      "versions": {
+        "uri": "model/versions.json",
+        "type": "JSON"
       }
     }
   },
@@ -47,7 +51,8 @@
         "sap.ui.core": {},
         "sap.ui.layout": {},
         "sap.ui.unified": {},
-        "sap.m": {}
+        "sap.m": {},
+        "sap.ui.webc.main": {}
       }
     },
 
@@ -78,6 +83,10 @@
       "data": {
         "type": "sap.ui.model.json.JSONModel",
         "dataSource": "data"
+      },
+      "versions": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "versions"
       }
     },
 
@@ -116,6 +125,11 @@
           "name": "RouteObjectView",
           "pattern": "packages/{name}",
           "target": ["TargetObjectView"]
+        },
+        {
+          "name": "timeline",
+          "pattern": "timeline",
+          "target": ["TargetTimelineView"]
         }
       ],
       "targets": {
@@ -143,6 +157,13 @@
           "viewLevel": 2,
           "viewId": "Object",
           "viewName": "Object"
+        },
+        "TargetTimelineView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 2,
+          "viewId": "Timeline",
+          "viewName": "Timeline"
         }
       }
     }
