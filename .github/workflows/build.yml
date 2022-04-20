@@ -2,7 +2,7 @@ name: build
 
 on:
     schedule:
-        - cron: "0 4 * * *" # runs every day at 4 UTC
+        - cron: "50 3 * * *" # runs every day at 03:50 UTC to avoid high loads
     push:
         branches: [main]
     workflow_dispatch:
