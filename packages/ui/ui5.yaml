@@ -9,12 +9,9 @@ framework:
     - name: sap.ui.core
     - name: sap.ui.layout
     - name: sap.m
-    - name: sap.f
     - name: sap.tnt
-    - name: themelib_sap_horizon
     - name: sap.uxap
     - name: sap.ui.webc.fiori
-    - name: sap.ui.webc.main
 builder:
   customTasks:
     - name: ui5-tooling-modules-task
