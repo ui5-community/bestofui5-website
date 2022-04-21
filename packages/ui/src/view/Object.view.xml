@@ -8,6 +8,7 @@
   xmlns:layout="sap.ui.layout"
   xmlns:tnt="sap.tnt"
   xmlns:cc="org.openui5.ui5community.control"
+  xmlns:core="sap.ui.core"
   displayBlock="true"
   height="100%"
 >
@@ -19,8 +20,14 @@
       <layout:VerticalLayout>
         <m:ObjectStatus title="Author" text="{data>author}" />
         <m:ObjectStatus title="License" text="{data>license}" />
-        <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
-        <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
+        <layout:HorizontalLayout>
+          <core:Icon src="sap-icon://font-awesome-icons/github" />
+          <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
+        </layout:HorizontalLayout>
+        <layout:HorizontalLayout>
+          <core:Icon src="sap-icon://font-awesome-icons/npm" />
+          <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
+        </layout:HorizontalLayout>
       </layout:VerticalLayout>
       <layout:VerticalLayout>
         <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
