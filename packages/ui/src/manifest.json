@@ -67,6 +67,9 @@
       "css": [
         {
           "uri": "css/style.css"
+        },
+        {
+          "uri": "font-awesome/font.css"
         }
       ]
     },

@@ -1,11 +1,28 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:layout="sap.ui.layout">
   <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
     <!-- <NumericContent id="trend-rank" value="{$this>downloadsMonthlyGrowth}" valueColor="{$this>rankColor}"
       indicator="{$this>rankIndicator}" class="sapUiSmallMarginTop" scale="%"
       visible="{= !!${$this>downloadsMonthlyGrowth} &amp;&amp; ${$this>showRank}}" withMargin="true" /> -->
 
     <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
-      <Link id="trend-title" text="{$this>name}" href="{= ${$this>npmlink} ? ${$this>npmlink} : ${$this>githublink} }" target="_blank" emphasized="true" />
+      <layout:HorizontalLayout>
+        <Title level="H3" text="{$this>name}" />
+        <core:Icon
+          class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+          core:require="{ sapMLib: 'sap/m/library' }"
+          src="sap-icon://font-awesome-icons/github"
+          press="sapMLib.URLHelper.redirect(${$this>githublink}, true)"
+          visible="{= !!${$this>githublink}}"
+        />
+        <core:Icon
+          class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+          core:require="{ sapMLib: 'sap/m/library' }"
+          src="sap-icon://font-awesome-icons/npm"
+          press="sapMLib.URLHelper.redirect(${$this>npmlink}, true)"
+          visible="{= !!${$this>npmlink}}"
+        />
+      </layout:HorizontalLayout>
+
       <FormattedText id="trend-desc" htmlText="{$this>description}" />
       <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
         <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" />
