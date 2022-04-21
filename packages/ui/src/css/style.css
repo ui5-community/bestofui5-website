@@ -25,3 +25,11 @@
 .sapMScrollBarOuterDiv {
 	height: auto;
 }
+
+/*
+ * wrap code text in markdown
+ */
+.wrapCodeText code {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
