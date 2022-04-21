@@ -10,6 +10,7 @@
     "project": ["./tsconfig.json", "./packages/ui/tsconfig.json"],
     "sourceType": "module"
   },
+  "ignorePatterns": ["src/resources/font-awesome/*.js"],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "@typescript-eslint/no-unsafe-assignment": "warn",
