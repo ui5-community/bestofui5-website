@@ -58,7 +58,7 @@
           </ObjectPageSubSection>
           <ObjectPageSubSection title="readme" id="readme" titleUppercase="false">
             <blocks>
-              <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" />
+              <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" class="wrapCodeText" />
             </blocks>
           </ObjectPageSubSection>
         </subSections>
