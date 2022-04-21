@@ -7,8 +7,8 @@
   xmlns:core="sap.ui.core"
 >
   <Select id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
-    <core:Item key="downloads14" text="By downloads last 14 days" />
-    <core:Item key="downloads30" text="By downloads last 30 days" />
+    <core:Item key="downloadsCurrentFortnight" text="By downloads last 14 days" />
+    <core:Item key="downloadsCurrentMonth" text="By downloads last 30 days" />
     <core:Item key="downloads365" text="By downloads last 365 days" />
     <core:Item key="updatedAt" text="By date of last update" />
     <core:Item key="createdAt" text="By date of creation" />
@@ -30,8 +30,8 @@
         updatedAt="{= ${settings>/selectKey} === 'updatedAt' ? ${data>updatedAt} : undefined }"
         createdAt="{= ${settings>/selectKey} === 'createdAt' ? ${data>createdAt} : undefined }"
         addedToBoUI5="{= ${settings>/selectKey} === 'addedToBoUI5' ? ${data>addedToBoUI5} : undefined }"
-        downloads14="{= ${settings>/selectKey} === 'downloads14' ? ${data>downloadsCurrentFortnight} : -1 }"
-        downloads30="{= ${settings>/selectKey} === 'downloads30' ? ${data>downloadsCurrentMonth} : -1 }"
+        downloads14="{= ${settings>/selectKey} === 'downloadsCurrentFortnight' ? ${data>downloadsCurrentFortnight} : -1 }"
+        downloads30="{= ${settings>/selectKey} === 'downloadsCurrentMonth' ? ${data>downloadsCurrentMonth} : -1 }"
         downloads365="{= ${settings>/selectKey} === 'downloads365' ? ${data>downloads365} : -1 }"
       />
     </CustomListItem>
