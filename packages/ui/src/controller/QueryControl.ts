@@ -55,7 +55,7 @@ export default class QueryControl {
 		}
 		const typeFilter = new Filter({
 			filters: typeFilters,
-			and: false,
+			and: true,
 		});
 		const typesTagsFilter = new Filter({
 			filters: [tagsFilter, typeFilter],
