@@ -2,6 +2,7 @@ import UIComponent from "sap/ui/core/UIComponent";
 import { support } from "sap/ui/Device";
 import models from "./model/models";
 import JSONModel from "sap/ui/model/json/JSONModel";
+import IconPool from "sap/ui/core/IconPool";
 
 // import additional dependencies to bundle them properly
 import "sap/ui/core/ComponentSupport";
@@ -27,6 +28,13 @@ export default class Component extends UIComponent {
 
 		// create the views based on the url/hash
 		this.getRouter().initialize();
+
+		IconPool.registerFont({
+			collectionName: "font-awesome-icons",
+			fontFamily: "fa-brands",
+			fontURI: "font-awesome",
+			lazy: false,
+		});
 
 		const settingsModel = new JSONModel({
 			filter: "all",

@@ -1,0 +1,7 @@
+@font-face {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url("fa-brands-400.woff2") format("woff2"), url("fa-brands-400.ttf") format("truetype");
+}
