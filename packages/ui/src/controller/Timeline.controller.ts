@@ -14,7 +14,7 @@ export default class Timeline extends BaseController {
 		});
 	}
 
-	public async onPatternMatched(event): Promise<void> {
+	public onPatternMatched(event): void {
 		this.getView().getModel("settings").setProperty("/iconTabHeaderKey", "timeline");
 	}
 }
