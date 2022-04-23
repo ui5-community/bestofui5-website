@@ -5,7 +5,7 @@ import formatter from "../model/formatter";
 import Sorter from "sap/ui/model/Sorter";
 
 /**
- * @namespace org.openui5.ui5community.controller
+ * @namespace org.openui5.bestofui5.controller
  */
 export default class HotPackages extends AppController {
 	private formatter = formatter;

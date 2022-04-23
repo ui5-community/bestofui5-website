@@ -5,7 +5,7 @@ import { Chart, registerables } from "chart.js";
 import RenderManager from "sap/ui/core/RenderManager";
 
 /**
- * @name org.openui5.ui5community.control.BarChart
+ * @name org.openui5.bestofui5.control.BarChart
  */
 export default class BarChart extends Control {
 	private _chart: Chart;
@@ -23,7 +23,7 @@ export default class BarChart extends Control {
 		},
 		aggregations: {
 			records: {
-				type: "org.openui5.ui5community.control.ChartRecord",
+				type: "org.openui5.bestofui5.control.ChartRecord",
 			},
 		},
 		defaultAggregation: "records",
