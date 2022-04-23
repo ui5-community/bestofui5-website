@@ -68,21 +68,21 @@ They will replace the standard controls in the long run and therefore it makes s
 As a use case, we wanted to display the individual released versions of the NPM packages sorted by date.  
 In [SAPUI5 there is a timeline](https://ui5.sap.com/#/api/sap.suite.ui.commons.Timeline) for this, but unfortunately not in OpenUI5, however in the [UI5 web components](https://sap.github.io/ui5-webcomponents/playground/components/Timeline/) there is.  
 To use the UI5 web components, [@petermuessig](https://github.com/petermuessig) has already written a [detailed blog](https://blogs.sap.com/2022/03/10/ui5-web-components-enablement-for-openui5-sapui5/) about it.  
-Through direct integration with OpenUI5 the use is as simple as any other control [`Object.view.xml#L61-L63`](https://github.com/ui5-community/bestofui5-website/blob/cf6bfc22b60fa873842a93d083a944cc2992b027/packages/ui/src/view/Object.view.xml#L61-L63)
+Through direct integration with OpenUI5 the use is as simple as any other control [`Timeline.view.xml#L18-L37`](https://github.com/ui5-community/bestofui5-website/blob/cf6bfc22b60fa873842a93d083a944cc2992b027/packages/ui/src/view/Timeline.view.xml#L18-L37)
 
 ### Build & Deployment
 
 Build is automated with GitHub Actions.  
 On every push to `main`, the [`build`](https://github.com/ui5-community/bestofui5-website/blob/main/.github/workflows/build.yml) workflow is triggered.  
 This will transpile typescript to javascript, run the crawl and will also run `ui5 build self-contained --all`.  
-The result will be moved to the new folder `docs` and force pushed to the `docs` branch.  
+The result will be moved to the new folder [`docs`](https://github.com/ui5-community/bestofui5-website/tree/docs) and force pushed to the `docs` branch.  
 From there, GitHub Pages will automatically deploy the new version to the webpage <https://bestofui5.org/> .
 
 ## Backend
 
 We crawl data from GitHub and NPM.  
 The source code is written in typescript and in folder `packages/crawler`.
-It creates two json files which will be used as a model in the UI5 App.  
+It creates two json files (`data`, `versions`) which will be used as a model in the UI5 App.  
 The files is located at [`packages/ui/src/model/`](https://github.com/ui5-community/bestofui5-website/tree/main/packages/ui/src/model).  
 The packages are crawled from are located in [`crawler/sources.json`](https://github.com/ui5-community/bestofui5-website/blob/main/packages/crawler/sources.json).
 
