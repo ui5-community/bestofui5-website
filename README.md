@@ -1,4 +1,4 @@
-# ui5community
+# Best of UI5
 
 "Best of UI5" is the new entry page for the ui5-community.  
 It will show the best of community projects, be it applications, libraries, custom controls, tooling extensions, middlewares, tasks or Easy UI5 generators.  
@@ -46,7 +46,7 @@ Build is automated with GitHub Actions.
 On every push to `main`, the [`build`](https://github.com/ui5-community/bestofui5-website/blob/main/.github/workflows/build.yml) workflow is triggered.  
 This will transpile typescript to javascript and will also run `ui5 build self-contained --all`.  
 The result will be moved to the new folder `docs` and force pushed to the `docs` branch.  
-From there, GitHub Pages will automatically deploy the new version to the webpage <https://bestofui5-website/> .
+From there, GitHub Pages will automatically deploy the new version to the webpage <https://bestofui5.org/> .
 
 ## Backend
 

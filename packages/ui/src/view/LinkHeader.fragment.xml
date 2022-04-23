@@ -1,0 +1,59 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <ToolbarSpacer />
+  <Button text="Hot Packages" press=".onButtonHeaderSelect($event, 'hotPackages')" type="{= ${settings>/headerKey} === 'hotPackages' ? 'Emphasized' : 'Transparent' }">
+    <customData>
+      <core:CustomData key="headerKey" value="hotPackages" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="High" group="1" />
+    </layoutData>
+  </Button>
+  <Button text="All Packages" press=".onButtonHeaderSelect($event, 'allPackages')" type="{= ${settings>/headerKey} === 'allPackages' ? 'Emphasized' : 'Transparent' }">
+    <customData>
+      <core:CustomData key="headerKey" value="allPackages" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="High" group="1" />
+    </layoutData>
+  </Button>
+  <Button text="Tags" press=".onButtonHeaderSelect($event, 'tags')" type="{= ${settings>/headerKey} === 'tags' ? 'Emphasized' : 'Transparent' }">
+    <customData>
+      <core:CustomData key="headerKey" value="tags" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="High" group="1" />
+    </layoutData>
+  </Button>
+  <Button text="Timeline" press=".onButtonHeaderSelect($event, 'timeline')" type="{= ${settings>/headerKey} === 'timeline' ? 'Emphasized' : 'Transparent' }">
+    <customData>
+      <core:CustomData key="headerKey" value="timeline" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="Low" group="2" />
+    </layoutData>
+  </Button>
+  <ToolbarSpacer />
+  <Button
+    class="sapUiTinyMargin"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="Add your own package"
+    type="Emphasized"
+    icon="sap-icon://add-product"
+    press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-website/issues/new?assignees=&amp;labels=new%20package&amp;template=new_package.md&amp;title=Add%20new%20package:', true)"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="Low" group="2" />
+    </layoutData>
+  </Button>
+  <Button
+    class="sapUiTinyMargin"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    type="Neutral"
+    icon="sap-icon://font-awesome-icons/github"
+    press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-website', true)"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="Low" group="2" />
+    </layoutData>
+  </Button>
+</core:FragmentDefinition>
