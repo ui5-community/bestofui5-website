@@ -56,19 +56,8 @@ PackageListItemContent.prototype.getFragmentName = function (type) {
 	return "org.openui5.ui5community.control.PackageListItemContent";
 };
 
-PackageListItemContent.prototype.setType = function (type) {
-	this.setProperty("type", type, true);
-	const image =
-		type === "code-repository"
-			? "resources/img/github.png"
-			: type === "docker-image"
-			? "resources/img/docker.png"
-			: type === "npm-package"
-			? "resources/img/npm.png"
-			: type === "pypi-package"
-			? "resources/img/pypi.png"
-			: "";
-	this.setProperty("typeImage", image);
+PackageListItemContent.prototype.onIconPress = function (event, link) {
+	console.log("onIconPress");
 };
 
 PackageListItemContent.prototype.setRankIndicator = function (indicator) {

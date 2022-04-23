@@ -8,6 +8,7 @@
   xmlns:layout="sap.ui.layout"
   xmlns:tnt="sap.tnt"
   xmlns:cc="org.openui5.ui5community.control"
+  xmlns:core="sap.ui.core"
   displayBlock="true"
   height="100%"
 >
@@ -19,12 +20,18 @@
       <layout:VerticalLayout>
         <m:ObjectStatus title="Author" text="{data>author}" />
         <m:ObjectStatus title="License" text="{data>license}" />
-        <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
-        <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
+        <layout:HorizontalLayout>
+          <core:Icon src="sap-icon://font-awesome-icons/github" />
+          <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
+        </layout:HorizontalLayout>
+        <layout:HorizontalLayout>
+          <core:Icon src="sap-icon://font-awesome-icons/npm" />
+          <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
+        </layout:HorizontalLayout>
       </layout:VerticalLayout>
       <layout:VerticalLayout>
         <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
-        <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloads30}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads30} >= 0}" />
+        <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloadsCurrentMonth}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloadsCurrentMonth} >= 0}" />
         <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
       </layout:VerticalLayout>
       <layout:VerticalLayout>
@@ -58,7 +65,7 @@
           </ObjectPageSubSection>
           <ObjectPageSubSection title="readme" id="readme" titleUppercase="false">
             <blocks>
-              <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" />
+              <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" class="wrapCodeText" />
             </blocks>
           </ObjectPageSubSection>
         </subSections>

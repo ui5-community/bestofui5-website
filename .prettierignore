@@ -2,3 +2,4 @@ build
 docs
 *.html
 *.properties
+packages/ui/src/resources/font-awesome
