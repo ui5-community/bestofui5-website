@@ -3,7 +3,7 @@
     <Page id="page" title="{i18n>title}" titleAlignment="Center" class="openui5header">
       <subHeader>
         <OverflowToolbar class="doNotRoundMyToolBar">
-          <core:Fragment id="IconTabHeaderMain" fragmentName="org.openui5.bestofui5.view.IconTabHeader" type="XML" />
+          <core:Fragment id="LinkHeader" fragmentName="org.openui5.bestofui5.view.LinkHeader" type="XML" />
         </OverflowToolbar>
       </subHeader>
       <content>

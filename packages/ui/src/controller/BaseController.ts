@@ -83,7 +83,8 @@ export default abstract class BaseController extends Controller {
 		}
 	}
 
-	public onTabHeaderselect(event: UI5Event): void {
-		this.navTo(event.getParameter("key"));
+	public onButtonHeaderSelect(event: UI5Event, headerKey: string): void {
+		this.getView().getModel("settings").setProperty("/headerKey", headerKey);
+		this.navTo(headerKey);
 	}
 }

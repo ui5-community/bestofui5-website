@@ -15,7 +15,7 @@ export default class Tags extends AppController {
 	}
 
 	public onPatternMatched(event): void {
-		this.getView().getModel("settings").setProperty("/iconTabHeaderKey", "tags");
+		this.getView().getModel("settings").setProperty("/headerKey", "tags");
 	}
 
 	public onSelectionChange(event): void {

@@ -17,7 +17,7 @@ export default class AllPackages extends AppController {
 	}
 
 	public onPatternMatched(event): void {
-		this.getView().getModel("settings").setProperty("/iconTabHeaderKey", "allPackages");
+		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 		const search = this.getView().getModel("settings").getProperty("/search");
 		const token = this.getView().getModel("settings").getProperty("/tokens");
 		this.queryControl.applySearchFilter();

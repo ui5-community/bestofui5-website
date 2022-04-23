@@ -19,7 +19,7 @@ export default class App extends BaseController {
 		const value = event.getParameter("value").trim();
 		this.getView().getModel("settings").setProperty("/search", value);
 		if (this.getRouter().getHashChanger().getHash() != "packages") {
-			this.getView().getModel("settings").setProperty("/iconTabHeaderKey", "allPackages");
+			this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 			this.navTo("allPackages");
 		} else {
 			this.getView().getParent().byId("AllPackages").getController().onPatternMatched();
@@ -29,7 +29,7 @@ export default class App extends BaseController {
 	public onUpdateToken(event): void {
 		this.queryControl.onUpdateToken(event);
 		if (this.getRouter().getHashChanger().getHash() != "packages") {
-			this.getView().getModel("settings").setProperty("/iconTabHeaderKey", "allPackages");
+			this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 			this.navTo("allPackages");
 		} else {
 			this.getView().getParent().byId("AllPackages").getController().onPatternMatched();
