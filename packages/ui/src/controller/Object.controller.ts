@@ -4,7 +4,7 @@ import UI5Event from "sap/ui/base/Event";
 import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
- * @namespace org.openui5.ui5community.controller
+ * @namespace org.openui5.bestofui5.controller
  */
 export default class Object extends BaseController {
 	public onInit(): void {

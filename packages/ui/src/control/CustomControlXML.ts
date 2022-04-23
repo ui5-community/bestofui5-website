@@ -2,7 +2,7 @@ import Control from "sap/ui/core/Control";
 import CustomControlXMLRenderer from "./CustomControlXMLRenderer";
 
 /**
- * @namespace org.openui5.ui5community.control
+ * @namespace org.openui5.bestofui5.control
  */
 export default class CustomControlXML extends Control {
 	// The following three lines were generated and should remain as-is to make TypeScript aware of the constructor signatures
@@ -19,7 +19,7 @@ export default class CustomControlXML extends Control {
 				 * Renderer
 				 */
 				renderer: {
-					type: "org.openui5.ui5community.control.CustomControlXMLRenderer",
+					type: "org.openui5.bestofui5.control.CustomControlXMLRenderer",
 					defaultValue: CustomControlXMLRenderer,
 				},
 				/**

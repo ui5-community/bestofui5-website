@@ -2,7 +2,7 @@
   "_version": "1.12.0",
 
   "sap.app": {
-    "id": "org.openui5.ui5community",
+    "id": "org.openui5.bestofui5",
     "type": "application",
     "title": "{{app_title}}",
     "description": "{{app_description}}",
@@ -39,7 +39,7 @@
   "sap.ui5": {
     "flexEnabled": false,
     "rootView": {
-      "viewName": "org.openui5.ui5community.view.App",
+      "viewName": "org.openui5.bestofui5.view.App",
       "type": "XML",
       "async": true,
       "id": "rootView"
@@ -78,7 +78,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "org.openui5.ui5community.i18n.i18n",
+          "bundleName": "org.openui5.bestofui5.i18n.i18n",
           "supportedLocales": ["en"],
           "fallbackLocale": "en"
         }
@@ -97,7 +97,7 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "org.openui5.ui5community.view",
+        "viewPath": "org.openui5.bestofui5.view",
         "controlId": "pageContainer",
         "transition": "show",
         "controlAggregation": "pages",

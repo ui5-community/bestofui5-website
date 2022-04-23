@@ -10,7 +10,7 @@ import "sap/ui/core/date/Gregorian";
 import "sap/ui/model/type/Date";
 
 /**
- * @namespace org.openui5.ui5community
+ * @namespace org.openui5.bestofui5
  */
 export default class Component extends UIComponent {
 	public static metadata = {

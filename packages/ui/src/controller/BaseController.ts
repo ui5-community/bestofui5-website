@@ -10,7 +10,7 @@ import UI5Event from "sap/ui/base/Event";
 import formatter from "../model/formatter";
 
 /**
- * @namespace org.openui5.ui5community.controller
+ * @namespace org.openui5.bestofui5.controller
  */
 export default abstract class BaseController extends Controller {
 	public formatter: formatter;

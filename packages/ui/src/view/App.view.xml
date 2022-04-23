@@ -1,16 +1,9 @@
-<mvc:View
-  controllerName="org.openui5.ui5community.controller.App"
-  xmlns:mvc="sap.ui.core.mvc"
-  displayBlock="true"
-  xmlns="sap.m"
-  xmlns:ui5cc="org.openui5.ui5community.control"
-  xmlns:core="sap.ui.core"
->
+<mvc:View controllerName="org.openui5.bestofui5.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:ui5cc="org.openui5.bestofui5.control" xmlns:core="sap.ui.core">
   <App>
     <Page id="page" title="{i18n>title}" titleAlignment="Center" class="openui5header">
       <subHeader>
         <OverflowToolbar class="doNotRoundMyToolBar">
-          <core:Fragment id="IconTabHeaderMain" fragmentName="org.openui5.ui5community.view.IconTabHeader" type="XML" />
+          <core:Fragment id="IconTabHeaderMain" fragmentName="org.openui5.bestofui5.view.IconTabHeader" type="XML" />
         </OverflowToolbar>
       </subHeader>
       <content>
