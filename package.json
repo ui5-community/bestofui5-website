@@ -7,7 +7,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ui5-community/ui5-community.github.io.git"
+    "url": "https://github.com/ui5-community/bestofui5-website.git"
   },
   "scripts": {
     "prepare": "husky install",

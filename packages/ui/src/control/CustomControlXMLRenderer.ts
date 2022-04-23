@@ -2,7 +2,7 @@ import Control from "sap/ui/core/Control";
 import RenderManager from "sap/ui/core/RenderManager";
 
 /**
- * @namespace org.openui5.ui5community.control.CustomControlXMLRenderer
+ * @namespace org.openui5.bestofui5.control.CustomControlXMLRenderer
  */
 
 export default class CustomControlXMLRenderer extends Control {

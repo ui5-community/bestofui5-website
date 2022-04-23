@@ -4,11 +4,11 @@
 It will show the best of community projects, be it applications, libraries, custom controls, tooling extensions, middlewares, tasks or Easy UI5 generators.  
 Everyone can be able to register their projects at Best of UI5.  
 The projects will be ranked by various information about the projects and filterable by important criteria.  
-This should help to find you the best suited reuse project for your development needs!  
+This should help to find you the best suited reuse project for your development needs!
 
 ## Add your package
 
-Just create a [issue with this template](https://github.com/ui5-community/ui5-community.github.io/issues/new?assignees=&labels=new%20package&template=new_package.md&title=Add%20new%20package:) with your package and just check if you meet the prerequisites
+Just create a [issue with this template](https://github.com/ui5-community/bestofui5-website/issues/new?assignees=&labels=new%20package&template=new_package.md&title=Add%20new%20package:) with your package and just check if you meet the prerequisites
 
 ## Views
 
@@ -43,10 +43,10 @@ In the folder `packages/ui` is the source code in Typescript.
 ### Build & Deployment
 
 Build is automated with GitHub Actions.  
-On every push to `main`, the [`build`](https://github.com/ui5-community/ui5-community.github.io/blob/main/.github/workflows/build.yml) workflow is triggered.  
+On every push to `main`, the [`build`](https://github.com/ui5-community/bestofui5-website/blob/main/.github/workflows/build.yml) workflow is triggered.  
 This will transpile typescript to javascript and will also run `ui5 build self-contained --all`.  
 The result will be moved to the new folder `docs` and force pushed to the `docs` branch.  
-From there, GitHub Pages will automatically deploy the new version to the webpage <https://ui5-community.github.io/> .
+From there, GitHub Pages will automatically deploy the new version to the webpage <https://bestofui5-website/> .
 
 ## Backend
 
@@ -63,7 +63,7 @@ Either [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) for depende
 ## Run local
 
 git clone:
-`> git clone https://github.com/ui5-community/ui5-community.github.io`
+`> git clone https://github.com/ui5-community/bestofui5-website`
 
 Install `yarn`:
 `> npm install yarn --global`
@@ -72,7 +72,7 @@ Install all modules:
 `> yarn`
 
 Run crawler to fetch current data (optional):
-`>  yarn workspace crawler fetch`
+`> yarn workspace crawler fetch`
 
 You might want to set your GITHUB_TOKEN as a enviroment variable to avoid hitting rate limits.
 

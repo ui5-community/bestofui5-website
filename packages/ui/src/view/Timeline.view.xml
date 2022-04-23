@@ -1,6 +1,6 @@
 <mvc:View
   xmlns:commons="sap.suite.ui.commons"
-  controllerName="org.openui5.ui5community.controller.Timeline"
+  controllerName="org.openui5.bestofui5.controller.Timeline"
   xmlns:m="sap.m"
   xmlns="sap.ui.webc.fiori"
   xmlns:webcm="sap.ui.webc.main"

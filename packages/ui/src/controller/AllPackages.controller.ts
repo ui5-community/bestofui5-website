@@ -6,7 +6,7 @@ import Sorter from "sap/ui/model/Sorter";
 import QueryControl from "./QueryControl";
 
 /**
- * @namespace org.openui5.ui5community.controller
+ * @namespace org.openui5.bestofui5.controller
  */
 export default class AllPackages extends AppController {
 	private formatter = formatter;

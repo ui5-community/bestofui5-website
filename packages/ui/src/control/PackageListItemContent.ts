@@ -4,7 +4,7 @@ import CustomControlXML from "./CustomControlXML";
 import XMLComposite from "sap/ui/core/XMLComposite";
 
 /**
- * @namespace org.openui5.ui5community.control
+ * @namespace org.openui5.bestofui5.control
  */
 
 export default class PackageListItemContent extends XMLComposite {
@@ -53,7 +53,7 @@ export default class PackageListItemContent extends XMLComposite {
 }
 
 PackageListItemContent.prototype.getFragmentName = function (type) {
-	return "org.openui5.ui5community.control.PackageListItemContent";
+	return "org.openui5.bestofui5.control.PackageListItemContent";
 };
 
 PackageListItemContent.prototype.onIconPress = function (event, link) {

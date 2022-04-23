@@ -1,7 +1,7 @@
 import BaseController from "./BaseController";
 
 /**
- * @namespace org.openui5.ui5community.controller
+ * @namespace org.openui5.bestofui5.controller
  */
 export default class Timeline extends BaseController {
 	public onInit(): void {
