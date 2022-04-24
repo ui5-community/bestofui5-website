@@ -4,7 +4,7 @@
   "description": "POC",
   "private": "true",
   "scripts": {
-    "fetch": "ts-node src/index.ts",
+    "build": "ts-node src/index.ts",
     "watch": "tsc -w",
     "compile": "tsc",
     "lint": "eslint src",
