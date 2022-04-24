@@ -28,7 +28,7 @@ jobs:
                   yarn
             - name: crawl data
               run: |
-                  yarn workspace crawler fetch
+                  yarn workspace crawler build
             - run: |
                   yarn workspace ui build
             - name: Commit/Push build to docs branch
