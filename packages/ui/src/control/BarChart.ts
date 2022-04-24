@@ -34,7 +34,7 @@ export default class BarChart extends Control {
 		render: (rm: RenderManager, chart: BarChart) => {
 			rm.openStart("div", chart);
 			rm.style("color", chart.getColor());
-			rm.style("padding", "2em");
+			rm.style("padding", "0em");
 			rm.openEnd();
 
 			rm.openStart("canvas", chart.getId() + "-canvas");
