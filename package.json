@@ -1,7 +1,7 @@
 {
-  "name": "ui5community.github.io",
+  "name": "bestofui5-website",
   "version": "0.15.0",
-  "description": "ui5community.github.io mono repo",
+  "description": "bestofui5-website monorepo",
   "private": true,
   "author": "Marian Zeis",
   "license": "Apache-2.0",

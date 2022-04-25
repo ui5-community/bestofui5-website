@@ -1,7 +1,7 @@
 {
   "name": "crawler",
   "version": "0.0.1",
-  "description": "POC",
+  "description": "GitHub Crawler: bestofui5-website",
   "private": "true",
   "scripts": {
     "build": "ts-node src/index.ts",
