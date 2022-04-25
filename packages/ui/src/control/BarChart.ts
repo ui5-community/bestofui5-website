@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import Control from "sap/ui/core/Control";
 // https://www.chartjs.org/docs/latest/getting-started/integration.html#bundlers-webpack-rollup-etc
@@ -73,6 +74,11 @@ export default class BarChart extends Control {
 				options: {
 					responsive: true,
 					animation: false,
+					scales: {
+						x: {
+							display: false,
+						},
+					},
 				},
 			});
 		} else {
