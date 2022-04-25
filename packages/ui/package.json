@@ -29,8 +29,8 @@
     "@babel/preset-typescript": "^7.16.7",
     "@openui5/ts-types-esm": "1.101.0",
     "@prettier/plugin-xml": "^2.0.1",
-    "@types/jquery": "3.5.14",
     "@types/chart.js": "2.9.36",
+    "@types/jquery": "3.5.14",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
     "@ui5/cli": "^2.14.8",
@@ -52,9 +52,9 @@
     ]
   },
   "dependencies": {
-    "ui5-tooling-modules": "^0.3.0",
+    "chart.js": "^3.7.1",
     "ui5-cc-md": "^0.0.6",
-    "xml-formatter": "^2.6.1",
-    "chart.js": "^3.7.1"
+    "ui5-tooling-modules": "^0.3.0",
+    "xml-formatter": "^2.6.1"
   }
 }

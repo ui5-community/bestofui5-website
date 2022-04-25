@@ -17,8 +17,8 @@
   "devDependencies": {
     "@prettier/plugin-xml": "^2.0.1",
     "@types/glob": "^7.2.0",
-    "@types/jsdoc-to-markdown": "^7.0.3",
     "@types/js-yaml": "^4.0.5",
+    "@types/jsdoc-to-markdown": "^7.0.3",
     "@types/node": "^17.0.25",
     "eslint": "^8.13.0",
     "lint-staged": "^12.4.0",
