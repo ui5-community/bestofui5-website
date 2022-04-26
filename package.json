@@ -21,8 +21,8 @@
     "lint:commit": "commitlint -e",
     "lint": "yarn workspaces run lint",
     "lint:staged": "yarn workspaces run lint:staged",
-    "hooks:pre-commit": "npm-run-all --sequential prettier:staged",
-    "hooks:pre-push": "npm-run-all --sequential lint:staged lint:commit"
+    "hooks:pre-commit": "npm-run-all --sequential prettier:staged lint:staged",
+    "hooks:pre-push": "npm-run-all --sequential lint:commit"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
