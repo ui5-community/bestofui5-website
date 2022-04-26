@@ -4,7 +4,7 @@ node_modules/
 # build results
 webapp
 dist
-
+docs
 # Logs
 logs
 *.log

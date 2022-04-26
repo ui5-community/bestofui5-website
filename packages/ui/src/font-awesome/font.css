@@ -3,5 +3,5 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: block;
-	src: url("fa-brands-400.woff2") format("woff2"), url("fa-brands-400.ttf") format("truetype");
+	src: url("fa-brands.woff2") format("woff2"), url("fa-brands.ttf") format("truetype");
 }

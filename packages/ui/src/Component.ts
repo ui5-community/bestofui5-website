@@ -33,7 +33,7 @@ export default class Component extends UIComponent {
 			collectionName: "font-awesome-icons",
 			fontFamily: "fa-brands",
 			fontURI: "font-awesome",
-			lazy: false,
+			lazy: true,
 		});
 
 		const settingsModel = new JSONModel({
