@@ -5,6 +5,7 @@ node_modules/
 webapp
 dist
 docs
+
 # Logs
 logs
 *.log

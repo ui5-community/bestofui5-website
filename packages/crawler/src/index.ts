@@ -6,6 +6,8 @@ import GitHubRepositoriesProvider from "./gh-repos";
 import NPMProvider from "./npm";
 import { IPackage, Source, Tags, DataJson } from "./types";
 
+// TEST
+
 (async () => {
 	const dataJson: DataJson = {
 		packages: [],

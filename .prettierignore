@@ -1,0 +1,11 @@
+# Ignore specific files
+_config.yml
+
+# Ignore files by extension
+/**/*.md
+/**/*.svg
+
+# Ignore folders
+/docs/**
+/packages/ui/src/font-awesome/**
+/packages/ui/webapp/**

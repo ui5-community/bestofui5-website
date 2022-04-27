@@ -8,9 +8,7 @@
     "watch": "tsc -w",
     "compile": "tsc",
     "lint": "eslint src",
-    "lint:staged": "lint-staged",
-    "prettier": "prettier --write src",
-    "prettier:staged": "pretty-quick --staged"
+    "lint:staged": "lint-staged"
   },
   "author": "Marian Zeis",
   "license": "Apache-2.0",
