@@ -47,6 +47,6 @@
     ]
   },
   "workspaces": [
-    "packages/*"
+    "packages/ui"
   ]
 }
