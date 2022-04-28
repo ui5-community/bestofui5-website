@@ -6,6 +6,8 @@
 (function () {
 	"use strict";
 
+	// TEST
+
 	var _WINDOW = {};
 	var _DOCUMENT = {};
 

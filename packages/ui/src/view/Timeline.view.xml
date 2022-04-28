@@ -21,17 +21,17 @@
         name="{versions>name}"
         nameClickable="true"
         nameClick=".onNameClick($event, 'mycustomString')"
-        subtitleText="{= ${i18n>listItemTagUpdated}.replace('{0}', ${
+        subtitleText="{= ${i18n>list_item_tag_updated}.replace('{0}', ${
           path: 'versions>date',
-          type: 'sap.ui.model.type.Date', 
-          formatOptions: { 
-            source : { 
-              pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ' 
+          type: 'sap.ui.model.type.Date',
+          formatOptions: {
+            source : {
+              pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ'
             },
             relative: true,
             relativeScale: 'auto',
             relativeStyle: 'wide'
-          } 
+          }
         }) }"
       />
     </Timeline>

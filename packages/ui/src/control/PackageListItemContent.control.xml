@@ -72,17 +72,17 @@
           renderMode="Narrow"
           colorScheme="6"
           displayOnly="false"
-          text="{= ${i18n>listItemTagUpdated}.replace('{0}', ${
+          text="{= ${i18n>list_item_tag_updated}.replace('{0}', ${
                     path: '$this>updatedAt',
-                    type: 'sap.ui.model.type.Date', 
-                    formatOptions: { 
-                      source : { 
-                        pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ' 
+                    type: 'sap.ui.model.type.Date',
+                    formatOptions: {
+                      source : {
+                        pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ'
                       },
                       relative: true,
                       relativeScale: 'auto',
                       relativeStyle: 'wide'
-                    } 
+                    }
                   }) }"
           visible="{= !!${$this>updatedAt} }"
         />
@@ -93,17 +93,17 @@
           renderMode="Narrow"
           colorScheme="6"
           displayOnly="false"
-          text="{= ${i18n>addedToBestOfUI5}.replace('{0}', ${
+          text="{= ${i18n>added_to_best_of_ui5}.replace('{0}', ${
                   path: '$this>addedToBoUI5',
-                  type: 'sap.ui.model.type.Date', 
-                  formatOptions: { 
-                    source : { 
-                      pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ' 
+                  type: 'sap.ui.model.type.Date',
+                  formatOptions: {
+                    source : {
+                      pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ'
                     },
                     relative: true,
                     relativeScale: 'auto',
                     relativeStyle: 'wide'
-                  } 
+                  }
                 }) }"
           visible="{= !!${$this>addedToBoUI5} }"
         />
@@ -114,17 +114,17 @@
           renderMode="Narrow"
           colorScheme="6"
           displayOnly="false"
-          text="{= ${i18n>listItemTagCreated}.replace('{0}', ${
+          text="{= ${i18n>list_item_tag_created}.replace('{0}', ${
                     path: '$this>createdAt',
-                    type:'sap.ui.model.type.Date', 
-                    formatOptions: { 
-                      source : { 
-                        pattern: 'yyyy-MM-ddTHH:mm:ss X' 
+                    type:'sap.ui.model.type.Date',
+                    formatOptions: {
+                      source : {
+                        pattern: 'yyyy-MM-ddTHH:mm:ss X'
                       },
                       relative: true,
                       relativeScale: 'auto',
                       relativeStyle: 'wide'
-                    } 
+                    }
                   }) }"
           visible="{= !!${$this>createdAt} }"
         />
