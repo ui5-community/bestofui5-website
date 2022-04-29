@@ -16,11 +16,11 @@
     },
     "dataSources": {
       "data": {
-        "uri": "model/data.json",
+        "uri": "https://raw.githubusercontent.com/ui5-community/bestofui5-data/live-data/data/data.json",
         "type": "JSON"
       },
       "versions": {
-        "uri": "model/versions.json",
+        "uri": "https://raw.githubusercontent.com/ui5-community/bestofui5-data/live-data/data/versions.json",
         "type": "JSON"
       }
     }

@@ -1,13 +1,12 @@
 name: build
 
 on:
-  schedule:
-    - cron: "50 3 * * *" # runs every day at 03:50 UTC to avoid high loads
   push:
     branches: [main]
   workflow_dispatch:
 
 env:
+  HUSKY_SKIP: true
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 jobs:
@@ -26,17 +25,12 @@ jobs:
       - name: yarn
         run: |
           yarn
-      - name: crawl data
-        run: |
-          yarn workspace crawler build
       - run: |
-          yarn workspace ui build
+          yarn build
       - name: Commit/Push build to docs branch
         run: |
           git config --global user.name 'marianfoo'
           git config --global user.email '13335743+marianfoo@users.noreply.github.com'
           git add docs -f
-          git add packages/ui/src/model/data.json
-          git add packages/ui/src/model/versions.json
           git commit -m "chore: build"
           git push origin HEAD:docs --force
