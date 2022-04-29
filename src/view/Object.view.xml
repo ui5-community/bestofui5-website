@@ -96,12 +96,19 @@
             <blocks>
               <m:List items="{path: 'data>versions/'}" id="listVersions">
                 <m:StandardListItem
+                  type="Navigation"
+                  press=".onPressStandardListItemNpmLink"
                   id="listVersionsItem"
                   title="{
-                  parts: [
-                    {path: 'data>'}
-                  ],
-                  formatter: 'org.openui5.bestofui5.model.formatter.getKeyValue'
+                  path: 'data>',
+                  formatter: 'org.openui5.bestofui5.model.formatter.getKeyValue'}"
+                  description="{
+                  path: 'data>',
+                  type: 'sap.ui.model.type.DateTime',
+                  formatOptions: {
+                    source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
+                    pattern: 'dd.MM.yyyy'
+                  }
                 }"
                 />
               </m:List>

@@ -1,7 +1,6 @@
 import BaseController from "./BaseController";
 import History from "sap/ui/core/History";
 import UI5Event from "sap/ui/base/Event";
-import JSONModel from "sap/ui/model/json/JSONModel";
 import formatter from "../model/formatter";
 // import formatter from "../model/formatter_ts";
 
@@ -40,5 +39,12 @@ export default class Object extends BaseController {
 		} else {
 			this.getRouter().navTo("default", {}, true);
 		}
+	}
+
+	public onPressStandardListItemNpmLink(event: UI5Event): void {
+		const versionNpm: string = event.getSource().getBinding("title").getContext().getPath().split("/")[4];
+		const npmLink: string = event.getSource().getParent().getBindingContext("data").getObject().npmlink;
+		const link = `${npmLink}/v/${versionNpm}`;
+		window.open(link, "_blank");
 	}
 }

@@ -23,8 +23,7 @@ sap.ui.define(
 
 			getKeyValue(event) {
 				// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-				const key = this.getBinding("title").getContext().getPath().split("/")[4];
-				return key;
+				return this.getBinding("title").getContext().getPath().split("/")[4];
 			},
 		};
 		return __exports;
