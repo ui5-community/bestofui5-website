@@ -1,3 +1,4 @@
+import Event from "sap/ui/base/Event";
 import BaseController from "./BaseController";
 
 /**
@@ -8,13 +9,13 @@ export default class Timeline extends BaseController {
 		this.getRouter().getRoute("timeline").attachPatternMatched(this.onPatternMatched, this);
 	}
 
-	public onNameClick(event: sap.ui.base.Event): void {
+	public onNameClick(event: Event): void {
 		this.navTo("RouteObjectView", {
 			name: event.getSource().getBindingContext("versions").getObject().name,
 		});
 	}
 
-	public onPatternMatched(event): void {
+	public onPatternMatched(event: Event): void {
 		this.getView().getModel("settings").setProperty("/headerKey", "timeline");
 	}
 }

@@ -1,16 +1,20 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
+import Event from "sap/ui/base/Event";
+import View from "sap/ui/core/mvc/View";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
+
 export default class QueryControl {
-	private view: sap.ui.core.mvc.View;
+	private view: View;
+
 	// create constructor
-	constructor(view) {
+	constructor(view: View) {
 		this.view = view;
 	}
 
-	public liveSearch(event): void {
+	public liveSearch(event: Event): void {
 		const value = event.getParameter("value").trim();
 		this.view.getModel("settings").setProperty("/search", value);
 		this.applySearchFilter();
@@ -77,21 +81,21 @@ export default class QueryControl {
 		}
 	}
 
-	public onUpdateToken(event): void {
+	public onUpdateToken(event: Event): void {
 		const model = this.view.getModel("settings");
 		let tokenArray = model.getProperty("/tokens");
 
-		let addOrRemove = event.getParameter("type");
+		const addOrRemove = event.getParameter("type");
 		if (addOrRemove === "added") {
-			let keyArray = event.getParameter("addedTokens")[0].getProperty("key").split(";");
-			let tokenObject = {
+			const keyArray = event.getParameter("addedTokens")[0].getProperty("key").split(";");
+			const tokenObject = {
 				key: keyArray[0],
 				type: keyArray[1],
 			};
 			tokenArray.push(tokenObject);
 		} else if (addOrRemove === "removed") {
-			let keyArray = event.getParameter("removedTokens")[0].getProperty("key").split(";");
-			let tokenObject = {
+			const keyArray = event.getParameter("removedTokens")[0].getProperty("key").split(";");
+			const tokenObject = {
 				key: keyArray[0],
 				type: keyArray[1],
 			};

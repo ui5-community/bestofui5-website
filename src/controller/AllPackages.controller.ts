@@ -1,22 +1,20 @@
 import AppController from "./App.controller";
-import Filter from "sap/ui/model/Filter";
-import FilterOperator from "sap/ui/model/FilterOperator";
-import formatter from "../model/formatter";
 import Sorter from "sap/ui/model/Sorter";
 import QueryControl from "./QueryControl";
+import Event from "sap/ui/base/Event";
 
 /**
  * @namespace org.openui5.bestofui5.controller
  */
 export default class AllPackages extends AppController {
-	private formatter = formatter;
+	private queryControl: QueryControl;
 
 	public onInit(): void {
 		this.queryControl = new QueryControl(this.getView());
 		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
 	}
 
-	public onPatternMatched(event): void {
+	public onPatternMatched(event: Event): void {
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 		const search = this.getView().getModel("settings").getProperty("/search");
 		const token = this.getView().getModel("settings").getProperty("/tokens");
@@ -30,8 +28,8 @@ export default class AllPackages extends AppController {
 		// }
 	}
 
-	public onAfterRendering(event): void {
-		let binding = this.getView().byId("listAllPackages").getBinding("items");
+	public onAfterRendering(event: Event): void {
+		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
 			path: "downloads365",
 			descending: true,
@@ -39,7 +37,7 @@ export default class AllPackages extends AppController {
 		binding.sort(oSorter);
 	}
 
-	public onPress(event): void {
+	public onPress(event: Event): void {
 		// get object name from oevent
 		const objectName = event.getSource().getBindingContext("data").getObject().name;
 		//route to object view
@@ -48,9 +46,9 @@ export default class AllPackages extends AppController {
 		});
 	}
 
-	public onSortSelectChange(event): void {
+	public onSortSelectChange(event: Event): void {
 		const selectKey = event.getParameter("selectedItem").getKey();
-		let binding = this.getView().byId("listAllPackages").getBinding("items");
+		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
 			path: selectKey,
 			descending: true,

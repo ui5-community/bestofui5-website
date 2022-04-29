@@ -13,7 +13,7 @@ import formatter from "../model/formatter";
  * @namespace org.openui5.bestofui5.controller
  */
 export default abstract class BaseController extends Controller {
-	public formatter: formatter;
+	static formatter = formatter;
 
 	/**
 	 * Convenience method for accessing the component of the controller's view.
