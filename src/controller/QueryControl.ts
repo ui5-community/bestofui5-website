@@ -5,6 +5,8 @@ import Event from "sap/ui/base/Event";
 import View from "sap/ui/core/mvc/View";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
+import JSONModel from "sap/ui/model/json/JSONModel";
+import ListBinding from "sap/ui/model/ListBinding";
 
 export default class QueryControl {
 	private view: View;
@@ -16,7 +18,7 @@ export default class QueryControl {
 
 	public liveSearch(event: Event): void {
 		const value = event.getParameter("value").trim();
-		this.view.getModel("settings").setProperty("/search", value);
+		(this.view.getModel("settings") as JSONModel).setProperty("/search", value);
 		this.applySearchFilter();
 	}
 
@@ -27,7 +29,7 @@ export default class QueryControl {
 			value = "";
 		}
 		const list = this.view.byId("listAllPackages");
-		const listBinding = list.getBinding("items");
+		const listBinding = list.getBinding("items") as ListBinding;
 		const nameFilter = new Filter({
 			path: "name",
 			operator: FilterOperator.Contains,
@@ -40,7 +42,7 @@ export default class QueryControl {
 		});
 		const tagsFilter = new Filter(
 			"tags",
-			function (array) {
+			function (array: Array<any>) {
 				for (const valueType of valueTypes) {
 					if (array.includes(valueType.key) && valueType.type === "tag") {
 						return true;
@@ -104,7 +106,7 @@ export default class QueryControl {
 				return obj.key !== tokenObject.key && obj.type !== tokenObject.type;
 			});
 		}
-		this.view.getModel("settings").setProperty("/tokens", tokenArray);
+		(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
 		// this.applySearchFilter(value, tokenArray);
 	}
 }

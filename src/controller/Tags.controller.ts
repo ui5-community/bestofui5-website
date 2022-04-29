@@ -2,6 +2,7 @@ import AppController from "./App.controller";
 import Filter from "sap/ui/model/Filter";
 import FilterOperator from "sap/ui/model/FilterOperator";
 import Event from "sap/ui/base/Event";
+import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -12,7 +13,7 @@ export default class Tags extends AppController {
 	}
 
 	public onPatternMatched(event: Event): void {
-		this.getView().getModel("settings").setProperty("/headerKey", "tags");
+		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", "tags");
 	}
 
 	public onSelectionChange(event: Event): void {
@@ -39,8 +40,8 @@ export default class Tags extends AppController {
 		};
 		tokenArray.push(tokenObject);
 
-		this.getView().getModel("settings").setProperty("/tokens", tokenArray);
-		this.getView().getModel("settings").setProperty("/search", "");
+		(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
+		(this.getView().getModel("settings") as JSONModel).setProperty("/search", "");
 		this.navTo("allPackages");
 	}
 }

@@ -6,7 +6,7 @@ import QueryControl from "./QueryControl";
  * @namespace org.openui5.bestofui5.controller
  */
 export default class App extends BaseController {
-	private queryControl: QueryControl;
+	protected queryControl: QueryControl;
 
 	public onInit(): void {
 		this.queryControl = new QueryControl(this.getView());
