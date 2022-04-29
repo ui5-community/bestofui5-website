@@ -73,7 +73,7 @@
         <subSections>
           <ObjectPageSubSection mode="Expanded" title="npm downloads" titleUppercase="true" id="npmDownloadsSection">
             <blocks>
-              <cc:BarChart title="NPM Downloads per Month" color="#0070f2" records="{data>downloadsHistory}">
+              <cc:BarChart title="NPM Downloads per Month" color="#288bff" records="{data>downloadsHistory}">
                 <cc:ChartRecord label='{data>yearMonth}' value="{data>downloads}" />
               </cc:BarChart>
             </blocks>

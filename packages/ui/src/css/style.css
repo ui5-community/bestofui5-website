@@ -23,7 +23,7 @@
 }
 
 .sapMScrollBarOuterDiv {
-	height: auto;
+	display: none;
 }
 
 /*
@@ -32,4 +32,14 @@
 .wrapCodeText code {
 	white-space: pre-wrap;
 	word-wrap: break-word;
+}
+
+.chartPadding {
+	padding: 0em;
+}
+
+@media only screen and (min-width: 1000px) {
+	.chartPadding {
+		padding: 2em;
+	}
 }
