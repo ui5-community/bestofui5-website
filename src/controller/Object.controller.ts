@@ -2,11 +2,15 @@ import BaseController from "./BaseController";
 import History from "sap/ui/core/History";
 import UI5Event from "sap/ui/base/Event";
 import JSONModel from "sap/ui/model/json/JSONModel";
+import formatter from "../model/formatter";
+// import formatter from "../model/formatter_ts";
 
 /**
  * @namespace org.openui5.bestofui5.controller
  */
 export default class Object extends BaseController {
+	public formatter = formatter;
+
 	public onInit(): void {
 		this.getRouter().getRoute("RouteObjectView").attachPatternMatched(this.onPatternMatched, this);
 	}
