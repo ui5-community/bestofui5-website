@@ -25,4 +25,11 @@ export default class Object extends BaseController {
 			model: "data",
 		});
 	}
+
+	public onPressStandardListItemNpmLink(event: UI5Event): void {
+		const versionNpm: string = event.getSource().getBinding("title").getContext().getPath().split("/")[4];
+		const npmLink: string = event.getSource().getParent().getBindingContext("data").getObject().npmlink;
+		const link = `${npmLink}/v/${versionNpm}`;
+		window.open(link, "_blank");
+	}
 }
