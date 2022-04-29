@@ -21,11 +21,11 @@
         <m:ObjectStatus title="Author" text="{data>author}" />
         <m:ObjectStatus title="License" text="{data>license}" />
         <m:HBox>
-          <core:Icon src="sap-icon://font-awesome-icons/github" />
+          <core:Icon src="sap-icon://font-awesome-icons/github" class="sapUiSmallMarginEnd" />
           <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
         </m:HBox>
         <m:HBox>
-          <core:Icon src="sap-icon://font-awesome-icons/npm" />
+          <core:Icon src="sap-icon://font-awesome-icons/npm" class="sapUiSmallMarginEnd" />
           <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
         </m:HBox>
         <m:layoutData>
