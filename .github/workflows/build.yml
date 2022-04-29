@@ -19,14 +19,12 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "16"
-      - name: install yarn
+      - name: npm install
         run: |
-          npm install yarn --global
-      - name: yarn
+          npm install
+      - name: build ui
         run: |
-          yarn
-      - run: |
-          yarn build
+          npm run build
       - name: Commit/Push build to docs branch
         run: |
           git config --global user.name 'marianfoo'
