@@ -12,58 +12,77 @@
   displayBlock="true"
   height="100%"
 >
-  <ObjectPageLayout alwaysShowContentHeader="true" id="ObjectPageLayout" upperCaseAnchorBar="false" height="100%" class="fixImageWidth">
+  <ObjectPageLayout alwaysShowContentHeader="true" id="ObjectPageLayout" showAnchorBar="false" upperCaseAnchorBar="false" height="100%" class="fixImageWidth">
     <headerTitle>
       <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" titleSelectorTooltip="Custom Tooltip" />
     </headerTitle>
     <headerContent>
-      <layout:VerticalLayout>
+      <m:VBox>
         <m:ObjectStatus title="Author" text="{data>author}" />
         <m:ObjectStatus title="License" text="{data>license}" />
-        <layout:HorizontalLayout>
+        <m:HBox>
           <core:Icon src="sap-icon://font-awesome-icons/github" />
           <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
-        </layout:HorizontalLayout>
-        <layout:HorizontalLayout>
+        </m:HBox>
+        <m:HBox>
           <core:Icon src="sap-icon://font-awesome-icons/npm" />
           <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
-        </layout:HorizontalLayout>
-      </layout:VerticalLayout>
-      <layout:VerticalLayout>
+        </m:HBox>
+        <m:layoutData>
+          <m:FlexItemData growFactor="1" />
+        </m:layoutData>
+      </m:VBox>
+      <m:VBox>
         <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
         <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloadsCurrentMonth}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloadsCurrentMonth} >= 0}" />
         <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
-      </layout:VerticalLayout>
-      <layout:VerticalLayout>
-        <m:ObjectStatus title="Created At" text="{
-					path: 'data>createdAt',
-					type: 'sap.ui.model.type.DateTime',
-					formatOptions: {
-						source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
-						pattern: 'dd.MM.yyyy'
-					}
-				}" />
-        <m:ObjectStatus title="Last update" text="{
-					path: 'data>updatedAt',
-					type: 'sap.ui.model.type.DateTime',
-					formatOptions: {
-						source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
-						pattern: 'dd.MM.yyyy'
-					}
-				}" />
-      </layout:VerticalLayout>
+        <m:layoutData>
+          <m:FlexItemData growFactor="1" />
+        </m:layoutData>
+      </m:VBox>
+      <m:VBox>
+        <m:ObjectStatus
+          title="Created At"
+          text="{
+            path: 'data>createdAt',
+            type: 'sap.ui.model.type.DateTime',
+            formatOptions: {
+              source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
+              pattern: 'dd.MM.yyyy'
+            }
+          }"
+        />
+        <m:ObjectStatus
+          title="Last update"
+          text="{
+            path: 'data>updatedAt',
+            type: 'sap.ui.model.type.DateTime',
+            formatOptions: {
+              source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
+              pattern: 'dd.MM.yyyy'
+            }
+          }"
+        />
+        <m:layoutData>
+          <m:FlexItemData growFactor="1" />
+        </m:layoutData>
+      </m:VBox>
     </headerContent>
     <sections>
       <ObjectPageSection id="npmSection">
         <subSections>
-          <ObjectPageSubSection title="npm downloads" id="npmDownloadsSection">
+          <ObjectPageSubSection mode="Expanded" title="npm downloads" titleUppercase="true" id="npmDownloadsSection">
             <blocks>
               <cc:BarChart title="NPM Downloads per Month" color="#0070f2" records="{data>downloadsHistory}">
                 <cc:ChartRecord label='{data>yearMonth}' value="{data>downloads}" />
               </cc:BarChart>
             </blocks>
           </ObjectPageSubSection>
-          <ObjectPageSubSection title="readme" id="readme" titleUppercase="false">
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection id="readmeSection">
+        <subSections>
+          <ObjectPageSubSection mode="Expanded" title="readme" id="readme" titleUppercase="true">
             <blocks>
               <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" class="wrapCodeText" />
             </blocks>
