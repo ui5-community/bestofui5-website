@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 env:
+  HUSKY_SKIP: true
   GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 jobs:
@@ -25,7 +26,7 @@ jobs:
         run: |
           yarn
       - run: |
-          yarn workspace ui build
+          yarn build
       - name: Commit/Push build to docs branch
         run: |
           git config --global user.name 'marianfoo'

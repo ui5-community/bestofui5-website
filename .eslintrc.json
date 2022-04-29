@@ -7,10 +7,9 @@
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-requiring-type-checking"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["./tsconfig.json", "./packages/ui/tsconfig.json"],
+    "project": ["./tsconfig.json"],
     "sourceType": "module"
   },
-  "ignorePatterns": ["*.xml", "*.properties", "src/font-awesome/**"],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "@typescript-eslint/no-unsafe-assignment": "warn",

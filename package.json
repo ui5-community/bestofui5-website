@@ -1,7 +1,7 @@
 {
   "name": "bestofui5-website",
   "version": "0.15.0",
-  "description": "bestofui5-website monorepo",
+  "description": "bestofui5-website - UI5 Application",
   "private": true,
   "author": "Marian Zeis",
   "license": "Apache-2.0",
@@ -10,31 +10,67 @@
     "url": "https://github.com/ui5-community/bestofui5-website.git"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "node ./.husky/skip.js || husky install",
     "clean": "rm -rf docs",
-    "build": "yarn workspaces run build",
-    "start": "yarn workspace ui start",
-    "start:dist": "yarn workspace ui start:dist",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "build": "npm-run-all build:ts build:ui5",
+    "build:opt": "npm-run-all build:ts build:ui5:opt",
+    "build:ts": "babel src --out-dir webapp --source-maps true --extensions \".ts,.js\" --copy-files",
+    "build:ui5": "ui5 build self-contained --all --clean-dest --dest docs",
+    "start": "npm-run-all --parallel watch:ts start:ui5",
+    "watch:ts": "babel src --out-dir webapp --source-maps true --extensions \".ts,.js\" --copy-files --watch",
+    "watch:controls": "npx @ui5/ts-interface-generator",
+    "start:ui5": "ui5 serve --port 8080 -o index.html",
+    "start:dist": "ui5 serve  --port 8080 -o index.html --config ui5-dist.yaml",
+    "ts-typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
     "lint:commit": "commitlint -e",
-    "lint": "yarn workspaces run lint",
-    "lint:staged": "yarn workspaces run lint:staged",
     "prettier": "prettier --write .",
     "prettier:staged": "pretty-quick --staged --verbose",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "hooks:pre-commit": "npm-run-all --sequential prettier:staged lint:staged",
     "hooks:pre-push": "npm-run-all --sequential lint:commit"
   },
+  "dependencies": {
+    "chart.js": "^3.7.1",
+    "ui5-cc-md": "^0.0.6"
+  },
   "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@prettier/plugin-xml": "^2.0.1",
+    "@openui5/ts-types-esm": "1.101.0",
+    "@types/chart.js": "2.9.36",
+    "@types/jquery": "3.5.14",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "@ui5/cli": "^2.14.8",
+    "@ui5/ts-interface-generator": "^0.4.2",
+    "babel-preset-transform-ui5": "^7.0.5",
     "conventional-changelog-cli": "^2.2.2",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.13.0",
     "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "prettier-plugin-properties": "^0.1.0",
-    "pretty-quick": "^3.1.3"
+    "pretty-quick": "^3.1.3",
+    "typescript": "^4.6.3",
+    "ui5-middleware-livereload": "^0.5.11",
+    "ui5-tooling-modules": "^0.3.0",
+    "xml-formatter": "^2.6.1"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-tooling-modules",
+      "ui5-middleware-livereload",
+      "ui5-cc-md"
+    ]
   },
   "config": {
     "commitizen": {
@@ -45,8 +81,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "workspaces": [
-    "packages/ui"
-  ]
+  }
 }
