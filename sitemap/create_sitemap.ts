@@ -10,7 +10,7 @@ async function buildSitemap() {
 	const res = await fetch("https://raw.githubusercontent.com/ui5-community/bestofui5-data/live-data/data/data.json");
 	const data = await res.json();
 
-	const writeStream = fs.createWriteStream("./src/sitemap.xml");
+	const writeStream = fs.createWriteStream("./docs/sitemap.xml");
 	sitemap.pipe(writeStream);
 
 	sitemap.write({ url: "/#/packages" });
