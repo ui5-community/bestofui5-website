@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable no-case-declarations */
 import UIComponent from "sap/ui/core/UIComponent";
 import { support } from "sap/ui/Device";
 import models from "./model/models";
@@ -30,6 +32,8 @@ export default class Component extends UIComponent {
 
 		// create the views based on the url/hash
 		this.getRouter().initialize();
+
+		this.getRouter().attachRoutePatternMatched(this.onTitleChanged, this);
 
 		IconPool.registerFont({
 			collectionName: "font-awesome-icons",
@@ -81,5 +85,37 @@ export default class Component extends UIComponent {
 			}
 		}
 		return this.contentDensityClass;
+	}
+
+	public async onTitleChanged(event: Event): void {
+		const routeName = event.getParameter("config").name;
+		let title = "Best of UI5";
+		switch (routeName) {
+			case "RouteObjectView":
+				let packageName = event.getParameter("arguments").name;
+				const model = this.getModel("data");
+				await model.dataLoaded();
+				const data = model.getData();
+				const objectIndex = data.packages.findIndex((object) => object.name === packageName);
+				const object = this.getModel("data").getProperty(`/packages/${objectIndex}`);
+				title = `${object.name} - ${title}`;
+				document.querySelector('meta[name="description"]').setAttribute("content", `${title} - ${object.description}`);
+				document.querySelector('meta[property="og:description"]').setAttribute("content", `${title} - ${object.description}`);
+				break;
+			case "default":
+				title = `Hot Packages - ${title}`;
+				break;
+			case "allPackages":
+				title = `All Packages - ${title}`;
+				break;
+			case "tags":
+				title = `Types/Tags - ${title}`;
+				break;
+			case "timeline":
+				title = `Timeline Versions - ${title}`;
+				break;
+		}
+		// set window title
+		document.title = title;
 	}
 }
