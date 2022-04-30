@@ -14,36 +14,42 @@
 >
   <ObjectPageLayout alwaysShowContentHeader="true" id="ObjectPageLayout" showAnchorBar="false" upperCaseAnchorBar="false" height="100%" class="fixImageWidth">
     <headerTitle>
-      <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" titleSelectorTooltip="Custom Tooltip" />
+      <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" />
     </headerTitle>
     <headerContent>
       <m:VBox>
-        <m:ObjectStatus title="Author" text="{data>author}" />
-        <m:ObjectStatus title="License" text="{data>license}" />
+        <m:ObjectStatus title="{i18n>object_view_header_author}" text="{data>author}" />
+        <m:ObjectStatus title="{i18n>object_view_header_license}" text="{data>license}" />
         <m:HBox>
           <core:Icon src="sap-icon://font-awesome-icons/github" class="sapUiSmallMarginEnd" />
-          <m:Link text="GitHub" href="{data>githublink}" target="_blank" />
+          <m:Link text="{i18n>object_view_header_github}" href="{data>githublink}" target="_blank" />
         </m:HBox>
         <m:HBox>
           <core:Icon src="sap-icon://font-awesome-icons/npm" class="sapUiSmallMarginEnd" />
-          <m:Link text="NPM" href="{data>npmlink}" target="_blank" />
+          <m:Link text="{i18n>object_view_header_npm}" href="{data>npmlink}" target="_blank" />
         </m:HBox>
         <m:layoutData>
           <m:FlexItemData growFactor="1" />
         </m:layoutData>
       </m:VBox>
       <m:VBox>
-        <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
-        <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloadsCurrentMonth}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloadsCurrentMonth} >= 0}" />
-        <tnt:InfoLabel id="downloads14" text="Downloads last 14 days {data>downloadsCurrentFortnight}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloadsCurrentFortnight} >= 0}" />
-        <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
+        <tnt:InfoLabel id="downloads365" text="{i18n>object_view_header_downloads365} {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
+        <tnt:InfoLabel id="downloads30" text="{i18n>object_view_header_downloads30} {data>downloadsCurrentMonth}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloadsCurrentMonth} >= 0}" />
+        <tnt:InfoLabel
+          id="downloads14"
+          text="{i18n>object_view_header_downloads14} {data>downloadsCurrentFortnight}"
+          renderMode="Loose"
+          colorScheme="5"
+          visible="{= ${data>downloadsCurrentFortnight} >= 0}"
+        />
+        <tnt:InfoLabel id="version" text="{i18n>object_view_header_version} {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
         <m:layoutData>
           <m:FlexItemData growFactor="1" />
         </m:layoutData>
       </m:VBox>
       <m:VBox>
         <m:ObjectStatus
-          title="Created At"
+          title="{i18n>object_view_header_created_at}"
           text="{
             path: 'data>createdAt',
             type: 'sap.ui.model.type.DateTime',
@@ -54,7 +60,7 @@
           }"
         />
         <m:ObjectStatus
-          title="Last update"
+          title="{i18n>object_view_header_updated_at}"
           text="{
             path: 'data>updatedAt',
             type: 'sap.ui.model.type.DateTime',
@@ -72,9 +78,9 @@
     <sections>
       <ObjectPageSection id="npmSection">
         <subSections>
-          <ObjectPageSubSection mode="Expanded" title="npm downloads" titleUppercase="true" id="npmDownloadsSection">
+          <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_npm}" titleUppercase="true" id="npmDownloadsSection">
             <blocks>
-              <cc:BarChart title="NPM Downloads per Month" color="#288bff" records="{data>downloadsHistory}">
+              <cc:BarChart title="{i18n>object_view_section_npm_chart_header}" color="#288bff" records="{data>downloadsHistory}">
                 <cc:ChartRecord label='{data>yearMonth}' value="{data>downloads}" />
               </cc:BarChart>
             </blocks>
@@ -83,7 +89,7 @@
       </ObjectPageSection>
       <ObjectPageSection id="readmeSection">
         <subSections>
-          <ObjectPageSubSection mode="Expanded" title="readme" id="readme" titleUppercase="true">
+          <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_readme}" id="readme" titleUppercase="true">
             <blocks>
               <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" class="wrapCodeText" />
             </blocks>
@@ -92,7 +98,7 @@
       </ObjectPageSection>
       <ObjectPageSection id="versionsSection">
         <subSections>
-          <ObjectPageSubSection mode="Expanded" title="versions" id="versions" titleUppercase="true">
+          <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_versions}" id="versions" titleUppercase="true">
             <blocks>
               <m:List
                 items="{

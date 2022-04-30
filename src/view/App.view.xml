@@ -7,7 +7,7 @@
           <Button
             class="sapUiTinyMargin"
             core:require="{ sapMLib: 'sap/m/library' }"
-            text="Add your own package"
+            text="{i18n>app_view_addyourpackage}"
             type="Emphasized"
             icon="sap-icon://add-product"
             press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&amp;labels=new%20package&amp;template=new_package.md', true)"
@@ -38,7 +38,7 @@
         <FlexBox width="100%" height="100%" id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
           <MultiInput
             startSuggestion="0"
-            placeholder="Search for..."
+            placeholder="{i18n>app_view_search_placeholder}"
             class="sapUiMediumMarginTopBottom"
             id="multiInput"
             width="100%"
