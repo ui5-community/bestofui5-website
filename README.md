@@ -8,7 +8,7 @@ This should help to find you the best suited reuse project for your development 
 
 ## Add your package
 
-Just create a [issue with this template in the `bestofui5-data repo`](https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&labels=new%20package&template=new_package.md) with your package and just check if you meet the prerequisites
+Just create a [issue with this template in the `bestofui5-data repo`](https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&labels=new%20package&template=new_package.md&title=Add%20new%20Package:) with your package and just check if you meet the prerequisites
 
 ## Views
 
