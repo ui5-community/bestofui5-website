@@ -7,14 +7,14 @@
   xmlns:core="sap.ui.core"
 >
   <Select id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
-    <core:Item key="downloadsCurrentFortnight" text="By downloads last 14 days" />
-    <core:Item key="downloadsCurrentMonth" text="By downloads last 30 days" />
-    <core:Item key="downloads365" text="By downloads last 365 days" />
-    <core:Item key="updatedAt" text="By date of last update" />
-    <core:Item key="createdAt" text="By date of creation" />
-    <core:Item key="addedToBoUI5" text="By date of addition on Best of UI5" />
+    <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
+    <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
+    <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
+    <core:Item key="updatedAt" text="{i18n>all_packages_view_select_updatedAt}" />
+    <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
+    <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
   </Select>
-  <List id="listAllPackages" headerText="Packages" mode="None" items="{path: 'data>/packages/'}" width="{= ${device>/system/phone} === true ? '' : '1024px' }">
+  <List id="listAllPackages" headerText="{i18n>all_packages_view_header}" mode="None" items="{path: 'data>/packages/'}" width="{= ${device>/system/phone} === true ? '' : '1024px' }">
     <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
       <ui5cc:PackageListItemContent
         name="{data>name}"
