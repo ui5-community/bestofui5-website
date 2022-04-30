@@ -88,8 +88,9 @@ export default class Component extends UIComponent {
 	}
 
 	private async onTitleChanged(event: Event): void {
+		const oResourceBundle = this.getModel("i18n").getResourceBundle();
 		const routeName = event.getParameter("config").name;
-		let title = "Best of UI5";
+		let title = oResourceBundle.getText("component_title");
 		switch (routeName) {
 			case "RouteObjectView":
 				let packageName = event.getParameter("arguments").name;
@@ -103,16 +104,16 @@ export default class Component extends UIComponent {
 				document.querySelector('meta[property="og:description"]').setAttribute("content", `${title} - ${object.description}`);
 				break;
 			case "default":
-				title = `Hot Packages - ${title}`;
+				title = `${oResourceBundle.getText("component_hot")} - ${title}`;
 				break;
 			case "allPackages":
-				title = `All Packages - ${title}`;
+				title = `${oResourceBundle.getText("component_all")} - ${title}`;
 				break;
 			case "tags":
-				title = `Types/Tags - ${title}`;
+				title = `${oResourceBundle.getText("component_tags")} - ${title}`;
 				break;
 			case "timeline":
-				title = `Timeline Versions - ${title}`;
+				title = `${oResourceBundle.getText("component_timeline")} - ${title}`;
 				break;
 		}
 		// set window title
