@@ -87,7 +87,7 @@ export default class Component extends UIComponent {
 		return this.contentDensityClass;
 	}
 
-	public async onTitleChanged(event: Event): void {
+	private async onTitleChanged(event: Event): void {
 		const routeName = event.getParameter("config").name;
 		let title = "Best of UI5";
 		switch (routeName) {
