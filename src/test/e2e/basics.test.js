@@ -7,6 +7,6 @@ describe("ui5 basic", () => {
 
 	it("should have the right title", async () => {
 		const title = await browser.getTitle();
-		expect(title).toEqual("Best of UI5");
+		expect(title).toEqual("Hot Packages - Best of UI5");
 	});
 });
