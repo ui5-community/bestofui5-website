@@ -13,6 +13,7 @@ CNAME
 
 # Ignore files by folders
 /src/font-awesome/**
+/src/test/**
 
 # Additionally ignore files for linting
 /**/*.html
