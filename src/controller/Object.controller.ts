@@ -1,7 +1,6 @@
 import BaseController from "./BaseController";
-import History from "sap/ui/core/History";
-import UI5Event from "sap/ui/base/Event";
-import JSONModel from "sap/ui/model/json/JSONModel";
+import Event from "sap/ui/base/Event";
+import Filter from "sap/ui/model/Filter";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -11,7 +10,7 @@ export default class Object extends BaseController {
 		this.getRouter().getRoute("RouteObjectView").attachPatternMatched(this.onPatternMatched, this);
 	}
 
-	public async onPatternMatched(event): Promise<void> {
+	public async onPatternMatched(event: Event): Promise<void> {
 		const objectName = event.getParameter("arguments").name;
 		const model = this.getModel("data");
 		await model.dataLoaded();
@@ -28,13 +27,10 @@ export default class Object extends BaseController {
 		});
 	}
 
-	public onNavBack(event: UI5Event): void {
-		const sPreviousHash = History.getInstance().getPreviousHash();
-
-		if (sPreviousHash !== undefined) {
-			history.go(-1);
-		} else {
-			this.getRouter().navTo("default", {}, true);
-		}
+	public onPressStandardListItemNpmLink(event: Event): void {
+		const versionNpm: string = event.getSource().getBindingContext("data").getObject().version;
+		const npmLink: string = event.getSource().getParent().getBindingContext("data").getObject().npmlink;
+		const link = `${npmLink}/v/${versionNpm}`;
+		window.open(link, "_blank");
 	}
 }

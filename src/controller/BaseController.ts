@@ -7,13 +7,14 @@ import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import Router from "sap/ui/core/routing/Router";
 import History from "sap/ui/core/routing/History";
 import UI5Event from "sap/ui/base/Event";
+import JSONModel from "sap/ui/model/json/JSONModel";
 import formatter from "../model/formatter";
 
 /**
  * @namespace org.openui5.bestofui5.controller
  */
 export default abstract class BaseController extends Controller {
-	public formatter: formatter;
+	static formatter = formatter;
 
 	/**
 	 * Convenience method for accessing the component of the controller's view.
@@ -84,7 +85,7 @@ export default abstract class BaseController extends Controller {
 	}
 
 	public onButtonHeaderSelect(event: UI5Event, headerKey: string): void {
-		this.getView().getModel("settings").setProperty("/headerKey", headerKey);
+		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", headerKey);
 		this.navTo(headerKey);
 	}
 }

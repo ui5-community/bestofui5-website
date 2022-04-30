@@ -15,7 +15,7 @@
     "baseUrl": "./",
     "typeRoots": ["node_modules/@types", "node_modules/@openui5/ts-types-esm"],
     "paths": {
-      "org/openui5/ui5community/*": ["./src/*"]
+      "org/openui5/bestofui5/*": ["./src/*"]
     }
   },
   "include": ["./src/**/*"]

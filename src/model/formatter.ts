@@ -1,3 +1,5 @@
+import { DeviationIndicator } from "sap/m/library";
+
 export default {
 	/**
 	 * Rounds the currency value to 2 digits
@@ -6,7 +8,7 @@ export default {
 	 * @param {string} value value to be formatted
 	 * @returns {string} formatted currency value with 2 digits
 	 */
-	formatValue: (value: string) => {
+	formatValue(value: string): string {
 		if (!value) {
 			return "";
 		}
@@ -17,21 +19,21 @@ export default {
 		}
 	},
 
-	formatRank: function (rank) {
+	formatRank(rank: number): number {
 		return +rank + 1;
 	},
 
-	formatIndicator: function (rank, pastRank) {
+	formatIndicator(rank: number, pastRank: number): DeviationIndicator {
 		if (rank < pastRank || isNaN(pastRank)) {
-			return sap.m.DeviationIndicator.Up;
+			return DeviationIndicator.Up;
 		}
 		if (rank > pastRank) {
-			return sap.m.DeviationIndicator.Down;
+			return DeviationIndicator.Down;
 		}
-		return sap.m.DeviationIndicator.None;
+		return DeviationIndicator.None;
 	},
 
-	formatPastRankTooltip: function (pastRank) {
+	formatPastRankTooltip(pastRank: number): string {
 		const resourceBundle = this.getView().getModel("i18n").getResourceBundle();
 		if (isNaN(pastRank)) {
 			return resourceBundle.getText("noPrevListing");
@@ -39,11 +41,11 @@ export default {
 		return resourceBundle.getText("prevListing", [+pastRank + 1]);
 	},
 
-	isPresent: function (value) {
+	isPresent(value: string): boolean {
 		return !!value;
 	},
 
-	containsNpmPackages: function (allItem) {
+	containsNpmPackages(allItem: Array<any>): boolean {
 		return (
 			allItem &&
 			allItem.some(function (item) {
@@ -52,7 +54,7 @@ export default {
 		);
 	},
 
-	formatHighlight: function (string, highlight) {
+	formatHighlight(string: string, highlight: string): string {
 		if (!string) {
 			return "";
 		}
@@ -67,7 +69,7 @@ export default {
 		return string;
 	},
 
-	containsDockerImages: function (allItem) {
+	containsDockerImages(allItem: Array<any>): boolean {
 		return (
 			allItem &&
 			allItem.some(function (item) {
@@ -76,7 +78,7 @@ export default {
 		);
 	},
 
-	containsPypiPackages: function (allItem) {
+	containsPypiPackages(allItem: Array<any>): boolean {
 		return (
 			allItem &&
 			allItem.some(function (item) {
@@ -85,7 +87,7 @@ export default {
 		);
 	},
 
-	containsCodeRepositories: function (allItem) {
+	containsCodeRepositories(allItem: Array<any>): boolean {
 		return (
 			allItem &&
 			allItem.some(function (item) {

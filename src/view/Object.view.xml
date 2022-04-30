@@ -35,6 +35,7 @@
       <m:VBox>
         <tnt:InfoLabel id="downloads365" text="Downloads last 365 days {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
         <tnt:InfoLabel id="downloads30" text="Downloads last 30 days {data>downloadsCurrentMonth}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloadsCurrentMonth} >= 0}" />
+        <tnt:InfoLabel id="downloads14" text="Downloads last 14 days {data>downloadsCurrentFortnight}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloadsCurrentFortnight} >= 0}" />
         <tnt:InfoLabel id="version" text=" Version {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
         <m:layoutData>
           <m:FlexItemData growFactor="1" />
@@ -85,6 +86,61 @@
           <ObjectPageSubSection mode="Expanded" title="readme" id="readme" titleUppercase="true">
             <blocks>
               <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" class="wrapCodeText" />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection id="versionsSection">
+        <subSections>
+          <ObjectPageSubSection mode="Expanded" title="versions" id="versions" titleUppercase="true">
+            <blocks>
+              <m:List
+                items="{
+                path: 'data>versions/',
+                sorter: {
+                  path: 'version',
+                  descending: true
+                },
+                filters: [
+                {
+                  filters: [
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: 'created'
+                    },
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: 'modified'
+                    },
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: '0.0.1-security'
+                    }
+                  ],
+                  and: true
+                }
+                ]
+              }"
+                id="listVersions"
+              >
+                <m:StandardListItem
+                  type="Navigation"
+                  press=".onPressStandardListItemNpmLink"
+                  id="listVersionsItem"
+                  title="{data>version}"
+                  description="{
+                  path: 'data>date',
+                  type: 'sap.ui.model.type.DateTime',
+                  formatOptions: {
+                    source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
+                    pattern: 'dd.MM.yyyy'
+                  }
+                }"
+                />
+              </m:List>
             </blocks>
           </ObjectPageSubSection>
         </subSections>
