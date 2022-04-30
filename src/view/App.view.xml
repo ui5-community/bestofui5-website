@@ -10,7 +10,7 @@
             text="{i18n>app_view_addyourpackage}"
             type="Emphasized"
             icon="sap-icon://add-product"
-            press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&amp;labels=new%20package&amp;template=new_package.md', true)"
+            press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&labels=new%20package&template=new_package.md&title=Add%20new%20Package:', true)"
           >
             <layoutData>
               <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
