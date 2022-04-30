@@ -94,16 +94,45 @@
         <subSections>
           <ObjectPageSubSection mode="Expanded" title="versions" id="versions" titleUppercase="true">
             <blocks>
-              <m:List items="{path: 'data>versions/'}" id="listVersions">
+              <m:List
+                items="{
+                path: 'data>versions/',
+                sorter: {
+                  path: 'version',
+                  descending: true
+                },
+                filters: [
+                {
+                  filters: [
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: 'created'
+                    },
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: 'modified'
+                    },
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: '0.0.1-security'
+                    }
+                  ],
+                  and: true
+                }
+                ]
+              }"
+                id="listVersions"
+              >
                 <m:StandardListItem
                   type="Navigation"
                   press=".onPressStandardListItemNpmLink"
                   id="listVersionsItem"
-                  title="{
-                  path: 'data>',
-                  formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.getKeyValue'}"
+                  title="{data>version}"
                   description="{
-                  path: 'data>',
+                  path: 'data>date',
                   type: 'sap.ui.model.type.DateTime',
                   formatOptions: {
                     source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},

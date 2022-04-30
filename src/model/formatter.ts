@@ -95,9 +95,4 @@ export default {
 			})
 		);
 	},
-
-	getKeyValue(): string {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-call
-		return this.getBinding("title").getContext().getPath().split("/")[4];
-	},
 };

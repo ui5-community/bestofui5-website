@@ -1,6 +1,11 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
   <ToolbarSpacer />
-  <Button text="Hot Packages" press=".onButtonHeaderSelect($event, 'hotPackages')" type="{= ${settings>/headerKey} === 'hotPackages' ? 'Emphasized' : 'Transparent' }">
+  <Button
+    text="Hot Packages"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'hotPackages')"
+    type="{= ${settings>/headerKey} === 'hotPackages' ? 'Emphasized' : 'Transparent' }"
+  >
     <customData>
       <core:CustomData key="headerKey" value="hotPackages" />
     </customData>
@@ -8,7 +13,13 @@
       <OverflowToolbarLayoutData priority="High" group="1" />
     </layoutData>
   </Button>
-  <Button text="All Packages" press=".onButtonHeaderSelect($event, 'allPackages')" type="{= ${settings>/headerKey} === 'allPackages' ? 'Emphasized' : 'Transparent' }">
+  <Button
+    text="All Packages"
+    tooltip="All Packages"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'allPackages')"
+    type="{= ${settings>/headerKey} === 'allPackages' ? 'Emphasized' : 'Transparent' }"
+  >
     <customData>
       <core:CustomData key="headerKey" value="allPackages" />
     </customData>
@@ -16,7 +27,7 @@
       <OverflowToolbarLayoutData priority="High" group="1" />
     </layoutData>
   </Button>
-  <Button text="Tags" press=".onButtonHeaderSelect($event, 'tags')" type="{= ${settings>/headerKey} === 'tags' ? 'Emphasized' : 'Transparent' }">
+  <Button text="Tags" class="sapUiNoMarginBegin sapUiNoMarginEnd" press=".onButtonHeaderSelect($event, 'tags')" type="{= ${settings>/headerKey} === 'tags' ? 'Emphasized' : 'Transparent' }">
     <customData>
       <core:CustomData key="headerKey" value="tags" />
     </customData>
@@ -24,7 +35,12 @@
       <OverflowToolbarLayoutData priority="High" group="1" />
     </layoutData>
   </Button>
-  <Button text="Timeline" press=".onButtonHeaderSelect($event, 'timeline')" type="{= ${settings>/headerKey} === 'timeline' ? 'Emphasized' : 'Transparent' }">
+  <Button
+    text="Timeline"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'timeline')"
+    type="{= ${settings>/headerKey} === 'timeline' ? 'Emphasized' : 'Transparent' }"
+  >
     <customData>
       <core:CustomData key="headerKey" value="timeline" />
     </customData>
