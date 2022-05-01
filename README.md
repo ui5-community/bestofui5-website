@@ -85,7 +85,8 @@ The tests are located in the [`test`](https://github.com/ui5-community/bestofui5
 
 ## Backend
 
-**The backend is located in a seperate repository [`bestofui5-data`](https://github.com/ui5-community/bestofui5-data).**
+**The backend is located in a seperate repository [`bestofui5-data`](https://github.com/ui5-community/bestofui5-data#readme).**  
+**For a more detailed documentation read the readme there.**
 
 We crawl data from GitHub and NPM.  
 The source code is written in typescript and in folder [`src`](https://github.com/ui5-community/bestofui5-data/tree/main/src).
