@@ -164,7 +164,7 @@
         "TargetTimelineView": {
           "viewType": "XML",
           "transition": "slide",
-          "viewLevel": 2,
+          "viewLevel": 1,
           "viewId": "Timeline",
           "viewName": "Timeline"
         }
