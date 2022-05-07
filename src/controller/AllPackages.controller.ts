@@ -13,10 +13,10 @@ export default class AllPackages extends AppController {
 
 	public onPatternMatched(event: Event): void {
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
-		const routerArgsObject = event.getParameter("arguments") || {};
+		const routerArgsObject = event.getParameter("arguments")["?query"] || {};
 		this.queryUtil.getParameterFromQuery(routerArgsObject);
-		this.filterFromQuery(routerArgsObject);
 		this.queryUtil.applySearchFilter();
+		this.filterFromQuery(routerArgsObject);
 	}
 
 	public onAfterRendering(): void {

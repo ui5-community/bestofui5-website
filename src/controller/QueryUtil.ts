@@ -126,6 +126,9 @@ export default class QueryUtil {
 			});
 			(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokens);
 		}
+		if (eventArguments.sort) {
+			(this.view.getModel("settings") as JSONModel).setProperty("/selectKey", eventArguments.sort);
+		}
 	}
 
 	public setQueryParameters(): void {
@@ -148,6 +151,12 @@ export default class QueryUtil {
 			tokens: tokenString,
 			sort: sortKey,
 		};
+		// remove empty values from queries
+		Object.keys(queries).forEach(function (key) {
+			if (!queries[key]) {
+				delete queries[key];
+			}
+		});
 
 		let queryString = "packages?";
 		// concat query string for hash with loop over dict, the first one without "&"
@@ -161,6 +170,8 @@ export default class QueryUtil {
 				}
 			}
 		}
-		this.view.getController().getRouter().getHashChanger().setHash(queryString);
+		if (queryString !== "packages?") {
+			this.view.getController().getRouter().getHashChanger().setHash(queryString);
+		}
 	}
 }
