@@ -111,16 +111,13 @@ export default class QueryUtil {
 		// this.applySearchFilter(value, tokenArray);
 	}
 
-	public setParameterFromQuery(eventArguments: any): void {
-		// set parameter from query to global json models
-		const routerArgsObject = eventArguments["?query"] || {};
-
-		if (routerArgsObject.search) {
-			(this.view.getModel("settings") as JSONModel).setProperty("/search", routerArgsObject.search);
+	public getParameterFromQuery(eventArguments: any): void {
+		if (eventArguments.search) {
+			(this.view.getModel("settings") as JSONModel).setProperty("/search", eventArguments.search);
 		}
-		if (routerArgsObject.tokens) {
+		if (eventArguments.tokens) {
 			// create tokens objects
-			const tokens = routerArgsObject.tokens.split(",").map(function (obj) {
+			const tokens = eventArguments.tokens.split(",").map(function (obj) {
 				const attributes = obj.split(":");
 				return {
 					key: attributes[0],
@@ -131,9 +128,14 @@ export default class QueryUtil {
 		}
 	}
 
-	private setQueryParameters(): void {
+	public setQueryParameters(): void {
 		const searchParameter: string = (this.view.getModel("settings") as JSONModel).getProperty("/search");
 		const tokens: any = (this.view.getModel("settings") as JSONModel).getProperty("/tokens");
+		let sortKey: string = (this.view.getModel("settings") as JSONModel).getProperty("/selectKey");
+		// dont set 'downloads365' in query because it is default value
+		if (sortKey === "downloads365") {
+			sortKey = "";
+		}
 		// join tokens objects attributes to string
 		const tokenString = tokens
 			.map(function (obj) {
@@ -144,6 +146,7 @@ export default class QueryUtil {
 		const queries = {
 			search: searchParameter,
 			tokens: tokenString,
+			sort: sortKey,
 		};
 
 		let queryString = "packages?";

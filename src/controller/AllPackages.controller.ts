@@ -13,7 +13,9 @@ export default class AllPackages extends AppController {
 
 	public onPatternMatched(event: Event): void {
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
-		this.queryUtil.setParameterFromQuery(event.getParameter("arguments"));
+		const routerArgsObject = event.getParameter("arguments") || {};
+		this.queryUtil.getParameterFromQuery(routerArgsObject);
+		this.filterFromQuery(routerArgsObject);
 		this.queryUtil.applySearchFilter();
 	}
 
@@ -37,11 +39,22 @@ export default class AllPackages extends AppController {
 
 	public onSortSelectChange(event: Event): void {
 		const selectKey = event.getParameter("selectedItem").getKey();
+		this.sortList(selectKey);
+		this.queryUtil.setQueryParameters();
+	}
+
+	private sortList(sortKey: string): void {
 		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
-			path: selectKey,
+			path: sortKey,
 			descending: true,
 		});
 		binding.sort(oSorter);
+	}
+
+	private filterFromQuery(eventArguments: any): void {
+		if (eventArguments.sort) {
+			this.sortList(eventArguments.sort);
+		}
 	}
 }
