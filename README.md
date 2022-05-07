@@ -81,6 +81,7 @@ From there, GitHub Pages will automatically deploy the new version to the webpag
 ### Testing
 
 We run [`wdi5`](https://github.com/js-soft/wdi5) tests on every Pull Request.  
+Implicitly, the build is also tested before the wdi5 tests, since it is executed before the tests.  
 The tests are located in the [`test`](https://github.com/ui5-community/bestofui5-website/tree/main/src/test) folder.
 
 ## Backend
