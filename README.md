@@ -20,8 +20,11 @@ The packages are sorted by the growth of downloads in the last 30 days.
 ### All Packages
 
 You can here search/filter/sort the packages.  
+**You can also bookmark your searches. A url could look like this:**  
+https://bestofui5.org/#/packages?search=live&tokens=middleware:type&sort=downloadsCurrentFortnight
+
 Each packages has metadata added what type it is and what tags are associated with it.  
-Most data is coming from GitHub and NPM.
+Data is coming from GitHub and NPM.
 
 ### Tags
 

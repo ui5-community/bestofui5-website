@@ -8,7 +8,7 @@ import FilterOperator from "sap/ui/model/FilterOperator";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import ListBinding from "sap/ui/model/ListBinding";
 
-export default class QueryControl {
+export default class QueryUtil {
 	private view: View;
 
 	// create constructor
@@ -23,6 +23,7 @@ export default class QueryControl {
 	}
 
 	public applySearchFilter(): void {
+		this.setQueryParameters();
 		let value = this.view.getModel("settings").getProperty("/search");
 		const valueTypes = this.view.getModel("settings").getProperty("/tokens");
 		if (!value) {
@@ -108,5 +109,69 @@ export default class QueryControl {
 		}
 		(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
 		// this.applySearchFilter(value, tokenArray);
+	}
+
+	public getParameterFromQuery(eventArguments: any): void {
+		if (eventArguments.search) {
+			(this.view.getModel("settings") as JSONModel).setProperty("/search", eventArguments.search);
+		}
+		if (eventArguments.tokens) {
+			// create tokens objects
+			const tokens = eventArguments.tokens.split(",").map(function (obj) {
+				const attributes = obj.split(":");
+				return {
+					key: attributes[0],
+					type: attributes[1],
+				};
+			});
+			(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokens);
+		}
+		if (eventArguments.sort) {
+			(this.view.getModel("settings") as JSONModel).setProperty("/selectKey", eventArguments.sort);
+		}
+	}
+
+	public setQueryParameters(): void {
+		const searchParameter: string = (this.view.getModel("settings") as JSONModel).getProperty("/search");
+		const tokens: any = (this.view.getModel("settings") as JSONModel).getProperty("/tokens");
+		let sortKey: string = (this.view.getModel("settings") as JSONModel).getProperty("/selectKey");
+		// dont set 'downloads365' in query because it is default value
+		if (sortKey === "downloads365") {
+			sortKey = "";
+		}
+		// join tokens objects attributes to string
+		const tokenString = tokens
+			.map(function (obj) {
+				return `${obj.key}:${obj.type}`;
+			})
+			.join(",");
+
+		const queries = {
+			search: searchParameter,
+			tokens: tokenString,
+			sort: sortKey,
+		};
+		// remove empty values from queries
+		Object.keys(queries).forEach(function (key) {
+			if (!queries[key]) {
+				delete queries[key];
+			}
+		});
+
+		let queryString = "packages?";
+		// concat query string for hash with loop over dict, the first one without "&"
+		for (let key in queries) {
+			if (queries[key] !== undefined && queries[key] !== null && queries[key] !== "") {
+				// the first one without "&"
+				if (key === Object.keys(queries)[0]) {
+					queryString += key + "=" + queries[key];
+				} else {
+					queryString += "&" + key + "=" + queries[key];
+				}
+			}
+		}
+		if (queryString !== "packages?") {
+			this.view.getController().getRouter().getHashChanger().setHash(queryString);
+		}
 	}
 }

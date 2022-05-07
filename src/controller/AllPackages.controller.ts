@@ -13,16 +13,10 @@ export default class AllPackages extends AppController {
 
 	public onPatternMatched(event: Event): void {
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
-		const search = this.getView().getModel("settings").getProperty("/search");
-		const token = this.getView().getModel("settings").getProperty("/tokens");
-		this.queryControl.applySearchFilter();
-		// // save the current query state
-		// this._oRouterArgs = event.getParameter("arguments");
-		// this._oRouterArgs["?query"] = this._oRouterArgs["?query"] || {};
-		// // search/filter via URL hash
-		// if (this._oRouterArgs["?query"].search || this._oRouterArgs["?query"].filterType) {
-		//   this._applySearchFilter(this._oRouterArgs["?query"].search, this._oRouterArgs["?query"].filterType);
-		// }
+		const routerArgsObject = event.getParameter("arguments")["?query"] || {};
+		this.queryUtil.getParameterFromQuery(routerArgsObject);
+		this.queryUtil.applySearchFilter();
+		this.filterFromQuery(routerArgsObject);
 	}
 
 	public onAfterRendering(): void {
@@ -45,11 +39,22 @@ export default class AllPackages extends AppController {
 
 	public onSortSelectChange(event: Event): void {
 		const selectKey = event.getParameter("selectedItem").getKey();
+		this.sortList(selectKey);
+		this.queryUtil.setQueryParameters();
+	}
+
+	private sortList(sortKey: string): void {
 		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
-			path: selectKey,
+			path: sortKey,
 			descending: true,
 		});
 		binding.sort(oSorter);
+	}
+
+	private filterFromQuery(eventArguments: any): void {
+		if (eventArguments.sort) {
+			this.sortList(eventArguments.sort);
+		}
 	}
 }
