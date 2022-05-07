@@ -1,7 +1,7 @@
 const All = require("./pageObjects/All");
 const Main = require("./pageObjects/Main");
 
-describe("ui5 basic", () => {
+describe("ui5 search", () => {
 	before(async () => {
 		await All.open();
 	});
@@ -23,5 +23,15 @@ describe("ui5 basic", () => {
 		const innerText = await webElement.$("h3").getText();
 		// check if text is equal to wdio-ui5-service
 		expect(innerText).toEqual("wdio-ui5-service");
+	});
+
+	it("search should return only one result", async () => {
+		// get list
+		const list = await All.getList();
+		// get list items aggregation
+		const listItems = await list.getAggregation("items");
+
+		// check if text is equal to wdio-ui5-service
+		expect(listItems.length).toEqual(1);
 	});
 });
