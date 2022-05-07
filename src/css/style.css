@@ -43,3 +43,9 @@
 		padding: 2em;
 	}
 }
+/*
+ * higlight description on search
+ */
+.sapMFT > em {
+	background: rgb(130, 106, 226, 0.5);
+}
