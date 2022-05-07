@@ -8,7 +8,7 @@ import FilterOperator from "sap/ui/model/FilterOperator";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import ListBinding from "sap/ui/model/ListBinding";
 
-export default class QueryControl {
+export default class QueryUtil {
 	private view: View;
 
 	// create constructor
@@ -23,6 +23,7 @@ export default class QueryControl {
 	}
 
 	public applySearchFilter(): void {
+		this.setQueryParameters();
 		let value = this.view.getModel("settings").getProperty("/search");
 		const valueTypes = this.view.getModel("settings").getProperty("/tokens");
 		if (!value) {
@@ -108,5 +109,55 @@ export default class QueryControl {
 		}
 		(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
 		// this.applySearchFilter(value, tokenArray);
+	}
+
+	public setParameterFromQuery(eventArguments: any): void {
+		// set parameter from query to global json models
+		const routerArgsObject = eventArguments["?query"] || {};
+
+		if (routerArgsObject.search) {
+			(this.view.getModel("settings") as JSONModel).setProperty("/search", routerArgsObject.search);
+		}
+		if (routerArgsObject.tokens) {
+			// create tokens objects
+			const tokens = routerArgsObject.tokens.split(",").map(function (obj) {
+				const attributes = obj.split(":");
+				return {
+					key: attributes[0],
+					type: attributes[1],
+				};
+			});
+			(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokens);
+		}
+	}
+
+	private setQueryParameters(): void {
+		const searchParameter: string = (this.view.getModel("settings") as JSONModel).getProperty("/search");
+		const tokens: any = (this.view.getModel("settings") as JSONModel).getProperty("/tokens");
+		// join tokens objects attributes to string
+		const tokenString = tokens
+			.map(function (obj) {
+				return `${obj.key}:${obj.type}`;
+			})
+			.join(",");
+
+		const queries = {
+			search: searchParameter,
+			tokens: tokenString,
+		};
+
+		let queryString = "packages?";
+		// concat query string for hash with loop over dict, the first one without "&"
+		for (let key in queries) {
+			if (queries[key] !== undefined && queries[key] !== null && queries[key] !== "") {
+				// the first one without "&"
+				if (key === Object.keys(queries)[0]) {
+					queryString += key + "=" + queries[key];
+				} else {
+					queryString += "&" + key + "=" + queries[key];
+				}
+			}
+		}
+		this.view.getController().getRouter().getHashChanger().setHash(queryString);
 	}
 }

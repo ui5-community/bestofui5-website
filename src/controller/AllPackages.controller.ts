@@ -13,16 +13,8 @@ export default class AllPackages extends AppController {
 
 	public onPatternMatched(event: Event): void {
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
-		const search = this.getView().getModel("settings").getProperty("/search");
-		const token = this.getView().getModel("settings").getProperty("/tokens");
-		this.queryControl.applySearchFilter();
-		// // save the current query state
-		// this._oRouterArgs = event.getParameter("arguments");
-		// this._oRouterArgs["?query"] = this._oRouterArgs["?query"] || {};
-		// // search/filter via URL hash
-		// if (this._oRouterArgs["?query"].search || this._oRouterArgs["?query"].filterType) {
-		//   this._applySearchFilter(this._oRouterArgs["?query"].search, this._oRouterArgs["?query"].filterType);
-		// }
+		this.queryUtil.setParameterFromQuery(event.getParameter("arguments"));
+		this.queryUtil.applySearchFilter();
 	}
 
 	public onAfterRendering(): void {

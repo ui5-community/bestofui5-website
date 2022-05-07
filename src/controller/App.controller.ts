@@ -1,15 +1,15 @@
 import Event from "sap/ui/base/Event";
 import BaseController from "./BaseController";
-import QueryControl from "./QueryControl";
+import QueryUtil from "./QueryUtil";
 
 /**
  * @namespace org.openui5.bestofui5.controller
  */
 export default class App extends BaseController {
-	protected queryControl: QueryControl;
+	protected queryUtil: QueryUtil;
 
 	public onInit(): void {
-		this.queryControl = new QueryControl(this.getView());
+		this.queryUtil = new QueryUtil(this.getView());
 	}
 
 	public liveSearch(event: Event): void {
@@ -24,7 +24,7 @@ export default class App extends BaseController {
 	}
 
 	public onUpdateToken(event: Event): void {
-		this.queryControl.onUpdateToken(event);
+		this.queryUtil.onUpdateToken(event);
 		if (this.getRouter().getHashChanger().getHash() != "packages") {
 			this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 			this.navTo("allPackages");
