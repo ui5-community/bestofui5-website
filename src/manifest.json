@@ -69,7 +69,7 @@
           "uri": "css/style.css"
         },
         {
-          "uri": "font-awesome/font.css"
+          "uri": "/resources/font-awesome/font.css"
         }
       ]
     },
@@ -138,18 +138,21 @@
       "targets": {
         "TargetAllPackagesView": {
           "viewType": "XML",
+          "transition": "slide",
           "viewLevel": 1,
           "viewId": "AllPackages",
           "viewName": "AllPackages"
         },
         "TargetHotPackagesView": {
           "viewType": "XML",
+          "transition": "slide",
           "viewLevel": 1,
           "viewId": "HotPackages",
           "viewName": "HotPackages"
         },
         "TargetTagsView": {
           "viewType": "XML",
+          "transition": "slide",
           "viewLevel": 1,
           "viewId": "Tags",
           "viewName": "Tags"

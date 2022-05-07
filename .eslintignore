@@ -12,7 +12,7 @@ CNAME
 /**/*.md
 
 # Ignore files by folders
-/src/font-awesome/**
+/src/resources/font-awesome/**
 /src/test/**
 
 # Additionally ignore files for linting
