@@ -38,7 +38,7 @@ export default class Component extends UIComponent {
 		IconPool.registerFont({
 			collectionName: "font-awesome-icons",
 			fontFamily: "fa-brands",
-			fontURI: "font-awesome",
+			fontURI: "resources/font-awesome",
 			lazy: true,
 		});
 

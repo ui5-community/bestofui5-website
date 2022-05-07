@@ -69,7 +69,7 @@
           "uri": "css/style.css"
         },
         {
-          "uri": "font-awesome/font.css"
+          "uri": "/resources/font-awesome/font.css"
         }
       ]
     },
