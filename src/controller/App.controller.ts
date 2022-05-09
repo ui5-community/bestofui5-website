@@ -8,14 +8,20 @@ import QueryUtil from "./QueryUtil";
  */
 export default class App extends BaseController {
 	protected queryUtil: QueryUtil;
+	private timerId: number;
 
 	public onInit(): void {
 		this.queryUtil = new QueryUtil(this.getView());
 	}
 
 	public liveSearch(event: Event): void {
-		const value = event.getParameter("value").trim();
-		this.liveSearchHandler(value);
+		const value = (event.getParameter("value") as string).trim();
+		if (this.timerId) {
+			clearTimeout(this.timerId);
+		}
+		this.timerId = setTimeout(() => {
+			this.liveSearchHandler(value);
+		}, 500) as unknown as number;
 	}
 
 	public liveSearchHandler(value: string): void {
