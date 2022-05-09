@@ -36,7 +36,7 @@
       </subHeader>
       <content>
         <FlexBox width="100%" height="100%" id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
-          <HBox alignItems="Center">
+          <HBox alignItems="Center" class="sapUiDemoFlexBoxSizeAdjustments">
             <MultiInput
               startSuggestion="0"
               placeholder="{i18n>app_view_search_placeholder}"
@@ -63,7 +63,7 @@
                 <Token key="{settings>key}" text="{settings>key}" />
               </tokens>
               <layoutData>
-                <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" />
+                <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" growFactor="1" />
               </layoutData>
             </MultiInput>
             <Button tooltip="{i18n>app_view_link_share_tooltip}" icon="sap-icon://share" press=".copyLinkToClipboard" type="Emphasized" />
