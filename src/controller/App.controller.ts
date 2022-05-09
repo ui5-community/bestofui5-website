@@ -1,3 +1,4 @@
+import MessageToast from "sap/m/MessageToast";
 import Event from "sap/ui/base/Event";
 import BaseController from "./BaseController";
 import QueryUtil from "./QueryUtil";
@@ -38,4 +39,21 @@ export default class App extends BaseController {
 		}
 	}
 
+	public copyLinkToClipboard(event: Event): void {
+		const oBundle = this.getView().getModel("i18n").getResourceBundle();
+		try {
+			// copy currentHash to clipboard
+			const dummy = document.createElement("input");
+			document.body.appendChild(dummy);
+			dummy.setAttribute("value", window.location.href);
+			dummy.select();
+			document.execCommand("copy");
+			document.body.removeChild(dummy);
+			// show message toast
+			MessageToast.show(oBundle.getText("app_view_link_copy"));
+		} catch (error) {
+			console.error(error);
+			MessageToast.show(oBundle.getText("app_view_link_copy_failed"));
+		}
+	}
 }
