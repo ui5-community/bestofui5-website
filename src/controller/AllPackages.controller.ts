@@ -9,14 +9,24 @@ export default class AllPackages extends AppController {
 	public onInit(): void {
 		super.onInit();
 		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
+		this.getRouter().getRoute("allPackages").attachEventOnce("patternMatched", this.onPatternMatchedOnce, this);
+	}
+
+	public onPatternMatchedOnce(event: Event): void {
+		try {
+			let routerArgsObject = event.getParameter("arguments")["?query"];
+			this.queryUtil.getParameterFromQuery(routerArgsObject);
+			this.filterFromQuery(routerArgsObject);
+			this.applySearchFilter();
+		} catch (error) {}
 	}
 
 	public onPatternMatched(event: Event): void {
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
-		const routerArgsObject = event.getParameter("arguments")["?query"] || {};
-		this.queryUtil.getParameterFromQuery(routerArgsObject);
+	}
+
+	public applySearchFilter(): void {
 		this.queryUtil.applySearchFilter();
-		this.filterFromQuery(routerArgsObject);
 	}
 
 	public onAfterRendering(): void {
@@ -53,7 +63,7 @@ export default class AllPackages extends AppController {
 	}
 
 	private filterFromQuery(eventArguments: any): void {
-		if (eventArguments.sort) {
+		if ("sort" in eventArguments) {
 			this.sortList(eventArguments.sort);
 		}
 	}

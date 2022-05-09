@@ -15,10 +15,7 @@
         name="{data>name}"
         githublink="{data>githublink}"
         npmlink="{data>npmlink}"
-        description="{
-          parts: ['data>description', 'settings>/search'],
-          formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatHighlight'
-        }"
+        description="{data>description}"
         type="{data>type}"
         stars="{data>stars}"
         forks="{data>forks}"

@@ -23,7 +23,6 @@ export default class QueryUtil {
 	}
 
 	public applySearchFilter(): void {
-		this.setQueryParameters();
 		let value = this.view.getModel("settings").getProperty("/search");
 		const valueTypes = this.view.getModel("settings").getProperty("/tokens");
 		if (!value) {
@@ -82,6 +81,7 @@ export default class QueryUtil {
 		} else {
 			listBinding.filter(searchFilter);
 		}
+		this.setQueryParameters();
 	}
 
 	public onUpdateToken(event: Event): void {
@@ -108,14 +108,13 @@ export default class QueryUtil {
 			});
 		}
 		(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
-		// this.applySearchFilter(value, tokenArray);
 	}
 
 	public getParameterFromQuery(eventArguments: any): void {
-		if (eventArguments.search) {
+		if ("search" in eventArguments) {
 			(this.view.getModel("settings") as JSONModel).setProperty("/search", eventArguments.search);
 		}
-		if (eventArguments.tokens) {
+		if ("tokens" in eventArguments) {
 			// create tokens objects
 			const tokens = eventArguments.tokens.split(",").map(function (obj) {
 				const attributes = obj.split(":");
@@ -126,7 +125,7 @@ export default class QueryUtil {
 			});
 			(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokens);
 		}
-		if (eventArguments.sort) {
+		if ("sort" in eventArguments) {
 			(this.view.getModel("settings") as JSONModel).setProperty("/selectKey", eventArguments.sort);
 		}
 	}
@@ -172,6 +171,8 @@ export default class QueryUtil {
 		}
 		if (queryString !== "packages?") {
 			this.view.getController().getRouter().getHashChanger().setHash(queryString);
+		} else {
+			this.view.getController().getRouter().getHashChanger().setHash("packages");
 		}
 	}
 }
