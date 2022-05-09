@@ -38,11 +38,4 @@ export default class App extends BaseController {
 		}
 	}
 
-	public delay(fn, ms, value): any {
-		let timer = 0;
-		return function (...args) {
-			clearTimeout(timer);
-			timer = setTimeout(fn.bind(this, ...args), ms || 0);
-		};
-	}
 }
