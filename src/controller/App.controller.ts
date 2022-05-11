@@ -62,4 +62,11 @@ export default class App extends BaseController {
 			MessageToast.show(oBundle.getText("app_view_link_copy_failed"));
 		}
 	}
+
+		/**
+	 * Remove the Splash screen after the application has been loaded!
+	 */
+	public onAfterRendering(): void {
+		document.body.classList.remove("splash");
+	}
 }
