@@ -57,12 +57,7 @@ export default class Component extends UIComponent {
 		this.setModel(models.createDeviceModel(), "device");
 	}
 
-	/**
-	 * Remove the Splash screen after the application has been loaded!
-	 */
-	public onAfterRendering(): void {
-		document.body.classList.remove("splash");
-	}
+
 
 	/**
 	 * This method can be called to determine whether the sapUiSizeCompact or sapUiSizeCozy
