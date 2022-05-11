@@ -1,5 +1,5 @@
 html:not(.sap-phone) .openui5header > :first-child {
-	height: 10rem;
+	height: 7rem;
 	background-color: #1366a2;
 }
 html:not(.sap-phone) .openui5header > :first-child div {
@@ -26,11 +26,11 @@ html:not(.sap-phone) .openui5header > :first-child .sapMTitle {
 }
 html:not(.sap-phone) .openui5header > :first-child .sapMTitle > span {
 	font-size: 4rem;
-	line-height: 5.5rem;
+	line-height: 3rem;
 	color: white;
 }
 html:not(.sap-phone) .openui5header > section {
-	top: 12.6rem !important;
+	top: 9.6rem !important;
 }
 
 @media (max-width: 1440px) {
