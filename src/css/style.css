@@ -1,3 +1,75 @@
+html:not(.sap-phone) .openui5header > :first-child {
+	height: 10rem;
+	background-color: #1366a2;
+}
+html:not(.sap-phone) .openui5header > :first-child div {
+	background-color: transparent;
+}
+
+html:not(.sap-phone) .openui5header > :first-child:before {
+	content: "";
+	background-image: url(../img/Header.svg);
+	background-repeat: no-repeat;
+	background-size: 1920px 1398px;
+	background-position: -500px 50%;
+	opacity: 0.5;
+	display: inline-block;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+html:not(.sap-phone) .openui5header > :first-child .sapMTitle {
+	position: absolute;
+	top: 2.5rem;
+	height: 5rem;
+}
+html:not(.sap-phone) .openui5header > :first-child .sapMTitle > span {
+	font-size: 4rem;
+	line-height: 5.5rem;
+	color: white;
+}
+html:not(.sap-phone) .openui5header > section {
+	top: 12.6rem !important;
+}
+
+@media (max-width: 1440px) {
+	html:not(.sap-phone) .openui5header > :first-child:before {
+		background-size: 1800px 1311px;
+		background-position: -700px 50%;
+	}
+}
+
+@media (max-width: 980px) {
+	html:not(.sap-phone) .openui5header > :first-child:before {
+		background-size: 1700px 1238px;
+		background-position: -900px 50%;
+	}
+}
+
+@media (max-width: 767px) {
+	html:not(.sap-phone) .openui5header > :first-child:before {
+		background-size: 1200px 874px;
+		background-position: -600px 50%;
+	}
+}
+
+html:not(.sap-phone) .openui5headerButton .sapUiIcon,
+html:not(.sap-phone) .openui5headerButton .sapMBtnContent > bdi,
+html:not(.sap-phone) .openui5headerButton:hover .sapMBtnContent > bdi {
+	color: white !important;
+}
+html:not(.sap-phone) .openui5headerButton:hover * {
+	background-color: transparent !important;
+}
+html:not(.sap-phone) .openui5headerButton:hover .sapMBtnInner {
+	border-color: white !important;
+}
+html:not(.sap-phone) .openui5headerButton:hover .sapMBtnInner:before,
+html:not(.sap-phone) .openui5headerButton:focus .sapMBtnInner:before {
+	border: none !important;
+}
+
 .fixOverflow.sapMNav {
 	overflow: inherit;
 }
