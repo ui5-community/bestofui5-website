@@ -1,5 +1,7 @@
+import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import MessageToast from "sap/m/MessageToast";
 import Event from "sap/ui/base/Event";
+import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import BaseController from "./BaseController";
 import QueryUtil from "./QueryUtil";
 
@@ -45,25 +47,29 @@ export default class App extends BaseController {
 		}
 	}
 
-	public copyLinkToClipboard(event: Event): void {
-		const oBundle = this.getView().getModel("i18n").getResourceBundle();
+	public async copyLinkToClipboard(event: Event): Promise<void> {
+		const resourceBundle = <ResourceBundle>(this.getView().getModel("i18n") as ResourceModel).getResourceBundle();
 		try {
-			// copy currentHash to clipboard
+			// try using standard clipboard API
+			if ("clipboard" in navigator) {
+				await navigator.clipboard.writeText(window.location.href);
+				return MessageToast.show(resourceBundle.getText("app_view_link_copy"));
+			}
+			// fallback if clipboard API is not supported
 			const dummy = document.createElement("input");
 			document.body.appendChild(dummy);
 			dummy.setAttribute("value", window.location.href);
 			dummy.select();
 			document.execCommand("copy");
 			document.body.removeChild(dummy);
-			// show message toast
-			MessageToast.show(oBundle.getText("app_view_link_copy"));
+			MessageToast.show(resourceBundle.getText("app_view_link_copy"));
 		} catch (error) {
 			console.error(error);
-			MessageToast.show(oBundle.getText("app_view_link_copy_failed"));
+			MessageToast.show(resourceBundle.getText("app_view_link_copy_failed"));
 		}
 	}
 
-		/**
+	/**
 	 * Remove the Splash screen after the application has been loaded!
 	 */
 	public onAfterRendering(): void {
