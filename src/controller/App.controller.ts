@@ -47,25 +47,25 @@ export default class App extends BaseController {
 		}
 	}
 
-	public async copyLinkToClipboard(_: Event): Promise<void> {
-		const oBundle = <ResourceBundle>(this.getView().getModel("i18n") as ResourceModel).getResourceBundle();
+	public async copyLinkToClipboard(event: Event): Promise<void> {
+		const resourceBundle = <ResourceBundle>(this.getView().getModel("i18n") as ResourceModel).getResourceBundle();
 		try {
+			// try using standard clipboard API
 			if ("clipboard" in navigator) {
 				await navigator.clipboard.writeText(window.location.href);
-				return MessageToast.show(oBundle.getText("app_view_link_copy"));
+				return MessageToast.show(resourceBundle.getText("app_view_link_copy"));
 			}
-			// copy currentHash to clipboard
+			// fallback if clipboard API is not supported
 			const dummy = document.createElement("input");
 			document.body.appendChild(dummy);
 			dummy.setAttribute("value", window.location.href);
 			dummy.select();
 			document.execCommand("copy");
 			document.body.removeChild(dummy);
-			// show message toast
-			MessageToast.show(oBundle.getText("app_view_link_copy"));
+			MessageToast.show(resourceBundle.getText("app_view_link_copy"));
 		} catch (error) {
 			console.error(error);
-			MessageToast.show(oBundle.getText("app_view_link_copy_failed"));
+			MessageToast.show(resourceBundle.getText("app_view_link_copy_failed"));
 		}
 	}
 
