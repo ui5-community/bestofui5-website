@@ -1,6 +1,8 @@
 import AppController from "./App.controller";
 import Sorter from "sap/ui/model/Sorter";
 import Event from "sap/ui/base/Event";
+import Log from "sap/base/Log";
+import ResourceBundle from "sap/base/i18n/ResourceBundle";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -18,11 +20,14 @@ export default class AllPackages extends AppController {
 			this.queryUtil.getParameterFromQuery(routerArgsObject);
 			this.filterFromQuery(routerArgsObject);
 			this.applySearchFilter();
-		} catch (error) {}
+		} catch (error) {
+			Log.error((this.getResourceBundle() as ResourceBundle).getText("all_packages_controller_queryparsing"));
+		}
 	}
 
 	public onPatternMatched(event: Event): void {
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
+		this.applySearchFilter();
 	}
 
 	public applySearchFilter(): void {

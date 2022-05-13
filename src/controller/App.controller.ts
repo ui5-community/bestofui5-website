@@ -18,6 +18,7 @@ export default class App extends BaseController {
 
 	public liveSearch(event: Event): void {
 		const value = (event.getParameter("value") as string).trim();
+		// delay search input
 		if (this.timerId) {
 			clearTimeout(this.timerId);
 		}
@@ -29,21 +30,20 @@ export default class App extends BaseController {
 	public liveSearchHandler(value: string): void {
 		// const value = event.getParameter("value").trim();
 		this.getView().getModel("settings").setProperty("/search", value);
-		if (!this.getRouter().getHashChanger().getHash().startsWith("packages")) {
-			this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
-			this.navTo("allPackages");
-		} else {
-			this.getView().getParent().byId("AllPackages").getController().applySearchFilter();
-		}
+		this.applySearch();
 	}
 
 	public onUpdateToken(event: Event): void {
 		this.queryUtil.onUpdateToken(event);
+		this.applySearch();
+	}
+
+	public applySearch(): void {
 		if (!this.getRouter().getHashChanger().getHash().startsWith("packages")) {
 			this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 			this.navTo("allPackages");
 		} else {
-			this.getView().getParent().byId("AllPackages").getController().applySearchFilter();
+			this.getOwnerComponent().byId("AllPackages").getController().applySearchFilter();
 		}
 	}
 
