@@ -76,7 +76,7 @@
       </m:VBox>
     </headerContent>
     <sections>
-      <ObjectPageSection id="npmSection">
+      <ObjectPageSection id="npmSection" visible="{= !!${data>downloadsHistory} }">
         <subSections>
           <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_npm}" titleUppercase="true" id="npmDownloadsSection">
             <blocks>
@@ -87,7 +87,7 @@
           </ObjectPageSubSection>
         </subSections>
       </ObjectPageSection>
-      <ObjectPageSection id="readmeSection">
+      <ObjectPageSection id="readmeSection" visible="{= !!${data>readme} }">
         <subSections>
           <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_readme}" id="readme" titleUppercase="true">
             <blocks>
@@ -96,7 +96,7 @@
           </ObjectPageSubSection>
         </subSections>
       </ObjectPageSection>
-      <ObjectPageSection id="versionsSection">
+      <ObjectPageSection id="versionsSection" visible="{= !!${data>versions} }">
         <subSections>
           <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_versions}" id="versions" titleUppercase="true">
             <blocks>

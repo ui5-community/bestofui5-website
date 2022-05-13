@@ -11,6 +11,7 @@ export default class Object extends BaseController {
 	}
 
 	public async onPatternMatched(event: Event): Promise<void> {
+		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", "allPackages");
 		const objectName = event.getParameter("arguments").name;
 		const model = this.getModel("data");
 		await model.dataLoaded();
