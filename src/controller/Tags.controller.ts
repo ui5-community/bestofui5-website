@@ -42,6 +42,6 @@ export default class Tags extends AppController {
 
 		(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
 		(this.getView().getModel("settings") as JSONModel).setProperty("/search", "");
-		this.navTo("allPackages");
+		this.applySearch();
 	}
 }
