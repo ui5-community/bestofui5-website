@@ -16,7 +16,7 @@ export default class AllPackages extends AppController {
 
 	public onPatternMatchedOnce(event: Event): void {
 		try {
-			let routerArgsObject = event.getParameter("arguments")["?query"];
+			let routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
 			this.queryUtil.getParameterFromQuery(routerArgsObject);
 			this.filterFromQuery(routerArgsObject);
 			this.applySearchFilter();
