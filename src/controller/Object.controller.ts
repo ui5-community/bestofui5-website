@@ -18,9 +18,9 @@ export default class Object extends BaseController {
 		const data = model.getData();
 		// find object index in data
 		const objectIndex = data.packages.findIndex((object) => object.name === objectName);
-		if (!objectIndex) {
-			//object not found
-			// return
+		if (objectIndex === -1) {
+			await this.getRouter().getTargets().display("objectNotFound");
+			return;
 		}
 		this.getView().bindElement({
 			path: `/packages/${objectIndex}`,

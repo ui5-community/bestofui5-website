@@ -101,6 +101,9 @@
         "controlId": "pageContainer",
         "transition": "show",
         "controlAggregation": "pages",
+        "bypassed": {
+          "target": ["notFound"]
+        },
         "async": true
       },
       "routes": [
@@ -170,6 +173,14 @@
           "viewLevel": 1,
           "viewId": "Timeline",
           "viewName": "Timeline"
+        },
+        "objectNotFound": {
+          "viewName": "ObjectNotFound",
+          "viewId": "objectNotFound"
+        },
+        "notFound": {
+          "viewName": "NotFound",
+          "viewId": "notFound"
         }
       }
     }

@@ -10,6 +10,7 @@ import IconPool from "sap/ui/core/IconPool";
 import "sap/ui/core/ComponentSupport";
 import "sap/ui/core/date/Gregorian";
 import "sap/ui/model/type/Date";
+import Log from "sap/base/Log";
 
 // TEST
 
@@ -57,8 +58,6 @@ export default class Component extends UIComponent {
 		this.setModel(models.createDeviceModel(), "device");
 	}
 
-
-
 	/**
 	 * This method can be called to determine whether the sapUiSizeCompact or sapUiSizeCozy
 	 * design mode class should be set, which influences the size appearance of some controls.
@@ -83,35 +82,39 @@ export default class Component extends UIComponent {
 	}
 
 	private async onTitleChanged(event: Event): void {
-		const oResourceBundle = this.getModel("i18n").getResourceBundle();
-		const routeName = event.getParameter("config").name;
-		let title = oResourceBundle.getText("component_title");
-		switch (routeName) {
-			case "RouteObjectView":
-				let packageName = event.getParameter("arguments").name;
-				const model = this.getModel("data");
-				await model.dataLoaded();
-				const data = model.getData();
-				const objectIndex = data.packages.findIndex((object) => object.name === packageName);
-				const object = this.getModel("data").getProperty(`/packages/${objectIndex}`);
-				title = `${object.name} - ${title}`;
-				document.querySelector('meta[name="description"]').setAttribute("content", `${title} - ${object.description}`);
-				document.querySelector('meta[property="og:description"]').setAttribute("content", `${title} - ${object.description}`);
-				break;
-			case "default":
-				title = `${oResourceBundle.getText("component_hot")} - ${title}`;
-				break;
-			case "allPackages":
-				title = `${oResourceBundle.getText("component_all")} - ${title}`;
-				break;
-			case "tags":
-				title = `${oResourceBundle.getText("component_tags")} - ${title}`;
-				break;
-			case "timeline":
-				title = `${oResourceBundle.getText("component_timeline")} - ${title}`;
-				break;
+		try {
+			const oResourceBundle = this.getModel("i18n").getResourceBundle();
+			const routeName = event.getParameter("config").name;
+			let title = oResourceBundle.getText("component_title");
+			switch (routeName) {
+				case "RouteObjectView":
+					let packageName = event.getParameter("arguments").name;
+					const model = this.getModel("data");
+					await model.dataLoaded();
+					const data = model.getData();
+					const objectIndex = data.packages.findIndex((object) => object.name === packageName);
+					const object = this.getModel("data").getProperty(`/packages/${objectIndex}`);
+					title = `${object.name} - ${title}`;
+					document.querySelector('meta[name="description"]').setAttribute("content", `${title} - ${object.description}`);
+					document.querySelector('meta[property="og:description"]').setAttribute("content", `${title} - ${object.description}`);
+					break;
+				case "default":
+					title = `${oResourceBundle.getText("component_hot")} - ${title}`;
+					break;
+				case "allPackages":
+					title = `${oResourceBundle.getText("component_all")} - ${title}`;
+					break;
+				case "tags":
+					title = `${oResourceBundle.getText("component_tags")} - ${title}`;
+					break;
+				case "timeline":
+					title = `${oResourceBundle.getText("component_timeline")} - ${title}`;
+					break;
+			}
+			// set window title
+			document.title = title;
+		} catch (error) {
+			Log.warning("Title could not be set");
 		}
-		// set window title
-		document.title = title;
 	}
 }
