@@ -24,7 +24,7 @@
           <core:Icon src="sap-icon://font-awesome-icons/github" class="sapUiSmallMarginEnd" />
           <m:Link text="{i18n>object_view_header_github}" href="{data>githublink}" target="_blank" />
         </m:HBox>
-        <m:HBox>
+        <m:HBox visible="{= !!${data>npmlink}}">
           <core:Icon src="sap-icon://font-awesome-icons/npm" class="sapUiSmallMarginEnd" />
           <m:Link text="{i18n>object_view_header_npm}" href="{data>npmlink}" target="_blank" />
         </m:HBox>
@@ -60,6 +60,14 @@
           }"
         />
         <m:ObjectStatus
+          icon="{
+          parts: ['data>updatedAt'],
+          formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatUpdatedAtIcon'
+        }"
+          state="{
+          parts: ['data>updatedAt'],
+          formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatUpdatedAtState'
+        }"
           title="{i18n>object_view_header_updated_at}"
           text="{
             path: 'data>updatedAt',

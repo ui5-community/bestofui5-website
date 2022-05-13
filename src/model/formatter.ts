@@ -95,4 +95,37 @@ export default {
 			})
 		);
 	},
+
+	formatUpdatedAtIcon(updatedAt: string): string {
+		// calculate the time difference in years between the current date and updatedAt
+		const currentDate = new Date();
+		const updatedAtDate = new Date(updatedAt);
+		const timeDiff = Math.abs(currentDate.getTime() - updatedAtDate.getTime());
+		const diffYears = timeDiff / (1000 * 3600 * 24 * 365);
+		if (diffYears < 1) {
+			return "";
+		}
+		if (diffYears >= 1 && diffYears < 2) {
+			return "sap-icon://warning";
+		}
+		if (diffYears >= 2) {
+			return "sap-icon://error";
+		}
+	},
+	formatUpdatedAtState(updatedAt: string): string {
+		// calculate the time difference in years between the current date and updatedAt
+		const currentDate = new Date();
+		const updatedAtDate = new Date(updatedAt);
+		const timeDiff = Math.abs(currentDate.getTime() - updatedAtDate.getTime());
+		const diffYears = timeDiff / (1000 * 3600 * 24 * 365);
+		if (diffYears < 1) {
+			return "None";
+		}
+		if (diffYears >= 1 && diffYears < 2) {
+			return "Warning";
+		}
+		if (diffYears >= 2) {
+			return "Error";
+		}
+	},
 };
