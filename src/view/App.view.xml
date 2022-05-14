@@ -8,6 +8,7 @@
             class="sapUiTinyMargin openui5headerButton"
             core:require="{ sapMLib: 'sap/m/library' }"
             text="{i18n>app_view_addyourpackage}"
+            visible="{= ${device>/system/desktop}}"
             type="Transparent"
             icon="sap-icon://add-product"
             press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&amp;labels=new%20package&amp;template=new_package.md&amp;title=Add%20new%20Package:', true)"
@@ -20,6 +21,7 @@
             class="sapUiTinyMargin openui5headerButton"
             core:require="{ sapMLib: 'sap/m/library' }"
             type="Transparent"
+            visible="{= ${device>/system/desktop}}"
             icon="sap-icon://font-awesome-icons/github"
             press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-website#readme', true)"
           >
