@@ -6,6 +6,10 @@ describe("ui5 basic", () => {
 	});
 
 	it("should have the right title", async () => {
+		// wait for calculation of browser title
+		try {
+			await $("filtekuzfutkfk424214").waitForExist({ timeout: 5000 });
+		} catch (error) {}
 		const title = await browser.getTitle();
 		expect(title).toEqual("Hot Packages - Best of UI5");
 	});

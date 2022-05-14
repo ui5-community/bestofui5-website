@@ -61,7 +61,7 @@ exports.config = {
 			// grid with only 5 firefox instances available you can make sure that not more than
 			// 5 instances get started at a time.
 			maxInstances: 5,
-			//
+			logLevel: "error",
 			browserName: "chrome",
 			acceptInsecureCerts: true,
 			"goog:chromeOptions": {
@@ -69,7 +69,7 @@ exports.config = {
 			},
 			// If outputDir is provided WebdriverIO can capture driver session logs
 			// it is possible to configure which logTypes to include/exclude.
-			// excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+			excludeDriverLogs: ["*"], // pass '*' to exclude all driver session logs
 			// excludeDriverLogs: ['bugreport', 'server'],
 		},
 	],
@@ -91,10 +91,11 @@ exports.config = {
 	// - @wdio/sumologic-reporter
 	// - @wdio/cli, @wdio/config, @wdio/utils
 	// Level of logging verbosity: trace | debug | info | warn | error | silent
-	// logLevels: {
-	//     webdriver: 'info',
-	//     '@wdio/appium-service': 'info'
-	// },
+	logLevels: {
+		webdriver: "error",
+		"@wdio/appium-service": "error",
+		"@wdio/devtools-service": "error",
+	},
 	//
 	// If you only want to run your tests until a specific amount of tests have failed use
 	// bail (default is 0 - don't bail, run all tests).
