@@ -26,15 +26,23 @@ https://bestofui5.org/#/packages?search=live&tokens=middleware:type&sort=downloa
 Each packages has metadata added what type it is and what tags are associated with it.  
 Data is coming from GitHub and NPM.
 
+### Object View
+
+You can click on any package to get more information about it.  
+Currently not only npm metadata is displayed, also the readme, historic npm downloads and all versions are displayed.
+
 ### Tags
 
 Here are all types and tags list that are used in the packages.  
 If you click on a tag, you will see all the packages that have this tag.
 
-### Object View
+### Timeline
 
-You can click on any package to get more information about it.  
-Currently not only npm metadata is displayed, also the readme, historic npm downloads and all versions are displayed.
+The timeline shows the latest changes in the associated NPM packages
+
+### Contribution
+
+This list shows the top contributors to the GitHub packages.
 
 # Technical
 
