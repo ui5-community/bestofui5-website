@@ -22,6 +22,10 @@
       "versions": {
         "uri": "https://raw.githubusercontent.com/ui5-community/bestofui5-data/live-data/data/versions.json",
         "type": "JSON"
+      },
+      "contributors": {
+        "uri": "https://raw.githubusercontent.com/ui5-community/bestofui5-data/live-data/data/contributors.json",
+        "type": "JSON"
       }
     }
   },
@@ -90,6 +94,10 @@
       "versions": {
         "type": "sap.ui.model.json.JSONModel",
         "dataSource": "versions"
+      },
+      "contributors": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "contributors"
       }
     },
 
@@ -136,6 +144,11 @@
           "name": "timeline",
           "pattern": "timeline",
           "target": ["TargetTimelineView"]
+        },
+        {
+          "name": "contributors",
+          "pattern": "contributors",
+          "target": ["TargetContributorsView"]
         }
       ],
       "targets": {
@@ -173,6 +186,13 @@
           "viewLevel": 1,
           "viewId": "Timeline",
           "viewName": "Timeline"
+        },
+        "TargetContributorsView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 1,
+          "viewId": "Contributors",
+          "viewName": "Contributors"
         },
         "objectNotFound": {
           "viewName": "ObjectNotFound",
