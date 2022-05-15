@@ -1,4 +1,12 @@
-<mvc:View xmlns:commons="sap.suite.ui.commons" controllerName="org.openui5.bestofui5.controller.Contributors" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" height="100%">
+<mvc:View
+  xmlns:commons="sap.suite.ui.commons"
+  xmlns:core="sap.ui.core"
+  controllerName="org.openui5.bestofui5.controller.Contributors"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  height="100%"
+>
   <FlexBox
     width="{= ${device>/system/phone} === true ? '' : '1024px' }"
     height="100%"
@@ -8,13 +16,14 @@
   >
     <List width="{= ${device>/system/phone} === true ? '' : '1024px' }" headerText="Contributors" items="{path: 'contributors>/', sorter : { path : 'contributions',descending: 'false' }}">
       <FeedListItem
+        core:require="{ sapMLib: 'sap/m/library' }"
         iconDisplayShape="Square"
         moreLabel="More"
         lessLabel="Less"
         sender="{contributors>name}"
         icon="{contributors>avatar_url}"
-        senderPress=".navToGithubUser"
-        iconPress=".navToGithubUser"
+        senderPress="sapMLib.URLHelper.redirect(${contributors>url}, true)"
+        iconPress="sapMLib.URLHelper.redirect(${contributors>url}, true)"
         iconDensityAware="false"
         info="Contributions: {contributors>contributions}"
         text="{contributors>packagesFrontend}"
