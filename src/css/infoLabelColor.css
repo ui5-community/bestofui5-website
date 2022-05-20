@@ -1,0 +1,184 @@
+/* fix for infolabel color */
+.backgroundColor1 {
+	border: 0.0625rem solid #d27700 !important;
+	background-color: #ffef9f !important;
+}
+
+.backgroundColor1 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor2 {
+	border: 0.0625rem solid #aa0808 !important;
+	background-color: #feeae1 !important;
+}
+
+.backgroundColor2 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor3 {
+	border: 0.0625rem solid #ba066c !important;
+	background-color: #fbf6f8 !important;
+}
+
+.backgroundColor3 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor4 {
+	border: 0.0625rem solid #a100c2 !important;
+	background-color: #ffe5fe !important;
+}
+
+.backgroundColor4 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor5 {
+	border: 0.0625rem solid #5d36ff !important;
+	background-color: #eceeff !important;
+}
+
+.backgroundColor5 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor6 {
+	border: 0.0625rem solid #0057d2 !important;
+	background-color: #d1efff !important;
+}
+
+.backgroundColor6 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor7 {
+	border: 0.0625rem solid #046c7a !important;
+	background-color: #c2fcee !important;
+}
+
+.backgroundColor7 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor8 {
+	border: 0.0625rem solid #1e592f !important;
+	background-color: #ebf5cb !important;
+}
+
+.backgroundColor8 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor9 {
+	border: 0.0625rem solid #5b738b !important;
+	background-color: #fff0fa !important;
+}
+
+.backgroundColor9 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+.backgroundColor10 {
+	border: 0.0625rem solid #6c32a9 !important;
+	background-color: #f5f6f7 !important;
+}
+
+.backgroundColor10 .sapTntInfoLabelInner {
+	color: #1d2d3e !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	/* CSS Code wenn Dark Mode aktiv */
+
+	.backgroundColor1 {
+		border: 0.0625rem solid #ffdf72 !important;
+		background-color: #382700 !important;
+	}
+
+	.backgroundColor1 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor2 {
+		border: 0.0625rem solid #ff8cb2 !important;
+		background-color: #501605 !important;
+	}
+
+	.backgroundColor2 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor3 {
+		border: 0.0625rem solid #fecbda !important;
+		background-color: #510136 !important;
+	}
+
+	.backgroundColor3 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor4 {
+		border: 0.0625rem solid #ffafed !important;
+		background-color: #28004a !important;
+	}
+
+	.backgroundColor4 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor5 {
+		border: 0.0625rem solid #d3b6ff !important;
+		background-color: #1c0c6e !important;
+	}
+
+	.backgroundColor5 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor6 {
+		border: 0.0625rem solid #a6e0ff !important;
+		background-color: #00144a !important;
+	}
+
+	.backgroundColor6 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor7 {
+		border: 0.0625rem solid #64edd2 !important;
+		background-color: #012931 !important;
+	}
+
+	.backgroundColor7 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor8 {
+		border: 0.0625rem solid #d5f1b1 !important;
+		background-color: #1e3009 !important;
+	}
+
+	.backgroundColor8 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor9 {
+		border: 0.0625rem solid #d5dadd !important;
+		background-color: #30164b !important;
+	}
+
+	.backgroundColor9 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+
+	.backgroundColor10 {
+		border: 0.0625rem solid #b995e0 !important;
+		background-color: #182430 !important;
+	}
+
+	.backgroundColor10 .sapTntInfoLabelInner {
+		color: #eaecee !important;
+	}
+}

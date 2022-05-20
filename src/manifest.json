@@ -73,6 +73,9 @@
           "uri": "css/style.css"
         },
         {
+          "uri": "css/infoLabelColor.css"
+        },
+        {
           "uri": "/resources/font-awesome/font.css"
         }
       ]
