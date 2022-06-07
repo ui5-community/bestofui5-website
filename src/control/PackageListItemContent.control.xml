@@ -21,6 +21,13 @@
           press="sapMLib.URLHelper.redirect(${$this>npmlink}, true)"
           visible="{= !!${$this>npmlink}}"
         />
+        <core:Icon
+          class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+          core:require="{ sapMLib: 'sap/m/library' }"
+          src="sap-icon://font-awesome-icons/microsoft"
+          press="sapMLib.URLHelper.redirect(${$this>vscodelink}, true)"
+          visible="{= !!${$this>vscodelink}}"
+        />
       </layout:HorizontalLayout>
 
       <FormattedText id="trend-desc" htmlText="{$this>description}" />
@@ -64,6 +71,17 @@
           colorScheme="5"
           displayOnly="false"
           visible="{= ${$this>downloads365} >= 0 }"
+        />
+
+        <tnt:InfoLabel
+          id="installs"
+          class="sapUiTinyMarginEnd"
+          text="VSC installs {$this>vscodeInstalls}"
+          tooltip="Total VSC installs"
+          renderMode="Narrow"
+          colorScheme="5"
+          displayOnly="false"
+          visible="{= ${$this>vscodeInstalls} >= 0 }"
         />
 
         <tnt:InfoLabel

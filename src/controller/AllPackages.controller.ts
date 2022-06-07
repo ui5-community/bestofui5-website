@@ -34,15 +34,6 @@ export default class AllPackages extends AppController {
 		this.queryUtil.applySearchFilter();
 	}
 
-	public onAfterRendering(): void {
-		const binding = this.getView().byId("listAllPackages").getBinding("items");
-		const oSorter = new Sorter({
-			path: "downloads365",
-			descending: true,
-		});
-		binding.sort(oSorter);
-	}
-
 	public onPress(event: Event): void {
 		// get object name from oevent
 		const objectName = event.getSource().getBindingContext("data").getObject().name;

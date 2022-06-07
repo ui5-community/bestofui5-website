@@ -28,6 +28,10 @@
           <core:Icon src="sap-icon://font-awesome-icons/npm" class="sapUiSmallMarginEnd" />
           <m:Link text="{i18n>object_view_header_npm}" href="{data>npmlink}" target="_blank" />
         </m:HBox>
+        <m:HBox visible="{= !!${data>vscodelink}}">
+          <core:Icon src="sap-icon://font-awesome-icons/microsoft" class="sapUiSmallMarginEnd" />
+          <m:Link text="{i18n>object_view_header_microsoft}" href="{data>vscodelink}" target="_blank" />
+        </m:HBox>
         <m:layoutData>
           <m:FlexItemData growFactor="1" />
         </m:layoutData>
@@ -42,6 +46,7 @@
           colorScheme="5"
           visible="{= ${data>downloadsCurrentFortnight} >= 0}"
         />
+        <tnt:InfoLabel id="installs" text="{i18n>object_view_header_vscodeInstalls} {data>vscodeInstalls}" renderMode="Loose" colorScheme="5" visible="{= ${data>vscodeInstalls} >= 0}" />
         <tnt:InfoLabel id="version" text="{i18n>object_view_header_version} {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
         <m:layoutData>
           <m:FlexItemData growFactor="1" />
