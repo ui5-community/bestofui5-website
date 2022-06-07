@@ -10,6 +10,7 @@
     <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
     <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
     <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
+    <core:Item key="vscodeInstalls" text="{i18n>all_packages_view_select_vscodeInstalls}" />
     <core:Item key="updatedAt" text="{i18n>all_packages_view_select_updatedAt}" />
     <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
     <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
@@ -20,6 +21,7 @@
         name="{data>name}"
         githublink="{data>githublink}"
         npmlink="{data>npmlink}"
+        vscodelink="{data>vscodelink}"
         description="{
           parts: ['data>description', 'settings>/search'],
           formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatHighlight'
@@ -30,6 +32,7 @@
         updatedAt="{= ${settings>/selectKey} === 'updatedAt' ? ${data>updatedAt} : undefined }"
         createdAt="{= ${settings>/selectKey} === 'createdAt' ? ${data>createdAt} : undefined }"
         addedToBoUI5="{= ${settings>/selectKey} === 'addedToBoUI5' ? ${data>addedToBoUI5} : undefined }"
+        vscodeInstalls="{= ${settings>/selectKey} === 'vscodeInstalls' ? ${data>vscodeInstalls} : undefined }"
         downloads14="{= ${settings>/selectKey} === 'downloadsCurrentFortnight' ? ${data>downloadsCurrentFortnight} : -1 }"
         downloads30="{= ${settings>/selectKey} === 'downloadsCurrentMonth' ? ${data>downloadsCurrentMonth} : -1 }"
         downloads365="{= ${settings>/selectKey} === 'downloads365' ? ${data>downloads365} : -1 }"

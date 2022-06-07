@@ -1,6 +1,7 @@
 import BaseController from "./BaseController";
 import Event from "sap/ui/base/Event";
 import Filter from "sap/ui/model/Filter";
+import { URLHelper } from "sap/m/library";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -29,9 +30,7 @@ export default class Object extends BaseController {
 	}
 
 	public onPressStandardListItemNpmLink(event: Event): void {
-		const versionNpm: string = event.getSource().getBindingContext("data").getObject().version;
-		const npmLink: string = event.getSource().getParent().getBindingContext("data").getObject().npmlink;
-		const link = `${npmLink}/v/${versionNpm}`;
-		window.open(link, "_blank");
+		const link = event.getSource().getBindingContext("data").getObject().link;
+		URLHelper.redirect(link, true);
 	}
 }
