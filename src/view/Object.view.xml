@@ -112,7 +112,7 @@
                 items="{
                 path: 'data>versions/',
                 sorter: {
-                  path: 'version',
+                  path: 'date',
                   descending: true
                 },
                 filters: [
