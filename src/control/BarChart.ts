@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 import Control from "sap/ui/core/Control";
 // https://www.chartjs.org/docs/latest/getting-started/integration.html#bundlers-webpack-rollup-etc
-import { Chart, registerables } from "chart.js";
+import Chart from "chart.js/auto";
 import RenderManager from "sap/ui/core/RenderManager";
 
 /**
@@ -67,7 +67,6 @@ export default class BarChart extends Control {
 
 	onAfterRendering() {
 		if (!this._chart) {
-			Chart.register(...registerables);
 			this._chart = new Chart(this.getDomRef("canvas") as HTMLCanvasElement, {
 				type: "bar",
 				data: this._getChartData(),

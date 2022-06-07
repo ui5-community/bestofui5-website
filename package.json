@@ -34,7 +34,7 @@
     "sitemap:build": "ts-node -O '{\"module\":\"commonjs\",\"target\":\"esnext\"}'  sitemap/create_sitemap.ts"
   },
   "dependencies": {
-    "chart.js": "^3.7.1",
+    "chart.js": "^3.8.0",
     "ui5-cc-md": "^0.0.6"
   },
   "devDependencies": {
