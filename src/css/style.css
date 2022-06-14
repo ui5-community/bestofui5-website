@@ -92,13 +92,13 @@
 /*
  * Fix scrollbar issue with ObjectPageLayout
  */
-.sapUxAPObjectPageWrapperTransform {
+/* .sapUxAPObjectPageWrapperTransform {
 	overflow: inherit !important;
 }
 
 .sapMScrollBarOuterDiv {
 	display: none;
-}
+} */
 
 /*
  * wrap code text in markdown

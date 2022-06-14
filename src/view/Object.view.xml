@@ -12,7 +12,7 @@
   displayBlock="true"
   height="100%"
 >
-  <ObjectPageLayout alwaysShowContentHeader="true" id="ObjectPageLayout" showAnchorBar="false" upperCaseAnchorBar="false" height="100%" class="fixImageWidth">
+  <ObjectPageLayout id="ObjectPageLayout" showAnchorBar="true" upperCaseAnchorBar="false" height="100%" class="fixImageWidth">
     <headerTitle>
       <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" />
     </headerTitle>
