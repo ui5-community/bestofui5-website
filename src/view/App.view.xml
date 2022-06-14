@@ -59,6 +59,7 @@
                         }
                     }"
               tokens="{settings>/tokens/}"
+              visible="{= ${settings>/route} !== 'RouteObjectView'}"
             >
               <core:ListItem key="{data>name};{data>type}" text="{data>name}" additionalText="{data>type}" />
               <tokens>
@@ -68,7 +69,7 @@
                 <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" growFactor="1" />
               </layoutData>
             </MultiInput>
-            <Button tooltip="{i18n>app_view_link_share_tooltip}" icon="sap-icon://share" press=".copyLinkToClipboard" type="Emphasized" />
+            <Button visible="{= ${settings>/route} !== 'RouteObjectView'}" tooltip="{i18n>app_view_link_share_tooltip}" icon="sap-icon://share" press=".copyLinkToClipboard" type="Emphasized" />
           </HBox>
 
           <NavContainer width="{= ${device>/system/phone} === true ? '' : '1024px' }" id="pageContainer" class="fixOverflow">

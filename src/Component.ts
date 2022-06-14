@@ -47,12 +47,15 @@ export default class Component extends UIComponent {
 			filter: "all",
 			tokens: [],
 			search: "",
+			route: "",
 			selectedTab: "hotPackagesView",
 			selectKey: "downloads365",
 			headerKey: "hotPackages",
 			tagFilter: "tag",
 		});
 		this.setModel(settingsModel, "settings");
+
+		this.getRouter().attachRouteMatched(this.onBeforeRouteMatched, this);
 
 		// set the device model
 		this.setModel(models.createDeviceModel(), "device");
@@ -116,5 +119,10 @@ export default class Component extends UIComponent {
 		} catch (error) {
 			Log.warning("Title could not be set");
 		}
+	}
+
+	private onBeforeRouteMatched(event: Event): void {
+		const routeName = event.getParameter("name");
+		this.getModel("settings").setProperty("/route", routeName);
 	}
 }
