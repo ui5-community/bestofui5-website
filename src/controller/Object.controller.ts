@@ -23,6 +23,7 @@ export default class Object extends BaseController {
 			await this.getRouter().getTargets().display("objectNotFound");
 			return;
 		}
+		this.getView().byId("ObjectPageLayout").setSelectedSection(null);
 		this.getView().bindElement({
 			path: `/packages/${objectIndex}`,
 			model: "data",
