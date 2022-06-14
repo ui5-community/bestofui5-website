@@ -5,7 +5,7 @@
       visible="{= !!${$this>downloadsMonthlyGrowth} &amp;&amp; ${$this>showRank}}" withMargin="true" /> -->
 
     <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
-      <layout:HorizontalLayout>
+      <HBox id="trend-item-tags-box2" class="sapUiTinyMarginTop" wrap="Wrap">
         <Title level="H3" text="{$this>name}" />
         <core:Icon
           class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
@@ -28,7 +28,7 @@
           press="sapMLib.URLHelper.redirect(${$this>vscodelink}, true)"
           visible="{= !!${$this>vscodelink}}"
         />
-      </layout:HorizontalLayout>
+      </HBox>
 
       <FormattedText id="trend-desc" htmlText="{$this>description}" />
       <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
