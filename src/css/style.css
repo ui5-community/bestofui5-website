@@ -123,3 +123,10 @@
 .sapMFT > em {
 	background: rgb(130, 106, 226, 0.5);
 }
+/*
+ * remove focus outline on ObjectPage Subsections and Header
+ */
+.sapUxAPObjectPageSubSection:focus,
+.sapUxAPObjectPageSection:focus {
+	box-shadow: none !important;
+}
