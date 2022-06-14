@@ -10,7 +10,7 @@
     id="tagsLits"
     headerText="{i18n>tags_view_header}"
     mode="None"
-    items="{path: 'data>/tags/', sorter : { path : 'count',descending: 'false' }}"
+    items="{path: 'data>/tags/', sorter : [{ path : 'type',descending: 'false', group: true },{ path : 'count',descending: 'false' }]}"
     width="{= ${device>/system/phone} === true ? '' : '1024px' }"
   >
     <CustomListItem type="Navigation" press="onPress" counter="{data>count}">
