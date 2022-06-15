@@ -17,8 +17,10 @@ export default class Object extends BaseController {
 		const model = this.getModel("data");
 		await model.dataLoaded();
 		const data = model.getData();
+		// replace underscore with slash to find package
+		const searchParamName = objectName.replace("_", "/");
 		// find object index in data
-		const objectIndex = data.packages.findIndex((object) => object.name === objectName);
+		const objectIndex = data.packages.findIndex((object) => object.name === searchParamName);
 		if (objectIndex === -1) {
 			await this.getRouter().getTargets().display("objectNotFound");
 			return;
