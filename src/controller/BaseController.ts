@@ -67,6 +67,12 @@ export default abstract class BaseController extends Controller {
 	 * @param [bReplace] Defines if the hash should be replaced (no browser history entry) or set (browser history entry)
 	 */
 	public navTo(sName: string, oParameters?: object, bReplace?: boolean): void {
+		// replace slash in package name because it cant be in url
+		try {
+			oParameters.name = oParameters.name.replace("/", "_");
+		} catch (error) {
+			console.info("no name parameter");
+		}
 		this.getRouter().navTo(sName, oParameters, undefined, bReplace);
 	}
 
