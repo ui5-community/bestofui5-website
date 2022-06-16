@@ -76,7 +76,16 @@
 	}
 }
 
-.headerLink.sapMLnk:visited .headerLink.sapMLnk {
+.headerLink.sapMLnk:link {
+	color: #1d2d3e;
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+.headerLink.sapMLnk:visited {
 	color: #1d2d3e;
 	text-shadow: none;
 	font-weight: bold;
