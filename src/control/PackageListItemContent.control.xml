@@ -1,9 +1,5 @@
 <core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt" xmlns:layout="sap.ui.layout">
-  <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
-    <!-- <NumericContent id="trend-rank" value="{$this>downloadsMonthlyGrowth}" valueColor="{$this>rankColor}"
-      indicator="{$this>rankIndicator}" class="sapUiSmallMarginTop" scale="%"
-      visible="{= !!${$this>downloadsMonthlyGrowth} &amp;&amp; ${$this>showRank}}" withMargin="true" /> -->
-
+  <FlexBox id="trend-item-box" class="item-box" alignItems="Center" justifyContent="SpaceBetween">
     <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
       <HBox id="trend-item-tags-box2" class="sapUiTinyMarginTop" wrap="Wrap">
         <Title level="H3" text="{$this>name}" />
@@ -34,11 +30,9 @@
       <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
         <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" />
 
-        <!-- <tnt:InfoLabel id="trend-item-tag3" class="sapUiTinyMarginEnd" text=" STARS {$this>stars}" renderMode="Narrow"
-          colorScheme="5" displayOnly="false" visible="{= !!${$this>stars} }" />
+        <!-- <tnt:InfoLabel id="trend-item-tag3" class="sapUiTinyMarginEnd" text=" STARS {$this>stars}" renderMode="Narrow" colorScheme="5" displayOnly="false" visible="{= !!${$this>stars} }" />
 
-        <tnt:InfoLabel id="trend-item-tag1" class="sapUiTinyMarginEnd" text="FORKS {$this>forks}" renderMode="Narrow"
-          colorScheme="5" displayOnly="false" visible="{= !!${$this>forks} }" /> -->
+        <tnt:InfoLabel id="trend-item-tag1" class="sapUiTinyMarginEnd" text="FORKS {$this>forks}" renderMode="Narrow" colorScheme="5" displayOnly="false" visible="{= !!${$this>forks} }" /> -->
 
         <tnt:InfoLabel
           id="downloads14"
@@ -148,7 +142,15 @@
         />
       </HBox>
     </VBox>
-
-    <Image id="trend-cat-type" width="4rem" src="{$this>typeImage}" class="sapUiSmallMarginTop sapUiSmallMarginEnd" />
+    <VBox visible="{= ${device>/system/desktop} === true }">
+      <core:Icon visible="{= ${$this>type} === 'module'}" class="sapUiSmallMarginBegin sapUiResponsiveContentPadding" src="sap-icon://font-awesome-icons-solid/code" size="70px" />
+      <core:Icon visible="{= ${$this>type} === 'middleware' }" class="sapUiSmallMarginBegin sapUiResponsiveContentPadding" src="sap-icon://font-awesome-icons-solid/server" size="70px" />
+      <core:Icon visible="{= ${$this>type} === 'task'}" class="sapUiSmallMarginBegin sapUiResponsiveContentPadding" src="sap-icon://font-awesome-icons-solid/list-check" size="70px" />
+      <core:Icon visible="{= ${$this>type} === 'customControl'}" class="sapUiSmallMarginBegin sapUiResponsiveContentPadding" src="sap-icon://font-awesome-icons-solid/gamepad" size="70px" />
+      <core:Icon visible="{= ${$this>type} === 'generator'}" class="sapUiSmallMarginBegin sapUiResponsiveContentPadding" src="sap-icon://font-awesome-icons-solid/robot" size="70px" />
+      <core:Icon visible="{= ${$this>type} === 'tooling'}" class="sapUiSmallMarginBegin sapUiResponsiveContentPadding" src="sap-icon://font-awesome-icons-solid/screwdriver" size="70px" />
+      <core:Icon visible="{= ${$this>type} === 'vscode'}" class="sapUiSmallMarginBegin sapUiResponsiveContentPadding" src="sap-icon://font-awesome-icons/microsoft" size="70px" />
+      <core:Icon visible="{= ${$this>type} === 'application'}" class="sapUiSmallMarginBegin sapUiResponsiveContentPadding" src="sap-icon://font-awesome-icons-solid/window-maximize" size="70px" />
+    </VBox>
   </FlexBox>
 </core:FragmentDefinition>

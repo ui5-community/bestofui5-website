@@ -42,6 +42,12 @@ export default class Component extends UIComponent {
 			fontURI: "resources/font-awesome",
 			lazy: true,
 		});
+		IconPool.registerFont({
+			collectionName: "font-awesome-icons-solid",
+			fontFamily: "fa-solid",
+			fontURI: "resources/font-awesome",
+			lazy: true,
+		});
 
 		const settingsModel = new JSONModel({
 			filter: "all",
