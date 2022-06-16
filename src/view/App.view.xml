@@ -4,7 +4,7 @@
       <customHeader>
         <Bar>
           <contentMiddle>
-            <Link text="Best of UI5" href="/#" />
+            <Link class="headerLink" text="Best of UI5" href="/#" />
           </contentMiddle>
           <contentRight>
             <Button

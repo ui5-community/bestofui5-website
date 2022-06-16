@@ -76,6 +76,25 @@
 	}
 }
 
+.headerLink.sapMLnk:visited .headerLink.sapMLnk {
+	color: #1d2d3e;
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+.headerLink.sapMLnk {
+	color: #1d2d3e;
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+
 .fixOverflow.sapMNav {
 	overflow: inherit;
 }
