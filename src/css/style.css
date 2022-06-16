@@ -130,3 +130,9 @@
 .sapUxAPObjectPageSection:focus {
 	box-shadow: none !important;
 }
+/*
+ * style type icons
+ */
+.typeIconsLineItem {
+	color: #d11212;
+}
