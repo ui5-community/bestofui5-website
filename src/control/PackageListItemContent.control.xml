@@ -28,14 +28,14 @@
 
       <FormattedText id="trend-desc" htmlText="{$this>description}" />
       <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
-        <core:Icon visible="{= ${$this>type} === 'module'}" class="sapUiTinyMarginEnd" src="sap-icon://font-awesome-icons-solid/code" />
-        <core:Icon visible="{= ${$this>type} === 'middleware' }" class="sapUiTinyMarginEnd" src="sap-icon://font-awesome-icons-solid/server" />
-        <core:Icon visible="{= ${$this>type} === 'task'}" class="sapUiTinyMarginEnd" src="sap-icon://font-awesome-icons-solid/list-check" />
-        <core:Icon visible="{= ${$this>type} === 'customControl'}" class="sapUiTinyMarginEnd" src="sap-icon://font-awesome-icons-solid/gamepad" />
-        <core:Icon visible="{= ${$this>type} === 'generator'}" class="sapUiTinyMarginEnd" src="sap-icon://font-awesome-icons-solid/robot" />
-        <core:Icon visible="{= ${$this>type} === 'tooling'}" class="sapUiTinyMarginEnd" src="sap-icon://font-awesome-icons-solid/screwdriver" />
-        <core:Icon visible="{= ${$this>type} === 'vscode'}" class="sapUiTinyMarginEnd" src="sap-icon://font-awesome-icons/microsoft" />
-        <core:Icon visible="{= ${$this>type} === 'application'}" class="sapUiTinyMarginEnd" src="sap-icon://font-awesome-icons-solid/window-maximize" />
+        <core:Icon visible="{= ${$this>type} === 'module'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/code" />
+        <core:Icon visible="{= ${$this>type} === 'middleware' }" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/server" />
+        <core:Icon visible="{= ${$this>type} === 'task'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/list-check" />
+        <core:Icon visible="{= ${$this>type} === 'customControl'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/gamepad" />
+        <core:Icon visible="{= ${$this>type} === 'generator'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/robot" />
+        <core:Icon visible="{= ${$this>type} === 'tooling'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/screwdriver" />
+        <core:Icon visible="{= ${$this>type} === 'vscode'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons/microsoft" />
+        <core:Icon visible="{= ${$this>type} === 'application'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/window-maximize" />
         <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{$this>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" />
 
         <!-- <tnt:InfoLabel id="trend-item-tag3" class="sapUiTinyMarginEnd" text=" STARS {$this>stars}" renderMode="Narrow" colorScheme="5" displayOnly="false" visible="{= !!${$this>stars} }" />
