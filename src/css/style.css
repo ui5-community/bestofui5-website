@@ -20,15 +20,19 @@
 		width: 100%;
 	}
 
-	html:not(.sap-phone) .openui5header > :first-child .sapMTitle {
+	html:not(.sap-phone) .openui5header > :first-child .sapMLnk {
 		position: absolute;
 		top: 2.5rem;
 		height: 5rem;
 	}
-	html:not(.sap-phone) .openui5header > :first-child .sapMTitle > span {
+	html:not(.sap-phone) .openui5header > :first-child .sapMLnk {
 		font-size: 4rem;
+		font-weight: bolder;
 		line-height: 4rem;
 		color: white;
+		/* remove link styles */
+		text-decoration: none;
+		outline: none;
 	}
 	html:not(.sap-phone) .openui5header > section {
 		top: 9.6rem !important;
