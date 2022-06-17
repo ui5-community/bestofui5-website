@@ -1,36 +1,40 @@
 <mvc:View controllerName="org.openui5.bestofui5.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:ui5cc="org.openui5.bestofui5.control" xmlns:core="sap.ui.core">
   <App>
     <Page id="page" title="{i18n>title}" titleAlignment="Center" class="openui5header">
-      <headerContent>
-        <OverflowToolbar style="Clear">
-          <ToolbarSpacer />
-          <Button
-            class="sapUiTinyMargin openui5headerButton"
-            core:require="{ sapMLib: 'sap/m/library' }"
-            text="{i18n>app_view_addyourpackage}"
-            visible="{= ${device>/system/desktop}}"
-            type="Transparent"
-            icon="sap-icon://add-product"
-            press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&amp;labels=new%20package&amp;template=new_package.md&amp;title=Add%20new%20Package:', true)"
-          >
-            <layoutData>
-              <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
-            </layoutData>
-          </Button>
-          <Button
-            class="sapUiTinyMargin openui5headerButton"
-            core:require="{ sapMLib: 'sap/m/library' }"
-            type="Transparent"
-            visible="{= ${device>/system/desktop}}"
-            icon="sap-icon://font-awesome-icons/github"
-            press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-website#readme', true)"
-          >
-            <layoutData>
-              <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
-            </layoutData>
-          </Button>
-        </OverflowToolbar>
-      </headerContent>
+      <customHeader>
+        <Bar>
+          <contentMiddle>
+            <Link class="headerLink" text="Best of UI5" href="/#" />
+          </contentMiddle>
+          <contentRight>
+            <Button
+              class="sapUiTinyMargin openui5headerButton"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              text="{i18n>app_view_addyourpackage}"
+              visible="{= ${device>/system/desktop}}"
+              type="Transparent"
+              icon="sap-icon://add-product"
+              press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&amp;labels=new%20package&amp;template=new_package.md&amp;title=Add%20new%20Package:', true)"
+            >
+              <layoutData>
+                <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
+              </layoutData>
+            </Button>
+            <Button
+              class="sapUiTinyMargin openui5headerButton"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              type="Transparent"
+              visible="{= ${device>/system/desktop}}"
+              icon="sap-icon://font-awesome-icons/github"
+              press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-website#readme', true)"
+            >
+              <layoutData>
+                <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
+              </layoutData>
+            </Button>
+          </contentRight>
+        </Bar>
+      </customHeader>
       <subHeader>
         <OverflowToolbar class="doNotRoundMyToolBar">
           <core:Fragment id="LinkHeader" fragmentName="org.openui5.bestofui5.view.LinkHeader" type="XML" />

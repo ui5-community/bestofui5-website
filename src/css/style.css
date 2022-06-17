@@ -20,15 +20,19 @@
 		width: 100%;
 	}
 
-	html:not(.sap-phone) .openui5header > :first-child .sapMTitle {
+	html:not(.sap-phone) .openui5header > :first-child .sapMLnk {
 		position: absolute;
 		top: 2.5rem;
 		height: 5rem;
 	}
-	html:not(.sap-phone) .openui5header > :first-child .sapMTitle > span {
+	html:not(.sap-phone) .openui5header > :first-child .sapMLnk {
 		font-size: 4rem;
+		font-weight: bolder;
 		line-height: 4rem;
 		color: white;
+		/* remove link styles */
+		text-decoration: none;
+		outline: none;
 	}
 	html:not(.sap-phone) .openui5header > section {
 		top: 9.6rem !important;
@@ -69,6 +73,56 @@
 	html:not(.sap-phone) .openui5headerButton:hover .sapMBtnInner:before,
 	html:not(.sap-phone) .openui5headerButton:focus .sapMBtnInner:before {
 		border: none !important;
+	}
+}
+
+/* Header Styles */
+.headerLink.sapMLnk:link {
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+.headerLink.sapMLnk:visited {
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+.headerLink.sapMLnk {
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.headerLink.sapMLnk:link {
+		color: white;
+	}
+	.headerLink.sapMLnk:visited {
+		color: white;
+	}
+	.headerLink.sapMLnk {
+		color: white;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.headerLink.sapMLnk:link {
+		color: #1d2d3e;
+	}
+	.headerLink.sapMLnk:visited {
+		color: #1d2d3e;
+	}
+	.headerLink.sapMLnk {
+		color: #1d2d3e;
 	}
 }
 
