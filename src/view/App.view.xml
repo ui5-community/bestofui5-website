@@ -1,10 +1,10 @@
 <mvc:View controllerName="org.openui5.bestofui5.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:ui5cc="org.openui5.bestofui5.control" xmlns:core="sap.ui.core">
   <App>
-    <Page id="page" title="{i18n>title}" titleAlignment="Center" class="openui5header">
+    <Page id="page" titleAlignment="Center" class="openui5header">
       <customHeader>
         <Bar>
           <contentMiddle>
-            <Link class="headerLink" text="Best of UI5" href="/#" />
+            <Link class="headerLink" text="{i18n>title}" href="/#" />
           </contentMiddle>
           <contentRight>
             <Button
