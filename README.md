@@ -46,6 +46,15 @@ This list shows the top contributors to the GitHub packages.
 
 # Technical
 
+## Overview
+
+Here is a diagram that illustrates the architecture of BestOfUI5.  
+
+In short:  
+The repository `bestofui5-data` generates the data and serves it to the website, so it is effectively our backend for the website.  
+In the repository `bestofui5-website` only the frontend is maintained. This is generated after each commit in `main` branch.  
+![Best Of UI5 Diagramm](img/BestOfUI5_Architecture.png)
+
 ## Frontend
 
 The frontend is generated with the [UI5-TS-App Generator](https://github.com/ui5-community/generator-ui5-ts-app) and written completly in TypeScript.
