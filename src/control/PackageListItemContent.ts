@@ -34,43 +34,6 @@ export default class PackageListItemContent extends XMLComposite {
 			createdAt: { type: "Date" },
 			updatedAt: { type: "Date" },
 			addedToBoUI5: { type: "Date" },
-			rank: { type: "int" },
-			rankTooltip: { type: "string" },
-			rankIndicator: { type: "sap.m.DeviationIndicator" },
-			showRank: { type: "boolean", defaultValue: false },
-			rankColor: { type: "sap.m.ValueColor" }, // this is a computed property
-			typeImage: { type: "string" }, // this is a computed property
 		},
 	};
-
-	// static renderer = {
-	// 	apiVersion: 2,
-	// 	render: function (rm: RenderManager, control: PackageListItemContent): void {
-	// 		rm.openStart("div", control);
-	// 		rm.openEnd();
-	// 		rm.text("test");
-	// 		rm.close("div");
-	// 	}
-	// };
 }
-
-PackageListItemContent.prototype.getFragmentName = function (type) {
-	return "org.openui5.bestofui5.control.PackageListItemContent";
-};
-
-PackageListItemContent.prototype.onIconPress = function (event, link) {
-	console.log("onIconPress");
-};
-
-PackageListItemContent.prototype.setRankIndicator = function (indicator) {
-	this.setProperty("rankIndicator", indicator, true);
-	if (indicator === sap.m.DeviationIndicator.Up) {
-		this.setProperty("rankColor", sap.m.ValueColor.Good);
-		return;
-	}
-	if (indicator === sap.m.DeviationIndicator.Down) {
-		this.setProperty("rankColor", sap.m.ValueColor.Error);
-		return;
-	}
-	this.setProperty("rankColor", sap.m.ValueColor.Neutral);
-};
