@@ -15,7 +15,15 @@
     <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
     <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
   </Select>
-  <List id="listAllPackages" headerText="{i18n>all_packages_view_header}" mode="None" items="{path: 'data>/packages/'}" width="{= ${device>/system/phone} === true ? '' : '1024px' }">
+  <List
+    id="listAllPackages"
+    headerText="{i18n>all_packages_view_header}"
+    growing="true"
+    growingScrollToLoad="true"
+    mode="None"
+    items="{path: 'data>/packages/'}"
+    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+  >
     <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
       <ui5cc:PackageListItemContent
         name="{data>name}"
