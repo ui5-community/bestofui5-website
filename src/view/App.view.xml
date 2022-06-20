@@ -32,6 +32,7 @@
                 <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
               </layoutData>
             </Button>
+            <Image src="{imageModel>/svgLogo}" width="{imageModel>/imageWidth}" visible="{= ${device>/system/desktop}}" />
           </contentRight>
         </Bar>
       </customHeader>

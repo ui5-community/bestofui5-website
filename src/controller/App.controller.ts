@@ -4,6 +4,8 @@ import Event from "sap/ui/base/Event";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import BaseController from "./BaseController";
 import QueryUtil from "./QueryUtil";
+import Device from "sap/ui/Device";
+import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -14,6 +16,17 @@ export default class App extends BaseController {
 
 	public onInit(): void {
 		this.queryUtil = new QueryUtil(this.getView());
+		let bIsPhone = Device.system.phone,
+			svgLogo = sap.ui.require.toUrl("org/openui5/bestofui5/img/bestofjs.svg"),
+			oImgModel;
+
+		this.getView().setModel(
+			new JSONModel({
+				imageWidth: bIsPhone ? "5em" : "4em",
+				svgLogo: svgLogo,
+			}),
+			"imageModel"
+		);
 	}
 
 	public liveSearch(event: Event): void {

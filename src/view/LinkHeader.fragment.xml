@@ -91,5 +91,18 @@
       <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
     </layoutData>
   </Button>
+  <Button
+    class="sapUiTinyMargin openui5headerButton"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="{i18n>app_view_gotobestofjs}"
+    type="Transparent"
+    icon="sap-icon://attachment-html"
+    press="sapMLib.URLHelper.redirect('https://bestofjs.org/', true)"
+    visible="{= ${device>/system/phone}}"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
+    </layoutData>
+  </Button>
   <ToolbarSpacer />
 </core:FragmentDefinition>
