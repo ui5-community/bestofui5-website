@@ -3,6 +3,8 @@
     id="listHotPackages"
     headerText="{i18n>hot_packages_view_header}"
     mode="None"
+    growing="true"
+    growingScrollToLoad="true"
     items="{path: 'data>/packages/', sorter : { path : 'downloadsFortnightGrowth',descending: 'false' },
         filters : [
             { path : 'type', operator : 'NE', value1 : 'generator'}
