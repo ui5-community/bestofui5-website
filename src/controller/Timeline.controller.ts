@@ -10,12 +10,21 @@ export default class Timeline extends BaseController {
 		this.getRouter().getRoute("timeline").attachPatternMatched(this.onPatternMatched, this);
 	}
 
+	/**
+	 * route to package when clicking on item in timeline list
+	 * @param event
+	 */
 	public onNameClick(event: Event): void {
 		this.navTo("RouteObjectView", {
 			name: event.getSource().getBindingContext("versions").getObject().name,
 		});
 	}
 
+	/**
+	 * headerkey defines the emphasized button in linkheader
+	 * set headerKey Property of the JSONModel settings
+	 * @param event
+	 */
 	public onPatternMatched(event: Event): void {
 		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", "timeline");
 	}

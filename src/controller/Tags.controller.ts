@@ -16,6 +16,10 @@ export default class Tags extends AppController {
 		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", "tags");
 	}
 
+	/**
+	 * filter the list of tags with the segmented button
+	 * @param {sap.ui.base.Event} event
+	 */
 	public onSelectionChange(event: Event): void {
 		const binding = this.getView().byId("tagsLits").getBinding("items");
 		const key = event.getParameter("item").getKey();
@@ -30,6 +34,12 @@ export default class Tags extends AppController {
 			binding.filter(filter);
 		}
 	}
+
+	/**
+	 * when clicking on an tag in the list, the token object for filtering is extracted and set
+	 * as the filter for the AllPackages List
+	 * @param event
+	 */
 
 	public onPress(event: Event): void {
 		const item = event.getSource().getBindingContext("data").getObject();

@@ -11,17 +11,25 @@ import ListBinding from "sap/ui/model/ListBinding";
 export default class QueryUtil {
 	private view: View;
 
-	// create constructor
 	constructor(view: View) {
 		this.view = view;
 	}
 
+	/**
+	 * triggered from liveChange event of MultiInput in App View
+	 * sets search value to global JSONModel settings
+	 * applys search values to list binding
+	 * @param event
+	 */
 	public liveSearch(event: Event): void {
 		const value = event.getParameter("value").trim();
 		(this.view.getModel("settings") as JSONModel).setProperty("/search", value);
 		this.applySearchFilter();
 	}
 
+	/**
+	 * applys search and filter values to list binding AllPackages
+	 */
 	public applySearchFilter(): void {
 		let value = this.view.getModel("settings").getProperty("/search");
 		const valueTypes = this.view.getModel("settings").getProperty("/tokens");
@@ -30,6 +38,7 @@ export default class QueryUtil {
 		}
 		const list = this.view.byId("listAllPackages");
 		const listBinding = list.getBinding("items") as ListBinding;
+		// filter name and description with search value
 		const nameFilter = new Filter({
 			path: "name",
 			operator: FilterOperator.Contains,
@@ -40,6 +49,7 @@ export default class QueryUtil {
 			operator: FilterOperator.Contains,
 			value1: value,
 		});
+		// check if any tags are match of the package
 		const tagsFilter = new Filter(
 			"tags",
 			function (array: Array<any>) {
@@ -50,6 +60,7 @@ export default class QueryUtil {
 				}
 			}.bind(this)
 		);
+		// check if type machtes the package
 		const typeFilters = [];
 		for (let i = 0; i < valueTypes.length; i++) {
 			const typeFilter = new Filter({
@@ -63,14 +74,17 @@ export default class QueryUtil {
 			filters: typeFilters,
 			and: true,
 		});
+		// search for tags and types with or condition
 		const typesTagsFilter = new Filter({
 			filters: [tagsFilter, typeFilter],
 			and: false,
 		});
+		// search for name and description with or condition
 		const searchFilter = new Filter({
 			filters: [nameFilter, descFilter],
 			and: false,
 		});
+		// apply filters to list binding
 		if (valueTypes.length > 0) {
 			listBinding.filter(
 				new Filter({
@@ -81,15 +95,22 @@ export default class QueryUtil {
 		} else {
 			listBinding.filter(searchFilter);
 		}
+		// set search values to url to be able to share the url and bookmark it
 		this.setQueryParameters();
 	}
 
+	/**
+	 * apply changes in token on MultiInput in App View
+	 * @param event
+	 */
 	public onUpdateToken(event: Event): void {
 		const model = this.view.getModel("settings");
 		let tokenArray = model.getProperty("/tokens");
 
+		// token can be removed or added
 		const addOrRemove = event.getParameter("type");
 		if (addOrRemove === "added") {
+			// token has two informations: key and type (i.e. middleware;type)
 			const keyArray = event.getParameter("addedTokens")[0].getProperty("key").split(";");
 			const tokenObject = {
 				key: keyArray[0],
@@ -110,6 +131,10 @@ export default class QueryUtil {
 		(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
 	}
 
+	/**
+	 * parse url parameters and set them to global JSONModel settings
+	 * @param eventArguments
+	 */
 	public getParameterFromQuery(eventArguments: any): void {
 		if ("search" in eventArguments) {
 			(this.view.getModel("settings") as JSONModel).setProperty("/search", eventArguments.search);
@@ -130,6 +155,9 @@ export default class QueryUtil {
 		}
 	}
 
+	/**
+	 * set url parameters from global JSONModel settings
+	 */
 	public setQueryParameters(): void {
 		const searchParameter: string = (this.view.getModel("settings") as JSONModel).getProperty("/search");
 		const tokens: any = (this.view.getModel("settings") as JSONModel).getProperty("/tokens");
