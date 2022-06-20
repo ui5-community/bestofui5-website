@@ -32,7 +32,13 @@
                 <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
               </layoutData>
             </Button>
-            <Image src="{imageModel>/svgLogo}" width="4em" visible="{= ${device>/system/desktop}}" />
+            <Image
+              src="{imageModel>/svgLogo}"
+              width="4em"
+              visible="{= ${device>/system/desktop}}"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              press="sapMLib.URLHelper.redirect('https://bestofjs.org/', true)"
+            />
           </contentRight>
         </Bar>
       </customHeader>
