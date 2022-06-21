@@ -5,8 +5,9 @@
   xmlns="sap.m"
   xmlns:ui5cc="org.openui5.bestofui5.control"
   xmlns:core="sap.ui.core"
+  xmlns:webc="sap.ui.webc.fiori"
 >
-  <Select id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
+  <!-- <Select id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
     <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
     <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
     <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
@@ -14,7 +15,8 @@
     <core:Item key="updatedAt" text="{i18n>all_packages_view_select_updatedAt}" />
     <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
     <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
-  </Select>
+  </Select> -->
+  <Button text="Open View Settings Dialog" press="handleOpenDialog" />
   <List
     id="listAllPackages"
     headerText="{i18n>all_packages_view_header}"

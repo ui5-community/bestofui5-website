@@ -3,6 +3,7 @@ import Sorter from "sap/ui/model/Sorter";
 import Event from "sap/ui/base/Event";
 import Log from "sap/base/Log";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
+import Fragment from "sap/ui/core/Fragment";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -62,5 +63,24 @@ export default class AllPackages extends AppController {
 		if ("sort" in eventArguments) {
 			this.sortList(eventArguments.sort);
 		}
+	}
+
+	private async openDialog(): void {
+		const oView = this.getView();
+
+		if (!this.dialog) {
+			this.dialog = await this.loadFragment({
+				id: oView.getId(),
+				name: "org.openui5.bestofui5.view.ViewSettingsDialog",
+				controller: this,
+			});
+			this.dialog.show();
+		} else {
+			this.dialog.show();
+		}
+	}
+
+	private handleOpenDialog(event: Event): void {
+		this.openDialog();
 	}
 }

@@ -11,6 +11,7 @@ framework:
     - name: sap.m
     - name: sap.tnt
     - name: sap.uxap
+    - name: sap.ui.webc.main
     - name: sap.ui.webc.fiori
 builder:
   customTasks:
