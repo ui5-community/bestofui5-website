@@ -5,17 +5,18 @@
     mode="None"
     growing="true"
     growingScrollToLoad="true"
-    items="{path: 'data>/packages/', sorter : { path : 'downloadsFortnightGrowth',descending: 'false' },
-    filters: [
-      {
-        filters : [
-            { path : 'type', operator : 'NE', value1 : 'generator'},
-            { path : 'type', operator : 'NE', value1 : 'application'},
-            { path : 'type', operator : 'NE', value1 : 'vscode'}
-        ], and :true
-}
-        ]
-  }"
+    items="{
+      path: 'data>/packages/', 
+      sorter : { path : 'downloadsFortnightGrowth',descending: 'false' },
+      filters: [{
+          filters : [
+              { path : 'type', operator : 'NE', value1 : 'generator'},
+              { path : 'type', operator : 'NE', value1 : 'application'},
+              { path : 'type', operator : 'NE', value1 : 'vscode'}
+          ], 
+          and :true
+      }]
+    }"
     width="{= ${device>/system/phone} === true ? '' : '1024px' }"
   >
     <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
