@@ -56,7 +56,8 @@
         "sap.ui.layout": {},
         "sap.ui.unified": {},
         "sap.m": {},
-        "sap.ui.webc.main": {}
+        "sap.ui.webc.main": {},
+        "sap.ui.webc.fiori": {}
       }
     },
 
