@@ -3,12 +3,14 @@ import Sorter from "sap/ui/model/Sorter";
 import Event from "sap/ui/base/Event";
 import Log from "sap/base/Log";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
-import Fragment from "sap/ui/core/Fragment";
+import ViewSettingsDialog from "sap/ui/webc/fiori/ViewSettingsDialog";
 
 /**
  * @namespace org.openui5.bestofui5.controller
  */
 export default class AllPackages extends AppController {
+	private dialog: ViewSettingsDialog;
+
 	public onInit(): void {
 		super.onInit();
 		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
@@ -17,7 +19,7 @@ export default class AllPackages extends AppController {
 
 	public onPatternMatchedOnce(event: Event): void {
 		try {
-			let routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
+			const routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
 			this.queryUtil.getParameterFromQuery(routerArgsObject);
 			this.filterFromQuery(routerArgsObject);
 			this.applySearchFilter();
@@ -69,12 +71,20 @@ export default class AllPackages extends AppController {
 		const oView = this.getView();
 
 		if (!this.dialog) {
-			this.dialog = await this.loadFragment({
+			this.dialog = (await this.loadFragment({
 				id: oView.getId(),
 				name: "org.openui5.bestofui5.view.ViewSettingsDialog",
 				controller: this,
-			});
-			this.dialog.show();
+				addToDependents: false,
+			})) as ViewSettingsDialog;
+			// TODO: should be handled internally by WebC dialogs
+			this.dialog.placeAt(sap.ui.getCore().getStaticAreaRef());
+			sap.ui.getCore().applyChanges();
+			setTimeout(
+				function () {
+					this.show();
+				}.bind(this.dialog)
+			);
 		} else {
 			this.dialog.show();
 		}
