@@ -14,6 +14,7 @@ class All extends Page {
 				id: "listAllPackages",
 				viewName: this._viewName,
 				controlType: "sap.m.List",
+				interaction: "root",
 			},
 		};
 
