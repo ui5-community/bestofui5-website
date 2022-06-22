@@ -16,7 +16,7 @@
     <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
     <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
   </Select> -->
-  <Button text="Open View Settings Dialog" press="handleOpenDialog" />
+  <Button text="Open View Settings Dialog" press="handleOpenDialog" busyIndicatorDelay="10" busy="{settings>/viewSettingsBusy}" />
   <List
     id="listAllPackages"
     headerText="{i18n>all_packages_view_header}"

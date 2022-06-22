@@ -58,6 +58,7 @@ export default class Component extends UIComponent {
 			selectKey: "downloads365",
 			headerKey: "hotPackages",
 			tagFilter: "tag",
+			viewSettingsBusy: false,
 		});
 		this.setModel(settingsModel, "settings");
 
