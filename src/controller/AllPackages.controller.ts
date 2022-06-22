@@ -4,6 +4,7 @@ import Event from "sap/ui/base/Event";
 import Log from "sap/base/Log";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import ViewSettingsDialog from "sap/ui/webc/fiori/ViewSettingsDialog";
+import { truncateSync } from "fs";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -68,6 +69,7 @@ export default class AllPackages extends AppController {
 	}
 
 	private async openDialog(): void {
+		this.getView().getModel("settings").setProperty("/viewSettingsBusy", true);
 		const oView = this.getView();
 
 		if (!this.dialog) {
@@ -75,22 +77,27 @@ export default class AllPackages extends AppController {
 				id: oView.getId(),
 				name: "org.openui5.bestofui5.view.ViewSettingsDialog",
 				controller: this,
-				addToDependents: false,
 			})) as ViewSettingsDialog;
 			// TODO: should be handled internally by WebC dialogs
 			this.dialog.placeAt(sap.ui.getCore().getStaticAreaRef());
 			sap.ui.getCore().applyChanges();
 			setTimeout(
 				function () {
-					this.show();
-				}.bind(this.dialog)
+					this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
+					this.dialog.show();
+				}.bind(this as AllPackages)
 			);
 		} else {
+			this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
 			this.dialog.show();
 		}
 	}
 
 	private handleOpenDialog(event: Event): void {
 		this.openDialog();
+	}
+
+	private handleConfirm(event: Event): void {
+		console.log("confirm");
 	}
 }
