@@ -47,12 +47,6 @@ export default class AllPackages extends AppController {
 		});
 	}
 
-	// public onSortSelectChange(event: Event): void {
-	// 	const selectKey = event.getParameter("selectedItem").getKey();
-	// 	this.sortList(selectKey);
-	// 	this.queryUtil.setQueryParameters();
-	// }
-
 	private sortList(sortKey: string, descendingParameter: boolean): void {
 		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
@@ -80,21 +74,14 @@ export default class AllPackages extends AppController {
 				controller: this,
 			})) as ViewSettingsDialog;
 			this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
+			// default sort is by downloads365
+			this.dialog.setSelectedSortItem("downloads365");
+			this.setViewSettingsDialogFilterFromTokens();
 			this.dialog.open();
-
-			// TODO: should be handled internally by WebC dialogs
-			// this.dialog.placeAt(sap.ui.getCore().getStaticAreaRef());
-			// sap.ui.getCore().applyChanges();
-			// setTimeout(
-			// 	function () {
-			// 		this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
-			// 		this.dialog.show();
-			// 	}.bind(this as AllPackages)
-			// );
 		} else {
-			const jsonModelTest = this.getView().getModel("settings");
-			this.dialog.setModel(jsonModelTest, "settings");
 			this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
+			this.dialog.setSelectedSortItem(this.getView().getModel("settings").setProperty("/selectKey"));
+			this.setViewSettingsDialogFilterFromTokens();
 			this.dialog.open();
 		}
 	}
@@ -117,5 +104,19 @@ export default class AllPackages extends AppController {
 		}
 		(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
 		this.queryUtil.applySearchFilter();
+	}
+
+	private setViewSettingsDialogFilterFromTokens(): void {
+		const tokensModel = this.getView().getModel("settings").getProperty("/tokens");
+		let filterObject: { [key: string]: any } = {};
+		for (const token of tokensModel) {
+			if (filterObject[token.type]) {
+				filterObject[token.type][`${token.key};${token.type}`] = true;
+			} else {
+				filterObject[token.type] = {};
+				filterObject[token.type][`${token.key};${token.type}`] = true;
+			}
+		}
+		this.dialog.setSelectedFilterCompoundKeys(filterObject);
 	}
 }
