@@ -80,7 +80,12 @@ export default class AllPackages extends AppController {
 			this.dialog.open();
 		} else {
 			this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
-			this.dialog.setSelectedSortItem(this.getView().getModel("settings").setProperty("/selectKey"));
+			try {
+				this.dialog.setSelectedSortItem(this.getView().getModel("settings").setProperty("/selectKey"));
+			} catch (error) {
+				console.info("selectKey not set");
+			}
+
 			this.setViewSettingsDialogFilterFromTokens();
 			this.dialog.open();
 		}
@@ -118,5 +123,17 @@ export default class AllPackages extends AppController {
 			}
 		}
 		this.dialog.setSelectedFilterCompoundKeys(filterObject);
+	}
+
+	private onTokenDelete(event: Event): void {
+		const key: string = event.getParameter("tokens")[0].getKey();
+		const keyArray = key.split(";");
+		const tokensModel = this.getView().getModel("settings").getProperty("/tokens");
+		// remove token from model
+		const indexRemove = tokensModel.findIndex((token) => token.key === keyArray[0] && token.type === keyArray[1]);
+		const removedToken = tokensModel.splice(indexRemove, 1);
+		(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokensModel);
+		// event.getSource().getTokensPopup().getContent()[0].removeItem(indexRemove);
+		this.queryUtil.applySearchFilter();
 	}
 }

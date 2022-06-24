@@ -190,3 +190,14 @@
 .typeIconsLineItem {
 	color: #d11212;
 }
+
+/*
+* center tokenizer 
+*/
+.tokinzer {
+	display: contents;
+}
+
+.sapMTokenizerScrollContainer {
+	display: inherit;
+}
