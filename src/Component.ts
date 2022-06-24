@@ -49,6 +49,8 @@ export default class Component extends UIComponent {
 			lazy: true,
 		});
 
+		// const filterModel = new JSONModel({
+
 		const settingsModel = new JSONModel({
 			filter: "all",
 			tokens: [],
@@ -56,6 +58,7 @@ export default class Component extends UIComponent {
 			route: "",
 			selectedTab: "hotPackagesView",
 			selectKey: "downloads365",
+			sortOrderDecending: true,
 			headerKey: "hotPackages",
 			tagFilter: "tag",
 			viewSettingsBusy: false,

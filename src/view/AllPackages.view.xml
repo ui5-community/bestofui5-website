@@ -17,6 +17,9 @@
     <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
   </Select> -->
   <Button text="Open View Settings Dialog" press="handleOpenDialog" busyIndicatorDelay="10" busy="{settings>/viewSettingsBusy}" />
+  <Tokenizer tokens="{settings>/tokens/}">
+    <Token text="{settings>key}" key="{settings>key};{settings>type}" />
+  </Tokenizer>
   <List
     id="listAllPackages"
     headerText="{i18n>all_packages_view_header}"
