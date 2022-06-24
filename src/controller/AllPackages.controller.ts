@@ -47,19 +47,20 @@ export default class AllPackages extends AppController {
 		});
 	}
 
-	public onSortSelectChange(event: Event): void {
-		const selectKey = event.getParameter("selectedItem").getKey();
-		this.sortList(selectKey);
-		this.queryUtil.setQueryParameters();
-	}
+	// public onSortSelectChange(event: Event): void {
+	// 	const selectKey = event.getParameter("selectedItem").getKey();
+	// 	this.sortList(selectKey);
+	// 	this.queryUtil.setQueryParameters();
+	// }
 
-	private sortList(sortKey: string): void {
+	private sortList(sortKey: string, descendingParameter: boolean): void {
 		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
 			path: sortKey,
-			descending: true,
+			descending: descendingParameter,
 		});
 		binding.sort(oSorter);
+		this.getView().getModel("settings").setProperty("/selectKey", sortKey);
 	}
 
 	private filterFromQuery(eventArguments: any): void {
@@ -78,18 +79,23 @@ export default class AllPackages extends AppController {
 				name: "org.openui5.bestofui5.view.ViewSettingsDialog",
 				controller: this,
 			})) as ViewSettingsDialog;
-			// TODO: should be handled internally by WebC dialogs
-			this.dialog.placeAt(sap.ui.getCore().getStaticAreaRef());
-			sap.ui.getCore().applyChanges();
-			setTimeout(
-				function () {
-					this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
-					this.dialog.show();
-				}.bind(this as AllPackages)
-			);
-		} else {
 			this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
-			this.dialog.show();
+			this.dialog.open();
+
+			// TODO: should be handled internally by WebC dialogs
+			// this.dialog.placeAt(sap.ui.getCore().getStaticAreaRef());
+			// sap.ui.getCore().applyChanges();
+			// setTimeout(
+			// 	function () {
+			// 		this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
+			// 		this.dialog.show();
+			// 	}.bind(this as AllPackages)
+			// );
+		} else {
+			const jsonModelTest = this.getView().getModel("settings");
+			this.dialog.setModel(jsonModelTest, "settings");
+			this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
+			this.dialog.open();
 		}
 	}
 
@@ -98,6 +104,18 @@ export default class AllPackages extends AppController {
 	}
 
 	private handleConfirm(event: Event): void {
-		console.log("confirm");
+		let tokenArray = [];
+		this.sortList(event.getParameter("sortItem").getKey(), event.getParameter("sortDescending"));
+		const filterItems = event.getParameter("filterItems");
+		for (const filterItem of filterItems) {
+			const keyArray = filterItem.getKey().split(";");
+			const tokenObject = {
+				key: keyArray[0],
+				type: keyArray[1],
+			};
+			tokenArray.push(tokenObject);
+		}
+		(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
+		this.queryUtil.applySearchFilter();
 	}
 }
