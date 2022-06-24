@@ -49,8 +49,6 @@ export default class Component extends UIComponent {
 			lazy: true,
 		});
 
-		// const filterModel = new JSONModel({
-
 		const settingsModel = new JSONModel({
 			filter: "all",
 			tokens: [],

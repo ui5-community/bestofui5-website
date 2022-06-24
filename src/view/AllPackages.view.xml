@@ -7,49 +7,42 @@
   xmlns:core="sap.ui.core"
   xmlns:webc="sap.ui.webc.fiori"
 >
-  <!-- <Select id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
-    <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
-    <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
-    <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
-    <core:Item key="vscodeInstalls" text="{i18n>all_packages_view_select_vscodeInstalls}" />
-    <core:Item key="updatedAt" text="{i18n>all_packages_view_select_updatedAt}" />
-    <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
-    <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
-  </Select> -->
-  <Button text="Open View Settings Dialog" press="handleOpenDialog" busyIndicatorDelay="10" busy="{settings>/viewSettingsBusy}" />
-  <Tokenizer tokens="{settings>/tokens/}">
-    <Token text="{settings>key}" key="{settings>key};{settings>type}" />
-  </Tokenizer>
-  <List
-    id="listAllPackages"
-    headerText="{i18n>all_packages_view_header}"
-    growing="true"
-    growingScrollToLoad="true"
-    mode="None"
-    items="{path: 'data>/packages/'}"
-    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
-  >
-    <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
-      <ui5cc:PackageListItemContent
-        name="{data>name}"
-        githublink="{data>githublink}"
-        npmlink="{data>npmlink}"
-        vscodelink="{data>vscodelink}"
-        description="{
+  <mvc:content>
+    <Button text="Open View Settings Dialog" press="handleOpenDialog" busyIndicatorDelay="10" busy="{settings>/viewSettingsBusy}" />
+    <Tokenizer id="tokenizer" tokens="{settings>/tokens/}" tokenDelete="onTokenDelete" class="tokinzer">
+      <Token text="{settings>key}" key="{settings>key};{settings>type}" />
+    </Tokenizer>
+    <List
+      id="listAllPackages"
+      headerText="{i18n>all_packages_view_header}"
+      growing="true"
+      growingScrollToLoad="true"
+      mode="None"
+      items="{path: 'data>/packages/'}"
+      width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+    >
+      <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
+        <ui5cc:PackageListItemContent
+          name="{data>name}"
+          githublink="{data>githublink}"
+          npmlink="{data>npmlink}"
+          vscodelink="{data>vscodelink}"
+          description="{
           parts: ['data>description', 'settings>/search'],
           formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatHighlight'
         }"
-        type="{data>type}"
-        stars="{data>stars}"
-        forks="{data>forks}"
-        updatedAt="{= ${settings>/selectKey} === 'updatedAt' ? ${data>updatedAt} : undefined }"
-        createdAt="{= ${settings>/selectKey} === 'createdAt' ? ${data>createdAt} : undefined }"
-        addedToBoUI5="{= ${settings>/selectKey} === 'addedToBoUI5' ? ${data>addedToBoUI5} : undefined }"
-        vscodeInstalls="{= ${settings>/selectKey} === 'vscodeInstalls' ? ${data>vscodeInstalls} : undefined }"
-        downloads14="{= ${settings>/selectKey} === 'downloadsCurrentFortnight' ? ${data>downloadsCurrentFortnight} : -1 }"
-        downloads30="{= ${settings>/selectKey} === 'downloadsCurrentMonth' ? ${data>downloadsCurrentMonth} : -1 }"
-        downloads365="{= ${settings>/selectKey} === 'downloads365' ? ${data>downloads365} : -1 }"
-      />
-    </CustomListItem>
-  </List>
+          type="{data>type}"
+          stars="{data>stars}"
+          forks="{data>forks}"
+          updatedAt="{= ${settings>/selectKey} === 'updatedAt' ? ${data>updatedAt} : undefined }"
+          createdAt="{= ${settings>/selectKey} === 'createdAt' ? ${data>createdAt} : undefined }"
+          addedToBoUI5="{= ${settings>/selectKey} === 'addedToBoUI5' ? ${data>addedToBoUI5} : undefined }"
+          vscodeInstalls="{= ${settings>/selectKey} === 'vscodeInstalls' ? ${data>vscodeInstalls} : undefined }"
+          downloads14="{= ${settings>/selectKey} === 'downloadsCurrentFortnight' ? ${data>downloadsCurrentFortnight} : -1 }"
+          downloads30="{= ${settings>/selectKey} === 'downloadsCurrentMonth' ? ${data>downloadsCurrentMonth} : -1 }"
+          downloads365="{= ${settings>/selectKey} === 'downloads365' ? ${data>downloads365} : -1 }"
+        />
+      </CustomListItem>
+    </List>
+  </mvc:content>
 </mvc:View>
