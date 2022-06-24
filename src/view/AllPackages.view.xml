@@ -8,10 +8,30 @@
   xmlns:webc="sap.ui.webc.fiori"
 >
   <mvc:content>
-    <Button text="Open View Settings Dialog" press="handleOpenDialog" busyIndicatorDelay="10" busy="{settings>/viewSettingsBusy}" />
-    <Tokenizer id="tokenizer" tokens="{settings>/tokens/}" tokenDelete="onTokenDelete" class="tokinzer">
-      <Token text="{settings>key}" key="{settings>key};{settings>type}" />
-    </Tokenizer>
+    <FlexBox>
+      <Select id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
+        <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
+        <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
+        <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
+        <core:Item key="vscodeInstalls" text="{i18n>all_packages_view_select_vscodeInstalls}" />
+        <core:Item key="updatedAt" text="{i18n>all_packages_view_select_updatedAt}" />
+        <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
+        <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
+      </Select>
+      <MultiComboBox width="500px" items="{
+				path: 'data>/tags',
+				sorter: [{
+					path: 'type',
+					descending: false,
+					group: true
+				},{
+					path: 'count',
+					descending: true
+				}]
+			}">
+        <core:Item key="{data>name};{data>type}" text="{data>name}" />
+      </MultiComboBox>
+    </FlexBox>
     <List
       id="listAllPackages"
       headerText="{i18n>all_packages_view_header}"

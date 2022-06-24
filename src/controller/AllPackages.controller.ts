@@ -47,6 +47,12 @@ export default class AllPackages extends AppController {
 		});
 	}
 
+	public onSortSelectChange(event: Event): void {
+		const selectKey = event.getParameter("selectedItem").getKey();
+		this.sortList(selectKey, true);
+		this.queryUtil.setQueryParameters();
+	}
+
 	private sortList(sortKey: string, descendingParameter: boolean): void {
 		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
@@ -63,77 +69,83 @@ export default class AllPackages extends AppController {
 		}
 	}
 
-	private async openDialog(): void {
-		this.getView().getModel("settings").setProperty("/viewSettingsBusy", true);
-		const oView = this.getView();
-
-		if (!this.dialog) {
-			this.dialog = (await this.loadFragment({
-				id: oView.getId(),
-				name: "org.openui5.bestofui5.view.ViewSettingsDialog",
-				controller: this,
-			})) as ViewSettingsDialog;
-			this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
-			// default sort is by downloads365
-			this.dialog.setSelectedSortItem("downloads365");
-			this.setViewSettingsDialogFilterFromTokens();
-			this.dialog.open();
-		} else {
-			this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
-			try {
-				this.dialog.setSelectedSortItem(this.getView().getModel("settings").setProperty("/selectKey"));
-			} catch (error) {
-				console.info("selectKey not set");
-			}
-
-			this.setViewSettingsDialogFilterFromTokens();
-			this.dialog.open();
-		}
+	private getGroupHeader(oGroup: any): any {
+		return new sap.ui.core.SeparatorItem({
+			text: oGroup.key.charAt(0).toUpperCase() + oGroup.key.slice(1),
+		});
 	}
 
-	private handleOpenDialog(event: Event): void {
-		this.openDialog();
-	}
+	// private async openDialog(): void {
+	// 	this.getView().getModel("settings").setProperty("/viewSettingsBusy", true);
+	// 	const oView = this.getView();
 
-	private handleConfirm(event: Event): void {
-		let tokenArray = [];
-		this.sortList(event.getParameter("sortItem").getKey(), event.getParameter("sortDescending"));
-		const filterItems = event.getParameter("filterItems");
-		for (const filterItem of filterItems) {
-			const keyArray = filterItem.getKey().split(";");
-			const tokenObject = {
-				key: keyArray[0],
-				type: keyArray[1],
-			};
-			tokenArray.push(tokenObject);
-		}
-		(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
-		this.queryUtil.applySearchFilter();
-	}
+	// 	if (!this.dialog) {
+	// 		this.dialog = (await this.loadFragment({
+	// 			id: oView.getId(),
+	// 			name: "org.openui5.bestofui5.view.ViewSettingsDialog",
+	// 			controller: this,
+	// 		})) as ViewSettingsDialog;
+	// 		this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
+	// 		// default sort is by downloads365
+	// 		this.dialog.setSelectedSortItem(this.getView().getModel("settings").getProperty("/selectKey"));
+	// 		this.setViewSettingsDialogFilterFromTokens();
+	// 		this.dialog.open();
+	// 	} else {
+	// 		this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
+	// 		try {
+	// 			this.dialog.setSelectedSortItem(this.getView().getModel("settings").getProperty("/selectKey"));
+	// 		} catch (error) {
+	// 			console.info("selectKey not set");
+	// 		}
 
-	private setViewSettingsDialogFilterFromTokens(): void {
-		const tokensModel = this.getView().getModel("settings").getProperty("/tokens");
-		let filterObject: { [key: string]: any } = {};
-		for (const token of tokensModel) {
-			if (filterObject[token.type]) {
-				filterObject[token.type][`${token.key};${token.type}`] = true;
-			} else {
-				filterObject[token.type] = {};
-				filterObject[token.type][`${token.key};${token.type}`] = true;
-			}
-		}
-		this.dialog.setSelectedFilterCompoundKeys(filterObject);
-	}
+	// 		this.setViewSettingsDialogFilterFromTokens();
+	// 		this.dialog.open();
+	// 	}
+	// }
 
-	private onTokenDelete(event: Event): void {
-		const key: string = event.getParameter("tokens")[0].getKey();
-		const keyArray = key.split(";");
-		const tokensModel = this.getView().getModel("settings").getProperty("/tokens");
-		// remove token from model
-		const indexRemove = tokensModel.findIndex((token) => token.key === keyArray[0] && token.type === keyArray[1]);
-		const removedToken = tokensModel.splice(indexRemove, 1);
-		(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokensModel);
-		// event.getSource().getTokensPopup().getContent()[0].removeItem(indexRemove);
-		this.queryUtil.applySearchFilter();
-	}
+	// private handleOpenDialog(event: Event): void {
+	// 	this.openDialog();
+	// }
+
+	// private handleConfirm(event: Event): void {
+	// 	let tokenArray = [];
+	// 	this.sortList(event.getParameter("sortItem").getKey(), event.getParameter("sortDescending"));
+	// 	const filterItems = event.getParameter("filterItems");
+	// 	for (const filterItem of filterItems) {
+	// 		const keyArray = filterItem.getKey().split(";");
+	// 		const tokenObject = {
+	// 			key: keyArray[0],
+	// 			type: keyArray[1],
+	// 		};
+	// 		tokenArray.push(tokenObject);
+	// 	}
+	// 	(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
+	// 	this.queryUtil.applySearchFilter();
+	// }
+
+	// private setViewSettingsDialogFilterFromTokens(): void {
+	// 	const tokensModel = this.getView().getModel("settings").getProperty("/tokens");
+	// 	let filterObject: { [key: string]: any } = {};
+	// 	for (const token of tokensModel) {
+	// 		if (filterObject[token.type]) {
+	// 			filterObject[token.type][`${token.key};${token.type}`] = true;
+	// 		} else {
+	// 			filterObject[token.type] = {};
+	// 			filterObject[token.type][`${token.key};${token.type}`] = true;
+	// 		}
+	// 	}
+	// 	this.dialog.setSelectedFilterCompoundKeys(filterObject);
+	// }
+
+	// private onTokenDelete(event: Event): void {
+	// 	const key: string = event.getParameter("tokens")[0].getKey();
+	// 	const keyArray = key.split(";");
+	// 	const tokensModel = this.getView().getModel("settings").getProperty("/tokens");
+	// 	// remove token from model
+	// 	const indexRemove = tokensModel.findIndex((token) => token.key === keyArray[0] && token.type === keyArray[1]);
+	// 	const removedToken = tokensModel.splice(indexRemove, 1);
+	// 	(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokensModel);
+	// 	// event.getSource().getTokensPopup().getContent()[0].removeItem(indexRemove);
+	// 	this.queryUtil.applySearchFilter();
+	// }
 }
