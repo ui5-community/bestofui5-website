@@ -56,6 +56,7 @@ export default class Component extends UIComponent {
 			route: "",
 			selectedTab: "hotPackagesView",
 			selectKey: "downloads365",
+			sortOrderDecending: true,
 			headerKey: "hotPackages",
 			tagFilter: "tag",
 		});

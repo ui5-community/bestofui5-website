@@ -25,13 +25,13 @@ describe("ui5 search", () => {
 		expect(innerText).toEqual("wdio-ui5-service");
 	});
 
-	it("search should return only one result", async () => {
+	it("search should return only two results", async () => {
 		// get list
 		const list = await All.getList();
 		// get list items aggregation
 		const listItems = await list.getAggregation("items");
 
 		// check if text is equal to wdio-ui5-service
-		expect(listItems.length).toEqual(1);
+		expect(listItems.length).toEqual(2);
 	});
 });

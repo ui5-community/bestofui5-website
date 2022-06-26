@@ -3,6 +3,7 @@ import Sorter from "sap/ui/model/Sorter";
 import Event from "sap/ui/base/Event";
 import Log from "sap/base/Log";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
+import MultiComboBox from "sap/m/MultiComboBox";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -10,16 +11,20 @@ import ResourceBundle from "sap/base/i18n/ResourceBundle";
 export default class AllPackages extends AppController {
 	public onInit(): void {
 		super.onInit();
-		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
 		this.getRouter().getRoute("allPackages").attachEventOnce("patternMatched", this.onPatternMatchedOnce, this);
 	}
 
 	public onPatternMatchedOnce(event: Event): void {
+		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
+		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
 		try {
-			let routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
-			this.queryUtil.getParameterFromQuery(routerArgsObject);
-			this.filterFromQuery(routerArgsObject);
-			this.applySearchFilter();
+			const routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
+			// check if object is empty
+			if (!(routerArgsObject && Object.keys(routerArgsObject).length === 0 && Object.getPrototypeOf(routerArgsObject) === Object.prototype)) {
+				this.queryUtil.getParameterFromQuery(routerArgsObject);
+				this.filterFromQuery(routerArgsObject);
+				this.applySearchFilter();
+			}
 		} catch (error) {
 			Log.error((this.getResourceBundle() as ResourceBundle).getText("all_packages_controller_queryparsing"));
 		}
@@ -32,6 +37,17 @@ export default class AllPackages extends AppController {
 
 	public applySearchFilter(): void {
 		this.queryUtil.applySearchFilter();
+		this.setSelectedItems();
+	}
+	private setSelectedItems() {
+		const multiComboBox: MultiComboBox = this.byId("multiComboBox");
+		const selectedItems = this.getView().getModel("settings").getProperty("/tokens");
+		let keyArray = [];
+		for (let i = 0; i < selectedItems.length; i++) {
+			keyArray.push(`${selectedItems[i].key};${selectedItems[i].type}`);
+		}
+
+		multiComboBox.setSelectedKeys(keyArray);
 	}
 
 	public onPress(event: Event): void {
@@ -45,22 +61,28 @@ export default class AllPackages extends AppController {
 
 	public onSortSelectChange(event: Event): void {
 		const selectKey = event.getParameter("selectedItem").getKey();
-		this.sortList(selectKey);
+		this.sortList(selectKey, true);
 		this.queryUtil.setQueryParameters();
 	}
 
-	private sortList(sortKey: string): void {
+	private sortList(sortKey: string, descendingParameter: boolean): void {
 		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
 			path: sortKey,
-			descending: true,
+			descending: descendingParameter,
 		});
 		binding.sort(oSorter);
+		this.getView().getModel("settings").setProperty("/selectKey", sortKey);
 	}
 
 	private filterFromQuery(eventArguments: any): void {
 		if ("sort" in eventArguments) {
 			this.sortList(eventArguments.sort);
 		}
+	}
+
+	private onSelectionChange(event: Event): void {
+		this.queryUtil.onSelectionChange(event);
+		this.applySearchFilter();
 	}
 }

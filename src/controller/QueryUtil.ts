@@ -84,27 +84,27 @@ export default class QueryUtil {
 		this.setQueryParameters();
 	}
 
-	public onUpdateToken(event: Event): void {
+	public onSelectionChange(event: Event): void {
 		const model = this.view.getModel("settings");
 		let tokenArray = model.getProperty("/tokens");
 
-		const addOrRemove = event.getParameter("type");
-		if (addOrRemove === "added") {
-			const keyArray = event.getParameter("addedTokens")[0].getProperty("key").split(";");
+		const selected = event.getParameter("selected");
+		if (selected) {
+			const keyArray = event.getParameter("changedItem").getKey().split(";");
 			const tokenObject = {
 				key: keyArray[0],
 				type: keyArray[1],
 			};
 			tokenArray.push(tokenObject);
-		} else if (addOrRemove === "removed") {
-			const keyArray = event.getParameter("removedTokens")[0].getProperty("key").split(";");
+		} else {
+			const keyArray = event.getParameter("changedItem").getKey().split(";");
 			const tokenObject = {
 				key: keyArray[0],
 				type: keyArray[1],
 			};
 			// filter token object array with key and type values
 			tokenArray = tokenArray.filter(function (obj) {
-				return obj.key !== tokenObject.key && obj.type !== tokenObject.type;
+				return !(obj.key === tokenObject.key && obj.type === tokenObject.type);
 			});
 		}
 		(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);

@@ -5,6 +5,7 @@
     mode="None"
     growing="true"
     growingScrollToLoad="true"
+    growingThreshold="{= ${device>/system/phone} === true ? 7 : 12 }"
     items="{
       path: 'data>/packages/', 
       sorter : { path : 'downloadsFortnightGrowth',descending: 'false' },
