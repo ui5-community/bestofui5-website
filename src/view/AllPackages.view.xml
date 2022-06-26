@@ -29,7 +29,7 @@
           sorter: [
             {path: 'type',descending: true,group: true},
             {path: 'count',descending: true}]
-			  }"
+			    }"
         >
           <items>
             <core:Item key="{data>name};{data>type}" text="{data>name} ({data>count})" />
