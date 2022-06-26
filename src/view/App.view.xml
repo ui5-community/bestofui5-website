@@ -8,7 +8,7 @@
           </contentMiddle>
           <contentRight>
             <Button
-              class="sapUiTinyMargin openui5headerButton"
+              class="sapUiNoMargin openui5headerButton"
               core:require="{ sapMLib: 'sap/m/library' }"
               text="{i18n>app_view_addyourpackage}"
               visible="{= ${device>/system/desktop}}"
@@ -21,7 +21,7 @@
               </layoutData>
             </Button>
             <Button
-              class="sapUiTinyMargin openui5headerButton"
+              class="sapUiNoMargin openui5headerButton"
               core:require="{ sapMLib: 'sap/m/library' }"
               type="Transparent"
               visible="{= ${device>/system/desktop}}"
@@ -32,6 +32,15 @@
                 <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
               </layoutData>
             </Button>
+            <Button
+              visible="{= ${device>/system/desktop}}"
+              text="bestofjs"
+              class="openui5headerButton sapUiNoMargin textColorWhite"
+              icon="sap-icon://lightbulb"
+              type="Transparent"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              press="sapMLib.URLHelper.redirect('https://bestofjs.org/', true)"
+            />
           </contentRight>
         </Bar>
       </customHeader>
