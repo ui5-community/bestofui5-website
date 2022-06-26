@@ -1,18 +1,9 @@
-<mvc:View
-  controllerName="org.openui5.bestofui5.controller.AllPackages"
-  xmlns:mvc="sap.ui.core.mvc"
-  displayBlock="true"
-  xmlns="sap.m"
-  xmlns:ui5cc="org.openui5.bestofui5.control"
-  xmlns:core="sap.ui.core"
-  xmlns:webc="sap.ui.webc.fiori"
-  xmlns:tnt="sap.tnt"
->
+<mvc:View controllerName="org.openui5.bestofui5.controller.AllPackages" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
   <mvc:content>
     <FlexBox alignItems="Center" wrap="{= ${device>/system/phone} === true ? 'Wrap' : 'NoWrap' }">
-      <HBox>
-        <core:Icon src="sap-icon://sort" class="size1" size="2rem" color="#031E48" />
-        <Select width="{= ${device>/system/phone} === true ? 'auto' : '100%' }" id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
+      <HBox alignItems="Center">
+        <core:Icon src="sap-icon://sort" class="{= ${device>/system/phone} === true ? sapUiTinyMarginBeginEnd : sapUiTinyMarginEnd }" />
+        <Select width="100%" id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
           <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
           <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
           <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
@@ -25,11 +16,11 @@
           </layoutData>
         </Select>
         <layoutData>
-          <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? 'auto' : '0' }" />
+          <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? '100%' : '0' }" />
         </layoutData>
       </HBox>
-      <HBox>
-        <core:Icon src="sap-icon://filter" class="size1" size="2rem" color="#031E48" />
+      <HBox alignItems="Center">
+        <core:Icon src="sap-icon://filter" class="sapUiTinyMarginBeginEnd" />
         <MultiComboBox
           id="multiComboBox"
           selectionChange="onSelectionChange"
@@ -48,7 +39,7 @@
           </layoutData>
         </MultiComboBox>
         <layoutData>
-          <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? 'auto' : '0' }" />
+          <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? '100%' : '0' }" />
         </layoutData>
       </HBox>
     </FlexBox>
