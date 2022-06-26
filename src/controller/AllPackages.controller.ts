@@ -4,7 +4,7 @@ import Event from "sap/ui/base/Event";
 import Log from "sap/base/Log";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import ViewSettingsDialog from "sap/ui/webc/fiori/ViewSettingsDialog";
-import { truncateSync } from "fs";
+import MultiComboBox from "sap/m/MultiComboBox";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -36,6 +36,17 @@ export default class AllPackages extends AppController {
 
 	public applySearchFilter(): void {
 		this.queryUtil.applySearchFilter();
+		this.setSelectedItems();
+	}
+	private setSelectedItems() {
+		const multiComboBox: MultiComboBox = this.byId("multiComboBox");
+		const selectedItems = this.getView().getModel("settings").getProperty("/tokens");
+		let keyArray = [];
+		for (let i = 0; i < selectedItems.length; i++) {
+			keyArray.push(`${selectedItems[i].key};${selectedItems[i].type}`);
+		}
+
+		multiComboBox.setSelectedKeys(keyArray);
 	}
 
 	public onPress(event: Event): void {
@@ -69,83 +80,8 @@ export default class AllPackages extends AppController {
 		}
 	}
 
-	private getGroupHeader(oGroup: any): any {
-		return new sap.ui.core.SeparatorItem({
-			text: oGroup.key.charAt(0).toUpperCase() + oGroup.key.slice(1),
-		});
+	private onSelectionChange(event: Event): void {
+		this.queryUtil.onSelectionChange(event);
+		this.applySearchFilter();
 	}
-
-	// private async openDialog(): void {
-	// 	this.getView().getModel("settings").setProperty("/viewSettingsBusy", true);
-	// 	const oView = this.getView();
-
-	// 	if (!this.dialog) {
-	// 		this.dialog = (await this.loadFragment({
-	// 			id: oView.getId(),
-	// 			name: "org.openui5.bestofui5.view.ViewSettingsDialog",
-	// 			controller: this,
-	// 		})) as ViewSettingsDialog;
-	// 		this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
-	// 		// default sort is by downloads365
-	// 		this.dialog.setSelectedSortItem(this.getView().getModel("settings").getProperty("/selectKey"));
-	// 		this.setViewSettingsDialogFilterFromTokens();
-	// 		this.dialog.open();
-	// 	} else {
-	// 		this.getView().getModel("settings").setProperty("/viewSettingsBusy", false);
-	// 		try {
-	// 			this.dialog.setSelectedSortItem(this.getView().getModel("settings").getProperty("/selectKey"));
-	// 		} catch (error) {
-	// 			console.info("selectKey not set");
-	// 		}
-
-	// 		this.setViewSettingsDialogFilterFromTokens();
-	// 		this.dialog.open();
-	// 	}
-	// }
-
-	// private handleOpenDialog(event: Event): void {
-	// 	this.openDialog();
-	// }
-
-	// private handleConfirm(event: Event): void {
-	// 	let tokenArray = [];
-	// 	this.sortList(event.getParameter("sortItem").getKey(), event.getParameter("sortDescending"));
-	// 	const filterItems = event.getParameter("filterItems");
-	// 	for (const filterItem of filterItems) {
-	// 		const keyArray = filterItem.getKey().split(";");
-	// 		const tokenObject = {
-	// 			key: keyArray[0],
-	// 			type: keyArray[1],
-	// 		};
-	// 		tokenArray.push(tokenObject);
-	// 	}
-	// 	(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
-	// 	this.queryUtil.applySearchFilter();
-	// }
-
-	// private setViewSettingsDialogFilterFromTokens(): void {
-	// 	const tokensModel = this.getView().getModel("settings").getProperty("/tokens");
-	// 	let filterObject: { [key: string]: any } = {};
-	// 	for (const token of tokensModel) {
-	// 		if (filterObject[token.type]) {
-	// 			filterObject[token.type][`${token.key};${token.type}`] = true;
-	// 		} else {
-	// 			filterObject[token.type] = {};
-	// 			filterObject[token.type][`${token.key};${token.type}`] = true;
-	// 		}
-	// 	}
-	// 	this.dialog.setSelectedFilterCompoundKeys(filterObject);
-	// }
-
-	// private onTokenDelete(event: Event): void {
-	// 	const key: string = event.getParameter("tokens")[0].getKey();
-	// 	const keyArray = key.split(";");
-	// 	const tokensModel = this.getView().getModel("settings").getProperty("/tokens");
-	// 	// remove token from model
-	// 	const indexRemove = tokensModel.findIndex((token) => token.key === keyArray[0] && token.type === keyArray[1]);
-	// 	const removedToken = tokensModel.splice(indexRemove, 1);
-	// 	(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokensModel);
-	// 	// event.getSource().getTokensPopup().getContent()[0].removeItem(indexRemove);
-	// 	this.queryUtil.applySearchFilter();
-	// }
 }

@@ -9,29 +9,48 @@
   xmlns:tnt="sap.tnt"
 >
   <mvc:content>
-    <FlexBox>
-      <Select id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
-        <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
-        <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
-        <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
-        <core:Item key="vscodeInstalls" text="{i18n>all_packages_view_select_vscodeInstalls}" />
-        <core:Item key="updatedAt" text="{i18n>all_packages_view_select_updatedAt}" />
-        <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
-        <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
-      </Select>
-      <MultiComboBox width="500px" items="{
-				path: 'data>/tags',
-				sorter: [{
-					path: 'type',
-					descending: false,
-					group: true
-				},{
-					path: 'count',
-					descending: true
-				}]
-			}">
-        <core:Item key="{data>name};{data>type}" text="{data>name}" />
-      </MultiComboBox>
+    <FlexBox alignItems="Center" wrap="{= ${device>/system/phone} === true ? 'Wrap' : 'NoWrap' }">
+      <HBox>
+        <core:Icon src="sap-icon://sort" class="size1" size="2rem" color="#031E48" />
+        <Select width="{= ${device>/system/phone} === true ? 'auto' : '100%' }" id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
+          <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
+          <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
+          <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
+          <core:Item key="vscodeInstalls" text="{i18n>all_packages_view_select_vscodeInstalls}" />
+          <core:Item key="updatedAt" text="{i18n>all_packages_view_select_updatedAt}" />
+          <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
+          <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
+          <layoutData>
+            <FlexItemData growFactor="1" />
+          </layoutData>
+        </Select>
+        <layoutData>
+          <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? 'auto' : '0' }" />
+        </layoutData>
+      </HBox>
+      <HBox>
+        <core:Icon src="sap-icon://filter" class="size1" size="2rem" color="#031E48" />
+        <MultiComboBox
+          id="multiComboBox"
+          selectionChange="onSelectionChange"
+          items="{
+          path: 'data>/tags',
+          sorter: [
+            {path: 'type',descending: true,group: true},
+            {path: 'count',descending: true}]
+			  }"
+        >
+          <items>
+            <core:Item key="{data>name};{data>type}" text="{data>name} ({data>count})" />
+          </items>
+          <layoutData>
+            <FlexItemData growFactor="1" />
+          </layoutData>
+        </MultiComboBox>
+        <layoutData>
+          <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? 'auto' : '0' }" />
+        </layoutData>
+      </HBox>
     </FlexBox>
     <List
       id="listAllPackages"
