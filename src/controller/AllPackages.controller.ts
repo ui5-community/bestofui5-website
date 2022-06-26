@@ -3,15 +3,12 @@ import Sorter from "sap/ui/model/Sorter";
 import Event from "sap/ui/base/Event";
 import Log from "sap/base/Log";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
-import ViewSettingsDialog from "sap/ui/webc/fiori/ViewSettingsDialog";
 import MultiComboBox from "sap/m/MultiComboBox";
 
 /**
  * @namespace org.openui5.bestofui5.controller
  */
 export default class AllPackages extends AppController {
-	private dialog: ViewSettingsDialog;
-
 	public onInit(): void {
 		super.onInit();
 		this.getRouter().getRoute("allPackages").attachEventOnce("patternMatched", this.onPatternMatchedOnce, this);

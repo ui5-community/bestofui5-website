@@ -59,7 +59,6 @@ export default class Component extends UIComponent {
 			sortOrderDecending: true,
 			headerKey: "hotPackages",
 			tagFilter: "tag",
-			viewSettingsBusy: false,
 		});
 		this.setModel(settingsModel, "settings");
 
