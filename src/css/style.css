@@ -190,3 +190,8 @@
 .typeIconsLineItem {
 	color: #d11212;
 }
+
+.textColorWhite .sapMBtnTransparent,
+.textColorWhite .sapMBtnTransparent > .sapMBtnIcon {
+	color: white;
+}

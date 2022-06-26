@@ -4,7 +4,6 @@ import Event from "sap/ui/base/Event";
 import ResourceModel from "sap/ui/model/resource/ResourceModel";
 import BaseController from "./BaseController";
 import QueryUtil from "./QueryUtil";
-import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -15,13 +14,6 @@ export default class App extends BaseController {
 
 	public onInit(): void {
 		this.queryUtil = new QueryUtil(this.getView());
-
-		this.getView().setModel(
-			new JSONModel({
-				svgLogo: sap.ui.require.toUrl("org/openui5/bestofui5/img/bestofjs.svg"),
-			}),
-			"imageModel"
-		);
 	}
 
 	public liveSearch(event: Event): void {
