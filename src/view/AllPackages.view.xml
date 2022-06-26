@@ -57,6 +57,7 @@
       headerText="{i18n>all_packages_view_header}"
       growing="true"
       growingScrollToLoad="true"
+      growingThreshold="{= ${device>/system/phone} === true ? 7 : 12 }"
       mode="None"
       items="{path: 'data>/packages/'}"
       width="{= ${device>/system/phone} === true ? '' : '1024px' }"

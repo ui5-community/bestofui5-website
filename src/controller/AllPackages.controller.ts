@@ -14,16 +14,19 @@ export default class AllPackages extends AppController {
 
 	public onInit(): void {
 		super.onInit();
-		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
 		this.getRouter().getRoute("allPackages").attachEventOnce("patternMatched", this.onPatternMatchedOnce, this);
 	}
 
 	public onPatternMatchedOnce(event: Event): void {
+		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
 		try {
 			const routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
-			this.queryUtil.getParameterFromQuery(routerArgsObject);
-			this.filterFromQuery(routerArgsObject);
-			this.applySearchFilter();
+			// check if object is empty
+			if (!(routerArgsObject && Object.keys(routerArgsObject).length === 0 && Object.getPrototypeOf(routerArgsObject) === Object.prototype)) {
+				this.queryUtil.getParameterFromQuery(routerArgsObject);
+				this.filterFromQuery(routerArgsObject);
+				this.applySearchFilter();
+			}
 		} catch (error) {
 			Log.error((this.getResourceBundle() as ResourceBundle).getText("all_packages_controller_queryparsing"));
 		}
