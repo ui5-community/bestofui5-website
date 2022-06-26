@@ -15,6 +15,7 @@ export default class AllPackages extends AppController {
 	}
 
 	public onPatternMatchedOnce(event: Event): void {
+		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
 		try {
 			const routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
