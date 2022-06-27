@@ -199,6 +199,7 @@
                       }) }"
                 visible="{= ${settings>/selectKey} === 'createdAt'}"
               />
+              <tnt:InfoLabel id="trend-item-license" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="7" displayOnly="false" text="{data>licenseSource}" />
             </HBox>
           </VBox>
         </FlexBox>
