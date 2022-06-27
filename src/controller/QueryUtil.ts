@@ -50,21 +50,49 @@ export default class QueryUtil {
 				}
 			}.bind(this)
 		);
+
 		const typeFilters = [];
 		for (let i = 0; i < valueTypes.length; i++) {
-			const typeFilter = new Filter({
-				path: "type",
-				operator: FilterOperator.Contains,
-				value1: valueTypes[i].key,
-			});
-			typeFilters.push(typeFilter);
+			if (valueTypes[i].type === "type") {
+				const typeFilter = new Filter({
+					path: "type",
+					operator: FilterOperator.Contains,
+					value1: valueTypes[i].key,
+				});
+				typeFilters.push(typeFilter);
+			}
 		}
 		const typeFilter = new Filter({
 			filters: typeFilters,
 			and: true,
 		});
+		const licenseFilters = [];
+		for (let i = 0; i < valueTypes.length; i++) {
+			if (valueTypes[i].type === "license") {
+				const licenseFilter = new Filter({
+					path: "licenseSource",
+					operator: FilterOperator.Contains,
+					value1: valueTypes[i].key,
+				});
+				licenseFilters.push(licenseFilter);
+			}
+		}
+		const licenseFilter = new Filter({
+			filters: licenseFilters,
+			and: true,
+		});
+		const filters = [];
+		if (tagsFilter.aFilters && tagsFilter.aFilters.length > 0) {
+			filters.push(tagsFilter);
+		}
+		if (typeFilter.aFilters && typeFilter.aFilters.length > 0) {
+			filters.push(typeFilter);
+		}
+		if (licenseFilter.aFilters && licenseFilter.aFilters.length > 0) {
+			filters.push(licenseFilter);
+		}
 		const typesTagsFilter = new Filter({
-			filters: [tagsFilter, typeFilter],
+			filters: filters,
 			and: false,
 		});
 		const searchFilter = new Filter({
