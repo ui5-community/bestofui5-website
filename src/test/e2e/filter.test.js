@@ -1,12 +1,12 @@
 const All = require("./pageObjects/All");
 const Main = require("./pageObjects/Main");
 
-describe("ui5 search", () => {
+describe("ui5 filter", () => {
 	before(async () => {
 		await All.open();
 	});
 
-	it("search should return wdi5 as first result", async () => {
+	it("predefined filter should return three items", async () => {
 		try {
 			await $("filtekuzfutkfk424214").waitForExist({ timeout: 2000 });
 		} catch (error) {}
