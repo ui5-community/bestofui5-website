@@ -52,4 +52,4 @@ jobs:
 
       # run wdi5 tests
       - name: test wdi5 core
-        run: npm run wdio
+        run: npm run test
