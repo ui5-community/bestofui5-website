@@ -17,39 +17,27 @@ describe("ui5 search", () => {
 		try {
 			await $("#__component0---AllPackages--multiComboBox-popup").waitForExist({ timeout: 2000 });
 		} catch (error) {}
-		// let popup = await All.getPopup();
+
+		// get popover list
 		let popoverList = await $("#__component0---AllPackages--multiComboBox-popup-list-listUl");
+		// get checkbox item so popover does not close by itself
 		let checkboxList = await popoverList.$$('[role="checkbox"]');
+		// get item 'middleware'
 		const typeItemWebCheckbox = checkboxList[0];
+		// select item to filter list
 		await typeItemWebCheckbox.click();
 
 		popoverList = await $("#__component0---AllPackages--multiComboBox-popup-list-listUl");
 		checkboxList = await popoverList.$$('[role="checkbox"]');
+		// get item 'proxy'
 		const tagItemWebCheckbox = checkboxList[9];
 		await tagItemWebCheckbox.click();
 
 		popoverList = await $("#__component0---AllPackages--multiComboBox-popup-list-listUl");
 		checkboxList = await popoverList.$$('[role="checkbox"]');
-		const licenseItemWebCheckbox = checkboxList[44];
+		// get item 'license'
+		const licenseItemWebCheckbox = checkboxList[43];
 		await licenseItemWebCheckbox.click();
-
-		// let popup = await All.getPopup();
-		// let content = await popup.getContent()
-		// let content1 = await content[0]
-		// let items = await content1.getAggregation("items");
-
-		// const typeItem = await items[1]
-		// const typeItemWeb = await typeItem.getWebElement()
-		// const typeItemWebCheckbox = await typeItemWeb.$('[role="checkbox"]')
-
-		// const tagItem = await items[11]
-		// const tagItemWeb = await tagItem.getWebElement()
-		// const tagItemWebCheckbox = await tagItemWeb.$('[role="checkbox"]')
-
-		// const licenseItem = await items[46]
-		// const licenseItemWeb = await licenseItem.getWebElement()
-		// licenseItemWeb.click()
-		// const licenseItemWebCheckbox = await licenseItemWeb.$('[role="checkbox"]')
 
 		// get list
 		const list = await All.getList();
