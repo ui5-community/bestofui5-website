@@ -48,8 +48,8 @@ jobs:
 
       # run appp
       - name: run app
-        run: npm run start:dist&
+        run: npm run start:test&
 
       # run wdi5 tests
       - name: test wdi5 core
-        run: npm run wdio
+        run: npm run test

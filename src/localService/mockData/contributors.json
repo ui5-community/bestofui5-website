@@ -1,0 +1,720 @@
+[
+  {
+    "name": "petermuessig",
+    "contributions": 298,
+    "avatar_url": "https://avatars.githubusercontent.com/u/1589419?v=4",
+    "url": "https://github.com/petermuessig",
+    "packages": ["ui5-ecosystem-showcase", "ui5-cc-chart", "generator-ui5-project", "generator-ui5-ts-app", "create-easy-ui5", "generator-ui5-ts-app-fcl", "generator-ui5-library"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/ui5-community/ui5-cc-chart' target='self'>ui5-cc-chart</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-ts-app' target='self'>generator-ui5-ts-app</a>",
+      "\n <a href='https://github.com/ui5-community/create-easy-ui5' target='self'>create-easy-ui5</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-ts-app-fcl' target='self'>generator-ui5-ts-app-fcl</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-library' target='self'>generator-ui5-library</a>"
+    ]
+  },
+  {
+    "name": "vobu",
+    "contributions": 724,
+    "avatar_url": "https://avatars.githubusercontent.com/u/6573426?v=4",
+    "url": "https://github.com/vobu",
+    "packages": ["ui5-ecosystem-showcase", "ui5-cc-md", "wdi5", "generator-ui5-project", "generator-ui5-ts-app", "create-wdi5", "generator-ui5-control", "open-ux-tools", "ui5-typescript-helloworld"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/ui5-community/ui5-cc-md' target='self'>ui5-cc-md</a>",
+      "\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-ts-app' target='self'>generator-ui5-ts-app</a>",
+      "\n <a href='https://github.com/ui5-community/create-wdi5' target='self'>create-wdi5</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-control' target='self'>generator-ui5-control</a>",
+      "\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>",
+      "\n <a href='https://github.com/SAP-samples/ui5-typescript-helloworld' target='self'>ui5-typescript-helloworld</a>"
+    ]
+  },
+  {
+    "name": "uxkjaer",
+    "contributions": 10,
+    "avatar_url": "https://avatars.githubusercontent.com/u/8186370?v=4",
+    "url": "https://github.com/uxkjaer",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "IObert",
+    "contributions": 70,
+    "avatar_url": "https://avatars.githubusercontent.com/u/1873245?v=4",
+    "url": "https://github.com/IObert",
+    "packages": ["ui5-ecosystem-showcase", "generator-ui5-project"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>"
+    ]
+  },
+  {
+    "name": "attila-boros",
+    "contributions": 4,
+    "avatar_url": "https://avatars.githubusercontent.com/u/68421930?v=4",
+    "url": "https://github.com/attila-boros",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "marcelschork",
+    "contributions": 4,
+    "avatar_url": "https://avatars.githubusercontent.com/u/63337737?v=4",
+    "url": "https://github.com/marcelschork",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "mauriciolauffer",
+    "contributions": 6,
+    "avatar_url": "https://avatars.githubusercontent.com/u/443888?v=4",
+    "url": "https://github.com/mauriciolauffer",
+    "packages": ["ui5-ecosystem-showcase", "openui5-model-odata-v2-odatamodelpromise"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/mauriciolauffer/openui5-model-odata-v2-odatamodelpromise' target='self'>openui5-model-odata-v2-odatamodelpromise</a>"
+    ]
+  },
+  {
+    "name": "sebbi08",
+    "contributions": 4,
+    "avatar_url": "https://avatars.githubusercontent.com/u/9070136?v=4",
+    "url": "https://github.com/sebbi08",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "lennart-m",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/20302675?v=4",
+    "url": "https://github.com/lennart-m",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "marianfoo",
+    "contributions": 13,
+    "avatar_url": "https://avatars.githubusercontent.com/u/13335743?v=4",
+    "url": "https://github.com/marianfoo",
+    "packages": ["ui5-ecosystem-showcase", "ui5-cc-md", "wdi5", "generator-ui5-project", "generator-ui5-ts-app-fcl"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/ui5-community/ui5-cc-md' target='self'>ui5-cc-md</a>",
+      "\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-ts-app-fcl' target='self'>generator-ui5-ts-app-fcl</a>"
+    ]
+  },
+  {
+    "name": "piejanssens",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/829098?v=4",
+    "url": "https://github.com/piejanssens",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "stockbal",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/35834861?v=4",
+    "url": "https://github.com/stockbal",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "lboehm",
+    "contributions": 10,
+    "avatar_url": "https://avatars.githubusercontent.com/u/6696988?v=4",
+    "url": "https://github.com/lboehm",
+    "packages": ["ui5-ecosystem-showcase", "generator-ui5-project", "open-ux-tools"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>",
+      "\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"
+    ]
+  },
+  {
+    "name": "matz3",
+    "contributions": 142,
+    "avatar_url": "https://avatars.githubusercontent.com/u/1410947?v=4",
+    "url": "https://github.com/matz3",
+    "packages": ["ui5-ecosystem-showcase", "openui5-sample-app"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"
+    ]
+  },
+  {
+    "name": "RandomByte",
+    "contributions": 155,
+    "avatar_url": "https://avatars.githubusercontent.com/u/1589939?v=4",
+    "url": "https://github.com/RandomByte",
+    "packages": ["ui5-ecosystem-showcase", "openui5-sample-app"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"
+    ]
+  },
+  {
+    "name": "Magoli1",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/31649374?v=4",
+    "url": "https://github.com/Magoli1",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "TheVivekGowda",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/19553091?v=4",
+    "url": "https://github.com/TheVivekGowda",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "lemaiwo",
+    "contributions": 7,
+    "avatar_url": "https://avatars.githubusercontent.com/u/5943183?v=4",
+    "url": "https://github.com/lemaiwo",
+    "packages": ["ui5-ecosystem-showcase", "generator-ui5-ts-app-fcl"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-ts-app-fcl' target='self'>generator-ui5-ts-app-fcl</a>"
+    ]
+  },
+  {
+    "name": "resitamas",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/17765383?v=4",
+    "url": "https://github.com/resitamas",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "L4Ndoo",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/43353417?v=4",
+    "url": "https://github.com/L4Ndoo",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "d-sooter",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/50948267?v=4",
+    "url": "https://github.com/d-sooter",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "ekansh005",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/439184?v=4",
+    "url": "https://github.com/ekansh005",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "esjewett",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/4822?v=4",
+    "url": "https://github.com/esjewett",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "fatihpense",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/918653?v=4",
+    "url": "https://github.com/fatihpense",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "iggycoder",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/3813072?v=4",
+    "url": "https://github.com/iggycoder",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "jkoenig134",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/33655937?v=4",
+    "url": "https://github.com/jkoenig134",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "maxmoehl",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/44866320?v=4",
+    "url": "https://github.com/maxmoehl",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "stefania-santimbrean",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/74544010?v=4",
+    "url": "https://github.com/stefania-santimbrean",
+    "packages": ["ui5-ecosystem-showcase"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-ecosystem-showcase' target='self'>ui5-ecosystem-showcase</a>"]
+  },
+  {
+    "name": "wridgeu",
+    "contributions": 9,
+    "avatar_url": "https://avatars.githubusercontent.com/u/14982812?v=4",
+    "url": "https://github.com/wridgeu",
+    "packages": ["ui5-cc-md", "wdi5", "generator-ui5-project", "generator-ui5-library"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/ui5-cc-md' target='self'>ui5-cc-md</a>",
+      "\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-library' target='self'>generator-ui5-library</a>"
+    ]
+  },
+  {
+    "name": "phreis",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/20723763?v=4",
+    "url": "https://github.com/phreis",
+    "packages": ["ui5-cc-md"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/ui5-cc-md' target='self'>ui5-cc-md</a>"]
+  },
+  {
+    "name": "dominikfeininger",
+    "contributions": 56,
+    "avatar_url": "https://avatars.githubusercontent.com/u/4546829?v=4",
+    "url": "https://github.com/dominikfeininger",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "Siolto",
+    "contributions": 5,
+    "avatar_url": "https://avatars.githubusercontent.com/u/32054457?v=4",
+    "url": "https://github.com/Siolto",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "ArnaudBuchholz",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/4194952?v=4",
+    "url": "https://github.com/ArnaudBuchholz",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "edvardas-kireilis",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/93360603?v=4",
+    "url": "https://github.com/edvardas-kireilis",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "nair-sumesh",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/12034160?v=4",
+    "url": "https://github.com/nair-sumesh",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "BeastiW",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/49303799?v=4",
+    "url": "https://github.com/BeastiW",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "monavari-lebrecht",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/404480?v=4",
+    "url": "https://github.com/monavari-lebrecht",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "ph-alsvik",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/82877124?v=4",
+    "url": "https://github.com/ph-alsvik",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "tompaulusch",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/101107160?v=4",
+    "url": "https://github.com/tompaulusch",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "georgbischoff",
+    "contributions": 8,
+    "avatar_url": "https://avatars.githubusercontent.com/u/51708474?v=4",
+    "url": "https://github.com/georgbischoff",
+    "packages": ["wdi5", "generator-ui5-project"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>"
+    ]
+  },
+  {
+    "name": "skarolus-rc",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/79539577?v=4",
+    "url": "https://github.com/skarolus-rc",
+    "packages": ["wdi5"],
+    "packagesFrontend": ["\n <a href='https://github.com/js-soft/wdi5' target='self'>wdi5</a>"]
+  },
+  {
+    "name": "nicogeburek",
+    "contributions": 11,
+    "avatar_url": "https://avatars.githubusercontent.com/u/65965098?v=4",
+    "url": "https://github.com/nicogeburek",
+    "packages": ["generator-ui5-project"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>"]
+  },
+  {
+    "name": "dh4rry",
+    "contributions": 6,
+    "avatar_url": "https://avatars.githubusercontent.com/u/33509295?v=4",
+    "url": "https://github.com/dh4rry",
+    "packages": ["generator-ui5-project"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>"]
+  },
+  {
+    "name": "OhItsLena",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/51129709?v=4",
+    "url": "https://github.com/OhItsLena",
+    "packages": ["generator-ui5-project"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>"]
+  },
+  {
+    "name": "AlexanderK22",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/60352903?v=4",
+    "url": "https://github.com/AlexanderK22",
+    "packages": ["generator-ui5-project", "generator-ui5-ts-app"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-ts-app' target='self'>generator-ui5-ts-app</a>"
+    ]
+  },
+  {
+    "name": "tobiasqueck",
+    "contributions": 33,
+    "avatar_url": "https://avatars.githubusercontent.com/u/44933199?v=4",
+    "url": "https://github.com/tobiasqueck",
+    "packages": ["generator-ui5-project", "open-ux-odata", "open-ux-tools"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>",
+      "\n <a href='https://github.com/sap/open-ux-odata' target='self'>open-ux-odata</a>",
+      "\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"
+    ]
+  },
+  {
+    "name": "tsaleksandrova",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/31507673?v=4",
+    "url": "https://github.com/tsaleksandrova",
+    "packages": ["generator-ui5-project"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/generator-ui5-project' target='self'>generator-ui5-project</a>"]
+  },
+  {
+    "name": "akudev",
+    "contributions": 19,
+    "avatar_url": "https://avatars.githubusercontent.com/u/4866568?v=4",
+    "url": "https://github.com/akudev",
+    "packages": ["generator-ui5-ts-app", "generator-ui5-ts-app-fcl", "ui5-typescript-helloworld"],
+    "packagesFrontend": [
+      "\n <a href='https://github.com/ui5-community/generator-ui5-ts-app' target='self'>generator-ui5-ts-app</a>",
+      "\n <a href='https://github.com/ui5-community/generator-ui5-ts-app-fcl' target='self'>generator-ui5-ts-app-fcl</a>",
+      "\n <a href='https://github.com/SAP-samples/ui5-typescript-helloworld' target='self'>ui5-typescript-helloworld</a>"
+    ]
+  },
+  {
+    "name": "ubheamar",
+    "contributions": 6,
+    "avatar_url": "https://avatars.githubusercontent.com/u/10156281?v=4",
+    "url": "https://github.com/ubheamar",
+    "packages": ["generator-ui5-flp-plugin"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/generator-ui5-flp-plugin' target='self'>generator-ui5-flp-plugin</a>"]
+  },
+  {
+    "name": "geert-janklaps",
+    "contributions": 16,
+    "avatar_url": "https://avatars.githubusercontent.com/u/2744548?v=4",
+    "url": "https://github.com/geert-janklaps",
+    "packages": ["generator-ui5-library"],
+    "packagesFrontend": ["\n <a href='https://github.com/ui5-community/generator-ui5-library' target='self'>generator-ui5-library</a>"]
+  },
+  {
+    "name": "CarlosOrozco88",
+    "contributions": 166,
+    "avatar_url": "https://avatars.githubusercontent.com/u/11719827?v=4",
+    "url": "https://github.com/CarlosOrozco88",
+    "packages": ["ui5-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/CarlosOrozco88/ui5-tools' target='self'>ui5-tools</a>"]
+  },
+  {
+    "name": "nlunets",
+    "contributions": 44,
+    "avatar_url": "https://avatars.githubusercontent.com/u/13470207?v=4",
+    "url": "https://github.com/nlunets",
+    "packages": ["open-ux-odata"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-odata' target='self'>open-ux-odata</a>"]
+  },
+  {
+    "name": "drktfl",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/50441133?v=4",
+    "url": "https://github.com/drktfl",
+    "packages": ["open-ux-odata"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-odata' target='self'>open-ux-odata</a>"]
+  },
+  {
+    "name": "kranthie-sap",
+    "contributions": 15,
+    "avatar_url": "https://avatars.githubusercontent.com/u/84985584?v=4",
+    "url": "https://github.com/kranthie-sap",
+    "packages": ["open-ux-odata", "open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-odata' target='self'>open-ux-odata</a>", "\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "olafschmidt",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/13767303?v=4",
+    "url": "https://github.com/olafschmidt",
+    "packages": ["open-ux-odata"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-odata' target='self'>open-ux-odata</a>"]
+  },
+  {
+    "name": "IainSAP",
+    "contributions": 34,
+    "avatar_url": "https://avatars.githubusercontent.com/u/46536134?v=4",
+    "url": "https://github.com/IainSAP",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "devinea",
+    "contributions": 32,
+    "avatar_url": "https://avatars.githubusercontent.com/u/10102054?v=4",
+    "url": "https://github.com/devinea",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "ullasholla",
+    "contributions": 19,
+    "avatar_url": "https://avatars.githubusercontent.com/u/212316?v=4",
+    "url": "https://github.com/ullasholla",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "donal-tobin-sap",
+    "contributions": 19,
+    "avatar_url": "https://avatars.githubusercontent.com/u/1914897?v=4",
+    "url": "https://github.com/donal-tobin-sap",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "zdravko-georgiev",
+    "contributions": 5,
+    "avatar_url": "https://avatars.githubusercontent.com/u/91968887?v=4",
+    "url": "https://github.com/zdravko-georgiev",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "815are",
+    "contributions": 4,
+    "avatar_url": "https://avatars.githubusercontent.com/u/90789422?v=4",
+    "url": "https://github.com/815are",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "unseen1980",
+    "contributions": 4,
+    "avatar_url": "https://avatars.githubusercontent.com/u/2386570?v=4",
+    "url": "https://github.com/unseen1980",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "Klaus-Keller",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/66327622?v=4",
+    "url": "https://github.com/Klaus-Keller",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "slin-sap",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/98066146?v=4",
+    "url": "https://github.com/slin-sap",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "docirl",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/45471079?v=4",
+    "url": "https://github.com/docirl",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "theStiggySpd",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/59027566?v=4",
+    "url": "https://github.com/theStiggySpd",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "FredAtWork",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/3767049?v=4",
+    "url": "https://github.com/FredAtWork",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "johannes-kolbe",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/106824015?v=4",
+    "url": "https://github.com/johannes-kolbe",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "korotkovao",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/98463389?v=4",
+    "url": "https://github.com/korotkovao",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "stefanschreck",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/22190895?v=4",
+    "url": "https://github.com/stefanschreck",
+    "packages": ["open-ux-tools"],
+    "packagesFrontend": ["\n <a href='https://github.com/sap/open-ux-tools' target='self'>open-ux-tools</a>"]
+  },
+  {
+    "name": "tobiasso85",
+    "contributions": 4,
+    "avatar_url": "https://avatars.githubusercontent.com/u/25656984?v=4",
+    "url": "https://github.com/tobiasso85",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "Michadelic",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/6791333?v=4",
+    "url": "https://github.com/Michadelic",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "ecker",
+    "contributions": 3,
+    "avatar_url": "https://avatars.githubusercontent.com/u/98084?v=4",
+    "url": "https://github.com/ecker",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "domianer",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/10723269?v=4",
+    "url": "https://github.com/domianer",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "larskissel",
+    "contributions": 2,
+    "avatar_url": "https://avatars.githubusercontent.com/u/31293922?v=4",
+    "url": "https://github.com/larskissel",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "cgrail",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/5702278?v=4",
+    "url": "https://github.com/cgrail",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "clemai",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/8356134?v=4",
+    "url": "https://github.com/clemai",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "flovogt",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/34711402?v=4",
+    "url": "https://github.com/flovogt",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "mcanalesmayo",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/10370200?v=4",
+    "url": "https://github.com/mcanalesmayo",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "rodrigoeidelvein",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/12849476?v=4",
+    "url": "https://github.com/rodrigoeidelvein",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "romaniam",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/6095741?v=4",
+    "url": "https://github.com/romaniam",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  },
+  {
+    "name": "SebastianWolf-SAP",
+    "contributions": 1,
+    "avatar_url": "https://avatars.githubusercontent.com/u/46522656?v=4",
+    "url": "https://github.com/SebastianWolf-SAP",
+    "packages": ["openui5-sample-app"],
+    "packagesFrontend": ["\n <a href='https://github.com/SAP/openui5-sample-app' target='self'>openui5-sample-app</a>"]
+  }
+]

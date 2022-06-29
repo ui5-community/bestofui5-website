@@ -6,6 +6,9 @@ CNAME
 /docs/**
 /webapp/**
 
+# Ignore mockservice
+/src/localService/**
+
 # Ignore files by extension
 /**/*.svg
 /**/*.png

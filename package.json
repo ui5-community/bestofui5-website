@@ -17,10 +17,12 @@
     "build:ts": "babel src --out-dir webapp --source-maps true --extensions \".ts,.js\" --copy-files",
     "build:ui5": "ui5 build self-contained --all --clean-dest --dest docs",
     "start": "npm-run-all --parallel watch:ts start:ui5",
+    "start:test": "npm-run-all --parallel watch:ts start:mock",
     "watch:ts": "babel src --out-dir webapp --source-maps true --extensions \".ts,.js\" --copy-files --watch",
     "watch:controls": "npx @ui5/ts-interface-generator",
     "start:ui5": "ui5 serve --port 8080 -o index.html",
-    "start:dist": "ui5 serve  --port 8080 -o index.html --config ui5-dist.yaml",
+    "start:dist": "ui5 serve --port 8080 -o index.html --config ui5-dist.yaml",
+    "start:mock": "ui5 serve  --port 8080 -o mockServer.html",
     "ts-typecheck": "tsc --noEmit",
     "lint": "eslint src",
     "lint:staged": "lint-staged",
@@ -30,7 +32,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "hooks:pre-commit": "npm-run-all --sequential prettier:staged lint:staged",
     "hooks:pre-push": "npm-run-all --sequential lint:commit",
-    "wdio": "wdio run wdio.conf.js",
+    "test": "wdio run wdio.conf.js",
     "sitemap:build": "ts-node -O '{\"module\":\"commonjs\",\"target\":\"esnext\"}'  sitemap/create_sitemap.ts"
   },
   "dependencies": {

@@ -24,7 +24,15 @@ You can here search/filter/sort the packages.
 https://bestofui5.org/#/packages?search=live&tokens=middleware:type&sort=downloadsCurrentFortnight
 
 Each packages has metadata added what type it is and what tags are associated with it.  
-Data is coming from GitHub and NPM.
+Data is coming from GitHub, NPM and Visual Studio Marketplace.
+
+The search is divided into three sections:
+
+- search by name and description
+- filter by type, tags and license
+- sorting
+
+The filter narrows down the results more and more with each selected field.
 
 ### Object View
 
@@ -102,7 +110,8 @@ From there, GitHub Pages will automatically deploy the new version to the webpag
 
 We run [`wdi5`](https://github.com/js-soft/wdi5) tests on every Pull Request.  
 Implicitly, the build is also tested before the wdi5 tests, since it is executed before the tests.  
-The tests are located in the [`test`](https://github.com/ui5-community/bestofui5-website/tree/main/src/test) folder.
+The tests are located in the [`test`](https://github.com/ui5-community/bestofui5-website/tree/main/src/test) folder.  
+We run the tests with [mock data](https://github.com/ui5-community/bestofui5-website/tree/main/src/localService) to make sure we get consistent results on the tests.
 
 ## Backend
 
