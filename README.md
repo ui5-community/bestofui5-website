@@ -24,7 +24,15 @@ You can here search/filter/sort the packages.
 https://bestofui5.org/#/packages?search=live&tokens=middleware:type&sort=downloadsCurrentFortnight
 
 Each packages has metadata added what type it is and what tags are associated with it.  
-Data is coming from GitHub and NPM.
+Data is coming from GitHub, NPM and Visual Studio Marketplace.
+
+The search is divided into three sections:
+
+- search by name and description
+- filter by type, tags and license
+- sorting
+
+The filter narrows down the results more and more with each selected field.
 
 ### Object View
 

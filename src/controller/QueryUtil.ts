@@ -30,6 +30,8 @@ export default class QueryUtil {
 		}
 		const list = this.view.byId("listAllPackages");
 		const listBinding = list.getBinding("items") as ListBinding;
+
+		// filter by input field on name and description
 		const nameFilter = new Filter({
 			path: "name",
 			operator: FilterOperator.Contains,
@@ -40,23 +42,29 @@ export default class QueryUtil {
 			operator: FilterOperator.Contains,
 			value1: value,
 		});
+		// filter valueTypes by type "tag"
+		const valueTypesTags = valueTypes.filter(function (obj) {
+			return obj.type === "tag";
+		});
+
+		// filter tag array on object
 		const tagsFilter = new Filter(
 			"tags",
 			function (array: Array<any>) {
-				for (const valueType of valueTypes) {
-					if (array.includes(valueType.key) && valueType.type === "tag") {
-						return true;
-					}
+				let checker = (arr, target) => target.every((v) => arr.includes(v.key) && v.type === "tag");
+				if (checker(array, valueTypesTags)) {
+					return true;
 				}
 			}.bind(this)
 		);
 
+		// filter types on object
 		const typeFilters = [];
 		for (let i = 0; i < valueTypes.length; i++) {
 			if (valueTypes[i].type === "type") {
 				const typeFilter = new Filter({
 					path: "type",
-					operator: FilterOperator.Contains,
+					operator: FilterOperator.EQ,
 					value1: valueTypes[i].key,
 				});
 				typeFilters.push(typeFilter);
@@ -66,12 +74,14 @@ export default class QueryUtil {
 			filters: typeFilters,
 			and: true,
 		});
+
+		// filter license on object
 		const licenseFilters = [];
 		for (let i = 0; i < valueTypes.length; i++) {
 			if (valueTypes[i].type === "license") {
 				const licenseFilter = new Filter({
 					path: "licenseSource",
-					operator: FilterOperator.Contains,
+					operator: FilterOperator.EQ,
 					value1: valueTypes[i].key,
 				});
 				licenseFilters.push(licenseFilter);
@@ -82,7 +92,7 @@ export default class QueryUtil {
 			and: true,
 		});
 		const filters = [];
-		if (tagsFilter.aFilters && tagsFilter.aFilters.length > 0) {
+		if (valueTypesTags.length > 0) {
 			filters.push(tagsFilter);
 		}
 		if (typeFilter.aFilters && typeFilter.aFilters.length > 0) {
@@ -93,7 +103,7 @@ export default class QueryUtil {
 		}
 		const typesTagsFilter = new Filter({
 			filters: filters,
-			and: false,
+			and: true,
 		});
 		const searchFilter = new Filter({
 			filters: [nameFilter, descFilter],
