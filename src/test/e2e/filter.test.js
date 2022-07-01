@@ -46,4 +46,8 @@ describe("ui5 filter", () => {
 		// check if text is equal to wdio-ui5-service
 		expect(binding.iLength).toEqual(3);
 	});
+
+	it("filter from url query hash", async () => {
+		await browser.goTo({ sHash: "#/packages?tokens=task:type" });
+	});
 });
