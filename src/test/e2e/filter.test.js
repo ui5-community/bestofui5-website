@@ -1,5 +1,4 @@
 const All = require("./pageObjects/All");
-const Main = require("./pageObjects/Main");
 
 describe("ui5 filter", () => {
 	before(async () => {
