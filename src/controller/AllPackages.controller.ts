@@ -23,11 +23,11 @@ export default class AllPackages extends AppController {
 			if (!(routerArgsObject && Object.keys(routerArgsObject).length === 0 && Object.getPrototypeOf(routerArgsObject) === Object.prototype)) {
 				this.queryUtil.getParameterFromQuery(routerArgsObject);
 				this.filterFromQuery(routerArgsObject);
-				this.applySearchFilter();
 			}
 		} catch (error) {
 			Log.error((this.getResourceBundle() as ResourceBundle).getText("all_packages_controller_queryparsing"));
 		}
+		this.applySearchFilter();
 	}
 
 	public onPatternMatched(event: Event): void {
