@@ -42,14 +42,14 @@ jobs:
         run: |
           npm i
 
-      # run app
+      # build things
+      - name: build
+        run: npm run build
+
+      # run appp
       - name: run app
         run: npm run start:test&
 
       # run wdi5 tests
       - name: test wdi5 core
         run: npm run test
-
-      # build things
-      - name: build
-        run: npm run build
