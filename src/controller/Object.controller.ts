@@ -30,6 +30,7 @@ export default class Object extends BaseController {
 			path: `/packages/${objectIndex}`,
 			model: "data",
 		});
+		this.getView().getParent().getParent().getParent().scrollTo(0);
 	}
 
 	public onPressStandardListItemNpmLink(event: Event): void {

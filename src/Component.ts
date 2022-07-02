@@ -61,7 +61,13 @@ export default class Component extends UIComponent {
 			tagFilter: "tag",
 		});
 		this.setModel(settingsModel, "settings");
-
+		const scrollStateModel = new JSONModel({
+			packages: 0,
+			tags: 0,
+			timeline: 0,
+			contributors: 0,
+		});
+		this.setModel(scrollStateModel, "scrollState");
 		this.getRouter().attachRouteMatched(this.onBeforeRouteMatched, this);
 
 		// set the device model

@@ -31,6 +31,7 @@ export default class AllPackages extends AppController {
 	}
 
 	public onPatternMatched(event: Event): void {
+		this.getView().getParent().getParent().getParent().scrollTo(this.getView().getModel("scrollState").getProperty("/packages"));
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 		this.applySearchFilter();
 	}
@@ -54,9 +55,14 @@ export default class AllPackages extends AppController {
 		// get object name from oevent
 		const objectName = event.getSource().getBindingContext("data").getObject().name;
 		//route to object view
-		this.navTo("RouteObjectView", {
-			name: objectName,
-		});
+		this.navTo(
+			"RouteObjectView",
+			{
+				name: objectName,
+			},
+			null,
+			"object"
+		);
 	}
 
 	public onSortSelectChange(event: Event): void {
@@ -84,5 +90,18 @@ export default class AllPackages extends AppController {
 	private onSelectionChange(event: Event): void {
 		this.queryUtil.onSelectionChange(event);
 		this.applySearchFilter();
+	}
+
+	private onSearch(event: Event): void {
+		console.log("onSearch");
+	}
+	private onSearchLiveChange(event: Event): void {
+		console.log("onSearchLiveChange");
+	}
+	private onSearchChange(event: Event): void {
+		console.log("onSearchChange");
+	}
+	private onSuggest(event: Event): void {
+		console.log("onSuggest");
 	}
 }
