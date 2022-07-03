@@ -12,5 +12,6 @@ export default class Timeline extends BaseController {
 
 	public onPatternMatched(event: Event): void {
 		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", "contributors");
+		this.getView().getParent().getParent().getParent().scrollTo(this.getView().getModel("scrollState").getProperty("/contributors"));
 	}
 }

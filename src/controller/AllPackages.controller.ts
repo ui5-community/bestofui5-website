@@ -31,6 +31,7 @@ export default class AllPackages extends AppController {
 	}
 
 	public onPatternMatched(event: Event): void {
+		this.getView().getParent().getParent().getParent().scrollTo(this.getView().getModel("scrollState").getProperty("/packages"));
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 		this.applySearchFilter();
 	}
@@ -54,9 +55,7 @@ export default class AllPackages extends AppController {
 		// get object name from oevent
 		const objectName = event.getSource().getBindingContext("data").getObject().name;
 		//route to object view
-		this.navTo("RouteObjectView", {
-			name: objectName,
-		});
+		this.navTo("RouteObjectView", { name: objectName }, null, "object");
 	}
 
 	public onSortSelectChange(event: Event): void {
