@@ -9,6 +9,7 @@ import History from "sap/ui/core/routing/History";
 import UI5Event from "sap/ui/base/Event";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import formatter from "../model/formatter";
+import Page from "sap/m/Page";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -113,20 +114,12 @@ export default abstract class BaseController extends Controller {
 			return this.getView().byId("page").getScrollDelegate().getScrollTop();
 		} catch (error) {
 			try {
-				return this.getView().getParent().getParent().getParent().getScrollDelegate().getScrollTop();
+				return (sap.ui.getCore().byId("__component0---rootView--page") as Page).getScrollDelegate().getScrollTop();
 			} catch (error) {
 				try {
-					return this.getView().getParent().getParent().getScrollDelegate().getScrollTop();
+					return this.getView().getParent().getParent().getParent().getScrollDelegate().getScrollTop();
 				} catch (error) {
-					try {
-						return this.getView().getParent().getScrollDelegate().getScrollTop();
-					} catch (error) {
-						try {
-							return this.getView().getScrollDelegate().getScrollTop();
-						} catch (error) {
-							return 0;
-						}
-					}
+					console.info("no scroll delegate");
 				}
 			}
 		}
