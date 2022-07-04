@@ -8,7 +8,7 @@ on:
       - main
 jobs:
   delete:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    if: ${{ contains( github.event.pull_request.labels.*.name, 'deploy_test') }}
     runs-on: ubuntu-latest
     steps:
       - name: format branch name
