@@ -11,6 +11,8 @@ jobs:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     steps:
+      - name: format branch name
+        run: echo "branch_name_local=$( echo "$GITHUB_HEAD_REF" | tr -dc '[:alnum:]\n\r')" >> $GITHUB_ENV
       - name: Azure Login
         uses: azure/login@v1
         with:
@@ -20,4 +22,4 @@ jobs:
         with:
           azcliversion: 2.37.0
           inlineScript: |
-            az staticwebapp delete -n "$GITHUB_HEAD_REF" -g bestofui5 --yes
+            az staticwebapp delete -n ${{ env.branch_name_local }} -g bestofui5 --yes  --no-wait

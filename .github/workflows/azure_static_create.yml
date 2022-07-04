@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: format branch name
-        run:  echo "branch_name_local=$("$GITHUB_HEAD_REF" | tr -dc '[:alnum:]\n\r')" >> $GITHUB_ENV
+        run: echo "branch_name_local=$( echo "$GITHUB_HEAD_REF" | tr -dc '[:alnum:]\n\r')" >> $GITHUB_ENV
       - name: Azure Login
         uses: azure/login@v1
         with:
@@ -23,12 +23,7 @@ jobs:
           inlineScript: |
             az staticwebapp create -n ${{ env.branch_name_local }} -g bestofui5
       - name: Set env
-        run: echo "azuresecret=$(az staticwebapp secrets list --name ${{ env.branch_name_local }}" --query "properties.apiKey" | tr -d '"')" >> $GITHUB_ENV
-      #- uses: gliech/create-github-secret-action@v1
-      #  with:
-      #    name: bestofui5_patch_2
-      #    value: ${{ env.azuresecret }}
-      #    pa_token: ${{ secrets.PAT_TOKEN }}
+        run: echo "azuresecret=$(az staticwebapp secrets list --name ${{ env.branch_name_local }} --query "properties.apiKey" | tr -d '"')" >> $GITHUB_ENV
       - uses: actions/checkout@v2
         with:
           submodules: true
