@@ -2,7 +2,7 @@
 
 "Best of UI5" is the new entry page for the ui5-community.  
 It will show the best of community projects, be it applications, libraries, custom controls, tooling extensions, middlewares, tasks or Easy UI5 generators.  
-Everyone can be able to register their projects at Best of UI5.  
+Everyone can be able to register their projects at Best of 
 The projects will be ranked by various information about the projects and filterable by important criteria.  
 This should help to find you the best suited reuse project for your development needs!
 
