@@ -10,6 +10,8 @@ jobs:
     if: ${{ github.event.label.name == 'deploy_test' }}
     runs-on: ubuntu-latest
     steps:
+      - name: format branch name
+        run:  echo "branch_name_local=$("$GITHUB_HEAD_REF" | tr -dc '[:alnum:]\n\r')" >> $GITHUB_ENV
       - name: Azure Login
         uses: azure/login@v1
         with:
@@ -19,9 +21,9 @@ jobs:
         with:
           azcliversion: 2.37.0
           inlineScript: |
-            az staticwebapp create -n "$GITHUB_HEAD_REF" -g bestofui5
+            az staticwebapp create -n ${{ env.branch_name_local }} -g bestofui5
       - name: Set env
-        run: echo "azuresecret=$(az staticwebapp secrets list --name "$GITHUB_HEAD_REF" --query "properties.apiKey" | tr -d '"')" >> $GITHUB_ENV
+        run: echo "azuresecret=$(az staticwebapp secrets list --name ${{ env.branch_name_local }}" --query "properties.apiKey" | tr -d '"')" >> $GITHUB_ENV
       #- uses: gliech/create-github-secret-action@v1
       #  with:
       #    name: bestofui5_patch_2
