@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-and-deploy:
-    if: ${{ contains( github.event.pull_request.labels.*.name, 'My Label') }}
+    if: ${{ contains( github.event.pull_request.labels.*.name, 'deploy_test') }}
     runs-on: ubuntu-latest
     steps:
       - name: Check PR labels action step
