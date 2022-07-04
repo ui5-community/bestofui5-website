@@ -1,0 +1,51 @@
+name: Update Static Web App on Azure
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [synchronize]
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    if: ${{ contains( github.event.pull_request.labels.*.name, 'My Label') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR labels action step
+        id: check_pr_labels
+        uses: shioyang/check-pr-labels-on-push-action@v1.0.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          labels: '["deploy_test"]'
+      - name: format branch name
+        run:  echo "branch_name_local=$( echo "$GITHUB_HEAD_REF" | tr -dc '[:alnum:]\n\r')" >> $GITHUB_ENV
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Set env
+        run: echo "azuresecret=$(az staticwebapp secrets list --name ${{ env.branch_name_local }} --query "properties.apiKey" | tr -d '"')" >> $GITHUB_ENV
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: use node 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - name: npm install
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ env.azuresecret }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          action: "upload"
+          skip_api_build: true
+          skip_app_build: true
+          app_location: "docs" # App source code path
+          output_location: "" # Built app content directory - optional
+          is_static_export: true
