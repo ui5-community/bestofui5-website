@@ -42,7 +42,7 @@ Currently not only npm metadata is displayed, also the readme, historic npm down
 ### Tags
 
 Here are all types and tags list that are used in the packages.  
-If you click on a tag, you will see all the packages that have this tag.
+If you click o tag, you will see all the packages that have this tag.
 
 ### Timeline
 
