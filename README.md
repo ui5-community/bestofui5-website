@@ -21,7 +21,7 @@ The packages are sorted by the growth of downloads in the last 30 days.
 
 You can here search/filter/sort the packages.  
 **You can also bookmark your searches. A url could look like this:**  
-https://bestofui5.org/#/packages?search=live&tokens=middleware:type&sort=downloadsCurrentFortnight
+<https://bestofui5.org/#/packages?search=live&tokens=middleware:type&sort=downloadsCurrentFortnight>
 
 Each packages has metadata added what type it is and what tags are associated with it.  
 Data is coming from GitHub, NPM and Visual Studio Marketplace.
@@ -121,15 +121,31 @@ We run the tests with [mock data](https://github.com/ui5-community/bestofui5-web
 We crawl data from GitHub and NPM.  
 The source code is written in typescript and in folder [`src`](https://github.com/ui5-community/bestofui5-data/tree/main/src).
 It creates two json files (`data`, `versions`) which will be used as a model in the UI5 App.  
-The latest update of the files are located in the [`data`](https://github.com/ui5-community/bestofui5-data/tree/live-data/data) folder on the `live-data` branch. 
+The latest update of the files are located in the [`data`](https://github.com/ui5-community/bestofui5-data/tree/live-data/data) folder on the `live-data` branch.
 The frontend is using these raw files [directly from the branch](https://github.com/ui5-community/bestofui5-website/blob/5a33b4b710d8143f1d07195bba9ca28696871995/src/manifest.json#L17-L27).  
 The packages are crawled from are located in [`sources.json`](https://github.com/ui5-community/bestofui5-data/blob/main/sources.json).
 
-## Requirements
+## DevOps
 
-Either [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) for dependency management.
+### Deployment of Pull Requests to Azure Static Web Apps
+
+In order for contributors to better understand the impact of a pull request and to better test it, there is an option to deploy the changes of a pull request into a test environment, using [Azure Static Web Apps](https://azure.microsoft.com/en-en/services/app-service/static/#overview).  
+This makes it easy to access and test the app.
+
+#### How To
+
+- **Create**: To initiate the deployment to Azure Static Web Apps, the label `deploy_test` must be assigned to a pull request.  
+  - If this was successful, a comment is left in the pull request with the link to the app.  
+- **Update**: After the label is added, each commit initiates an update to the Azure Static Web App.
+  - If this label is not present on the pull request, the GitHub actions will be skipped every time.  
+- **Delete**: If the pull request is closed (manually or via merge), the Azure Static Web App is also deleted.
+  -  Do not remove the label, otherwise the app will not be deleted!
 
 ## Run local
+
+### Requirements
+
+Either [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) for dependency management.
 
 git clone:
 `> git clone https://github.com/ui5-community/bestofui5-website`
