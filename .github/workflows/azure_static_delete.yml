@@ -20,4 +20,4 @@ jobs:
         with:
           azcliversion: 2.37.0
           inlineScript: |
-            az staticwebapp delete -n "$GITHUB_HEAD_REF" -g bestofui5 --yes
+            az staticwebapp delete -n "$GITHUB_HEAD_REF" -g github-followers --yes

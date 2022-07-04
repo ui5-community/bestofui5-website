@@ -19,7 +19,7 @@ jobs:
         with:
           azcliversion: 2.37.0
           inlineScript: |
-            az staticwebapp create -n "$GITHUB_HEAD_REF" -g bestofui5
+            az staticwebapp create -n "$GITHUB_HEAD_REF" -g github-followers
       - name: Set env
         run: echo "azuresecret=$(az staticwebapp secrets list --name "$GITHUB_HEAD_REF" --query "properties.apiKey" | tr -d '"')" >> $GITHUB_ENV
       #- uses: gliech/create-github-secret-action@v1
