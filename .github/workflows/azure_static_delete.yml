@@ -22,4 +22,4 @@ jobs:
         with:
           azcliversion: 2.37.0
           inlineScript: |
-            az staticwebapp delete -n ${{ env.branch_name_local }} -g bestofui5 --yes
+            az staticwebapp delete -n ${{ env.branch_name_local }} -g bestofui5 --yes  --no-wait
