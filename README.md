@@ -130,7 +130,8 @@ The packages are crawled from are located in [`sources.json`](https://github.com
 ### Deployment of Pull Requests to Azure Static Web Apps
 
 In order for contributors to better understand the impact of a pull request and to better test it, there is an option to deploy the changes of a pull request into a test environment, using [Azure Static Web Apps](https://azure.microsoft.com/en-en/services/app-service/static/#overview).  
-This makes it easy to access and test the app.
+This makes it easy to access and test the app.  
+**For security reasons, this only works for pull requests from the `ui5-community` repo.**
 
 #### How To
 

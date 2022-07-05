@@ -8,7 +8,7 @@ on:
       - main
 jobs:
   delete:
-    if: ${{ contains( github.event.pull_request.labels.*.name, 'deploy_test') }}
+    if: ${{ contains( github.event.pull_request.labels.*.name, 'deploy_test') && github.repository_owner == 'ui5-community' }}
     runs-on: ubuntu-latest
     steps:
       - name: format branch name
