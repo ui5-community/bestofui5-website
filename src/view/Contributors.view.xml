@@ -7,28 +7,28 @@
   displayBlock="true"
   height="100%"
 >
+  <Button text="Expand Details" press=".onExpandDetails" />
   <FlexBox
+    id="contributorsFlexBox"
     width="{= ${device>/system/phone} === true ? '' : '1024px' }"
     height="100%"
-    direction="Column"
-    alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }"
+    direction="{contributorsView>/direction}"
+    alignItems="Start"
+    wrap="{contributorsView>/wrap}"
     justifyContent="Start"
+    items="{path: 'contributors>/', sorter : { path : 'contributions',descending: 'false' }}"
   >
-    <List width="{= ${device>/system/phone} === true ? '' : '1024px' }" headerText="Contributors" items="{path: 'contributors>/', sorter : { path : 'contributions',descending: 'false' }}">
-      <FeedListItem
-        core:require="{ sapMLib: 'sap/m/library' }"
-        iconDisplayShape="Square"
-        moreLabel="More"
-        lessLabel="Less"
-        sender="{contributors>name}"
-        icon="{contributors>avatar_url}"
-        senderPress="sapMLib.URLHelper.redirect(${contributors>url}, true)"
-        iconPress="sapMLib.URLHelper.redirect(${contributors>url}, true)"
-        iconDensityAware="false"
-        info="Contributions: {contributors>contributions}"
-        text="{contributors>packagesFrontend}"
-        convertLinksToAnchorTags="All"
-      />
-    </List>
+    <items>
+      <FlexBox>
+        <VBox alignItems="Center">
+          <Avatar src="{contributors>avatar_url}" displaySize="XL" showBorder="true" press="onPress" />
+          <Text text="{contributors>name}" class="sapUiSmallMarginTop" />
+        </VBox>
+        <VBox class="contributorsLinks sapMText ">
+          <Text text="Contributions: {contributors>contributions}" class="sapUiSmallMarginTop" visible="{= ${contributorsView>/direction} === 'Column'}" />
+          <core:HTML content="{contributors>packagesFrontend}" visible="{= ${contributorsView>/direction} === 'Column'}" />
+        </VBox>
+      </FlexBox>
+    </items>
   </FlexBox>
 </mvc:View>

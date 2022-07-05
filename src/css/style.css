@@ -195,3 +195,15 @@
 .textColorWhite .sapMBtnTransparent > .sapMBtnIcon {
 	color: white;
 }
+
+.contributorsLinks {
+	line-height: 1.4;
+}
+
+.contributorsLinks a {
+	display: inline-block;
+	transition: 0.3s;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1.4;
+}
