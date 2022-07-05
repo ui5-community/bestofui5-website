@@ -7,9 +7,13 @@ on:
 
 jobs:
   build-and-deploy:
-    if: ${{ github.event.label.name == 'deploy_test' }}
+    if: ${{ github.event.label.name == 'deploy_test' && $GITHUB_REPOSITORY_OWNER === 'marianfoo' }}
     runs-on: ubuntu-latest
     steps:
+      - name: echo github
+        run: echo "$GITHUB_HEAD_REF"
+      - name: echo github
+        run: echo $GITHUB_HEAD_REF
       - name: format branch name
         run:  echo "branch_name_local=$( echo "$GITHUB_HEAD_REF" | tr -dc '[:alnum:]\n\r')" >> $GITHUB_ENV
       - name: Azure Login
