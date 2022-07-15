@@ -1,4 +1,4 @@
-describe("ui5 filter", () => {
+describe("ui5 query filter", () => {
 	before(async () => {
 		await browser.goTo({ sHash: "#/packages?tokens=task:type" });
 	});
@@ -13,19 +13,4 @@ describe("ui5 filter", () => {
 
 		expect(infolabelInnerText).toEqual("TASK");
 	});
-
-	// it("sort from url query hash", async () => {
-	// 	await browser.goTo({ sHash: "#/packages?sort=addedToBoUI5" });
-	// 	// get type infolabel
-	// 	// const firstItemTitle = await browser.asControl({
-	// 	// 	selector: {
-	// 	// 		viewName: "org.openui5.bestofui5.view.AllPackages",
-	// 	// 		id: "__title0-__clone0-inner",
-	// 	// 	},
-	// 	// });
-	// 	const firstItemTitle = await $("#__title0-__clone0-inner");
-	// 	const textInnerText = await firstItemTitle.getText();
-
-	// 	expect(textInnerText).toEqual("create-wdi5");
-	// });
 });

@@ -1,4 +1,4 @@
-describe("ui5 filter", () => {
+describe("ui5 query sort", () => {
 	before(async () => {
 		await browser.goTo({ sHash: "#/packages?sort=addedToBoUI5" });
 	});

@@ -1,7 +1,6 @@
-const All = require("./pageObjects/All");
 const Tags = require("./pageObjects/Tags");
 
-describe("ui5 filter", () => {
+describe("ui5 tags", () => {
 	before(async () => {
 		await Tags.open();
 	});
