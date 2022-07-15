@@ -74,6 +74,13 @@
 	html:not(.sap-phone) .openui5headerButton:focus .sapMBtnInner:before {
 		border: none !important;
 	}
+	html[data-sap-ui-browser^="ff"].sap-desktop .sapMBarPH.sapMBarContainer {
+		display: unset;
+		position: relative !important;
+	}
+	html[data-sap-ui-browser^="ff"].sap-desktop .sapMLnk.sapMLnkMaxWidth.headerLink.sapMBarChild {
+		position: relative;
+	}
 }
 
 /* Header Styles */
