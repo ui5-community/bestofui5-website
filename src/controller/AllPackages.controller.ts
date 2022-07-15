@@ -28,6 +28,7 @@ export default class AllPackages extends AppController {
 			Log.error((this.getResourceBundle() as ResourceBundle).getText("all_packages_controller_queryparsing"));
 		}
 		this.applySearchFilter();
+		this.sortList((this.getView().getModel("settings") as JSONModel).getProperty("/selectKey"), true);
 	}
 
 	public onPatternMatched(event: Event): void {
@@ -41,7 +42,7 @@ export default class AllPackages extends AppController {
 		this.setSelectedItems();
 	}
 	private setSelectedItems() {
-		const multiComboBox: MultiComboBox = this.byId("multiComboBox");
+		const multiComboBox = this.byId("multiComboBox") as MultiComboBox;
 		const selectedItems = this.getView().getModel("settings").getProperty("/tokens");
 		let keyArray = [];
 		for (let i = 0; i < selectedItems.length; i++) {
