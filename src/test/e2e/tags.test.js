@@ -15,17 +15,13 @@ describe("ui5 filter", () => {
 		const item2 = await itemsTags[2];
 		await item2.press(); // press the second item `task`
 		try {
-			await $("#__component0---AllPackages--trend-item-type-__clone0").waitForExist({ timeout: 5000 });
+			await $("#__component0---AllPackages--trend-item-type-__clone0").waitForExist({ timeout: 1000 });
 		} catch (error) {}
 		// get type infolabel
-		const firstItemInfolabelType = await browser.asControl({
-			selector: {
-				viewName: "org.openui5.bestofui5.view.AllPackages",
-				id: "__component0---AllPackages--trend-item-type-__clone11",
-			},
-		});
-		const infolabelInnerText = await firstItemInfolabelType.getText();
+		const firstItemInfolabelType = await $("#__component0---AllPackages--trend-item-type-__clone19");
+		const firstItemInfolabelTypeSpan = await firstItemInfolabelType.$(".sapTntInfoLabelText");
+		const infolabelInnerText = await firstItemInfolabelTypeSpan.getText();
 
-		expect(infolabelInnerText).toEqual("task");
+		expect(infolabelInnerText).toEqual("TASK");
 	});
 });
