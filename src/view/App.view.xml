@@ -41,6 +41,14 @@
               core:require="{ sapMLib: 'sap/m/library' }"
               press="sapMLib.URLHelper.redirect('https://bestofjs.org/', true)"
             />
+            <Button
+              visible="{= ${device>/system/desktop}}"
+              text="dotabap"
+              class="openui5headerButton sapUiNoMargin textColorWhite"
+              type="Transparent"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              press="sapMLib.URLHelper.redirect('https://dotabap.org/', true)"
+            />
           </contentRight>
         </Bar>
       </customHeader>
