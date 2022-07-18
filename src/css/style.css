@@ -196,8 +196,18 @@
 	color: white;
 }
 
+.flexboxContributor {
+	padding: 1rem 0;
+	margin-bottom: 1rem;
+	margin-left: 0.5rem;
+	border-radius: 25px;
+	background-color: white;
+	padding: 20px;
+}
+
 .contributorsLinks {
 	line-height: 1.4;
+	padding: 0 1.5rem;
 }
 
 .contributorsLinks a {
