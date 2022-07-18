@@ -58,6 +58,7 @@
             <core:Icon visible="{= ${data>type} === 'tooling'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/screwdriver" />
             <core:Icon visible="{= ${data>type} === 'vscode'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons/microsoft" />
             <core:Icon visible="{= ${data>type} === 'application'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/window-maximize" />
+            <core:Icon visible="{= ${data>type} === 'library'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/book" />
             <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{data>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" />
 
             <tnt:InfoLabel
