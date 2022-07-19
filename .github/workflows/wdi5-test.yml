@@ -71,13 +71,13 @@ jobs:
         run: |
           npm i
 
-      # run appp
+      # build with babel
+      - name: babel
+        run: npm run build:ts
+
+      # run app
       - name: run app
         run: npm run start:test&
-
-      - name: Sleep for 30 seconds
-        run: sleep 30s
-        shell: bash
 
       # run wdi5 tests
       - name: test wdi5 core
