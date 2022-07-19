@@ -15,6 +15,7 @@
             <FlexItemData growFactor="1" />
           </layoutData>
         </Select>
+        <Button press=".changeSortOrder" icon="{= ${settings>/sortOrderDecending} ? 'sap-icon://sort-descending' : 'sap-icon://sort-ascending' }" />
         <layoutData>
           <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? '100%' : '0' }" />
         </layoutData>

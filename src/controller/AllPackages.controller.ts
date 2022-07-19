@@ -4,6 +4,7 @@ import Event from "sap/ui/base/Event";
 import Log from "sap/base/Log";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
 import MultiComboBox from "sap/m/MultiComboBox";
+import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -60,16 +61,17 @@ export default class AllPackages extends AppController {
 	}
 
 	public onSortSelectChange(event: Event): void {
-		const selectKey = event.getParameter("selectedItem").getKey();
-		this.sortList(selectKey, true);
+		const selectKey = event.getParameter("selectedItem").getKey() as string;
+		this.sortList(selectKey);
 		this.queryUtil.setQueryParameters();
 	}
 
-	private sortList(sortKey: string, descendingParameter: boolean): void {
+	private sortList(sortKey: string): void {
+		const sortOrderDecending = this.getView().getModel("settings").getProperty("/sortOrderDecending") as boolean;
 		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
 			path: sortKey,
-			descending: descendingParameter,
+			descending: sortOrderDecending,
 		});
 		binding.sort(oSorter);
 		this.getView().getModel("settings").setProperty("/selectKey", sortKey);
@@ -84,5 +86,13 @@ export default class AllPackages extends AppController {
 	private onSelectionChange(event: Event): void {
 		this.queryUtil.onSelectionChange(event);
 		this.applySearchFilter();
+	}
+
+	private changeSortOrder(event: Event): void {
+		const sortOrderDecending = this.getView().getModel("settings").getProperty("/sortOrderDecending") as boolean;
+		const sortKey = this.getView().getModel("settings").getProperty("/selectKey") as string;
+		(this.getView().getModel("settings") as JSONModel).setProperty("/sortOrderDecending", !sortOrderDecending);
+		this.sortList(sortKey);
+		this.queryUtil.setQueryParameters();
 	}
 }

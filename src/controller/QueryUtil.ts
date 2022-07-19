@@ -166,12 +166,17 @@ export default class QueryUtil {
 		if ("sort" in eventArguments) {
 			(this.view.getModel("settings") as JSONModel).setProperty("/selectKey", eventArguments.sort);
 		}
+		if ("order" in eventArguments) {
+			const order = eventArguments.order === "asc" ? false : true;
+			(this.view.getModel("settings") as JSONModel).setProperty("/sortOrderDecending", order);
+		}
 	}
 
 	public setQueryParameters(): void {
 		const searchParameter: string = (this.view.getModel("settings") as JSONModel).getProperty("/search");
 		const tokens: any = (this.view.getModel("settings") as JSONModel).getProperty("/tokens");
 		let sortKey: string = (this.view.getModel("settings") as JSONModel).getProperty("/selectKey");
+		let sortOrder = (this.view.getModel("settings") as JSONModel).getProperty("/sortOrderDecending") as boolean;
 		// dont set 'downloads365' in query because it is default value
 		if (sortKey === "downloads365") {
 			sortKey = "";
@@ -187,6 +192,7 @@ export default class QueryUtil {
 			search: searchParameter,
 			tokens: tokenString,
 			sort: sortKey,
+			order: sortOrder ? "" : "asc",
 		};
 		// remove empty values from queries
 		Object.keys(queries).forEach(function (key) {
