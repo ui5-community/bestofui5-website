@@ -5,7 +5,7 @@ describe("ui5 query sort", () => {
 
 	it("sort from url query hash", async () => {
 		try {
-			await $("filtekuzfutkfk424214").waitForExist({ timeout: 1000 });
+			await $("#__component0---AllPackages--listAllPackages-listUl li").waitForExist({ timeout: 5000 });
 		} catch (error) {}
 
 		const list = await $$("#__component0---AllPackages--listAllPackages-listUl li");
