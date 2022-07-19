@@ -1,0 +1,1664 @@
+[
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.0", "date": "2019-09-09T22:01:27.916Z", "changelog": "" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.1", "date": "2019-09-10T05:16:55.341Z", "changelog": "" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.2", "date": "2019-10-13T08:53:49.222Z", "changelog": "" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.3", "date": "2019-10-13T10:14:28.781Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.4", "date": "2020-02-25T21:51:09.290Z", "changelog": "" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.5", "date": "2020-03-20T06:46:12.831Z", "changelog": "" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.6", "date": "2020-03-25T07:04:05.281Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.7", "date": "2020-04-04T12:08:32.634Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.1.8", "date": "2020-05-01T14:48:07.410Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.2.0",
+    "date": "2020-05-24T09:29:48.732Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  { "name": "ui5-middleware-cfdestination", "version": "0.2.1", "date": "2020-07-17T22:05:39.683Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.2.2", "date": "2020-08-03T07:51:25.543Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.2.3", "date": "2020-09-20T07:24:15.032Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.2.4", "date": "2020-09-29T12:13:10.267Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.3.0",
+    "date": "2020-12-17T08:32:17.172Z",
+    "changelog": "### Features\r\n\r\n* adding a second filter criteria ([#410](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/410)) ([2181f64](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/2181f64306e2605bec6571bc78330d74ca46f3a9))"
+  },
+  { "name": "ui5-middleware-cfdestination", "version": "0.3.1", "date": "2021-01-25T13:38:21.161Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.4.0",
+    "date": "2021-02-16T15:25:57.756Z",
+    "changelog": "### Features\r\n\r\n* add auth to routes ([#492](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/492)) ([ef735c4](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/ef735c4024c3bad8fe5a3e8d98dea4874edf6cd3))"
+  },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.4.1",
+    "date": "2021-03-10T09:57:25.921Z",
+    "changelog": "### Bug Fixes\r\n\r\n* auth routes config (fixes [#506](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/506)) ([f9ae45c](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/f9ae45c53625334845df968f2771646295ebf04a))"
+  },
+  { "name": "ui5-middleware-cfdestination", "version": "0.4.2", "date": "2021-05-05T19:24:39.676Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.4.3", "date": "2021-05-15T09:03:14.680Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.5.0",
+    "date": "2021-06-06T19:26:11.983Z",
+    "changelog": "### Features\r\n\r\n* **testing,localDir:** middleware cf-destination ([#526](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/526)) ([24127c5](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/24127c58b9369a0c230d129da856ad8635100759))"
+  },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.6.0",
+    "date": "2021-06-07T19:10:13.060Z",
+    "changelog": "### Features\r\n\r\n* add default options for cfdestination ([#527](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/527)) ([1a29c83](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/1a29c83d659002bb6dbe3f7f7da0ecbfdb3afa2a))"
+  },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.7.0",
+    "date": "2021-08-07T20:04:24.127Z",
+    "changelog": "### Features\r\n\r\n* multitenancy config and routing ([#528](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/528)) ([83160c5](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/83160c5cd72d07061557fad9a643e7e5d0a0de26))"
+  },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.7.1",
+    "date": "2021-09-29T18:46:38.382Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-task-zipper:** Absolute Path Error for Third Party Dependencies ([#541](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/541)) ([fd6f022](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/fd6f0224c8b43a9252a233677c8bffb82521d991))"
+  },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.7.2",
+    "date": "2021-10-28T21:10:55.250Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **deps:** update dependencies version ([2444781](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/2444781b4b2b7215b8e891dfe65c42167a668f66))"
+  },
+  { "name": "ui5-middleware-cfdestination", "version": "0.7.3", "date": "2021-10-29T20:23:02.484Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.8.0",
+    "date": "2021-12-26T09:54:40.246Z",
+    "changelog": "### Features\r\n\r\n* **ui5-task-stringreplacer,ui5-middleware-stringreplacer:** support for multiple .env files ([29e246a](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/29e246abba7b82f0f42a6f16316e5029de638d26)), closes [#545](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/545)"
+  },
+  { "name": "ui5-middleware-cfdestination", "version": "0.8.1", "date": "2022-02-07T22:15:26.308Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.8.2", "date": "2022-02-22T20:21:31.975Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.8.3",
+    "date": "2022-02-24T20:28:10.112Z",
+    "changelog": "### Bug Fixes\r\n\r\n* ensure middlewares work with Karma connect middleware ([#584](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/584)) ([c0ae49f](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/c0ae49fbcf49c6f667c86bfca291beefe6b74f27))"
+  },
+  { "name": "ui5-middleware-cfdestination", "version": "0.8.4", "date": "2022-04-11T11:40:04.530Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.8.5",
+    "date": "2022-04-19T08:29:41.800Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-cfdestination", "version": "0.8.6", "date": "2022-05-22T20:38:43.165Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-cfdestination", "version": "0.8.7", "date": "2022-05-23T07:03:59.624Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  {
+    "name": "ui5-middleware-cfdestination",
+    "version": "0.9.0",
+    "date": "2022-06-22T05:38:16.962Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-middleware-cfdestination", "version": "0.9.1", "date": "2022-06-26T10:22:53.801Z", "changelog": "**Note:** Version bump only for package ui5-middleware-cfdestination" },
+  { "name": "ui5-middleware-iasync", "version": "0.0.1-alpha", "date": "2019-12-17T16:00:18.749Z", "changelog": "" },
+  { "name": "ui5-middleware-iasync", "version": "0.0.2-alpha", "date": "2020-02-25T21:51:25.472Z", "changelog": "" },
+  { "name": "ui5-middleware-iasync", "version": "0.0.2-alpha.0", "date": "2020-03-25T07:04:49.500Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  { "name": "ui5-middleware-iasync", "version": "0.0.2-alpha.1", "date": "2020-04-04T12:08:49.937Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  { "name": "ui5-middleware-iasync", "version": "0.0.2-alpha.2", "date": "2020-05-01T15:38:43.412Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  {
+    "name": "ui5-middleware-iasync",
+    "version": "0.0.2-alpha.3",
+    "date": "2020-05-02T08:27:08.332Z",
+    "changelog": "### Bug Fixes\r\n\r\n* avoid to pack iasync gif for NPM package ([105f64b](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/105f64b598bdc560ddb324972b859a2391ee6570))"
+  },
+  { "name": "ui5-middleware-iasync", "version": "0.0.2-alpha.4", "date": "2020-05-05T14:47:27.783Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  {
+    "name": "ui5-middleware-iasync",
+    "version": "0.1.0-alpha.0",
+    "date": "2020-05-24T09:29:48.811Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  { "name": "ui5-middleware-iasync", "version": "0.1.0-alpha.1", "date": "2020-07-17T22:05:39.663Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  { "name": "ui5-middleware-iasync", "version": "0.1.0-alpha.2", "date": "2020-09-20T07:24:15.040Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  { "name": "ui5-middleware-iasync", "version": "0.1.0-alpha.3", "date": "2021-05-05T19:24:40.063Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  { "name": "ui5-middleware-iasync", "version": "0.1.0-alpha.4", "date": "2021-08-07T20:04:24.170Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  {
+    "name": "ui5-middleware-iasync",
+    "version": "0.1.0-alpha.5",
+    "date": "2021-10-28T21:10:55.252Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **deps:** update dependencies version ([2444781](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/2444781b4b2b7215b8e891dfe65c42167a668f66))"
+  },
+  { "name": "ui5-middleware-iasync", "version": "0.1.0-alpha.6", "date": "2021-10-29T20:23:02.550Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  { "name": "ui5-middleware-iasync", "version": "0.1.0-alpha.7", "date": "2022-04-11T11:40:04.531Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  {
+    "name": "ui5-middleware-iasync",
+    "version": "0.1.0-alpha.8",
+    "date": "2022-04-19T08:29:42.008Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-iasync", "version": "0.1.0-alpha.9", "date": "2022-05-22T20:38:43.224Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  { "name": "ui5-middleware-iasync", "version": "0.1.0-alpha.10", "date": "2022-05-23T07:03:59.640Z", "changelog": "**Note:** Version bump only for package ui5-middleware-iasync" },
+  {
+    "name": "ui5-middleware-iasync",
+    "version": "1.0.0-alpha.0",
+    "date": "2022-06-22T05:38:16.306Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-middleware-index",
+    "version": "0.1.0",
+    "date": "2020-04-04T12:08:33.562Z",
+    "changelog": "### Features\r\n\r\n* **middleware:** default index document ([#166](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/166)) ([afc27c2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/afc27c2d8793440b517bbd90803d75ebf10d33ce))"
+  },
+  { "name": "ui5-middleware-index", "version": "0.1.1", "date": "2020-05-01T14:48:07.558Z", "changelog": "**Note:** Version bump only for package ui5-middleware-index" },
+  {
+    "name": "ui5-middleware-index",
+    "version": "0.2.0",
+    "date": "2020-05-24T09:29:49.358Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  { "name": "ui5-middleware-index", "version": "0.2.1", "date": "2020-07-17T22:05:39.727Z", "changelog": "**Note:** Version bump only for package ui5-middleware-index" },
+  { "name": "ui5-middleware-index", "version": "0.2.2", "date": "2020-09-20T07:24:15.480Z", "changelog": "**Note:** Version bump only for package ui5-middleware-index" },
+  { "name": "ui5-middleware-index", "version": "0.2.3", "date": "2021-05-05T19:24:40.513Z", "changelog": "**Note:** Version bump only for package ui5-middleware-index" },
+  {
+    "name": "ui5-middleware-index",
+    "version": "0.2.4",
+    "date": "2021-10-28T22:44:21.978Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **index:** improved docu ([d69755d](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/d69755d36a5d1604e37bf71fa60bc9295ce639a1))"
+  },
+  {
+    "name": "ui5-middleware-index",
+    "version": "0.2.5",
+    "date": "2021-10-28T22:53:06.643Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **index:** improved docu ([6bfd98b](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/6bfd98bd6cff10a9cc1a5f26d9933cd654216666))"
+  },
+  { "name": "ui5-middleware-index", "version": "0.2.6", "date": "2021-10-29T20:23:03.229Z", "changelog": "**Note:** Version bump only for package ui5-middleware-index" },
+  {
+    "name": "ui5-middleware-index",
+    "version": "0.2.7",
+    "date": "2022-02-24T20:28:10.191Z",
+    "changelog": "### Bug Fixes\r\n\r\n* ensure middlewares work with Karma connect middleware ([#584](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/584)) ([c0ae49f](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/c0ae49fbcf49c6f667c86bfca291beefe6b74f27))"
+  },
+  { "name": "ui5-middleware-index", "version": "0.2.8", "date": "2022-04-11T11:40:05.143Z", "changelog": "**Note:** Version bump only for package ui5-middleware-index" },
+  {
+    "name": "ui5-middleware-index",
+    "version": "0.2.9",
+    "date": "2022-04-19T08:29:42.971Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-index", "version": "0.2.10", "date": "2022-05-22T20:38:44.112Z", "changelog": "**Note:** Version bump only for package ui5-middleware-index" },
+  {
+    "name": "ui5-middleware-index",
+    "version": "0.3.0",
+    "date": "2022-06-22T05:38:17.272Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-middleware-livecompileless",
+    "version": "0.2.0",
+    "date": "2021-05-15T09:03:09.726Z",
+    "changelog": "### Features\r\n\r\n* Less support for app development ([#512](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/512)) ([d0b381f](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/d0b381f74213fd75942cc887adc66874982f2fbc))"
+  },
+  { "name": "ui5-middleware-livecompileless", "version": "0.2.1", "date": "2021-08-07T20:04:24.202Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livecompileless" },
+  { "name": "ui5-middleware-livecompileless", "version": "0.2.2", "date": "2021-10-29T20:23:03.275Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livecompileless" },
+  { "name": "ui5-middleware-livecompileless", "version": "0.2.3", "date": "2022-02-22T20:21:31.960Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livecompileless" },
+  { "name": "ui5-middleware-livecompileless", "version": "0.2.4", "date": "2022-04-11T11:40:05.173Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livecompileless" },
+  {
+    "name": "ui5-middleware-livecompileless",
+    "version": "0.2.5",
+    "date": "2022-04-19T08:29:42.987Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-livecompileless", "version": "0.2.6", "date": "2022-05-22T20:38:44.004Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livecompileless" },
+  {
+    "name": "ui5-middleware-livecompileless",
+    "version": "0.3.0",
+    "date": "2022-06-22T05:38:18.197Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-middleware-livereload", "version": "0.1.0", "date": "2019-09-09T22:01:27.986Z", "changelog": "" },
+  { "name": "ui5-middleware-livereload", "version": "0.1.1", "date": "2019-09-10T05:16:55.342Z", "changelog": "" },
+  { "name": "ui5-middleware-livereload", "version": "0.1.2", "date": "2019-10-13T08:53:48.666Z", "changelog": "" },
+  { "name": "ui5-middleware-livereload", "version": "0.1.3", "date": "2019-10-13T09:21:27.673Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  { "name": "ui5-middleware-livereload", "version": "0.1.4", "date": "2019-10-13T10:14:28.716Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  { "name": "ui5-middleware-livereload", "version": "0.1.5", "date": "2020-02-13T21:31:22.265Z", "changelog": "" },
+  { "name": "ui5-middleware-livereload", "version": "0.1.6", "date": "2020-02-25T21:51:09.901Z", "changelog": "" },
+  { "name": "ui5-middleware-livereload", "version": "0.1.7", "date": "2020-03-20T06:46:12.220Z", "changelog": "" },
+  { "name": "ui5-middleware-livereload", "version": "0.1.8", "date": "2020-03-25T07:04:05.284Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.1.9",
+    "date": "2020-03-27T06:18:01.072Z",
+    "changelog": "### Bug Fixes\r\n\r\n* livereload now supports watchPath and path config ([1e90ab5](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/1e90ab52085efbb4d3f6de7c6c4c71ce3c577240))"
+  },
+  { "name": "ui5-middleware-livereload", "version": "0.1.10", "date": "2020-04-04T12:08:33.206Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.2.0",
+    "date": "2020-05-01T14:48:08.216Z",
+    "changelog": "### Features\r\n\r\n* Automatically set a non-taken port for livereload server ([#195](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/195)) ([9ca6037](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/9ca6037a8977e3ed5279d834bb7347a6cc6f0eed))"
+  },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.3.0",
+    "date": "2020-05-24T09:29:49.497Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **docu:** extra extensions config for livereload ([1f6149a](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/1f6149a97354a3360c608ab2027086f174cd908e))\r\n\r\n\r\n### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.4.0",
+    "date": "2020-07-17T22:05:39.571Z",
+    "changelog": "### Bug Fixes\r\n\r\n* default to debug false ([#253](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/253)) ([0926ae4](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/0926ae4e2235766ef744333d13064e9e948f28b6))\r\n\r\n\r\n### Features\r\n\r\n* ui5-middleware-livereload - watch multiple paths ([#259](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/259)) ([16005f6](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/16005f6373db4ed2ead127fb4cf009465c738cc4))"
+  },
+  { "name": "ui5-middleware-livereload", "version": "0.4.1", "date": "2020-08-03T07:51:25.781Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  { "name": "ui5-middleware-livereload", "version": "0.4.2", "date": "2020-09-20T07:24:15.162Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.4.3",
+    "date": "2020-09-29T12:13:09.679Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **livereload:** ensure proper concat for extra exts ([#311](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/311)) ([cdf4b63](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/cdf4b633d9b4ad30e209038e08dcfe24277712cc))"
+  },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.5.0",
+    "date": "2020-12-17T08:32:17.182Z",
+    "changelog": "### Features\r\n\r\n* **livereload:** add exclusions option ([d65646c](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/d65646c1b1bffdda4a32be03d4d719a92daab96b))"
+  },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.5.1",
+    "date": "2020-12-17T09:04:40.016Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **livereload:** adopted docu of exclusion patterns ([047188d](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/047188d2269300aff712c8bdecb6a3bb8bfbba5c))"
+  },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.5.2",
+    "date": "2021-02-10T13:58:59.029Z",
+    "changelog": "### Bug Fixes\r\n\r\n* non-specified exclusions crash the server ([d76efb5](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/d76efb51b8b47f82af9d3474e9555fc6901808eb))"
+  },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.5.3",
+    "date": "2021-03-22T19:58:53.657Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **livereload:** support HTTP/2 --h2 option ([#511](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/511)) ([6d28f06](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/6d28f06de2c9572f82a979a44b6e3b7d5b80c2bd))"
+  },
+  { "name": "ui5-middleware-livereload", "version": "0.5.4", "date": "2021-05-05T19:24:40.462Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  { "name": "ui5-middleware-livereload", "version": "0.5.5", "date": "2021-08-07T20:04:24.258Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  { "name": "ui5-middleware-livereload", "version": "0.5.6", "date": "2021-10-28T21:10:55.256Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.5.7",
+    "date": "2021-10-28T21:58:57.686Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **livereload:** correction of indentation ([39fe59a](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/39fe59adbaaa522d99bb2bf624ebb239020bb1de))"
+  },
+  { "name": "ui5-middleware-livereload", "version": "0.5.8", "date": "2021-10-29T20:23:03.911Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  { "name": "ui5-middleware-livereload", "version": "0.5.9", "date": "2022-02-07T22:15:26.338Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  { "name": "ui5-middleware-livereload", "version": "0.5.10", "date": "2022-04-11T11:40:05.663Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.5.11",
+    "date": "2022-04-19T08:29:44.244Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-livereload", "version": "0.5.12", "date": "2022-05-22T20:38:44.801Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  { "name": "ui5-middleware-livereload", "version": "0.5.13", "date": "2022-05-23T07:04:00.443Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livereload" },
+  {
+    "name": "ui5-middleware-livereload",
+    "version": "0.6.0",
+    "date": "2022-06-22T05:38:17.995Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.0", "date": "2019-09-09T22:01:28.024Z", "changelog": "" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.1", "date": "2019-09-10T05:16:55.807Z", "changelog": "" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.2", "date": "2019-10-13T08:53:48.784Z", "changelog": "" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.3", "date": "2019-10-13T09:21:27.852Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.4", "date": "2019-10-13T10:14:29.166Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.5", "date": "2020-02-25T21:51:09.950Z", "changelog": "" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.6", "date": "2020-03-20T06:46:12.942Z", "changelog": "" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.7", "date": "2020-03-25T07:04:05.807Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  {
+    "name": "ui5-middleware-livetranspile",
+    "version": "0.1.8",
+    "date": "2020-04-04T12:08:32.796Z",
+    "changelog": "### Bug Fixes\r\n\r\n* avoid undefined exception with empty path ([effc994](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/effc994013c0f5eae69c0797c70e7609a070399e))"
+  },
+  { "name": "ui5-middleware-livetranspile", "version": "0.1.9", "date": "2020-05-01T14:48:07.646Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  {
+    "name": "ui5-middleware-livetranspile",
+    "version": "0.2.0",
+    "date": "2020-05-24T09:29:56.346Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  {
+    "name": "ui5-middleware-livetranspile",
+    "version": "0.2.1",
+    "date": "2020-05-27T07:11:18.126Z",
+    "changelog": "### Bug Fixes\r\n\r\n* safeguard options (closes [#217](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/217)) ([#218](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/218)) ([bcea7c9](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/bcea7c933a65764aa374397fdb1366cec3ed208f))"
+  },
+  { "name": "ui5-middleware-livetranspile", "version": "0.2.2", "date": "2020-07-17T22:05:39.670Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.2.3", "date": "2020-08-03T07:51:25.718Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.2.4", "date": "2020-09-20T07:24:15.037Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  {
+    "name": "ui5-middleware-livetranspile",
+    "version": "0.3.0",
+    "date": "2020-12-17T08:32:17.211Z",
+    "changelog": "### Features\r\n\r\n* allow for file patterns as JS input source ([#364](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/364)) ([fe41414](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/fe41414a2375d0954d48c870c6b65686b6b32029))"
+  },
+  { "name": "ui5-middleware-livetranspile", "version": "0.3.1", "date": "2021-05-05T19:24:40.833Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.3.2", "date": "2021-08-07T20:04:24.186Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  {
+    "name": "ui5-middleware-livetranspile",
+    "version": "0.3.3",
+    "date": "2021-10-28T21:10:55.213Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **deps:** update dependencies version ([2444781](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/2444781b4b2b7215b8e891dfe65c42167a668f66))"
+  },
+  { "name": "ui5-middleware-livetranspile", "version": "0.3.4", "date": "2021-10-29T20:23:04.022Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.3.5", "date": "2022-02-07T22:15:28.811Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.3.6", "date": "2022-02-22T20:21:32.606Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  {
+    "name": "ui5-middleware-livetranspile",
+    "version": "0.3.7",
+    "date": "2022-02-24T20:28:10.735Z",
+    "changelog": "### Bug Fixes\r\n\r\n* ensure middlewares work with Karma connect middleware ([#584](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/584)) ([c0ae49f](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/c0ae49fbcf49c6f667c86bfca291beefe6b74f27))"
+  },
+  { "name": "ui5-middleware-livetranspile", "version": "0.3.8", "date": "2022-04-11T11:40:05.788Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  {
+    "name": "ui5-middleware-livetranspile",
+    "version": "0.3.9",
+    "date": "2022-04-19T08:29:44.216Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-livetranspile", "version": "0.3.10", "date": "2022-05-22T20:38:44.931Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-livetranspile", "version": "0.3.11", "date": "2022-05-23T07:04:00.540Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  {
+    "name": "ui5-middleware-livetranspile",
+    "version": "0.4.0",
+    "date": "2022-06-22T05:38:18.728Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-middleware-livetranspile", "version": "0.4.1", "date": "2022-06-26T10:22:53.818Z", "changelog": "**Note:** Version bump only for package ui5-middleware-livetranspile" },
+  { "name": "ui5-middleware-onelogin", "version": "0.0.1", "date": "2022-01-19T00:15:38.434Z", "changelog": "" },
+  { "name": "ui5-middleware-onelogin", "version": "0.0.2", "date": "2022-01-19T03:09:31.006Z", "changelog": "" },
+  { "name": "ui5-middleware-onelogin", "version": "0.0.3", "date": "2022-01-19T03:19:59.146Z", "changelog": "" },
+  { "name": "ui5-middleware-onelogin", "version": "0.0.4", "date": "2022-01-19T12:31:29.079Z", "changelog": "" },
+  { "name": "ui5-middleware-onelogin", "version": "0.0.5", "date": "2022-01-24T23:57:15.654Z", "changelog": "" },
+  { "name": "ui5-middleware-onelogin", "version": "1.0.1", "date": "2022-02-07T12:25:37.520Z", "changelog": "" },
+  {
+    "name": "ui5-middleware-onelogin",
+    "version": "1.1.0",
+    "date": "2022-02-22T20:21:32.797Z",
+    "changelog": "### Features\r\n\r\n* **ui5-middleware-onelogin:** auth support for arbitrary services ([edfb188](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/edfb1886706a58c503b15ab7ce04745c32765828))"
+  },
+  { "name": "ui5-middleware-onelogin", "version": "1.2.0", "date": "2022-04-07T23:10:33.122Z", "changelog": "" },
+  { "name": "ui5-middleware-onelogin", "version": "1.2.1", "date": "2022-04-07T23:12:36.832Z", "changelog": "" },
+  {
+    "name": "ui5-middleware-onelogin",
+    "version": "1.2.2",
+    "date": "2022-04-11T11:40:06.267Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **onelogin:** added certificate handling to onelogin and prompts when username and password isn't added ([#599](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/599)) ([a879ab7](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/a879ab7edd83be807c46c2ea9f7ae51d0a5bb8df)), closes [#591](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/591) [#597](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/597) [#1](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/1) [#591](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/591) [#597](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/597) [#596](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/596)"
+  },
+  {
+    "name": "ui5-middleware-onelogin",
+    "version": "1.2.3",
+    "date": "2022-04-19T08:29:46.018Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-onelogin", "version": "1.2.4", "date": "2022-05-22T20:38:45.631Z", "changelog": "**Note:** Version bump only for package ui5-middleware-onelogin" },
+  { "name": "ui5-middleware-onelogin", "version": "1.2.5", "date": "2022-05-23T07:04:01.324Z", "changelog": "**Note:** Version bump only for package ui5-middleware-onelogin" },
+  {
+    "name": "ui5-middleware-onelogin",
+    "version": "2.0.0",
+    "date": "2022-06-22T05:38:19.314Z",
+    "changelog": "### chore\r\n\r\n* Added typedefs to onelogin and simpleproxy ([#620](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/620)) ([5404971](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/5404971fdff501e04347ed75125bc91ace98779a)), closes [#617](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/617) [#606](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/606)\r\n\r\n\r\n### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-middleware-onelogin", "version": "2.0.1", "date": "2022-06-26T10:22:54.520Z", "changelog": "**Note:** Version bump only for package ui5-middleware-onelogin" },
+  { "name": "ui5-middleware-servestatic", "version": "0.1.1", "date": "2019-10-13T08:53:48.899Z", "changelog": "" },
+  { "name": "ui5-middleware-servestatic", "version": "0.1.2", "date": "2019-10-13T10:14:29.543Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  { "name": "ui5-middleware-servestatic", "version": "0.1.3", "date": "2019-12-17T16:00:14.326Z", "changelog": "" },
+  { "name": "ui5-middleware-servestatic", "version": "0.1.4", "date": "2020-02-25T21:51:09.914Z", "changelog": "" },
+  { "name": "ui5-middleware-servestatic", "version": "0.1.5", "date": "2020-03-25T07:04:05.817Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  { "name": "ui5-middleware-servestatic", "version": "0.1.6", "date": "2020-04-04T12:08:32.714Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  {
+    "name": "ui5-middleware-servestatic",
+    "version": "0.2.0",
+    "date": "2020-05-01T14:48:08.073Z",
+    "changelog": "### Features\r\n\r\n* add error handling ([1f51951](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/1f519513f7989f6640f593666cfe9d45f68643a1))\r\n* add option to allow paths from .env file ([6152658](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/615265803985c6ed8fd9f6bf785a9eccc42e6fb2))\r\n* use regex logic to detect .env config option ([d7b0c67](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/d7b0c6713343ae80f7115dd7b5cce8382dfb64d6))"
+  },
+  {
+    "name": "ui5-middleware-servestatic",
+    "version": "0.3.0",
+    "date": "2020-05-24T09:29:49.344Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.1", "date": "2020-07-17T22:05:39.640Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  {
+    "name": "ui5-middleware-servestatic",
+    "version": "0.3.2",
+    "date": "2020-08-03T07:51:25.689Z",
+    "changelog": "### Bug Fixes\r\n\r\n* use absolute path for servestatic middleware ([c6086ec](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c6086ec057411188b240e722e751a0341c70647a)), closes [#278](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/278)"
+  },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.3", "date": "2020-09-20T07:24:15.190Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.4", "date": "2021-05-05T19:24:39.848Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.5", "date": "2021-08-07T20:04:24.114Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  {
+    "name": "ui5-middleware-servestatic",
+    "version": "0.3.6",
+    "date": "2021-10-28T21:37:16.985Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **servestatic:** fixed docu ([e38aef1](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/e38aef160b08a25579ee28a7e9e86e8cf1758065))"
+  },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.7", "date": "2021-10-29T20:23:04.609Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.8", "date": "2022-02-07T22:15:30.874Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.9", "date": "2022-02-22T20:21:33.242Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.10", "date": "2022-04-11T11:40:06.394Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  {
+    "name": "ui5-middleware-servestatic",
+    "version": "0.3.11",
+    "date": "2022-04-19T08:29:45.963Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.12", "date": "2022-05-22T20:38:45.720Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  { "name": "ui5-middleware-servestatic", "version": "0.3.13", "date": "2022-05-23T07:04:01.529Z", "changelog": "**Note:** Version bump only for package ui5-middleware-servestatic" },
+  {
+    "name": "ui5-middleware-servestatic",
+    "version": "0.4.0",
+    "date": "2022-06-22T05:38:19.458Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.1.0", "date": "2019-09-09T22:01:28.428Z", "changelog": "" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.1.1", "date": "2019-09-10T05:16:55.254Z", "changelog": "" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.1.2", "date": "2019-10-13T08:53:49.230Z", "changelog": "" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.1.3", "date": "2019-10-13T10:14:28.716Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.1.4", "date": "2019-12-17T16:00:14.288Z", "changelog": "" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.1.5", "date": "2020-02-25T21:51:10.010Z", "changelog": "" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.2.0",
+    "date": "2020-03-25T07:04:06.187Z",
+    "changelog": "### Features\r\n\r\n* Accepts self-signed certificates (HTTPS) ([d9a85aa](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/d9a85aabccd2b7346b97240350749f569b616a80))"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.2.1", "date": "2020-04-04T12:08:32.858Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.2.2", "date": "2020-05-01T14:48:08.322Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.2.3",
+    "date": "2020-05-05T14:47:27.854Z",
+    "changelog": "### Bug Fixes\r\n\r\n* add .dotenv as direct dependency to simpleproxy ([77d4360](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/77d436004d187cb696f98cc0d742ee1ad2a75b0e))"
+  },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.3.0",
+    "date": "2020-05-24T09:29:49.445Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.3.1",
+    "date": "2020-06-23T18:36:37.866Z",
+    "changelog": "### Bug Fixes\r\n\r\n* removes the secure flag of cookies when proxying https resources ([9a9be0d](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/9a9be0d204d9e493b93c0f1eae74fe80621ff4fa)), closes [#236](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/236)"
+  },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.3.2",
+    "date": "2020-07-06T10:01:57.215Z",
+    "changelog": "### Bug Fixes\r\n\r\n* Removing domain, path, samesite flags from cookie while proxying ([#247](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/247)) ([bb1fdcd](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/bb1fdcd31c23d84113acfbcbf014f5b0ac1a0642)), closes [#236](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/236) [#236](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/236) [#236](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/236)"
+  },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.4.0",
+    "date": "2020-07-17T22:05:39.704Z",
+    "changelog": "### Features\r\n\r\n* Enhance simpleproxy with adding configuration option for http headers ([#250](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/250)) ([8cfd528](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/8cfd528db846e40d940f854adc215a18c6b002ae))"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.4.1", "date": "2020-09-20T07:24:15.054Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.5.0",
+    "date": "2020-09-29T12:13:09.741Z",
+    "changelog": "### Features\r\n\r\n* **simpleproxy:** allow to increase payload limit ([7c5bbfb](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/7c5bbfb72d2196b02bc14e7bd7313de0584b5e7e))"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.5.1", "date": "2020-09-29T12:26:41.205Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.6.0",
+    "date": "2020-11-03T19:30:55.241Z",
+    "changelog": "### Features\r\n\r\n* Add basic authentication ([4299350](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/4299350fb45fc1700d64f8bbee80f44b6f0e46e4))"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.6.1", "date": "2020-12-17T08:32:17.147Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.7.0",
+    "date": "2021-01-25T13:38:21.244Z",
+    "changelog": "### Features\r\n\r\n* **simpleproxy:** Support configuration of proxied url parameters via .env and ui5.yaml  ([#440](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/440)) ([dafd66c](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/dafd66cd63d93553e7cf6dc797ef84c48e8575b6))"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.7.1", "date": "2021-03-06T10:41:58.441Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.7.2", "date": "2021-05-05T19:24:40.073Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.7.3",
+    "date": "2021-08-07T20:04:24.320Z",
+    "changelog": "### Bug Fixes\r\n\r\n* encoding of full url ([61e3a64](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/61e3a6418f412a045066ddcb5aa96e890170a6ec))"
+  },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.7.4",
+    "date": "2021-10-28T21:10:55.162Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **deps:** update dependencies version ([2444781](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/2444781b4b2b7215b8e891dfe65c42167a668f66))"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.7.5", "date": "2021-10-29T20:23:04.667Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.7.6", "date": "2021-12-26T09:54:40.269Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.8.0",
+    "date": "2022-02-22T20:21:33.568Z",
+    "changelog": "### Features\r\n\r\n* **SimpleProxy:**  added a feature to skip the server cache  ([#579](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/579)) ([e9e0785](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/e9e0785c6a1eae3b475c586eb25f6ae8610a76ce))"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.8.1", "date": "2022-04-11T11:40:06.822Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.8.2",
+    "date": "2022-04-19T08:29:46.949Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.8.3", "date": "2022-05-22T20:38:46.202Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  { "name": "ui5-middleware-simpleproxy", "version": "0.8.4", "date": "2022-05-23T07:04:02.076Z", "changelog": "**Note:** Version bump only for package ui5-middleware-simpleproxy" },
+  {
+    "name": "ui5-middleware-simpleproxy",
+    "version": "0.9.0",
+    "date": "2022-06-22T05:38:20.218Z",
+    "changelog": "### chore\r\n\r\n* Added typedefs to onelogin and simpleproxy ([#620](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/620)) ([5404971](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/5404971fdff501e04347ed75125bc91ace98779a)), closes [#617](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/617) [#606](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/606)\r\n\r\n\r\n* Updated typedefs on simpleproxy (#621) ([75e8610](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/75e8610c95157f6b3e0a32837a4e3300c19cc5fe)), closes [#621](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/621) [#617](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/617) [#606](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/606)\r\n\r\n\r\n### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-middleware-stringreplacer",
+    "version": "0.2.0",
+    "date": "2020-09-29T12:13:10.120Z",
+    "changelog": "### Features\r\n\r\n* **stringreplacer:** new middleware and alignment of task ([40dcb4d](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/40dcb4d4442b0262699a779a13b565d8bba07a87))"
+  },
+  { "name": "ui5-middleware-stringreplacer", "version": "0.2.1", "date": "2021-01-06T07:54:13.960Z", "changelog": "**Note:** Version bump only for package ui5-middleware-stringreplacer" },
+  { "name": "ui5-middleware-stringreplacer", "version": "0.2.2", "date": "2021-05-05T19:24:40.402Z", "changelog": "**Note:** Version bump only for package ui5-middleware-stringreplacer" },
+  { "name": "ui5-middleware-stringreplacer", "version": "0.2.3", "date": "2021-08-07T20:04:24.142Z", "changelog": "**Note:** Version bump only for package ui5-middleware-stringreplacer" },
+  {
+    "name": "ui5-middleware-stringreplacer",
+    "version": "0.2.4",
+    "date": "2021-09-29T18:46:38.369Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-*-stringreplacer:** documentation issues ([ae41da2](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae41da2247f15726634ca0f0bd7c784deb63a99d)), closes [#538](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/538)"
+  },
+  { "name": "ui5-middleware-stringreplacer", "version": "0.2.5", "date": "2021-10-29T20:23:05.391Z", "changelog": "**Note:** Version bump only for package ui5-middleware-stringreplacer" },
+  {
+    "name": "ui5-middleware-stringreplacer",
+    "version": "0.3.0",
+    "date": "2021-12-26T09:54:44.907Z",
+    "changelog": "### Features\r\n\r\n* **ui5-task-stringreplacer,ui5-middleware-stringreplacer:** support for multiple .env files ([29e246a](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/29e246abba7b82f0f42a6f16316e5029de638d26)), closes [#545](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/545)"
+  },
+  { "name": "ui5-middleware-stringreplacer", "version": "0.3.1", "date": "2022-02-22T20:21:33.834Z", "changelog": "**Note:** Version bump only for package ui5-middleware-stringreplacer" },
+  {
+    "name": "ui5-middleware-stringreplacer",
+    "version": "0.3.2",
+    "date": "2022-02-24T20:28:10.911Z",
+    "changelog": "### Bug Fixes\r\n\r\n* ensure middlewares work with Karma connect middleware ([#584](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/584)) ([c0ae49f](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/c0ae49fbcf49c6f667c86bfca291beefe6b74f27))"
+  },
+  { "name": "ui5-middleware-stringreplacer", "version": "0.3.3", "date": "2022-04-11T11:40:06.998Z", "changelog": "**Note:** Version bump only for package ui5-middleware-stringreplacer" },
+  {
+    "name": "ui5-middleware-stringreplacer",
+    "version": "0.3.4",
+    "date": "2022-04-19T08:29:47.070Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-stringreplacer", "version": "0.3.5", "date": "2022-05-22T20:38:46.463Z", "changelog": "**Note:** Version bump only for package ui5-middleware-stringreplacer" },
+  { "name": "ui5-middleware-stringreplacer", "version": "0.3.6", "date": "2022-05-23T07:04:02.230Z", "changelog": "**Note:** Version bump only for package ui5-middleware-stringreplacer" },
+  {
+    "name": "ui5-middleware-stringreplacer",
+    "version": "0.3.7",
+    "date": "2022-06-03T20:09:36.559Z",
+    "changelog": "### Bug Fixes\r\n\r\n* handle missing strings ([#617](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/617)) ([465be5a](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/465be5a3185b8509f812e058e73591a7c5488fe1))"
+  },
+  {
+    "name": "ui5-middleware-stringreplacer",
+    "version": "0.4.0",
+    "date": "2022-06-22T05:38:20.318Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-middleware-stringreplacer",
+    "version": "0.4.1",
+    "date": "2022-06-26T10:22:54.513Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **stringreplacer:** respect also the placeholders from ui5.yaml ([#628](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/628)) ([cfb0fd5](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/cfb0fd5c6921c461057a8cf4a65c67f606a1742b)), closes [#626](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/626)"
+  },
+  {
+    "name": "ui5-middleware-webjars",
+    "version": "0.2.0",
+    "date": "2021-01-25T13:38:21.468Z",
+    "changelog": "### Features\r\n\r\n* **webjars:** support to serve content from JAR files ([#456](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/456)) ([b4ce282](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/b4ce282dde94b230175c02539c3e3c2d0487d478))"
+  },
+  {
+    "name": "ui5-middleware-webjars",
+    "version": "0.3.0",
+    "date": "2021-01-28T23:14:51.560Z",
+    "changelog": "### Features\r\n\r\n* **webjars:** enable support for classpath file ([#471](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/471)) ([b9c7b05](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/b9c7b0591dedc58a92786d7e537d4cf752665ec7))"
+  },
+  { "name": "ui5-middleware-webjars", "version": "0.3.1", "date": "2021-05-05T19:24:40.610Z", "changelog": "**Note:** Version bump only for package ui5-middleware-webjars" },
+  { "name": "ui5-middleware-webjars", "version": "0.3.2", "date": "2021-08-07T20:04:24.121Z", "changelog": "**Note:** Version bump only for package ui5-middleware-webjars" },
+  {
+    "name": "ui5-middleware-webjars",
+    "version": "0.3.3",
+    "date": "2021-10-28T21:10:55.231Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **deps:** update dependencies version ([2444781](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/2444781b4b2b7215b8e891dfe65c42167a668f66))"
+  },
+  { "name": "ui5-middleware-webjars", "version": "0.3.4", "date": "2021-10-29T20:23:05.353Z", "changelog": "**Note:** Version bump only for package ui5-middleware-webjars" },
+  { "name": "ui5-middleware-webjars", "version": "0.3.5", "date": "2022-02-22T20:29:00.509Z", "changelog": "**Note:** Version bump only for package ui5-middleware-webjars" },
+  { "name": "ui5-middleware-webjars", "version": "0.3.6", "date": "2022-04-11T11:40:07.526Z", "changelog": "**Note:** Version bump only for package ui5-middleware-webjars" },
+  {
+    "name": "ui5-middleware-webjars",
+    "version": "0.3.7",
+    "date": "2022-04-19T08:29:48.940Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-middleware-webjars", "version": "0.3.8", "date": "2022-05-22T20:38:46.943Z", "changelog": "**Note:** Version bump only for package ui5-middleware-webjars" },
+  { "name": "ui5-middleware-webjars", "version": "0.3.9", "date": "2022-05-23T07:04:02.899Z", "changelog": "**Note:** Version bump only for package ui5-middleware-webjars" },
+  {
+    "name": "ui5-middleware-webjars",
+    "version": "0.4.0",
+    "date": "2022-06-22T05:38:21.106Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-task-compileless",
+    "version": "0.2.0",
+    "date": "2021-05-15T09:03:12.642Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-task-compileless:** Fix typo in function parameter ([#521](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/521)) ([65040db](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/65040db9613306e7e2c803cb2990f63fbf52b715))\r\n\r\n\r\n### Features\r\n\r\n* Less support for app development ([#512](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/512)) ([d0b381f](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/d0b381f74213fd75942cc887adc66874982f2fbc))"
+  },
+  { "name": "ui5-task-compileless", "version": "0.2.1", "date": "2021-06-06T19:26:13.027Z", "changelog": "**Note:** Version bump only for package ui5-task-compileless" },
+  { "name": "ui5-task-compileless", "version": "0.2.2", "date": "2021-08-07T20:04:24.109Z", "changelog": "**Note:** Version bump only for package ui5-task-compileless" },
+  { "name": "ui5-task-compileless", "version": "0.2.3", "date": "2021-10-29T20:23:05.959Z", "changelog": "**Note:** Version bump only for package ui5-task-compileless" },
+  { "name": "ui5-task-compileless", "version": "0.2.4", "date": "2022-02-22T20:21:34.177Z", "changelog": "**Note:** Version bump only for package ui5-task-compileless" },
+  { "name": "ui5-task-compileless", "version": "0.2.5", "date": "2022-04-11T11:40:07.543Z", "changelog": "**Note:** Version bump only for package ui5-task-compileless" },
+  {
+    "name": "ui5-task-compileless",
+    "version": "0.2.6",
+    "date": "2022-04-19T08:29:55.741Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-task-compileless", "version": "0.2.7", "date": "2022-05-22T20:38:47.154Z", "changelog": "**Note:** Version bump only for package ui5-task-compileless" },
+  { "name": "ui5-task-compileless", "version": "0.2.8", "date": "2022-05-23T07:04:03.024Z", "changelog": "**Note:** Version bump only for package ui5-task-compileless" },
+  {
+    "name": "ui5-task-compileless",
+    "version": "0.3.0",
+    "date": "2022-06-22T05:38:20.980Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-task-flatten-library",
+    "version": "0.2.0",
+    "date": "2020-09-20T07:24:15.213Z",
+    "changelog": "### Features\r\n\r\n* **flatten-library:** flatten library in build result ([#301](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/301)) ([00d63e2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/00d63e2))"
+  },
+  {
+    "name": "ui5-task-flatten-library",
+    "version": "0.2.1",
+    "date": "2021-03-06T10:41:58.858Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **flatten-library:** Ignore resources tagged as 'omit from build result' ([7641241](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/7641241546a4031ddbbf1b0a7d2e5955da4352be))"
+  },
+  { "name": "ui5-task-flatten-library", "version": "0.2.2", "date": "2021-05-05T19:24:40.459Z", "changelog": "**Note:** Version bump only for package ui5-task-flatten-library" },
+  { "name": "ui5-task-flatten-library", "version": "0.2.3", "date": "2021-10-29T20:23:06.045Z", "changelog": "**Note:** Version bump only for package ui5-task-flatten-library" },
+  { "name": "ui5-task-flatten-library", "version": "0.2.4", "date": "2022-04-11T11:40:08.221Z", "changelog": "**Note:** Version bump only for package ui5-task-flatten-library" },
+  {
+    "name": "ui5-task-flatten-library",
+    "version": "0.2.5",
+    "date": "2022-04-19T08:29:55.943Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-task-flatten-library", "version": "0.2.6", "date": "2022-05-22T20:38:47.533Z", "changelog": "**Note:** Version bump only for package ui5-task-flatten-library" },
+  {
+    "name": "ui5-task-flatten-library",
+    "version": "0.2.7",
+    "date": "2022-06-03T20:09:36.526Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-task-flatten-library:** support files without extensions ([1aa61ee](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/1aa61ee4d448ab1056679d92ccd188f9c3a81e95)), closes [#606](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/606)"
+  },
+  {
+    "name": "ui5-task-flatten-library",
+    "version": "0.3.0",
+    "date": "2022-06-22T05:38:21.591Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-task-i18ncheck", "version": "0.0.1-security", "date": "2020-05-02T02:49:30.665Z", "changelog": "" },
+  { "name": "ui5-task-i18ncheck", "version": "0.2.1", "date": "2020-05-02T08:26:51.884Z", "changelog": "**Note:** Version bump only for package ui5-task-i18ncheck" },
+  {
+    "name": "ui5-task-i18ncheck",
+    "version": "0.3.0",
+    "date": "2020-05-24T09:29:49.491Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  { "name": "ui5-task-i18ncheck", "version": "0.3.1", "date": "2020-07-17T22:05:47.147Z", "changelog": "**Note:** Version bump only for package ui5-task-i18ncheck" },
+  { "name": "ui5-task-i18ncheck", "version": "0.3.2", "date": "2020-09-20T07:24:15.066Z", "changelog": "**Note:** Version bump only for package ui5-task-i18ncheck" },
+  { "name": "ui5-task-i18ncheck", "version": "0.3.3", "date": "2020-12-17T08:32:17.100Z", "changelog": "**Note:** Version bump only for package ui5-task-i18ncheck" },
+  { "name": "ui5-task-i18ncheck", "version": "0.3.4", "date": "2021-05-05T19:24:40.559Z", "changelog": "**Note:** Version bump only for package ui5-task-i18ncheck" },
+  { "name": "ui5-task-i18ncheck", "version": "0.3.5", "date": "2021-08-07T20:04:24.290Z", "changelog": "**Note:** Version bump only for package ui5-task-i18ncheck" },
+  { "name": "ui5-task-i18ncheck", "version": "0.3.6", "date": "2021-10-29T20:23:06.661Z", "changelog": "**Note:** Version bump only for package ui5-task-i18ncheck" },
+  { "name": "ui5-task-i18ncheck", "version": "0.3.7", "date": "2022-04-11T11:40:08.117Z", "changelog": "**Note:** Version bump only for package ui5-task-i18ncheck" },
+  {
+    "name": "ui5-task-i18ncheck",
+    "version": "0.3.8",
+    "date": "2022-04-19T08:29:56.433Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  {
+    "name": "ui5-task-i18ncheck",
+    "version": "0.3.9",
+    "date": "2022-05-22T20:38:47.786Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-task-i18ncheck:** update xmldom ([#616](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/616)) ([6e45c87](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/6e45c87172c366b6933c4a9b66cfee82af6d2d62)), closes [#613](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/613)"
+  },
+  {
+    "name": "ui5-task-minify-xml",
+    "version": "0.2.0",
+    "date": "2021-08-07T20:04:24.256Z",
+    "changelog": "### Features\r\n\r\n* add ui5-task-minify-xml based on minify-xml ([0ac05de](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/0ac05dea4a2b5100cec01c143fec2e706db1b645))"
+  },
+  { "name": "ui5-task-minify-xml", "version": "0.2.1", "date": "2021-10-28T21:10:55.118Z", "changelog": "**Note:** Version bump only for package ui5-task-minify-xml" },
+  { "name": "ui5-task-minify-xml", "version": "0.2.2", "date": "2021-10-29T20:23:06.618Z", "changelog": "**Note:** Version bump only for package ui5-task-minify-xml" },
+  { "name": "ui5-task-minify-xml", "version": "0.2.3", "date": "2022-02-07T22:15:32.215Z", "changelog": "**Note:** Version bump only for package ui5-task-minify-xml" },
+  { "name": "ui5-task-minify-xml", "version": "0.2.4", "date": "2022-04-11T11:40:08.671Z", "changelog": "**Note:** Version bump only for package ui5-task-minify-xml" },
+  {
+    "name": "ui5-task-minify-xml",
+    "version": "0.2.5",
+    "date": "2022-04-19T08:29:56.671Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-task-minify-xml", "version": "0.2.6", "date": "2022-05-22T20:38:48.072Z", "changelog": "**Note:** Version bump only for package ui5-task-minify-xml" },
+  { "name": "ui5-task-minify-xml", "version": "0.2.7", "date": "2022-05-23T07:04:03.637Z", "changelog": "**Note:** Version bump only for package ui5-task-minify-xml" },
+  {
+    "name": "ui5-task-minify-xml",
+    "version": "0.3.0",
+    "date": "2022-06-22T05:38:21.828Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-task-pwa-enabler", "version": "0.0.1-security", "date": "2020-05-26T23:40:15.530Z", "changelog": "" },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.1", "date": "2020-05-27T07:11:18.286Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.2", "date": "2020-07-17T22:05:40.843Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.3", "date": "2021-05-05T19:24:40.103Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.4", "date": "2021-08-07T20:04:27.383Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  {
+    "name": "ui5-task-pwa-enabler",
+    "version": "0.2.5",
+    "date": "2021-10-28T21:10:55.410Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **deps:** update dependencies version ([2444781](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/2444781b4b2b7215b8e891dfe65c42167a668f66))"
+  },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.6", "date": "2021-10-29T20:23:07.299Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.7", "date": "2022-02-07T22:15:33.367Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.8", "date": "2022-02-22T20:21:34.614Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.9", "date": "2022-04-11T11:40:08.739Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  {
+    "name": "ui5-task-pwa-enabler",
+    "version": "0.2.10",
+    "date": "2022-04-19T08:29:58.519Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.11", "date": "2022-05-22T20:38:48.611Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  { "name": "ui5-task-pwa-enabler", "version": "0.2.12", "date": "2022-05-23T07:04:03.790Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  {
+    "name": "ui5-task-pwa-enabler",
+    "version": "0.3.0",
+    "date": "2022-06-22T05:38:22.221Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-task-pwa-enabler", "version": "0.3.1", "date": "2022-06-26T10:22:55.318Z", "changelog": "**Note:** Version bump only for package ui5-task-pwa-enabler" },
+  { "name": "ui5-task-stringreplacer", "version": "0.1.0", "date": "2020-05-23T10:26:14.586Z", "changelog": "" },
+  { "name": "ui5-task-stringreplacer", "version": "0.2.0", "date": "2020-05-25T05:43:45.545Z", "changelog": "" },
+  { "name": "ui5-task-stringreplacer", "version": "0.3.0", "date": "2020-05-25T13:21:41.211Z", "changelog": "" },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.4.0",
+    "date": "2020-05-27T07:11:18.105Z",
+    "changelog": "### Features\r\n\r\n* new custom task - stringsreplacer ([#215](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/215)) ([2e02864](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/2e02864ce89da0f200c3a7da440706370771a8a7))"
+  },
+  { "name": "ui5-task-stringreplacer", "version": "0.4.1", "date": "2020-07-17T22:05:40.254Z", "changelog": "**Note:** Version bump only for package ui5-task-stringreplacer" },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.5.0",
+    "date": "2020-09-29T12:13:09.627Z",
+    "changelog": "### Features\r\n\r\n* **stringreplacer:** new middleware and alignment of task ([40dcb4d](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/40dcb4d4442b0262699a779a13b565d8bba07a87))"
+  },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.5.1",
+    "date": "2020-11-12T10:00:38.967Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **stringreplacer:** added lodash dependency to package.json ([1315a5b](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/1315a5bf4809b7b36f9c38e5f1bc2b1371a7d8c8))"
+  },
+  { "name": "ui5-task-stringreplacer", "version": "0.5.2", "date": "2021-05-05T19:24:43.637Z", "changelog": "**Note:** Version bump only for package ui5-task-stringreplacer" },
+  { "name": "ui5-task-stringreplacer", "version": "0.5.3", "date": "2021-08-07T20:04:26.923Z", "changelog": "**Note:** Version bump only for package ui5-task-stringreplacer" },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.5.4",
+    "date": "2021-09-29T18:46:38.341Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-*-stringreplacer:** documentation issues ([ae41da2](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae41da2247f15726634ca0f0bd7c784deb63a99d)), closes [#538](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/538)"
+  },
+  { "name": "ui5-task-stringreplacer", "version": "0.5.5", "date": "2021-10-29T20:23:07.246Z", "changelog": "**Note:** Version bump only for package ui5-task-stringreplacer" },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.6.0",
+    "date": "2021-12-26T09:54:44.906Z",
+    "changelog": "### Features\r\n\r\n* **ui5-task-stringreplacer,ui5-middleware-stringreplacer:** support for multiple .env files ([29e246a](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/29e246abba7b82f0f42a6f16316e5029de638d26)), closes [#545](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/545)"
+  },
+  { "name": "ui5-task-stringreplacer", "version": "0.6.1", "date": "2022-02-22T20:21:34.887Z", "changelog": "**Note:** Version bump only for package ui5-task-stringreplacer" },
+  { "name": "ui5-task-stringreplacer", "version": "0.6.2", "date": "2022-04-11T11:40:09.207Z", "changelog": "**Note:** Version bump only for package ui5-task-stringreplacer" },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.6.3",
+    "date": "2022-04-19T08:29:59.324Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-task-stringreplacer", "version": "0.6.4", "date": "2022-05-22T20:38:48.695Z", "changelog": "**Note:** Version bump only for package ui5-task-stringreplacer" },
+  { "name": "ui5-task-stringreplacer", "version": "0.6.5", "date": "2022-05-23T07:04:04.256Z", "changelog": "**Note:** Version bump only for package ui5-task-stringreplacer" },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.6.6",
+    "date": "2022-06-03T20:09:37.285Z",
+    "changelog": "### Bug Fixes\r\n\r\n* handle missing strings ([#617](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/617)) ([465be5a](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/465be5a3185b8509f812e058e73591a7c5488fe1))"
+  },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.7.0",
+    "date": "2022-06-22T05:38:22.934Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-task-stringreplacer",
+    "version": "0.7.1",
+    "date": "2022-06-26T10:22:55.401Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **stringreplacer:** respect also the placeholders from ui5.yaml ([#628](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/628)) ([cfb0fd5](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/cfb0fd5c6921c461057a8cf4a65c67f606a1742b)), closes [#626](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/626)"
+  },
+  { "name": "ui5-task-transpile", "version": "0.1.0", "date": "2019-09-09T22:01:27.995Z", "changelog": "" },
+  { "name": "ui5-task-transpile", "version": "0.1.1", "date": "2019-09-10T05:16:55.773Z", "changelog": "" },
+  { "name": "ui5-task-transpile", "version": "0.1.2", "date": "2019-10-13T08:53:49.182Z", "changelog": "" },
+  { "name": "ui5-task-transpile", "version": "0.1.3", "date": "2020-02-25T21:51:09.443Z", "changelog": "" },
+  { "name": "ui5-task-transpile", "version": "0.1.4", "date": "2020-03-20T06:46:12.266Z", "changelog": "" },
+  { "name": "ui5-task-transpile", "version": "0.1.5", "date": "2020-03-25T07:04:05.339Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.1.6", "date": "2020-04-04T12:08:36.227Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.1.7", "date": "2020-05-01T14:48:07.859Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  {
+    "name": "ui5-task-transpile",
+    "version": "0.2.0",
+    "date": "2020-05-24T09:29:48.934Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  { "name": "ui5-task-transpile", "version": "0.2.1", "date": "2020-07-17T22:05:39.669Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.2.2", "date": "2020-08-03T07:51:25.865Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.2.3", "date": "2020-09-20T07:24:14.998Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  {
+    "name": "ui5-task-transpile",
+    "version": "0.3.0",
+    "date": "2020-12-17T08:32:17.210Z",
+    "changelog": "### Features\r\n\r\n* allow for file patterns as JS input source ([#364](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/364)) ([fe41414](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/fe41414a2375d0954d48c870c6b65686b6b32029))"
+  },
+  { "name": "ui5-task-transpile", "version": "0.3.1", "date": "2021-05-05T19:24:45.647Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.3.2", "date": "2021-08-07T20:04:26.955Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  {
+    "name": "ui5-task-transpile",
+    "version": "0.3.3",
+    "date": "2021-10-28T21:10:55.232Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **deps:** update dependencies version ([2444781](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/2444781b4b2b7215b8e891dfe65c42167a668f66))"
+  },
+  { "name": "ui5-task-transpile", "version": "0.3.4", "date": "2021-10-29T20:23:07.931Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.3.5", "date": "2022-02-07T22:15:34.661Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.3.6", "date": "2022-02-22T20:21:35.283Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.3.7", "date": "2022-04-11T11:40:09.301Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  {
+    "name": "ui5-task-transpile",
+    "version": "0.3.8",
+    "date": "2022-04-19T08:30:05.073Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-task-transpile", "version": "0.3.9", "date": "2022-05-22T20:38:49.256Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-transpile", "version": "0.3.10", "date": "2022-05-23T07:04:04.432Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  {
+    "name": "ui5-task-transpile",
+    "version": "0.4.0",
+    "date": "2022-06-22T05:38:23.628Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  { "name": "ui5-task-transpile", "version": "0.4.1", "date": "2022-06-26T10:22:56.075Z", "changelog": "**Note:** Version bump only for package ui5-task-transpile" },
+  { "name": "ui5-task-zipper", "version": "0.1.0", "date": "2020-02-13T21:31:22.452Z", "changelog": "" },
+  { "name": "ui5-task-zipper", "version": "0.1.1", "date": "2020-02-25T21:51:09.920Z", "changelog": "" },
+  { "name": "ui5-task-zipper", "version": "0.1.2", "date": "2020-03-20T06:46:12.310Z", "changelog": "" },
+  { "name": "ui5-task-zipper", "version": "0.1.3", "date": "2020-03-25T07:04:05.354Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.1.4", "date": "2020-04-04T12:08:32.702Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.1.5", "date": "2020-05-01T14:48:07.718Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  {
+    "name": "ui5-task-zipper",
+    "version": "0.2.0",
+    "date": "2020-05-06T13:58:17.547Z",
+    "changelog": "### Features\r\n\r\n* **zipper:** allow to include additional files ([#198](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/198)) ([abf6d01](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/abf6d016d955a49763c59ac508b6267a760052e9))"
+  },
+  {
+    "name": "ui5-task-zipper",
+    "version": "0.3.0",
+    "date": "2020-05-24T09:29:49.376Z",
+    "changelog": "### Features\r\n\r\n* **pwa:** added pwa build for sample application ([c36baf2](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/c36baf24ed93e4e3634374c7ddcd426b8818876f))"
+  },
+  { "name": "ui5-task-zipper", "version": "0.3.1", "date": "2020-07-17T22:05:39.687Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.3.2", "date": "2020-09-20T07:24:15.016Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  {
+    "name": "ui5-task-zipper",
+    "version": "0.4.0",
+    "date": "2020-12-17T08:32:17.130Z",
+    "changelog": "### Features\r\n\r\n* add \"keepResources\" config flag + fix bug with missing dependencies ([#385](https://github.com/petermuessig/ui5-ecosystem-showcase/issues/385)) ([aaaab50](https://github.com/petermuessig/ui5-ecosystem-showcase/commit/aaaab508a5a64068b91207178b08a24dfe8f65a3))"
+  },
+  { "name": "ui5-task-zipper", "version": "0.4.1", "date": "2021-01-05T12:13:21.814Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.4.2", "date": "2021-01-25T13:38:21.252Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.4.3", "date": "2021-05-05T19:24:45.837Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  {
+    "name": "ui5-task-zipper",
+    "version": "0.4.4",
+    "date": "2021-09-29T18:46:38.499Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-task-zipper:** Absolute Path Error for Third Party Dependencies ([#541](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/541)) ([fd6f022](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/fd6f0224c8b43a9252a233677c8bffb82521d991))"
+  },
+  { "name": "ui5-task-zipper", "version": "0.4.5", "date": "2021-10-28T21:10:55.148Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.4.6", "date": "2021-10-29T20:23:08.077Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.4.7", "date": "2021-10-29T20:28:57.097Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.4.8", "date": "2022-02-22T20:21:35.616Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.4.9", "date": "2022-02-22T20:29:00.489Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  { "name": "ui5-task-zipper", "version": "0.4.10", "date": "2022-04-11T11:40:09.941Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  {
+    "name": "ui5-task-zipper",
+    "version": "0.4.11",
+    "date": "2022-04-19T08:30:04.999Z",
+    "changelog": "### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  {
+    "name": "ui5-task-zipper",
+    "version": "0.4.12",
+    "date": "2022-05-22T20:38:49.389Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **zipper:** rename Readme ([#612](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/612)) ([1c01013](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/1c01013fd22a0ea71db781fe9655849fec06964d))"
+  },
+  { "name": "ui5-task-zipper", "version": "0.4.13", "date": "2022-05-23T07:04:04.946Z", "changelog": "**Note:** Version bump only for package ui5-task-zipper" },
+  {
+    "name": "ui5-task-zipper",
+    "version": "0.5.0",
+    "date": "2022-06-22T05:38:24.372Z",
+    "changelog": "### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.1.0",
+    "date": "2021-11-09T10:37:14.114Z",
+    "changelog": "### Features\r\n\r\n* **ui5-tooling-modules:** new extensions to consume npm packages ([a8706cc](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/a8706ccec92d257bccb22d143fa366d77db0ebf8))"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.1.1",
+    "date": "2021-12-26T09:54:47.638Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** added missing dependency to @ui5/fs ([4c26fdc](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/4c26fdc6b619619119462ea9ea35d84e43311e54))"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.1.2",
+    "date": "2022-02-07T22:15:35.845Z",
+    "changelog": "### Bug Fixes\r\n\r\n* build task error message  ([#559](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/559)) ([a488791](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/a4887914f0aa8ac30e00448dc65d1ff8466d1ff5))\r\n* **ui5-tooling-modules:** include json, polyfill node.js modules ([9054961](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/9054961f252dcdd7557cb21c63095ab5c436114d)), closes [#564](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/564)"
+  },
+  { "name": "ui5-tooling-modules", "version": "0.1.3", "date": "2022-02-22T20:21:35.993Z", "changelog": "**Note:** Version bump only for package ui5-tooling-modules" },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.2.0",
+    "date": "2022-02-24T20:28:11.368Z",
+    "changelog": "### Features\r\n\r\n* **ui5-tooling-modules:** extended UI5 modules support ([#583](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/583)) ([fe2c8a7](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/fe2c8a72c9fa5e906db56ecf86c83621d0585eb8)), closes [#578](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/578)"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.2.1",
+    "date": "2022-02-27T13:20:23.468Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** skip css and simulate process.env ([#585](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/585)) ([e6f246c](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/e6f246c057228c9b3ae3c45fcc952fbcd8375a96))"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.2.2",
+    "date": "2022-03-04T14:44:34.130Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** ensure to export \"exports\" not default for cjs ([5c39eae](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/5c39eae5a0db2ff8ad46fcfdec804c13da0cfd32)), closes [#589](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/589)"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.2.3",
+    "date": "2022-03-18T13:38:06.312Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** ignore #text nodes in XMLViews ([e884428](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/e8844287e46a894d3b6ad9b65907782043b755ac))"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.2.4",
+    "date": "2022-03-24T17:43:42.960Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** ignore module parsing errors ([6154519](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/61545196498a65bdb1b7f432c68e815e9458fad0))"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.2.5",
+    "date": "2022-03-26T08:01:23.272Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** usage of replaceAll produces error while building ([#591](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/591)) ([f07c0a5](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/f07c0a5ff08963a232c873bd195ecda949cf9719))"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.2.6",
+    "date": "2022-04-07T13:44:20.014Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** add node polyfills later ([#597](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/597)) ([58b8dcd](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/58b8dcdd0c383a59bdf8c33fc224f700494d8d4e))"
+  },
+  { "name": "ui5-tooling-modules", "version": "0.2.7", "date": "2022-04-11T11:40:10.055Z", "changelog": "**Note:** Version bump only for package ui5-tooling-modules" },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.3.0",
+    "date": "2022-04-19T08:30:06.858Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** fix espree issues, add prettier ([#603](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/603)) ([b9f0f58](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b9f0f5818ffd67fc2ad4722841bb227b1141766a))\r\n* **ui5-tooling-modules:** try/catch require.resolve for modules ([#604](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/604)) ([264f43b](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/264f43b5d4cc7e1ff35e877c6d6b9096cb793496))\r\n\r\n\r\n### Features\r\n\r\n* **ui5-tooling-modules:** allow to prepend path mappings for Component ([#605](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/605)) ([71e8ac6](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/71e8ac6d83d97859a2aae00d32651a2fc0fb42bc))\r\n\r\n\r\n### Reverts\r\n\r\n* Revert \"chore: add metadata to `package.json` for all packages for ui5-community website (#600)\" (#601) ([b6037d4](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/b6037d4d397275ad2d83e7f18415c45a878c76bf)), closes [#600](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/600) [#601](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/601)"
+  },
+  { "name": "ui5-tooling-modules", "version": "0.3.1", "date": "2022-05-22T20:38:50.128Z", "changelog": "**Note:** Version bump only for package ui5-tooling-modules" },
+  { "name": "ui5-tooling-modules", "version": "0.3.2", "date": "2022-05-23T07:04:05.164Z", "changelog": "**Note:** Version bump only for package ui5-tooling-modules" },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.3.3",
+    "date": "2022-06-03T20:09:37.268Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** add support for pnpm/symlinks and AMD ([#618](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/618)) ([69922ca](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/69922ca6987946f6484c9365ea3f46415f1ed9f3))"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.4.0",
+    "date": "2022-06-22T05:38:25.078Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** avoid stackoverflow for html tags in xmlviews ([#625](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/625)) ([41bcf09](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/41bcf090b1d4f95f2aa5b9a279079009b64a66f7)), closes [#622](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/622)\r\n\r\n\r\n### Features\r\n\r\n* replace yarn with pnpm ([#619](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/619)) ([ae7f654](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/ae7f6544f010d4b97c8a4db28ea89d01389b5fb5))\r\n\r\n\r\n### BREAKING CHANGES\r\n\r\n* new package manager\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* refactor: iasync still failing\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix(ui5-app): make Karma work with pnpm\r\n\r\n* chore(ui5-app): remove uiveri5 from sample\r\n\r\n* chore(ui5-app): add updated wdio.conf\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: fix cf_dest tests\r\n\r\nrestructured tests and added node_modules as symlink\r\n\r\n* fix(ui5-app): adding eslint for wdio and mocha\r\n\r\n* chore(ui5-middleware-cfdestination): cleanup\r\n\r\n* feat(ui5-tooling-modules): add bundling support for AMD\r\n\r\n* chore(ui5-tooling-modules): cleanup\r\n\r\n* chore: fix code style\r\n\r\n* fix(ui5-task-flatten-library): support files without extensions\r\n\r\n* refactor: updated tests to pass with pnpm\r\n\r\n* feat(ui5-tooling-modules): support pnpm / node_modules symlinks\r\n\r\n* fix: make prettier and eslint work with pnpm\r\n\r\n* fix: update actions, lerna, vscode for pnpm\r\n\r\n* chore: only run test on tooling extensions\r\n\r\n* chore: use sequential tests for ava\r\n\r\n* chore: add @ui5/cli dev dependency for ava tests\r\n\r\n* chore: enable support for local act GH action tests\r\n\r\n* chore: add docu for local GitHub action execution\r\n\r\n* chore: docu cleanup\r\n\r\n* chore: re-add ncu scripts\r\n\r\nCo-authored-by: Peter Muessig <peter.muessig@sap.com>"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.5.0",
+    "date": "2022-06-26T10:22:56.048Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** move nodePolyFills back to front ([#630](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/630)) ([1a2a39f](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/1a2a39fd5034866a0a42a9ea153939dae89ec268))\r\n\r\n\r\n### Features\r\n\r\n* **ui5-tooling-modules:** fix AMD bundling and filter Node built-ins ([#627](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/627)) ([0ad6e6e](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/0ad6e6e26a4b8a6ea1ec95721945696329dda9aa)), closes [#623](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/623)"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.5.1",
+    "date": "2022-06-26T18:58:13.759Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **ui5-tooling-modules:** properly consider browser, module, main fallback+ ([#631](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/631)) ([63b606e](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/63b606e38190543aea51197ea7db7ce81c1b1cf1))"
+  },
+  {
+    "name": "ui5-tooling-modules",
+    "version": "0.6.0",
+    "date": "2022-06-27T09:36:02.447Z",
+    "changelog": "### Features\r\n\r\n* **ui5-tooling-modules:** support app-local bundle defs ([#632](https://github.com/ui5-community/ui5-ecosystem-showcase/issues/632)) ([9375433](https://github.com/ui5-community/ui5-ecosystem-showcase/commit/9375433b494bdbea79c6a13f3331087e14a1966e))"
+  },
+  { "name": "ui5-cc-md", "version": "0.0.1", "date": "2021-02-12T15:50:11.988Z", "changelog": "" },
+  { "name": "ui5-cc-md", "version": "0.0.2", "date": "2021-02-15T19:21:33.001Z", "changelog": "" },
+  { "name": "ui5-cc-md", "version": "0.0.3", "date": "2021-07-14T11:22:41.548Z", "changelog": "" },
+  { "name": "ui5-cc-md", "version": "0.0.4", "date": "2022-03-21T14:30:09.531Z", "changelog": "" },
+  { "name": "ui5-cc-md", "version": "0.0.5", "date": "2022-04-13T19:36:13.096Z", "changelog": "" },
+  { "name": "ui5-cc-md", "version": "0.0.6", "date": "2022-04-14T11:59:35.786Z", "changelog": "" },
+  { "name": "ui5-cc-chart", "version": "0.1.0", "date": "2022-05-09T16:01:08.925Z", "changelog": "" },
+  {
+    "name": "ui5-cc-chart",
+    "version": "0.1.1",
+    "date": "2022-05-10T20:38:40.752Z",
+    "changelog": "### Bug Fixes\r\n\r\n* make line chart the default ([bd41b41](https://github.com/ui5-community/ui5-cc-chart/commit/bd41b4199c487a041d63b982bd87ed50c9077f3b))\r\n\r\n\r\n### Features\r\n\r\n* finalize public project ([6291ba6](https://github.com/ui5-community/ui5-cc-chart/commit/6291ba6102e7d15c1c8a50ff73770e4f842a55cd))"
+  },
+  { "name": "wdio-ui5-service", "version": "0.0.1", "date": "2020-10-30T14:16:49.879Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.0.2", "date": "2020-11-02T21:00:23.187Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.0.3", "date": "2020-11-10T15:56:24.766Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.0", "date": "2020-11-11T15:17:11.107Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.2", "date": "2020-11-11T15:58:40.987Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.3", "date": "2020-11-12T13:42:15.349Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.4", "date": "2020-11-12T14:47:45.498Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.5", "date": "2020-11-13T21:40:37.458Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.6", "date": "2020-11-27T09:24:37.908Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.7", "date": "2020-12-11T08:34:58.567Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.8", "date": "2020-12-15T08:47:20.550Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.1.9", "date": "2020-12-21T19:49:44.495Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.4.0", "date": "2021-01-08T08:59:51.069Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.5.0", "date": "2021-02-01T20:19:16.413Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.5.1", "date": "2021-02-11T09:45:27.988Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.6.0", "date": "2021-05-11T12:10:53.090Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.6.1", "date": "2021-06-01T07:49:37.471Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.6.2", "date": "2021-11-19T18:15:47.127Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.7.0", "date": "2021-12-15T20:00:44.069Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.8.0-alpha.0", "date": "2022-01-13T14:19:15.571Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.8.0", "date": "2022-01-17T11:14:10.106Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.8.1", "date": "2022-01-18T07:42:25.682Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.8.2", "date": "2022-02-04T14:21:29.325Z", "changelog": "" },
+  {
+    "name": "wdio-ui5-service",
+    "version": "0.9.0-alpha.0",
+    "date": "2022-03-01T08:06:39.508Z",
+    "changelog": "### Features\r\n\r\n- \"ui5\" plugin, webserver and tooling ([e912898](https://github.com/js-soft/wdi5/commit/e9128987ecaffbe6b09b649cecf819e3ea460539))\r\n- add control selector ([f78dcb3](https://github.com/js-soft/wdi5/commit/f78dcb3ced30a86dcee846013517b3ce235e87b8))\r\n- async api ([c94444b](https://github.com/js-soft/wdi5/commit/c94444b3dc40f57b0997061e433792af7bc8dd54))\r\n- chrome flags ([c48a9bf](https://github.com/js-soft/wdi5/commit/c48a9bf799579b821be85680b6779ac9bf72ff35))\r\n- colored console ([fd47ba5](https://github.com/js-soft/wdi5/commit/fd47ba53f5ad7da26f5eb052a665b78cef0561cd))\r\n- **dev:** add commit linting ([a8ade45](https://github.com/js-soft/wdi5/commit/a8ade4528965710d39f396fae16245e04c081f67))\r\n- **dev:** add linting for staged files ([f4fc3b1](https://github.com/js-soft/wdi5/commit/f4fc3b15eb82307c2be42216e0dc58b19f64ebfb))\r\n- expose wdi5 class ([e88b25a](https://github.com/js-soft/wdi5/commit/e88b25af447f8af083985c3942ff41f5d2874020))\r\n- hook up wdi5 commands to wdio ([37e55bd](https://github.com/js-soft/wdi5/commit/37e55bd11d23a5efd5f244db56a2ae895b96f621))\r\n- initial plugin skeleton ([ea30572](https://github.com/js-soft/wdi5/commit/ea30572b6c51510ae20d5bab0058fc6995923693))\r\n- introduce build script ([a6eac16](https://github.com/js-soft/wdi5/commit/a6eac16f929b6205917c2d4eae7a9e5e93774609))\r\n- **late-inject:** make it work ([e523e43](https://github.com/js-soft/wdi5/commit/e523e435b51dd47300d7957d10f40cb3e214d9c5))\r\n- logger ([7547b6a](https://github.com/js-soft/wdi5/commit/7547b6a4f5ef211737923cc0b5ea4ae99d78d9af))\r\n- make \\_getAggregation fluent-api compatible ([37ec913](https://github.com/js-soft/wdi5/commit/37ec91355dcc32d4d1c30449a6a2a6a5177e3948))\r\n- **npm:** workspaces ([a0e77c1](https://github.com/js-soft/wdi5/commit/a0e77c113bf3a0ddd7ceaa92f4d4c64b3669fa11))\r\n- outsource \\_navTo ([9eaa97c](https://github.com/js-soft/wdi5/commit/9eaa97c4d6c6e169cb1898da5d7b5bd6b34031b6))\r\n- prep npm distribution ([6228eef](https://github.com/js-soft/wdi5/commit/6228eefb6866cc9603397e047da6f92982393096))\r\n- re-export browser commands ([1fea437](https://github.com/js-soft/wdi5/commit/1fea437ecc7f31e313a0d5556addc00efe6f1a5d))\r\n- screenshot api ([bd9b3d2](https://github.com/js-soft/wdi5/commit/bd9b3d21c97c74bbff15e35650727fa26d67c056))\r\n- **service:** expose injectUI5() ([4f3097a](https://github.com/js-soft/wdi5/commit/4f3097a8be3078bfb5b70c4993b5d9e2b1772025))\r\n- **skeleton:** running e2e test ([0391fc8](https://github.com/js-soft/wdi5/commit/0391fc8ec440dc8a7cd596ff5b1cd12ac7b9e652))\r\n- **types:** wdi5 browser ([d7496a9](https://github.com/js-soft/wdi5/commit/d7496a906f467a9e93a0fc8ca5c0b3f5cd666da9))\r\n- use workspace for referencing wdio-ui5-service ([70ad24e](https://github.com/js-soft/wdi5/commit/70ad24e2be0705a4c249f079a01ae92daedff25b))\r\n- wdi5 config ([7215bcb](https://github.com/js-soft/wdi5/commit/7215bcbcdeafa2b1b68fac7017382f5bd6d1ec62))\r\n- **wdi5:** add \"helper\" class ([7e966c3](https://github.com/js-soft/wdi5/commit/7e966c31dc3680c2edfd9e7b6a1c2b06294e2226))\r\n- **wdio-ui5-service:** assert ui5 page ([a74667f](https://github.com/js-soft/wdi5/commit/a74667f78d6569c31da8378874a8d30defda8ed2))\r\n- **wdio,config:** working wdi5-enhanced config ([e1e5283](https://github.com/js-soft/wdi5/commit/e1e528375b9c9e70abeac8a65d5dedebc27fb904))\r\n\r\n### Bug Fixes\r\n\r\n- add missing wait for ui5 timeout option ([0e59dbe](https://github.com/js-soft/wdi5/commit/0e59dbe9d43f5d647f48ae2c02346dbe8e4dd776))\r\n- api visibility ([eba53bd](https://github.com/js-soft/wdi5/commit/eba53bd05809828345795bd066658d7f2f54dabf))\r\n- client side getAggregation ([6c9e98b](https://github.com/js-soft/wdi5/commit/6c9e98bb97e185915962ec9d2c35fd671199b95e))\r\n- custom press api ([8cf76b6](https://github.com/js-soft/wdi5/commit/8cf76b6fbe7e235a7b949b0a7f884071c1905eff))\r\n- disable control's fireEvent for wdi5's api ([ba367c6](https://github.com/js-soft/wdi5/commit/ba367c6708d4d70d5bb33e5c589638b8e472bd0f))\r\n- export module ([9c57635](https://github.com/js-soft/wdi5/commit/9c57635d46a30973e6788853f8860516a5a877a1))\r\n- make usable in fluent async api ([6300a1b](https://github.com/js-soft/wdi5/commit/6300a1b5aa34e4a3e6e20bdaf9e2d5ee7530ac6a))\r\n- md ([b02c47f](https://github.com/js-soft/wdi5/commit/b02c47fbcb1ab9f64be0c27efc4bd9634d83e4e9))\r\n- module export ([673830c](https://github.com/js-soft/wdi5/commit/673830ce169ca08fc08430d3be863c1ec53b78bf))\r\n- **package.json:** main entry point ([04ce093](https://github.com/js-soft/wdi5/commit/04ce093c915244361a877e0d3c7c4277232354c5))\r\n- pass over generated control id ([84fd727](https://github.com/js-soft/wdi5/commit/84fd727ba48d0539c26f0a3792cdd42ec517e159))\r\n- reenable button for nav sequence ([d66a982](https://github.com/js-soft/wdi5/commit/d66a982bef925bd85eab77b37a9603bdb00a78b1))\r\n- references ([54ecae7](https://github.com/js-soft/wdi5/commit/54ecae79a01fedc97a12694c7dee0597e1c17d10))\r\n- safeguard cache control store ([0949fa0](https://github.com/js-soft/wdi5/commit/0949fa035df3d7cd0334b4a6881677868bf3fd60))\r\n- **ts:** compile errors for mocha + jquery ([ae252eb](https://github.com/js-soft/wdi5/commit/ae252ebcaf73c97a350d204f98f9cdff9dd10d6f))\r\n- using logger singleton ([22b70a0](https://github.com/js-soft/wdi5/commit/22b70a08ab85de44de88cf157bc1160e9a3731ef))\r\n- wdi5 init sequence ([3a9eb2b](https://github.com/js-soft/wdi5/commit/3a9eb2b1aa129df7c12d083d4bb3ade180f5fb6b))\r\n- work getWebElement with fluent async api ([07fd194](https://github.com/js-soft/wdi5/commit/07fd194c983d727c234401bbad8388dc4fbd0e7a))"
+  },
+  {
+    "name": "wdio-ui5-service",
+    "version": "0.9.0-alpha.1",
+    "date": "2022-03-04T10:59:57.260Z",
+    "changelog": "### Features\r\n\r\n* support fiori elements id selector ([#159](https://github.com/js-soft/wdi5/issues/159)) ([352db78](https://github.com/js-soft/wdi5/commit/352db78190eaff9aa4d14b7b8239f51c85126a39))"
+  },
+  {
+    "name": "wdio-ui5-service",
+    "version": "0.9.0-rc1",
+    "date": "2022-03-18T14:23:11.859Z",
+    "changelog": "### Features\r\n\r\n* **devx:** auto open dev tools when DEBUG is set ([#168](https://github.com/js-soft/wdi5/issues/168)) ([048767b](https://github.com/js-soft/wdi5/commit/048767b4a1e240b7420bf33b6c000d531c04cc97))\r\n* enhanced logger and tests ([#189](https://github.com/js-soft/wdi5/issues/189)) ([959f159](https://github.com/js-soft/wdi5/commit/959f159a78a3671ab169c415db9b1ed4781e351a))\r\n* **logger:** custom tags in logger ([17eef1a](https://github.com/js-soft/wdi5/commit/17eef1aba365b1ed1620b99bb607157de0d9acc4))\r\n* **matcher:** i18n, ancestor, descendant, sibling, labelFor ([1fd328c](https://github.com/js-soft/wdi5/commit/1fd328cab0de7cd0a6895d717447866ca7de0c7d)), closes [#129](https://github.com/js-soft/wdi5/issues/129) [#121](https://github.com/js-soft/wdi5/issues/121)\r\n\r\n\r\n### Bug Fixes\r\n\r\n* **118:** loggin of selector verification ([6ff7283](https://github.com/js-soft/wdi5/commit/6ff72836a1eccbf40cab524a3a07fe3c446c081d))\r\n* **docs:** wdi5 types ref ([bfe7f6b](https://github.com/js-soft/wdi5/commit/bfe7f6b4dcd29c49bfba9c399235c19552d56ff0))\r\n* **example-app:** types ref ([e983b4b](https://github.com/js-soft/wdi5/commit/e983b4b46d0993f78bef6f01bc4e29750ec80673))\r\n* rm i18n changes ([6a1bcda](https://github.com/js-soft/wdi5/commit/6a1bcdac2893b54050b4102f6d7800aa7559fd38))\r\n* safeguard empty baseURL ([#165](https://github.com/js-soft/wdi5/issues/165)) ([620f3b5](https://github.com/js-soft/wdi5/commit/620f3b5e0fa40280d87883d21fc366f9a8b6f7fb)), closes [#148](https://github.com/js-soft/wdi5/issues/148)"
+  },
+  { "name": "wdio-ui5-service", "version": "0.9.0-rc2", "date": "2022-03-22T13:56:17.755Z", "changelog": "" },
+  {
+    "name": "wdio-ui5-service",
+    "version": "0.9.0-rc3",
+    "date": "2022-03-25T10:12:13.199Z",
+    "changelog": "### Features\r\n\r\n* **combobox:** make aggregation work ([#191](https://github.com/js-soft/wdi5/issues/191)) ([c2984bd](https://github.com/js-soft/wdi5/commit/c2984bd153633105fe7ebe60c318b19fa8580525)), closes [#121](https://github.com/js-soft/wdi5/issues/121)\r\n\r\n\r\n### Bug Fixes\r\n\r\n* control getShorthand returns array-valued property ([#170](https://github.com/js-soft/wdi5/issues/170)) ([b7a2789](https://github.com/js-soft/wdi5/commit/b7a2789b1c26dd754afa5713a0f6431de7a5fca5)), closes [#172](https://github.com/js-soft/wdi5/issues/172)\r\n* Version Checks ([#200](https://github.com/js-soft/wdi5/issues/200)) ([3648a98](https://github.com/js-soft/wdi5/commit/3648a984e442be37e17427b247c6f8d20a4422df))"
+  },
+  {
+    "name": "wdio-ui5-service",
+    "version": "0.9.0-rc4",
+    "date": "2022-04-08T15:40:43.353Z",
+    "changelog": "### Features\r\n\r\n* added selenium-service configuration sample ([#220](https://github.com/js-soft/wdi5/issues/220)) ([99dd250](https://github.com/js-soft/wdi5/commit/99dd250fd696371b7f68d0d56be30d62beaaa3fe))\r\n* get all controls of a specific type ([#212](https://github.com/js-soft/wdi5/issues/212)) ([f4e8082](https://github.com/js-soft/wdi5/commit/f4e8082a6eae2116c12596524e7774bdb10bb6fa))\r\n* **performance:** using custom waitForUI5 function to overcome sap.ui.test.RecordReplay promiseWaiter issue ([#217](https://github.com/js-soft/wdi5/issues/217)) ([53fd065](https://github.com/js-soft/wdi5/commit/53fd06511eb4d05004dbef72fa1bb9e931a7200d)), closes [#196](https://github.com/js-soft/wdi5/issues/196)\r\n* wdio bridge via $() ([#179](https://github.com/js-soft/wdi5/issues/179)) ([acf026b](https://github.com/js-soft/wdi5/commit/acf026bd0cb7fdafa9412055ae0da23a51cad32c))\r\n\r\n\r\n### Bug Fixes\r\n\r\n* headless code example ([#216](https://github.com/js-soft/wdi5/issues/216)) ([a2d6ee8](https://github.com/js-soft/wdi5/commit/a2d6ee874627f699b9b5884ba14306e8245a2195))"
+  },
+  {
+    "name": "wdio-ui5-service",
+    "version": "0.9.0-rc4.1",
+    "date": "2022-04-12T11:55:35.528Z",
+    "changelog": "### Features\r\n\r\n* wdio bridge via $() ([#179](https://github.com/js-soft/wdi5/issues/179)) ([41ef513](https://github.com/js-soft/wdi5/commit/41ef513960196de73c418d9f2357aec36f0fde13))\r\n\r\n\r\n### Bug Fixes\r\n\r\n* allControls with forceSelect ([#226](https://github.com/js-soft/wdi5/issues/226)) ([0dd6853](https://github.com/js-soft/wdi5/commit/0dd6853f3cebb4b4f134e7ef7664353bdbc4ec54)), closes [#225](https://github.com/js-soft/wdi5/issues/225)"
+  },
+  {
+    "name": "wdio-ui5-service",
+    "version": "0.9.0-rc4.2",
+    "date": "2022-04-20T19:34:40.434Z",
+    "changelog": "### Features\r\n\r\n* add to \"best of UI5\" ([#231](https://github.com/js-soft/wdi5/issues/231)) ([b17685c](https://github.com/js-soft/wdi5/commit/b17685c68c3f51ca1bf8b013b49eac90de1f9c73))\r\n* proxy object-type return value ([#234](https://github.com/js-soft/wdi5/issues/234)) ([1959411](https://github.com/js-soft/wdi5/commit/1959411eb9e8dabf3b44521ee718991a7d9e2791))\r\n* **wdi5-control:** .getControlInfo() for info on capabilities ([#214](https://github.com/js-soft/wdi5/issues/214)) ([965d8bb](https://github.com/js-soft/wdi5/commit/965d8bb02154f2bc59bf3be3076eb8950d3c6333))\r\n* **wdi5-control:** .getControlInfo() for info on capabilities ([#214](https://github.com/js-soft/wdi5/issues/214)) ([073d917](https://github.com/js-soft/wdi5/commit/073d9177a89f898c7e89b6b9dfe5dd545e01ae54))"
+  },
+  {
+    "name": "wdio-ui5-service",
+    "version": "0.9.0-rc4.3",
+    "date": "2022-04-28T16:02:47.784Z",
+    "changelog": "### Bug Fixes\r\n\r\n* **#241:** rm warning if control was not instatiated by $$ ([#242](https://github.com/js-soft/wdi5/issues/242)) ([0b6a111](https://github.com/js-soft/wdi5/commit/0b6a111ad66644fafb0856627850ba792641ce41)), closes [#241](https://github.com/js-soft/wdi5/issues/241)"
+  },
+  { "name": "wdio-ui5-service", "version": "0.9.0", "date": "2022-05-11T17:35:46.532Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.1", "date": "2022-05-23T06:26:44.130Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.2", "date": "2022-06-15T19:24:30.607Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.3", "date": "2022-06-20T06:59:46.774Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.4", "date": "2022-06-21T15:43:36.006Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.5", "date": "2022-06-24T13:02:06.270Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.6", "date": "2022-06-29T13:50:48.874Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.7", "date": "2022-07-04T07:30:47.146Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.8", "date": "2022-07-04T21:20:44.375Z", "changelog": "" },
+  { "name": "wdio-ui5-service", "version": "0.9.9", "date": "2022-07-05T21:18:35.478Z", "changelog": "" },
+  { "name": "create-easy-ui5", "version": "1.0.0", "date": "2022-03-10T13:12:51.126Z", "changelog": "" },
+  {
+    "name": "create-wdi5",
+    "version": "0.1.0",
+    "date": "2022-06-19T08:21:36.873Z",
+    "changelog": "### Features\r\n\r\n* config, install, script ([d23e5bf](https://github.com/ui5-community/create-wdi5/commit/d23e5bf2d4cce82befa80fb2b44496a6f6005fa0))"
+  },
+  { "name": "create-wdi5", "version": "0.1.1", "date": "2022-06-19T08:35:24.383Z", "changelog": "" },
+  {
+    "name": "create-wdi5",
+    "version": "0.2.0",
+    "date": "2022-07-02T09:35:56.649Z",
+    "changelog": "### Features\r\n\r\n* --debug and --headless ([da13699](https://github.com/ui5-community/create-wdi5/commit/da13699aee7a7029fd1af646a2b70df2278f0d6c))\r\n* support wdio/wdi5 in typescript ([c363ab0](https://github.com/ui5-community/create-wdi5/commit/c363ab0619e9826ce6a43a3ee9d62ac9afd0aa08))\r\n\r\n### [0.1.1](https://github.com/ui5-community/create-wdi5/compare/v0.1.0...v0.1.1) (2022-06-19)\r\n\r\n\r\n### Bug Fixes\r\n\r\n* **manifest:** bin ([ab2c686](https://github.com/ui5-community/create-wdi5/commit/ab2c6864b3b2033bc373d9cc155f0e68a3c52282))"
+  },
+  { "name": "create-wdi5", "version": "0.2.1", "date": "2022-07-04T07:03:43.523Z", "changelog": "" },
+  { "name": "create-wdi5", "version": "0.2.2", "date": "2022-07-08T06:11:55.771Z", "changelog": "" },
+  { "name": "openui5-model-odata-v2-odatapromise", "version": "0.0.1", "date": "2022-06-06T08:11:34.824Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "1.2.0", "date": "2022-06-21T22:04:29.437Z", "changelog": "- New! First typescript (ESM) support, both server and builder\r\n- Dependencies upgrade" },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.20",
+    "date": "2022-06-17T21:51:28Z",
+    "changelog": "- Upgraded default `ui5-tools.ui5Version` from `1.71.44` to `1.71.48`\r\n- New configuration property `ui5-tools.server.proxyDestinations`\r\n- Dependencies upgrade"
+  },
+  { "name": "ui5-tools", "version": "1.1.19", "date": "2022-06-08T08:40:16.943Z", "changelog": "" },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.18",
+    "date": "2022-06-08T08:29:38.253Z",
+    "changelog": "- New Configurator menu: `Configurator --> Uninstall SAPUI5 Runtime` (shortcut `alt+c alt+d`)\r\n- Dependencies upgrade"
+  },
+  { "name": "ui5-tools", "version": "1.1.17", "date": "2022-03-29T12:22:41.16Z", "changelog": "- Dependencies upgrade" },
+  { "name": "ui5-tools", "version": "1.1.16", "date": "2022-02-09T17:35:26.773Z", "changelog": "- Fixed: css hot reload\r\n- Dependencies upgrade" },
+  { "name": "ui5-tools", "version": "1.1.15", "date": "2022-01-21T00:30:08.793Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "1.1.14", "date": "2022-01-21T00:22:21.063Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "1.1.13", "date": "2022-01-21T00:13:23.15Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "1.1.12", "date": "2022-01-20T22:48:45.257Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "1.1.11", "date": "2022-01-12T22:03:28.587Z", "changelog": "- Fixed: autorefresh\r\n- Dependencies upgrade" },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.10",
+    "date": "2022-01-11T01:54:05.21Z",
+    "changelog": "- Fixed: configuration property `ui5-tools.deployer.rejectUnauthorized` /  SSL certs error when deploying"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.9",
+    "date": "2022-01-10T18:27:17.94Z",
+    "changelog": "- Fixed: autorefresh when `distFolder === srcFolder`\r\n- Fixed: showing EULA when downloading SAPUI5 Runtime"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.8",
+    "date": "2022-01-09T00:15:07.033Z",
+    "changelog": "- Changed runtime download from `~/.vscode/extensions/carlosorozcojimenez.ui5-tools-${version}/runtime/` to `~/.vscode/extensions/carlosorozcojimenez.ui5-tools-support/runtime/`"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.7",
+    "date": "2022-01-08T23:19:30.59Z",
+    "changelog": "- Updated default value for `ui5-tools.ui5Version` to 1.71.44\r\n- Updated default value for `ui5-tools.server.resourcesProxy` to `Runtime`\r\n- File `sandbox.js` is included in the extension bundle. Now it is possible to launch the launchpad in enclosed networks\r\n- Dependencies upgrade"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.6",
+    "date": "2022-01-04T22:45:07.887Z",
+    "changelog": "- New `ui5-tools.server.resourcesProxy` option `Runtime`. Download from tools.hana.ondemand.com the Runtime selected. The runtime is downloaded and unzipped in ui5-tools/runtime extension folder.\r\n- Wizard for `Configurator -> Ui5Provider` updated with `Runtime` options\r\n- Server start: when using new `Runtime` option, server startup checks if ui5 version is downloaded and download it automatically.\r\n- Dependencies upgrade"
+  },
+  { "name": "ui5-tools", "version": "1.1.5", "date": "2021-12-18T16:04:01.627Z", "changelog": "- Dependencies upgrade" },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.4",
+    "date": "2021-11-03T17:16:51.62Z",
+    "changelog": "- Fixed: detection of projects without webapp/src/Webcontent folders and deployment without build\r\n- Dependencies upgrade"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.3",
+    "date": "2021-10-29T15:59:05.457Z",
+    "changelog": "- Fixed: `ui5-tools.server.babelSourcesLive` fixed in windows systems\r\n- Changed: computed date replaced changed due to speed improvements. Check [readme file](README.md)\r\n- Dependencies upgrade"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.2",
+    "date": "2021-10-22T14:00:06.5Z",
+    "changelog": "- New configuration property `ui5-tools.server.babelSourcesLive`. Live transpile js.\r\n- AppcacheBuster is changed default value: `None`."
+  },
+  { "name": "ui5-tools", "version": "1.1.1", "date": "2021-10-19T09:06:27.32Z", "changelog": "- Babelify bug solved\r\n- Dependencies upgrade" },
+  {
+    "name": "ui5-tools",
+    "version": "1.1.0",
+    "date": "2021-10-18T09:53:07.54Z",
+    "changelog": "- Extension migrated to typescript\r\n- Removed font generator: check new extension [Icon Font Bundler](https://marketplace.visualstudio.com/items?itemName=carlosorozcojimenez.icon-font-bundler)\r\n- Some bugs solved\r\n- Updated default UI5 to version from 1.71.35 to 1.71.42"
+  },
+  { "name": "ui5-tools", "version": "1.0.4", "date": "2021-08-02T14:56:37.783Z", "changelog": "- Delete dist folder bug solved" },
+  { "name": "ui5-tools", "version": "1.0.3", "date": "2021-07-28T03:46:00.94Z", "changelog": "- Chokidar bug solved" },
+  { "name": "ui5-tools", "version": "1.0.2", "date": "2021-07-27T14:28:21.697Z", "changelog": "- Deploy bug solved\r\n- Log extracted in a single file\r\n- Refactoring" },
+  {
+    "name": "ui5-tools",
+    "version": "1.0.1",
+    "date": "2021-07-26T20:53:21.897Z",
+    "changelog": "- AppcacheBuster is now enabled by default in PROD mode only, new configuration property `ui5-tools.server.cacheBuster`\r\n- Restored no-cache flag for resources proxy"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "1.0.0",
+    "date": "2021-07-23T16:34:16.51Z",
+    "changelog": "- Dependencies upgrade\r\n- AppCachebuster simulator in localhost server with timestamps for every file served. Timestamp from\r\n  last modification/creaton of every file.\r\n- It is now possible to debug with F12 without `Disable cache` option checked in `Network` tab if you are using AppCacheBuster.\r\n- Other improvements, server index, extension messages, builder code, live server/live builder, live server production...\r\n- Server index changes: Sponsors section, About and Changelog section, modified Info section"
+  },
+  { "name": "ui5-tools", "version": "0.6.13", "date": "2021-07-20T16:15:14.483Z", "changelog": "- Dependencies upgrade\r\n- Markdown docs improvements" },
+  {
+    "name": "ui5-tools",
+    "version": "0.6.12",
+    "date": "2021-07-06T07:14:57.423Z",
+    "changelog": "- Dependencies upgrade\r\n- Async preload creation thanks to [openui5-preload](https://github.com/r-murphy/openui5-preload) - [Ryan Murphy](https://github.com/r-murphy)"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.6.11",
+    "date": "2021-07-05T07:26:09.643Z",
+    "changelog": "- Dependencies upgrade\r\n- Readme bug solved\r\n- New option `ui5-tools.deployer.rejectUnauthorized`"
+  },
+  { "name": "ui5-tools", "version": "0.6.10", "date": "2021-06-04T11:34:03.113Z", "changelog": "- Library preload bundle bug solved" },
+  {
+    "name": "ui5-tools",
+    "version": "0.6.9",
+    "date": "2021-06-04T11:25:20.107Z",
+    "changelog": "- Dependencies upgrade\r\n- New deploy commands `ui5-tools.deployer.deployAll`\r\n- New comands: `ui5-tools.fonts.generate` and `ui5-tools.fonts.generateAll`. Compatible with a folder containing svg files and importing font awesome from github\r\n- New option: `ui5-tools.builder.babelSourcesExclude`\r\n- Look for all \\*.md files in workspace to show in `localhost/ui5tools/#/docs` route\r\n- Can build app without Component.js"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.6.8",
+    "date": "2021-04-26T13:04:22.337Z",
+    "changelog": "- New options: `ui5-tools.builder.buildPreload` and `ui5-tools.deployer.deployFolder`\r\n- Dependencies upgrade\r\n- Corrected bugs"
+  },
+  { "name": "ui5-tools", "version": "0.6.7", "date": "2021-03-23T16:00:31.59Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "0.6.6", "date": "2021-03-23T10:53:58.983Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "0.6.5", "date": "2021-03-23T10:16:14.917Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "0.6.4", "date": "2021-03-19T13:04:32.49Z", "changelog": "- Windows systems build/menu bug solved" },
+  { "name": "ui5-tools", "version": "0.6.3", "date": "2021-03-18T11:04:35.6Z", "changelog": "- Livereload bug solved" },
+  {
+    "name": "ui5-tools",
+    "version": "0.6.2",
+    "date": "2021-03-17T17:34:58.923Z",
+    "changelog": "- Output ui5-tools extension log: bug corrected\r\n- Updated default UI5 to version from 1.71.20 to 1.71.35"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.6.1",
+    "date": "2021-03-17T11:37:29.383Z",
+    "changelog": "- Readme updated\r\n- Credits section updated\r\n- .env file changes does not require restart vscode or extension now"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.6.0",
+    "date": "2021-03-16T17:39:54.8Z",
+    "changelog": "- New deployer! Gateway deployments\r\n- Right click in project folder in order to build or deploy ui5 project\r\n- Strings replaced updated with new format options (Date)\r\n- readme: updated credits section"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.5.0",
+    "date": "2021-02-18T08:56:04.347Z",
+    "changelog": "- New builder options: `ui5-tools.builder.uglifyPreload`, `ui5-tools.builder.uglifySourcesExclude`, `ui5-tools.builder.preloadSrc`\r\n- readme: +credits section\r\n- Upgrade dependencies"
+  },
+  { "name": "ui5-tools", "version": "0.4.8", "date": "2021-02-13T13:31:51.493Z", "changelog": "- Upgrade dependencies" },
+  { "name": "ui5-tools", "version": "0.4.7", "date": "2021-02-01T09:03:13.003Z", "changelog": "- Upgrade dependencies\r\n- Corrected manifest.json discover function" },
+  {
+    "name": "ui5-tools",
+    "version": "0.4.6",
+    "date": "2020-12-14T11:40:55.02Z",
+    "changelog": "- Server startup vars changed\r\n- New <% ISODATE %> key (Replacestrings)\r\n- Upgrade dependencies version"
+  },
+  { "name": "ui5-tools", "version": "0.4.5", "date": "2020-12-14T11:15:28.603Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "0.4.4", "date": "2020-12-14T11:11:47.64Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "0.4.3", "date": "2020-11-19T14:18:26.423Z", "changelog": "- Server autostart bug solved\r\n- Gateway version fetching bug solved" },
+  {
+    "name": "ui5-tools",
+    "version": "0.4.2",
+    "date": "2020-11-15T15:32:09.367Z",
+    "changelog": "- New options `ui5-tools.server.odataSecure` and `ui5-tools.server.resourcesSecure`\r\n- Updated dependencies\r\n- New output container ui5-tools. All relevant messages are printed there"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.4.1",
+    "date": "2020-11-06T00:29:23.62Z",
+    "changelog": "- Builder: now it is possible to auto-build themes (library.source.less) and styles (styles.less/projectNameFolder.less) on library and components both.\r\n- Configurator: auto detects ui5 version for gateway proxy (ui5 provider)\r\n- Server: now can serve root folder by setting `srcFolder` = '', if build folder is equal to `srcFolder`', Builder only generates css and Component-preload.\r\n- Updated default UI5 to version from 1.71.20 to 1.71.27\r\n- Corrected resources server cache\r\n- Infinite starting server bug solved related to manifest.json errors"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.4.0",
+    "date": "2020-08-03T12:49:40.637Z",
+    "changelog": "- Babelify files for ie11 compatibility (only for builder)\r\n- Configurable server timeout (default: 60000ms)"
+  },
+  { "name": "ui5-tools", "version": "0.3.1", "date": "2020-06-18T08:26:14.027Z", "changelog": "- Livereload bug solved" },
+  {
+    "name": "ui5-tools",
+    "version": "0.3.0",
+    "date": "2020-06-17T22:21:51.013Z",
+    "changelog": "- SSL proxy verification default to false\r\n- Replace strings in builder\r\n- New configurator command: replace strings\r\n- Auto theme less builder\r\n- Bug/resource cache solved while restarting server (.env, manifest.json)\r\n- New keymaps support\r\n- Major refactor\r\n- Implemented port finder\r\n- PDF corrupted error solved"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.2.0",
+    "date": "2020-06-08T23:00:40.63Z",
+    "changelog": "- Authentication with `.env` file for Other proxies\r\n- Less autobuild to css\r\n- Breaking changes! new option `resourcesUri` to separate from `odataUri` for gateway users"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.1.8",
+    "date": "2020-06-03T11:03:22.497Z",
+    "changelog": "- Multiple odataUri and odataMountPath for `Other` odataProxy\r\n- Bug correction in `Other` odataProxy\r\n- Example in `workspaceExample` width multiple `Other` odataUri/odataMountPath pointing to northwind"
+  },
+  {
+    "name": "ui5-tools",
+    "version": "0.1.7",
+    "date": "2020-06-02T22:42:02.78Z",
+    "changelog": "- Added \"Other\" destination to odataProxy and odataMountPath\r\n- MD files bugs solved (docs folder)\r\n- Default UI5 proxy switched from OpenUI5 to SAPUI5\r\n- Autorestart server after changing configuration"
+  },
+  { "name": "ui5-tools", "version": "0.1.6", "date": "2020-05-29T09:30:24.44Z", "changelog": "- Breaking changes! options gatewayProxy/gatewayUri -> odataProxy/odataUri" },
+  { "name": "ui5-tools", "version": "0.1.5", "date": "2020-05-29T03:45:13.25Z", "changelog": "- New server index + readme + docs + links + info" },
+  { "name": "ui5-tools", "version": "0.1.4", "date": "2020-05-28T19:31:42.253Z", "changelog": "- Fix? vscode endless loop instalation" },
+  { "name": "ui5-tools", "version": "0.1.3", "date": "2020-05-28T16:19:42.75Z", "changelog": "- Bug correction for windows users" },
+  {
+    "name": "ui5-tools",
+    "version": "0.1.2",
+    "date": "2020-05-28T10:54:24.75Z",
+    "changelog": "- Server: launchpad file sandbox.js fetched from sapui5 cdn\r\n- Server: bug correction for cache cleaning at startup\r\n- Server: url launchpad added last slash /flp/"
+  },
+  { "name": "ui5-tools", "version": "0.1.1", "date": "2020-05-27T21:56:24.363Z", "changelog": "- Server: launchpad theme for older versions" },
+  {
+    "name": "ui5-tools",
+    "version": "0.1.0",
+    "date": "2020-05-27T16:27:51.987Z",
+    "changelog": "- Server: new sandbox launchpad for sapui5 framework. Customizable with firiSandboxConfig.json in workspaceroot\r\n- Server: new server index with ui5, includes readme.md and docs folders (\\*.md). When SAPUI5 framework, shows link to the sandbox launchpad\r\n- Server: new server-side caching for resources, cache cleaning at server startup\r\n- Server: proxy for gateway asks user for username and password before server initialization\r\n- Configurator: now you can select ui5 versions fetched from CDN, manual option is fallback"
+  },
+  { "name": "ui5-tools", "version": "0.0.5", "date": "2020-05-22T23:03:29.743Z", "changelog": "- Server: correction for windows users" },
+  { "name": "ui5-tools", "version": "0.0.4", "date": "2020-05-20T11:08:50.767Z", "changelog": "- Server: auto-serve index with workspace apps" },
+  { "name": "ui5-tools", "version": "0.0.3", "date": "2020-05-19T16:00:58.187Z", "changelog": "" },
+  { "name": "ui5-tools", "version": "0.0.2", "date": "2020-05-19T15:42:17.753Z", "changelog": "- Webpack bundle: livereload correction bug" },
+  { "name": "ui5-tools", "version": "0.0.1", "date": "2020-05-18T16:05:30.213Z", "changelog": "- Initial version of the ui5-tools extension with server and builder" },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.0.1",
+    "date": "2022-05-30T09:16:36.280Z",
+    "changelog": "### Patch Changes\r\n\r\n-   069270b: Initial open source release of the SAP UX FE Mockserver\r\n-   Updated dependencies [069270b]\r\n    -   @sap-ux/fe-mockserver-core@1.0.1"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.0.2",
+    "date": "2022-05-30T09:46:04.445Z",
+    "changelog": "### Patch Changes\r\n\r\n-   beb31e8: Include the ui5.yaml to run the middleware"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.0.3",
+    "date": "2022-05-30T13:31:33.180Z",
+    "changelog": "### Patch Changes\r\n\r\n-   f06b6d2: Make sure request for non existing object returns 404\r\n-   Updated dependencies [f06b6d2]\r\n    -   @sap-ux/fe-mockserver-core@1.0.2"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.0.4",
+    "date": "2022-06-01T07:01:31.309Z",
+    "changelog": "### Patch Changes\r\n\r\n-   Updated dependencies [e96f8fc]\r\n    -   @sap-ux/fe-mockserver-core@1.0.3"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.0.5",
+    "date": "2022-06-03T08:54:04.370Z",
+    "changelog": "### Patch Changes\r\n\r\n-   a3b8a5d: Add support for nested lambda functions\r\n-   Updated dependencies [a3b8a5d]\r\n    -   @sap-ux/fe-mockserver-core@1.0.4"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.0",
+    "date": "2022-06-07T07:20:58.597Z",
+    "changelog": "### Minor Changes\r\n\r\n-   32c6142: Improve the function based mockdata API\r\n\r\n### Patch Changes\r\n\r\n-   Updated dependencies [32c6142]\r\n    -   @sap-ux/fe-mockserver-core@1.1.0"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.1",
+    "date": "2022-06-07T09:50:45.387Z",
+    "changelog": "### Patch Changes\r\n\r\n-   af43ce7: Fix dependencies\r\n-   Updated dependencies [af43ce7]\r\n    -   @sap-ux/fe-mockserver-core@1.1.1"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.2",
+    "date": "2022-06-08T13:13:33.397Z",
+    "changelog": "### Patch Changes\r\n\r\n-   8df5691: Fix mock data generation and reorganize some part of the code\r\n-   Updated dependencies [8df5691]\r\n    -   @sap-ux/fe-mockserver-core@1.1.2"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.3",
+    "date": "2022-06-09T08:11:05.243Z",
+    "changelog": "### Patch Changes\r\n\r\n-   987d74e: The urlPath for annotation file can now contains '\\*' characters.\r\n-   Updated dependencies [987d74e]\r\n    -   @sap-ux/fe-mockserver-core@1.1.3"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.4",
+    "date": "2022-06-09T09:06:43.042Z",
+    "changelog": "### Patch Changes\r\n\r\n-   715790c: Boolean keys are now working correctly\r\n-   Updated dependencies [715790c]\r\n    -   @sap-ux/fe-mockserver-core@1.1.4"
+  },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.5",
+    "date": "2022-06-13T09:05:47.332Z",
+    "changelog": "### Patch Changes\r\n\r\n-   3d65cc0: Default mockdata folder to the folder containing the metadata if missing\r\n-   Updated dependencies [3d65cc0]\r\n    -   @sap-ux/fe-mockserver-core@1.1.5"
+  },
+  { "name": "@sap-ux/ui5-middleware-fe-mockserver", "version": "2.1.6", "date": "2022-06-14T09:47:12.808Z", "changelog": "### Patch Changes\r\n\r\n-   @sap-ux/fe-mockserver-core@1.1.6" },
+  { "name": "@sap-ux/ui5-middleware-fe-mockserver", "version": "2.1.7", "date": "2022-06-15T07:48:37.101Z", "changelog": "### Patch Changes\r\n\r\n-   cf0d380: Added author to package.json" },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.8",
+    "date": "2022-06-21T09:24:56.504Z",
+    "changelog": "### Patch Changes\r\n\r\n-   4c8a147: '204' response will no longer contain an empty data object\r\n-   Updated dependencies [4c8a147]\r\n    -   @sap-ux/fe-mockserver-core@1.1.7"
+  },
+  { "name": "@sap-ux/ui5-middleware-fe-mockserver", "version": "2.1.9", "date": "2022-06-23T11:38:21.054Z", "changelog": "### Patch Changes\r\n\r\n-   @sap-ux/fe-mockserver-core@1.1.8" },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.10",
+    "date": "2022-06-27T15:03:31.230Z",
+    "changelog": "### Patch Changes\r\n\r\n-   64a0fdf: Improve v2 services support\r\n-   Updated dependencies [64a0fdf]\r\n    -   @sap-ux/fe-mockserver-core@1.1.9"
+  },
+  { "name": "@sap-ux/ui5-middleware-fe-mockserver", "version": "2.1.11", "date": "2022-06-28T11:28:34.554Z", "changelog": "### Patch Changes\r\n\r\n-   @sap-ux/fe-mockserver-core@1.1.10" },
+  { "name": "@sap-ux/ui5-middleware-fe-mockserver", "version": "2.1.12", "date": "2022-07-01T11:46:01.280Z", "changelog": "### Patch Changes\r\n\r\n-   @sap-ux/fe-mockserver-core@1.1.11" },
+  { "name": "@sap-ux/ui5-middleware-fe-mockserver", "version": "2.1.13", "date": "2022-07-01T11:59:55.333Z", "changelog": "### Patch Changes\r\n\r\n-   @sap-ux/fe-mockserver-core@1.1.12" },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.14",
+    "date": "2022-07-07T10:17:38.205Z",
+    "changelog": "### Patch Changes\r\n\r\n-   86932ff: Unbound Action are now correctly forwarded to custom handlers\r\n-   Updated dependencies [86932ff]\r\n    -   @sap-ux/fe-mockserver-core@1.1.13"
+  },
+  { "name": "@sap-ux/ui5-middleware-fe-mockserver", "version": "2.1.15", "date": "2022-07-07T14:55:11.988Z", "changelog": "### Patch Changes\r\n\r\n-   @sap-ux/fe-mockserver-core@1.1.14" },
+  { "name": "@sap-ux/ui5-middleware-fe-mockserver", "version": "2.1.16", "date": "2022-07-11T07:37:34.777Z", "changelog": "### Patch Changes\r\n\r\n-   @sap-ux/fe-mockserver-core@1.1.15" },
+  {
+    "name": "@sap-ux/ui5-middleware-fe-mockserver",
+    "version": "2.1.17",
+    "date": "2022-07-12T10:14:21.381Z",
+    "changelog": "### Patch Changes\r\n\r\n-   dde9115: Improve singleton support\r\n-   Updated dependencies [dde9115]\r\n    -   @sap-ux/fe-mockserver-core@1.1.16"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.5.0",
+    "date": "2022-05-18T15:36:10.236Z",
+    "changelog": "### Minor Changes\r\n\r\n-   9f84d52: Intrdocded new backend-proxy-middleware.\r\n\r\n### Patch Changes\r\n\r\n-   Updated dependencies [9f84d52]\r\n    -   @sap-ux/store@0.1.4"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.5.1",
+    "date": "2022-05-19T14:49:19.773Z",
+    "changelog": "### Patch Changes\r\n\r\n-   Updated dependencies [c70fd4d]\r\n    -   @sap-ux/axios-extension@0.5.2\r\n    -   @sap-ux/btp-utils@0.9.2\r\n    -   @sap-ux/logger@0.1.6\r\n    -   @sap-ux/store@0.1.5"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.5.2",
+    "date": "2022-05-20T08:11:43.089Z",
+    "changelog": "### Patch Changes\r\n\r\n-   Updated dependencies [9864fb5]\r\n    -   @sap-ux/axios-extension@0.6.0"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.6.0",
+    "date": "2022-06-13T10:02:49.874Z",
+    "changelog": "### Minor Changes\r\n\r\n-   6f51973: chore(open-ux-tools) Remove node 12 from the list of supported engines for all modules\r\n\r\n### Patch Changes\r\n\r\n-   Updated dependencies [6f51973]\r\n    -   @sap-ux/axios-extension@0.7.0\r\n    -   @sap-ux/btp-utils@0.10.0\r\n    -   @sap-ux/logger@0.2.0\r\n    -   @sap-ux/store@0.2.0"
+  },
+  { "name": "@sap-ux/backend-proxy-middleware", "version": "0.6.1", "date": "2022-06-16T10:00:35.510Z", "changelog": "### Patch Changes\r\n\r\n-   5c5c904: Add author to package.json" },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.6.2",
+    "date": "2022-06-23T12:09:55.405Z",
+    "changelog": "### Patch Changes\r\n\r\n-   Updated dependencies [6f0f217]\r\n    -   @sap-ux/btp-utils@0.10.1\r\n    -   @sap-ux/axios-extension@0.7.1"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.6.3",
+    "date": "2022-06-24T15:03:45.313Z",
+    "changelog": "### Patch Changes\r\n\r\n-   Updated dependencies [ebc59b4]\r\n    -   @sap-ux/store@0.3.0"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.6.4",
+    "date": "2022-06-28T07:07:49.720Z",
+    "changelog": "### Patch Changes\r\n\r\n-   febef3e: Moves bsp logic to function generateProxyMiddlewareOptions"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.6.5",
+    "date": "2022-06-29T07:16:04.114Z",
+    "changelog": "### Patch Changes\r\n\r\n-   6fae741: Support setting credentials via .env file"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.6.6",
+    "date": "2022-07-04T13:11:45.042Z",
+    "changelog": "### Patch Changes\r\n\r\n-   cc1c406: chore(open-ux-tools) ignore source map files when publishing to npm\r\n-   Updated dependencies [cc1c406]\r\n    -   @sap-ux/axios-extension@0.7.2\r\n    -   @sap-ux/btp-utils@0.10.2\r\n    -   @sap-ux/logger@0.2.1\r\n    -   @sap-ux/store@0.3.1"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.6.7",
+    "date": "2022-07-13T13:09:34.700Z",
+    "changelog": "### Patch Changes\r\n\r\n-   7f339ca: Support using direct OData service URLs in BAS"
+  },
+  {
+    "name": "@sap-ux/backend-proxy-middleware",
+    "version": "0.6.8",
+    "date": "2022-07-15T14:17:38.860Z",
+    "changelog": "### Patch Changes\r\n\r\n-   fa232ad: Add optonal url property to the type DestinationBackendConfig"
+  },
+  { "name": "@sap-ux/ui5-proxy-middleware", "version": "1.0.0", "date": "2022-03-03T08:31:21.568Z", "changelog": "### Major Changes\r\n\r\n-   3e70b04: Add ui5-proxy-middleware" },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.0.1",
+    "date": "2022-03-22T19:41:07.386Z",
+    "changelog": "### Patch Changes\r\n\r\n-   aff88b6: Rename test-project folder to test-input to fix issue with changeset version script\r\n-   7107fbc: chore - use import type in TS code.\r\n-   Updated dependencies [7107fbc]\r\n    -   @sap-ux/logger@0.1.3"
+  },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.0.2",
+    "date": "2022-03-24T07:17:45.101Z",
+    "changelog": "### Patch Changes\r\n\r\n-   0837ac1: Add missing information to package.json and enforced use of higher version of minimist\r\n-   Updated dependencies [0837ac1]\r\n    -   @sap-ux/logger@0.1.4"
+  },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.0.3",
+    "date": "2022-03-29T14:11:38.802Z",
+    "changelog": "### Patch Changes\r\n\r\n-   c18fc5c: chore(open-ux-tools) update devDependencies and change dependabot config\r\n-   Updated dependencies [a34d058]\r\n-   Updated dependencies [c18fc5c]\r\n    -   @sap-ux/logger@0.1.5"
+  },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.0.4",
+    "date": "2022-03-31T13:50:08.839Z",
+    "changelog": "### Patch Changes\r\n\r\n-   56409d0: Consolidated ui5 configuration types and enhanced API\r\n-   Updated dependencies [56409d0]\r\n    -   @sap-ux/ui5-config@0.13.0"
+  },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.0.5",
+    "date": "2022-04-01T07:07:20.313Z",
+    "changelog": "### Patch Changes\r\n\r\n-   Updated dependencies [5b5355c]\r\n    -   @sap-ux/ui5-config@0.13.1"
+  },
+  { "name": "@sap-ux/ui5-proxy-middleware", "version": "1.0.6", "date": "2022-04-22T11:35:03.416Z", "changelog": "### Patch Changes\r\n\r\n-   c3eee4e: Set true as default for the secure option" },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.0.7",
+    "date": "2022-04-27T16:58:25.950Z",
+    "changelog": "### Patch Changes\r\n\r\n-   Updated dependencies [b5ab868]\r\n    -   @sap-ux/ui5-config@0.13.2"
+  },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.0.8",
+    "date": "2022-05-19T14:49:22.711Z",
+    "changelog": "### Patch Changes\r\n\r\n-   c70fd4d: chore(open-ux-tools) pnpm 7 and node 18 support.\r\n-   Updated dependencies [c70fd4d]\r\n    -   @sap-ux/logger@0.1.6\r\n    -   @sap-ux/ui5-config@0.13.3"
+  },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.0.9",
+    "date": "2022-05-20T08:32:29.941Z",
+    "changelog": "### Patch Changes\r\n\r\n-   47538c6: Read FIORI_TOOLS_UI5\\* env variables of a run configuration"
+  },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.1.0",
+    "date": "2022-06-13T10:02:52.883Z",
+    "changelog": "### Minor Changes\r\n\r\n-   6f51973: chore(open-ux-tools) Remove node 12 from the list of supported engines for all modules\r\n\r\n### Patch Changes\r\n\r\n-   Updated dependencies [6f51973]\r\n    -   @sap-ux/logger@0.2.0\r\n    -   @sap-ux/ui5-config@0.14.0"
+  },
+  { "name": "@sap-ux/ui5-proxy-middleware", "version": "1.1.1", "date": "2022-06-16T10:00:35.510Z", "changelog": "### Patch Changes\r\n\r\n-   5c5c904: Add author to package.json" },
+  {
+    "name": "@sap-ux/ui5-proxy-middleware",
+    "version": "1.1.2",
+    "date": "2022-07-04T13:11:48.479Z",
+    "changelog": "### Patch Changes\r\n\r\n-   cc1c406: chore(open-ux-tools) ignore source map files when publishing to npm\r\n-   Updated dependencies [cc1c406]\r\n    -   @sap-ux/logger@0.2.1\r\n    -   @sap-ux/ui5-config@0.14.1"
+  },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.0", "date": "2022-06-18T05:48:10.299Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.1", "date": "2022-06-18T06:11:27.340Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.2", "date": "2022-06-18T06:22:19.394Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.3", "date": "2022-06-19T05:01:30.949Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.4", "date": "2022-06-19T05:20:12.236Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.5", "date": "2022-06-19T12:01:35.472Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.6", "date": "2022-06-20T14:16:38.151Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.7", "date": "2022-06-20T14:18:57.825Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.8", "date": "2022-06-20T14:21:21.060Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.9", "date": "2022-06-20T14:25:37.594Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.10", "date": "2022-06-20T14:28:24.252Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.25", "date": "2022-06-20T21:02:19.765Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.26", "date": "2022-06-21T12:48:48.579Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.27", "date": "2022-06-22T05:48:15.951Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.29", "date": "2022-07-03T13:17:53.949Z", "changelog": "" },
+  { "name": "ui5-cc-dndashboard", "version": "1.0.31", "date": "2022-07-12T15:15:08.489Z", "changelog": "" },
+  { "name": "ui5-middleware-destination", "version": "1.0.0", "date": "2019-09-22T17:42:49.461Z", "changelog": "" },
+  { "name": "ui5-middleware-destination", "version": "1.0.1", "date": "2019-09-22T17:47:03.549Z", "changelog": "" },
+  { "name": "ui5-middleware-destination", "version": "1.0.2", "date": "2019-09-22T18:14:11.879Z", "changelog": "" },
+  { "name": "ui5-middleware-destination", "version": "1.0.3", "date": "2020-05-11T15:24:01.235Z", "changelog": "" },
+  { "name": "ui5-middleware-destination", "version": "1.1.1", "date": "2020-07-19T23:03:39.618Z", "changelog": "" },
+  { "name": "ui5-middleware-destination", "version": "1.1.2", "date": "2020-07-20T19:35:23.636Z", "changelog": "" },
+  { "name": "ui5-middleware-destination", "version": "2.0.1", "date": "2020-07-21T09:59:59.129Z", "changelog": "" },
+  { "name": "ui5-middleware-destination", "version": "2.0.2", "date": "2020-07-21T10:07:12.473Z", "changelog": "" }
+]
