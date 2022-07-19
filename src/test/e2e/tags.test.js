@@ -21,6 +21,6 @@ describe("ui5 tags", () => {
 		const firstItemInfolabelTypeSpan = await firstItemInfolabelType.$(".sapTntInfoLabelText");
 		const infolabelInnerText = await firstItemInfolabelTypeSpan.getText();
 
-		expect(infolabelInnerText).toEqual("TASK");
+		expect(infolabelInnerText).toEqual("TASK2");
 	});
 });
