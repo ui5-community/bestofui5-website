@@ -6,7 +6,36 @@ on:
       - main
 
 jobs:
-  test:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out repo
+        uses: actions/checkout@v3
+
+      - name: use node 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+
+      # we need this for workspace mgmt
+      - name: check npm version >= 7
+        run: npm --version
+      - name: update npm
+        run: |
+          npm i -g npm@latest
+          npm --version
+
+      # install both module + sample app(s) deps
+      - name: install packages
+        run: |
+          npm i
+
+      # build things
+      - name: build
+        run: npm run build
+  test-wdi5:
     runs-on: ubuntu-latest
 
     steps:
@@ -41,10 +70,6 @@ jobs:
       - name: install packages
         run: |
           npm i
-
-      # build things
-      - name: build
-        run: npm run build
 
       # run appp
       - name: run app
