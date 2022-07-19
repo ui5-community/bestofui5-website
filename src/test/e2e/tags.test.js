@@ -14,7 +14,7 @@ describe("ui5 tags", () => {
 		const item2 = await itemsTags[2];
 		await item2.press(); // press the second item `task`
 		try {
-			await $("#__component0---AllPackages--trend-item-type-__clone0").waitForExist({ timeout: 1000 });
+			await $("#__component0---AllPackages--trend-item-type-__clone0").waitForExist({ timeout: 1500 });
 		} catch (error) {}
 		// get type infolabel
 		const firstItemInfolabelType = await $("#__component0---AllPackages--trend-item-type-__clone19");
