@@ -4,6 +4,7 @@
       <SegmentedButtonItem text="{i18n>tags_view_all}" key="all" />
       <SegmentedButtonItem text="{i18n>tags_view_tags}" key="tag" />
       <SegmentedButtonItem text="{i18n>tags_view_types}" key="type" />
+      <SegmentedButtonItem text="{i18n>tags_view_license}" key="license" />
     </items>
   </SegmentedButton>
   <List
@@ -20,6 +21,7 @@
           <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
             <tnt:InfoLabel id="type" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'tag' }" renderMode="Narrow" colorScheme="2" displayOnly="false" />
             <tnt:InfoLabel id="tag" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'type' }" renderMode="Loose" colorScheme="4" displayOnly="false" />
+            <tnt:InfoLabel id="license" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'license' }" renderMode="Loose" colorScheme="7" displayOnly="false" />
           </HBox>
         </VBox>
       </FlexBox>
