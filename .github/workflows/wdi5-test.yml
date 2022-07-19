@@ -75,16 +75,10 @@ jobs:
       - name: run app
         run: npm run start:test&
 
+      - name: Sleep for 30 seconds
+        run: sleep 30s
+        shell: bash
+
       # run wdi5 tests
       - name: test wdi5 core
         run: npm run test
-
-      - name: cancel workflow
-        if: failure()
-        uses: potiuk/cancel-workflow-runs@master
-        with:
-          cancelMode: self
-          notifyPRCancel: true
-          notifyPRCancelMessage: Cancelled because wdi5 tests failed.
-          token: ${{ secrets.GITHUB_TOKEN }}
-          sourceRunId: ${{ github.event.workflow_run.id }}
