@@ -29,7 +29,7 @@
             core:require="{ sapMLib: 'sap/m/library' }"
             press="sapMLib.URLHelper.redirect(${contributors>url}, true)"
           />
-          <Link text="{contributors>name}" press="sapMLib.URLHelper.redirect(${contributors>url}, true)" core:require="{ sapMLib: 'sap/m/library' }" class="sapUiNoMarginTop" />
+          <Link text="{contributors>name}" press="sapMLib.URLHelper.redirect(${contributors>url}, true)" core:require="{ sapMLib: 'sap/m/library' }" class="sapUiNoMarginTop contributorOverflowText" />
         </VBox>
         <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
           <Text text="Contributions: {contributors>contributions}" class="sapUiSmallMarginTop" visible="{= ${contributorsView>/direction} === 'Column'}" />

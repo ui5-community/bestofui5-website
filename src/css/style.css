@@ -196,13 +196,32 @@
 	color: white;
 }
 
+/*
+ * style contributors sections
+ */
+
+@media (prefers-color-scheme: dark) {
+	.flexboxContributor {
+		background-color: #1d232a;
+	}
+	.contributorsLinks a:visited {
+		color: #8a2ddf;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.flexboxContributor {
+		background-color: white;
+	}
+}
+
 .flexboxContributor {
 	padding: 1rem 0;
-	margin-bottom: 1rem;
-	margin-left: 0.5rem;
+	margin-right: 0.2rem;
+	margin-left: 0.2rem;
+	margin-bottom: 0.4rem;
 	border-radius: 25px;
-	background-color: white;
-	padding: 20px;
+	padding: 0.8rem;
 }
 
 .contributorsLinks {
@@ -216,4 +235,11 @@
 	font-weight: bold;
 	text-decoration: none;
 	line-height: 1.4;
+}
+
+.contributorOverflowText {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 110px;
 }
