@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/physical-activity","./v4/physical-activity"],function(i,a,t){"use strict";const c=i.isThemeFamily("sap_horizon")?t:a;var e={pathData:c};return e});

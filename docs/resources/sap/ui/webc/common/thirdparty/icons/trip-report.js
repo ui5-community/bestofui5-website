@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/trip-report","./v4/trip-report"],function(r,t,e){"use strict";const i=r.isThemeFamily("sap_horizon")?e:t;var a={pathData:i};return a});

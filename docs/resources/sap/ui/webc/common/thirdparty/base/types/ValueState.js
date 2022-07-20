@@ -1,0 +1,1 @@
+sap.ui.define(["./DataType"],function(n){"use strict";const e={None:"None",Success:"Success",Warning:"Warning",Error:"Error",Information:"Information"};class r extends n{static isValid(n){return!!e[n]}}r.generateTypeAccessors(e);return r});

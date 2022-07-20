@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/headset","./v4/headset"],function(e,a,t){"use strict";const i=e.isThemeFamily("sap_horizon")?t:a;var s={pathData:i};return s});

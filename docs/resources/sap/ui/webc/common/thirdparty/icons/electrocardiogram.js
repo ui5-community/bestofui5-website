@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/electrocardiogram","./v4/electrocardiogram"],function(a,e,r){"use strict";const i=a.isThemeFamily("sap_horizon")?r:e;var o={pathData:i};return o});

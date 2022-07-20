@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e){"use strict";const t=(t,s,n)=>e.html`<div class="ui5-badge-root"><slot name="icon"></slot>${t.hasText?i():undefined}<span class="ui5-hidden-text">${e.ifDefined(t.badgeDescription)}</span></div>`;const i=(t,i,s)=>e.html`<label class="ui5-badge-text"><bdi><slot></slot></bdi></label>`;return t});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/business-by-design","./v4/business-by-design"],function(s,e,i){"use strict";const n=s.isThemeFamily("sap_horizon")?i:e;var a={pathData:n};return a});

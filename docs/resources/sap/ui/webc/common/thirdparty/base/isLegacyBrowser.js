@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const n=()=>!!window.ShadyDOM;return n});

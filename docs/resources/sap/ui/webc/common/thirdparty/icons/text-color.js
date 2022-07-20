@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/text-color","./v4/text-color"],function(t,e,o){"use strict";const a=t.isThemeFamily("sap_horizon")?o:e;var i={pathData:a};return i});

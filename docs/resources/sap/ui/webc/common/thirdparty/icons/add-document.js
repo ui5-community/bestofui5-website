@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/add-document","./v4/add-document"],function(a,e,t){"use strict";const i=a.isThemeFamily("sap_horizon")?t:e;var n={pathData:i};return n});

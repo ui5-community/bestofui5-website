@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/bubble-chart","./v4/bubble-chart"],function(a,e,t){"use strict";const i=a.isThemeFamily("sap_horizon")?t:e;var r={pathData:i};return r});

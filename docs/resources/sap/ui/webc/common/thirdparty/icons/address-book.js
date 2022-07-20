@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/address-book","./v4/address-book"],function(a,e,s){"use strict";const o=a.isThemeFamily("sap_horizon")?s:e;var i={pathData:o};return i});

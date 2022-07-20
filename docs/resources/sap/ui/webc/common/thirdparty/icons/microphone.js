@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/microphone","./v4/microphone"],function(e,i,o){"use strict";const a=e.isThemeFamily("sap_horizon")?o:i;var n={pathData:a};return n});

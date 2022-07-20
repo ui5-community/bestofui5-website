@@ -1,0 +1,1 @@
+sap.ui.define(["./getEffectiveStyle","./CustomStyle"],function(t,e){"use strict";const n=new Map;e.attachCustomCSSChange(t=>{n.delete(`${t}_normal`)});const a=(e,a=false)=>{const s=e.getMetadata().getTag();const c=`${s}_${a?"static":"normal"}`;if(!n.has(c)){const s=t(e,a);const o=new CSSStyleSheet;o.replaceSync(s);n.set(c,[o])}return n.get(c)};return a});

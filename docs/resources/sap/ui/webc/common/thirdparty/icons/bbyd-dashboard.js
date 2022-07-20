@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/bbyd-dashboard","./v4/bbyd-dashboard"],function(a,e,i){"use strict";const s=a.isThemeFamily("sap_horizon")?i:e;var o={pathData:s};return o});

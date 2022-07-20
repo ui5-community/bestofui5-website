@@ -1,0 +1,1 @@
+sap.ui.define(["exports"],function(e){"use strict";const t=new Set;const s=e=>{t.add(e)};const n=e=>t.has(e);e.isRtlAware=n;e.markAsRtlAware=s;Object.defineProperty(e,"__esModule",{value:true})});

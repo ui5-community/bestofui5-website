@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/crm-sales","./v4/crm-sales"],function(a,e,s){"use strict";const i=a.isThemeFamily("sap_horizon")?s:e;var r={pathData:i};return r});

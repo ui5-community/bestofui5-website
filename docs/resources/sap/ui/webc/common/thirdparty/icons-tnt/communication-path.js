@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/asset-registries/Icons"],function(t){"use strict";const n="communication-path";const s="M453 37q5-5 11-5t11 5 5 11-5 11L59 475q-5 5-11 5t-11-5-5-11 5-11z";const a=false;const c="tnt";const e="@ui5/webcomponents-icons-tnt";t.registerIcon(n,{pathData:s,ltr:a,collection:c,packageName:e});var o={pathData:s};return o});

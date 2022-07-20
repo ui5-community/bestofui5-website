@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/activity-assigned-to-goal","./v4/activity-assigned-to-goal"],function(a,i,t){"use strict";const e=a.isThemeFamily("sap_horizon")?t:i;var s={pathData:e};return s});

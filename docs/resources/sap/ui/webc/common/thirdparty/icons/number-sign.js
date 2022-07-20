@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/number-sign","./v4/number-sign"],function(e,i,n){"use strict";const a=e.isThemeFamily("sap_horizon")?n:i;var s={pathData:a};return s});

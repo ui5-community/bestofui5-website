@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/arobase","./v4/arobase"],function(a,e,i){"use strict";const s=a.isThemeFamily("sap_horizon")?i:e;var o={pathData:s};return o});

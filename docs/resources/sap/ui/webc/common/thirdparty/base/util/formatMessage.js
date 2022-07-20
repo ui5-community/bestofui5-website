@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const r=/('')|'([^']+(?:''[^']*)*)(?:'|$)|\{([0-9]+(?:\s*,[^{}]*)?)\}|[{}]/g;const t=(t,e)=>{e=e||[];return t.replace(r,(r,t,n,i,s)=>{if(t){return"'"}if(n){return n.replace(/''/g,"'")}if(i){return String(e[parseInt(i)])}throw new Error(`[i18n]: pattern syntax error at pos ${s}`)})};return t});

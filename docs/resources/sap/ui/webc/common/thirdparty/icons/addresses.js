@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/addresses","./v4/addresses"],function(e,s,a){"use strict";const i=e.isThemeFamily("sap_horizon")?a:s;var r={pathData:i};return r});

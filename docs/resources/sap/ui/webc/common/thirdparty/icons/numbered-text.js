@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/numbered-text","./v4/numbered-text"],function(e,t,a){"use strict";const i=e.isThemeFamily("sap_horizon")?a:t;var n={pathData:i};return n});

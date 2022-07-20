@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/shipping-status","./v4/shipping-status"],function(i,s,t){"use strict";const a=i.isThemeFamily("sap_horizon")?t:s;var e={pathData:a};return e});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sap-logo-shape","./v4/sap-logo-shape"],function(a,e,s){"use strict";const o=a.isThemeFamily("sap_horizon")?s:e;var i={pathData:o};return i});

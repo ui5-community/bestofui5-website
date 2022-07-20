@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const e=()=>{let e=document.activeElement;while(e&&e.shadowRoot&&e.shadowRoot.activeElement){e=e.shadowRoot.activeElement}return e};return e});

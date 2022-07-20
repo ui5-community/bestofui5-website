@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/business-card","./v4/business-card"],function(s,a,e){"use strict";const i=s.isThemeFamily("sap_horizon")?e:a;var n={pathData:i};return n});

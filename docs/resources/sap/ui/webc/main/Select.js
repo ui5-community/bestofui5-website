@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/webc/common/WebComponent","./library","sap/ui/core/EnabledPropagator","sap/ui/core/library","./thirdparty/Select","./thirdparty/features/InputElementsFormSupport"],function(e,t,a,r){"use strict";var i=r.ValueState;var p=e.extend("sap.ui.webc.main.Select",{metadata:{library:"sap.ui.webc.main",tag:"ui5-select-ui5",interfaces:["sap.ui.core.IFormContent"],properties:{accessibleName:{type:"string"},enabled:{type:"boolean",defaultValue:true,mapping:{type:"attribute",to:"disabled",formatter:"_mapEnabled"}},name:{type:"string",defaultValue:""},required:{type:"boolean",defaultValue:false},valueState:{type:"sap.ui.core.ValueState",defaultValue:i.None},valueStateMessage:{type:"string",defaultValue:"",mapping:{type:"slot",to:"div"}},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},defaultAggregation:"options",aggregations:{options:{type:"sap.ui.webc.main.ISelectOption",multiple:true}},associations:{ariaLabelledBy:{type:"sap.ui.core.Control",multiple:true,mapping:{type:"property",to:"accessibleNameRef",formatter:"_getAriaLabelledByForRendering"}}},events:{change:{parameters:{selectedOption:{type:"HTMLElement"}}}},getters:["selectedOption"]}});a.call(p.prototype);return p});

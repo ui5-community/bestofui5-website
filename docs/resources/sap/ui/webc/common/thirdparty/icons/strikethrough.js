@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/strikethrough","./v4/strikethrough"],function(t,e,i){"use strict";const r=t.isThemeFamily("sap_horizon")?i:e;var a={pathData:r};return a});

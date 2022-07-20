@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/webc/common/WebComponent","./library","sap/ui/webc/main/library","./thirdparty/NotificationListGroupItem"],function(e,t,i){"use strict";var a=i.Priority;var o=e.extend("sap.ui.webc.fiori.NotificationListGroupItem",{metadata:{library:"sap.ui.webc.fiori",tag:"ui5-li-notification-group-ui5",interfaces:["sap.ui.webc.main.IListItem"],properties:{busy:{type:"boolean",defaultValue:false},busyDelay:{type:"int",defaultValue:1e3},collapsed:{type:"boolean",defaultValue:false},priority:{type:"sap.ui.webc.main.Priority",defaultValue:a.None},read:{type:"boolean",defaultValue:false},showClose:{type:"boolean",defaultValue:false},showCounter:{type:"boolean",defaultValue:false},titleText:{type:"string",defaultValue:""}},defaultAggregation:"items",aggregations:{actions:{type:"sap.ui.webc.fiori.INotificationAction",multiple:true,slot:"actions"},items:{type:"sap.ui.webc.fiori.INotificationListItem",multiple:true}},events:{close:{parameters:{}},toggle:{parameters:{}}}}});return o});

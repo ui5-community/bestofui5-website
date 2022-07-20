@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/functional-location","./v4/functional-location"],function(a,i,n){"use strict";const o=a.isThemeFamily("sap_horizon")?n:i;var t={pathData:o};return t});

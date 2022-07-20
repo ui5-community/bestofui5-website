@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/kpi-corporate-performance","./v4/kpi-corporate-performance"],function(e,r,a){"use strict";const o=e.isThemeFamily("sap_horizon")?a:r;var i={pathData:o};return i});

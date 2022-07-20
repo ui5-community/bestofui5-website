@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/collections-insight","./v4/collections-insight"],function(i,t,e){"use strict";const n=i.isThemeFamily("sap_horizon")?e:t;var s={pathData:n};return s});

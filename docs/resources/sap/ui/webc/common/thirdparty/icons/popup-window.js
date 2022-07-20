@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/popup-window","./v4/popup-window"],function(i,o,p){"use strict";const a=i.isThemeFamily("sap_horizon")?p:o;var e={pathData:a};return e});

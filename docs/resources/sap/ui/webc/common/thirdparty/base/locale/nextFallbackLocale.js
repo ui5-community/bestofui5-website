@@ -1,0 +1,1 @@
+sap.ui.define(["../generated/AssetParameters"],function(e){"use strict";const r=r=>{if(!r){return e.DEFAULT_LOCALE}if(r==="zh_HK"){return"zh_TW"}const t=r.lastIndexOf("_");if(t>=0){return r.slice(0,t)}return r!==e.DEFAULT_LOCALE?e.DEFAULT_LOCALE:""};return r});

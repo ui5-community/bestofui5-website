@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/screen-split-three","./v4/screen-split-three"],function(e,t,i){"use strict";const s=e.isThemeFamily("sap_horizon")?i:t;var r={pathData:s};return r});

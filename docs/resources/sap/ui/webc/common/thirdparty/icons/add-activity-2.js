@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/add-activity-2","./v4/add-activity-2"],function(a,i,t){"use strict";const e=a.isThemeFamily("sap_horizon")?t:i;var c={pathData:e};return c});

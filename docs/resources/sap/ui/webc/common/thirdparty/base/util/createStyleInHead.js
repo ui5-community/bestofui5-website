@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const t=(t,e={})=>{const n=document.createElement("style");n.type="text/css";Object.entries(e).forEach(t=>n.setAttribute(...t));n.textContent=t;document.head.appendChild(n);return n};return t});

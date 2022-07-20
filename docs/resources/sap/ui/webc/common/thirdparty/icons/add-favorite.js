@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/add-favorite","./v4/add-favorite"],function(a,e,i){"use strict";const t=a.isThemeFamily("sap_horizon")?i:e;var o={pathData:t};return o});

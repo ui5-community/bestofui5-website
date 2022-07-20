@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/UI5Element"],function(t){"use strict";function e(t){return t&&typeof t==="object"&&"default"in t?t["default"]:t}var n=e(t);const i={tag:"ui5-filter-item-option",properties:{text:{type:String},selected:{type:Boolean}},slots:{},events:{}};class s extends n{static get metadata(){return i}}s.define();return s});

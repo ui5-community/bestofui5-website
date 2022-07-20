@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/customer-and-supplier","./v4/customer-and-supplier"],function(e,a,i){"use strict";const s=e.isThemeFamily("sap_horizon")?i:a;var r={pathData:s};return r});

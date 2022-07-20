@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/chevron-phase-2","./v4/chevron-phase-2"],function(e,a,i){"use strict";const n=e.isThemeFamily("sap_horizon")?i:a;var s={pathData:n};return s});

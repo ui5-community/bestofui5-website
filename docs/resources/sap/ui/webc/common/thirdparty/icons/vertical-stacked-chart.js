@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/vertical-stacked-chart","./v4/vertical-stacked-chart"],function(a,t,e){"use strict";const c=a.isThemeFamily("sap_horizon")?e:t;var i={pathData:c};return i});

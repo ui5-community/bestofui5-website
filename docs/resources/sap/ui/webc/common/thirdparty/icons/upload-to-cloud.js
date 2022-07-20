@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/upload-to-cloud","./v4/upload-to-cloud"],function(o,a,t){"use strict";const e=o.isThemeFamily("sap_horizon")?t:a;var i={pathData:e};return i});

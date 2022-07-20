@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/add-filter","./v4/add-filter"],function(a,e,i){"use strict";const t=a.isThemeFamily("sap_horizon")?i:e;var r={pathData:t};return r});

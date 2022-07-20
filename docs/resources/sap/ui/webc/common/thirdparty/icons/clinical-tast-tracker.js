@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/clinical-tast-tracker","./v4/clinical-tast-tracker"],function(a,t,i){"use strict";const c=a.isThemeFamily("sap_horizon")?i:t;var e={pathData:c};return e});

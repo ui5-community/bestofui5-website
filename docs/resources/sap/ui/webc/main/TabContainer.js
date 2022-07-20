@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/webc/common/WebComponent","./library","./thirdparty/TabContainer"],function(e,a){"use strict";var t=a.TabLayout;var i=a.TabsOverflowMode;var n=e.extend("sap.ui.webc.main.TabContainer",{metadata:{library:"sap.ui.webc.main",tag:"ui5-tabcontainer-ui5",properties:{collapsed:{type:"boolean",defaultValue:false},fixed:{type:"boolean",defaultValue:false},height:{type:"sap.ui.core.CSSSize",mapping:"style"},showOverflow:{type:"boolean",defaultValue:false},tabLayout:{type:"sap.ui.webc.main.TabLayout",defaultValue:t.Standard},tabsOverflowMode:{type:"sap.ui.webc.main.TabsOverflowMode",defaultValue:i.End},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},defaultAggregation:"items",aggregations:{items:{type:"sap.ui.webc.main.ITab",multiple:true},overflowButton:{type:"sap.ui.webc.main.IButton",multiple:false,slot:"overflowButton"},startOverflowButton:{type:"sap.ui.webc.main.IButton",multiple:false,slot:"startOverflowButton"}},events:{tabSelect:{parameters:{tab:{type:"HTMLElement"},tabIndex:{type:"int"}}}},designtime:"sap/ui/webc/main/designtime/TabContainer.designtime"}});return n});

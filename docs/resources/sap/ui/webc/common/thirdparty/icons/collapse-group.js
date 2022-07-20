@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/collapse-group","./v4/collapse-group"],function(a,e,o){"use strict";const i=a.isThemeFamily("sap_horizon")?o:e;var s={pathData:i};return s});

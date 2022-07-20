@@ -1,0 +1,1 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/asset-registries/Illustrations","./tnt-Dialog-Teams","./tnt-Scene-Teams","./tnt-Spot-Teams"],function(e,t,s,n,o){"use strict";const a="Teams";const i="tnt";t.registerIllustration(a,{dialogSvg:s,sceneSvg:n,spotSvg:o,set:i});e.dialogSvg=s;e.sceneSvg=n;e.spotSvg=o;Object.defineProperty(e,"__esModule",{value:true})});

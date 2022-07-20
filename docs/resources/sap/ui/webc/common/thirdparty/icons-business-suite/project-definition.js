@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/asset-registries/Icons"],function(s){"use strict";const t="project-definition";const e="M496 512H16L256 0z";const n=false;const i="business-suite";const c="@ui5/webcomponents-icons-business-suite";s.registerIcon(t,{pathData:e,ltr:n,collection:i,packageName:c});var o={pathData:e};return o});

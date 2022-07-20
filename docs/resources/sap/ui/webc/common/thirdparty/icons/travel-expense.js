@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/travel-expense","./v4/travel-expense"],function(e,a,t){"use strict";const i=e.isThemeFamily("sap_horizon")?t:a;var n={pathData:i};return n});

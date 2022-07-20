@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const e=(e,t)=>{if(e.length!==t.length){return false}for(let n=0;n<e.length;n++){if(e[n]!==t[n]){return false}}return true};return e});

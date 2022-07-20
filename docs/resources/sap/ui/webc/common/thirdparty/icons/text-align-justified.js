@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/text-align-justified","./v4/text-align-justified"],function(i,t,e){"use strict";const a=i.isThemeFamily("sap_horizon")?e:t;var n={pathData:a};return n});

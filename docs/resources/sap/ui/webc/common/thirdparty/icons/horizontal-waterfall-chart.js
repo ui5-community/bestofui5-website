@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/horizontal-waterfall-chart","./v4/horizontal-waterfall-chart"],function(a,t,r){"use strict";const e=a.isThemeFamily("sap_horizon")?r:t;var i={pathData:e};return i});

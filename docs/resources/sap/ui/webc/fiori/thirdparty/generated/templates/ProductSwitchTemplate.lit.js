@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e){"use strict";const i=(i,t,o)=>e.html`<div class="ui5-product-switch-root" role="list" aria-label="${e.ifDefined(i._ariaLabelText)}" @focusin=${i._onfocusin} @keydown=${i._onkeydown} @click="${i.handleProductSwitchItemClick}"><slot></slot></div>`;return i});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/cursor-arrow","./v4/cursor-arrow"],function(r,a,o){"use strict";const e=r.isThemeFamily("sap_horizon")?o:a;var i={pathData:e};return i});

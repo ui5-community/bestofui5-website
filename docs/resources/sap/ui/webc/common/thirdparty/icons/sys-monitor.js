@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sys-monitor","./v4/sys-monitor"],function(i,s,o){"use strict";const t=i.isThemeFamily("sap_horizon")?o:s;var a={pathData:t};return a});

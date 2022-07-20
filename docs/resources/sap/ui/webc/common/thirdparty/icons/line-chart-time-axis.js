@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/line-chart-time-axis","./v4/line-chart-time-axis"],function(i,a,e){"use strict";const t=i.isThemeFamily("sap_horizon")?e:a;var n={pathData:t};return n});

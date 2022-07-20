@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/internet-browser","./v4/internet-browser"],function(e,r,t){"use strict";const i=e.isThemeFamily("sap_horizon")?t:r;var n={pathData:i};return n});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/attachment-zip-file","./v4/attachment-zip-file"],function(t,a,e){"use strict";const i=t.isThemeFamily("sap_horizon")?e:a;var n={pathData:i};return n});

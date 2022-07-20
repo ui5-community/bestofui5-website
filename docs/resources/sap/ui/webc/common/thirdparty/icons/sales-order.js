@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sales-order","./v4/sales-order"],function(e,a,s){"use strict";const r=e.isThemeFamily("sap_horizon")?s:a;var i={pathData:r};return i});

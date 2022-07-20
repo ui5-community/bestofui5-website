@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const t={Auto:"Auto",Vertical:"Vertical",Horizontal:"Horizontal",Paging:"Paging"};return t});

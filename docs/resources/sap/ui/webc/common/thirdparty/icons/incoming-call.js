@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/incoming-call","./v4/incoming-call"],function(i,a,n){"use strict";const c=i.isThemeFamily("sap_horizon")?n:a;var e={pathData:c};return e});

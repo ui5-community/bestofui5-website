@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/column-chart-dual-axis","./v4/column-chart-dual-axis"],function(a,i,t){"use strict";const c=a.isThemeFamily("sap_horizon")?t:i;var e={pathData:c};return e});

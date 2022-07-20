@@ -1,0 +1,1 @@
+sap.ui.define(["../util/detectNavigatorLanguage","../config/Language","./Locale"],function(t,e,n){"use strict";const r=new Map;const a=t=>{if(!r.has(t)){r.set(t,new n(t))}return r.get(t)};const g=t=>{try{if(t&&typeof t==="string"){return a(t)}}catch(t){}};const u=n=>{if(n){return g(n)}if(e.getLanguage()){return a(e.getLanguage())}return g(t())};return u});

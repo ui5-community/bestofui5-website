@@ -1,0 +1,1 @@
+sap.ui.define(["./animate","./config"],function(e,t){"use strict";var r=({element:r=t.element,duration:n=t.duration,progress:o=t.identity,dx:l=0,dy:i=0})=>{let s;let a;return e({beforeStart:()=>{s=r.scrollLeft;a=r.scrollTop},duration:n,element:r,progress:e=>{o(e);r.scrollLeft=s+e*l;r.scrollTop=a+e*i}})};return r});

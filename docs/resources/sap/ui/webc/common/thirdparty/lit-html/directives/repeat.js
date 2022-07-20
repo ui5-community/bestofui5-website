@@ -1,0 +1,11 @@
+sap.ui.define(["exports","../lit-html","../directive"],function(e,t,n){"use strict";
+/**
+	 * @license
+	 * Copyright 2020 Google LLC
+	 * SPDX-License-Identifier: BSD-3-Clause
+	 */const{H:s}=t._$LH,i=()=>document.createComment(""),r=(e,t,n)=>{var r;const o=e._$AA.parentNode,l=void 0===t?e._$AB:t._$AA;if(void 0===n){const t=o.insertBefore(i(),l),r=o.insertBefore(i(),l);n=new s(t,r,e,e.options)}else{const t=n._$AB.nextSibling,s=n._$AM,i=s!==e;if(i){let t;null===(r=n._$AQ)||void 0===r||r.call(n,e),n._$AM=e,void 0!==n._$AP&&(t=e._$AU)!==s._$AU&&n._$AP(t)}if(t!==l||i){let e=n._$AA;for(;e!==t;){const t=e.nextSibling;o.insertBefore(e,l),e=t}}}return n},o=(e,t,n=e)=>(e._$AI(t,n),e),l={},u=(e,t=l)=>e._$AH=t,c=e=>e._$AH,f=e=>{var t;null===(t=e._$AP)||void 0===t||t.call(e,!1,!0);let n=e._$AA;const s=e._$AB.nextSibling;for(;n!==s;){const e=n.nextSibling;n.remove(),n=e}};
+/**
+	 * @license
+	 * Copyright 2017 Google LLC
+	 * SPDX-License-Identifier: BSD-3-Clause
+	 */const a=(e,t,n)=>{const s=new Map;for(let i=t;i<=n;i++)s.set(e[i],i);return s},d=n.directive(class extends n.Directive{constructor(e){if(super(e),e.type!==n.PartType.CHILD)throw Error("repeat() can only be used in text expressions")}dt(e,t,n){let s;void 0===n?n=t:void 0!==t&&(s=t);const i=[],r=[];let o=0;for(const t of e)i[o]=s?s(t,o):o,r[o]=n(t,o),o++;return{values:r,keys:i}}render(e,t,n){return this.dt(e,t,n).values}update(e,[n,s,i]){var l;const d=c(e),{values:A,keys:v}=this.dt(n,s,i);if(!Array.isArray(d))return this.ut=v,A;const _=null!==(l=this.ut)&&void 0!==l?l:this.ut=[],$=[];let h,p,g=0,x=d.length-1,y=0,b=A.length-1;for(;g<=x&&y<=b;)if(null===d[g])g++;else if(null===d[x])x--;else if(_[g]===v[y])$[y]=o(d[g],A[y]),g++,y++;else if(_[x]===v[b])$[b]=o(d[x],A[b]),x--,b--;else if(_[g]===v[b])$[b]=o(d[g],A[b]),r(e,$[b+1],d[g]),g++,b--;else if(_[x]===v[y])$[y]=o(d[x],A[y]),r(e,d[g],d[x]),x--,y++;else if(void 0===h&&(h=a(v,y,b),p=a(_,g,x)),h.has(_[g]))if(h.has(_[x])){const t=p.get(v[y]),n=void 0!==t?d[t]:null;if(null===n){const t=r(e,d[g]);o(t,A[y]),$[y]=t}else $[y]=o(n,A[y]),r(e,d[g],n),d[t]=null;y++}else f(d[x]),x--;else f(d[g]),g++;for(;y<=b;){const t=r(e,$[b+1]);o(t,A[y]),$[y++]=t}for(;g<=x;){const e=d[g++];null!==e&&f(e)}return this.ut=v,u(e,$),t.noChange}});e.repeat=d;Object.defineProperty(e,"__esModule",{value:true})});

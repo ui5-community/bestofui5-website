@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/drop-down-list","./v4/drop-down-list"],function(i,o,t){"use strict";const a=i.isThemeFamily("sap_horizon")?t:o;var e={pathData:a};return e});

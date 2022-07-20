@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/heating-cooling","./v4/heating-cooling"],function(i,a,e){"use strict";const n=i.isThemeFamily("sap_horizon")?e:a;var o={pathData:n};return o});

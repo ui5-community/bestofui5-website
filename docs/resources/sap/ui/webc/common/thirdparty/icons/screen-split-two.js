@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/screen-split-two","./v4/screen-split-two"],function(e,t,i){"use strict";const s=e.isThemeFamily("sap_horizon")?i:t;var a={pathData:s};return a});

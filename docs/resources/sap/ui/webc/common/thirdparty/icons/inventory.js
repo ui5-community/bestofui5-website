@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/inventory","./v4/inventory"],function(e,i,n){"use strict";const t=e.isThemeFamily("sap_horizon")?n:i;var a={pathData:t};return a});

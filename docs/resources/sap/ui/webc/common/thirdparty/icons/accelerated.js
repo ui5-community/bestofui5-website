@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/accelerated","./v4/accelerated"],function(e,a,t){"use strict";const c=e.isThemeFamily("sap_horizon")?t:a;var i={pathData:c};return i});

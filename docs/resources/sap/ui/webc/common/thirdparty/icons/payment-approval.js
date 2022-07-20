@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/payment-approval","./v4/payment-approval"],function(a,e,p){"use strict";const t=a.isThemeFamily("sap_horizon")?p:e;var i={pathData:t};return i});

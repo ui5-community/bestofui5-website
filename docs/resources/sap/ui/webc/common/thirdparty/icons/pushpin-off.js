@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/pushpin-off","./v4/pushpin-off"],function(i,a,e){"use strict";const n=i.isThemeFamily("sap_horizon")?e:a;var s={pathData:n};return s});

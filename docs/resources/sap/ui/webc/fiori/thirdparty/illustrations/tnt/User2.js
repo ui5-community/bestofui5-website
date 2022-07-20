@@ -1,0 +1,1 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/asset-registries/Illustrations","./tnt-Dialog-User2","./tnt-Scene-User2","./tnt-Spot-User2"],function(e,t,s,r,n){"use strict";const o="User2";const i="tnt";t.registerIllustration(o,{dialogSvg:s,sceneSvg:r,spotSvg:n,set:i});e.dialogSvg=s;e.sceneSvg=r;e.spotSvg=n;Object.defineProperty(e,"__esModule",{value:true})});

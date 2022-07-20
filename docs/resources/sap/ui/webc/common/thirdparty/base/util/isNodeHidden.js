@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const e=e=>{if(e.nodeName==="SLOT"){return false}return e.offsetWidth<=0&&e.offsetHeight<=0||e.style&&e.style.visibility==="hidden"};return e});

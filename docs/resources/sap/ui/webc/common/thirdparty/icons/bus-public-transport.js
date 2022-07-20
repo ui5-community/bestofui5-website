@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/bus-public-transport","./v4/bus-public-transport"],function(t,a,i){"use strict";const s=t.isThemeFamily("sap_horizon")?i:a;var r={pathData:s};return r});

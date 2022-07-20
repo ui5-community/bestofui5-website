@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/LocaleData"],function(e){"use strict";function t(e){return e&&typeof e==="object"&&"default"in e?e["default"]:e}var u=t(e);return u});

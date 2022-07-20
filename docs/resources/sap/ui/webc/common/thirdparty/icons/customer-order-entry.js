@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/customer-order-entry","./v4/customer-order-entry"],function(e,r,t){"use strict";const o=e.isThemeFamily("sap_horizon")?t:r;var a={pathData:o};return a});

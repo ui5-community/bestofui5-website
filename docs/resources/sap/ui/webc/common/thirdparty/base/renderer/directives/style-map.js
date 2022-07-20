@@ -1,0 +1,1 @@
+sap.ui.define(["exports","../../_chunks/style-map","sap/ui/webc/common/thirdparty/lit-html/directive"],function(e,t,i){"use strict";e.styleMap=t.styleMap;Object.defineProperty(e,"__esModule",{value:true})});

@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const s=(s,t)=>class e extends s{constructor(){super();t&&t()}};return s});

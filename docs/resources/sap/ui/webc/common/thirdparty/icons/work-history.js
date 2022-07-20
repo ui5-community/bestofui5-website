@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/work-history","./v4/work-history"],function(i,o,r){"use strict";const t=i.isThemeFamily("sap_horizon")?r:o;var a={pathData:t};return a});

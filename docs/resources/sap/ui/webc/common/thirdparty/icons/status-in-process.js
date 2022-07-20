@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/status-in-process","./v4/status-in-process"],function(s,t,a){"use strict";const e=s.isThemeFamily("sap_horizon")?a:t;var i={pathData:e};return i});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/grid","./v4/grid"],function(i,a,e){"use strict";const r=i.isThemeFamily("sap_horizon")?e:a;var t={pathData:r};return t});

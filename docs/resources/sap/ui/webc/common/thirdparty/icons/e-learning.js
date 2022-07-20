@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/e-learning","./v4/e-learning"],function(e,a,i){"use strict";const n=e.isThemeFamily("sap_horizon")?i:a;var r={pathData:n};return r});

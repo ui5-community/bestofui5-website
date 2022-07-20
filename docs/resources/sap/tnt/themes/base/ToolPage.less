@@ -1,0 +1,186 @@
+/* ================================= */
+/* CSS for control sap.tnt/ToolPage  */
+/* Base theme                        */
+/* ================================= */
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+@_sap_tnt_ToolPage_AsideWidth : 15rem;
+@_sap_tnt_ToolPage_AsideWidthOnTablet : 3rem;
+@_sap_tnt_ToolPage_HeaderHeight : 3rem;
+@_sap_tnt_ToolPage_AnimationDuration : 0.3s;
+@_sap_tnt_ToolPage_HeaderShadow: none;
+
+/* ==========================================================================
+   Root element
+   ========================================================================== */
+.sapTntToolPage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.sapTntToolPageHeader {
+  height: @_sap_tnt_ToolPage_HeaderHeight;
+}
+
+.sapTntToolPageHeaderWrapper {
+  box-shadow: @_sap_tnt_ToolPage_HeaderShadow;
+  z-index: 2; // bring header above content wrapper to draw drop shadow over the content
+}
+
+/* ==========================================================================
+   Subheader
+   ========================================================================== */
+.sapTntToolPage header + header .sapTntToolPageHeader {
+  height: auto;
+
+  .sapTntToolHeader {
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   Content wrapper
+   ========================================================================== */
+.sapTntToolPageContentWrapper {
+  display: flex;
+  flex-grow: 1;
+  min-height: 0; // fixes flex chrome issue
+  position: relative;
+}
+
+/* Aside container
+   ========================================================================== */
+
+.sapTntToolPageAside {
+  display: flex;
+  flex-direction: column;
+
+  will-change: transform;
+}
+
+.sapTntToolPageAsideContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+}
+
+html:not([data-sap-ui-animation='off']) .sapTntToolPageMain {
+  transition: padding-left @_sap_tnt_ToolPage_AnimationDuration, transform @_sap_tnt_ToolPage_AnimationDuration;
+}
+
+html:not([data-sap-ui-animation='off']) .sapTntToolPageAside {
+  transition: transform @_sap_tnt_ToolPage_AnimationDuration;
+}
+
+.sap-desktop,
+.sap-tablet {
+  .sapTntToolPageAside {
+    width: @_sap_tnt_ToolPage_AsideWidth;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .sapTntToolPageAside + .sapTntToolPageMain {
+    padding-left: @_sap_tnt_ToolPage_AsideWidth;
+  }
+}
+
+.sap-desktop,
+.sap-tablet {
+  .sapTntToolPageAsideCollapsed {
+    & > .sapTntToolPageAside {
+      width: @_sap_tnt_ToolPage_AsideWidthOnTablet;
+    }
+
+    & > .sapTntToolPageAside + .sapTntToolPageMain {
+      padding-left: @_sap_tnt_ToolPage_AsideWidthOnTablet;
+    }
+  }
+}
+
+.sap-phone {
+  .sapTntToolPageAside {
+    width: @_sap_tnt_ToolPage_AsideWidth;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  .sapTntToolPageMain {
+    transform: translateX(@_sap_tnt_ToolPage_AsideWidth);
+  }
+
+  .sapTntToolPageAsideCollapsed {
+    .sapTntToolPageAside {
+      transform: translateX(-@_sap_tnt_ToolPage_AsideWidth);
+    }
+    .sapTntToolPageMain {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Main container
+   ========================================================================== */
+
+.sapTntToolPageMain {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0; // fixes flex chrome issue
+
+  will-change: transform;
+}
+
+.sapTntToolPageMainContent {
+  flex: 1;
+  min-height: 0; // fixes flex chrome issue
+  position: relative;
+}
+
+.sapTntToolPageMainContentWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+   RTL
+   ========================================================================== */
+
+html[dir=rtl] {
+  &.sap-phone {
+    .sapTntToolPageMain {
+      transform: translateX(-@_sap_tnt_ToolPage_AsideWidth);
+    }
+
+    .sapTntToolPageAsideCollapsed {
+      .sapTntToolPageAside {
+        transform: translateX(@_sap_tnt_ToolPage_AsideWidth);
+      }
+      .sapTntToolPageMain {
+        transform: translateX(0);
+      }
+    }
+  }
+}

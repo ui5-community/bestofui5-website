@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/doc-attachment","./v4/doc-attachment"],function(t,a,e){"use strict";const c=t.isThemeFamily("sap_horizon")?e:a;var i={pathData:c};return i});

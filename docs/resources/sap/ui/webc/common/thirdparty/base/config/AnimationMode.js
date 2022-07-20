@@ -1,0 +1,1 @@
+sap.ui.define(["exports","../InitialConfiguration","../types/AnimationMode"],function(e,t,i){"use strict";let n;const o=()=>{if(n===undefined){n=t.getAnimationMode()}return n};const s=e=>{if(Object.values(i).includes(e)){n=e}};e.getAnimationMode=o;e.setAnimationMode=s;Object.defineProperty(e,"__esModule",{value:true})});

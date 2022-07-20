@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/color-fill","./v4/color-fill"],function(i,o,a){"use strict";const e=i.isThemeFamily("sap_horizon")?a:o;var r={pathData:e};return r});

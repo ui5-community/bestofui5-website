@@ -1,0 +1,1 @@
+sap.ui.define(["exports","../EventProvider"],function(e,t){"use strict";const d=new t;const n="themeLoaded";const o=e=>{d.attachEvent(n,e)};const a=e=>{d.detachEvent(n,e)};const c=e=>d.fireEvent(n,e);e.attachThemeLoaded=o;e.detachThemeLoaded=a;e.fireThemeLoaded=c;Object.defineProperty(e,"__esModule",{value:true})});

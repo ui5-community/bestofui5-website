@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const e=(e,t=document.body)=>{let r=document.querySelector(e);if(r){return r}r=document.createElement(e);return t.insertBefore(r,t.firstChild)};return e});

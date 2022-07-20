@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/lead-outdated","./v4/lead-outdated"],function(a,e,t){"use strict";const i=a.isThemeFamily("sap_horizon")?t:e;var o={pathData:i};return o});

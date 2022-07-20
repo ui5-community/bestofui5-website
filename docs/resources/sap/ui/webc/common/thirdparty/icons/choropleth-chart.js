@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/choropleth-chart","./v4/choropleth-chart"],function(t,a,e){"use strict";const h=t.isThemeFamily("sap_horizon")?e:a;var o={pathData:h};return o});

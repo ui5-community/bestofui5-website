@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const t="--_ui5_content_density";const e=e=>getComputedStyle(e).getPropertyValue(t);return e});

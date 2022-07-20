@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/types/DataType"],function(t){"use strict";function e(t){return t&&typeof t==="object"&&"default"in t?t["default"]:t}var s=e(t);const a={List:"List",Solid:"Solid",Transparent:"Transparent"};class n extends s{static isValid(t){return!!a[t]}}n.generateTypeAccessors(a);return n});

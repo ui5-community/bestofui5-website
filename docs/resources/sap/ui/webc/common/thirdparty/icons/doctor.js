@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/doctor","./v4/doctor"],function(o,t,a){"use strict";const e=o.isThemeFamily("sap_horizon")?a:t;var i={pathData:e};return i});

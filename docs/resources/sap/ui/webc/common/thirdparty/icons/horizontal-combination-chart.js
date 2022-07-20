@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/horizontal-combination-chart","./v4/horizontal-combination-chart"],function(a,i,o){"use strict";const t=a.isThemeFamily("sap_horizon")?o:i;var n={pathData:t};return n});

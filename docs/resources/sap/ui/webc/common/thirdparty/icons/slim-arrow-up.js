@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/slim-arrow-up","./v4/slim-arrow-up"],function(a,i,r){"use strict";const e=a.isThemeFamily("sap_horizon")?r:i;var s={pathData:e};return s});

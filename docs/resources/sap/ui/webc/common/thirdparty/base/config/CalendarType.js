@@ -1,0 +1,1 @@
+sap.ui.define(["exports","../types/CalendarType","../InitialConfiguration"],function(e,n,t){"use strict";let i;const r=()=>{if(i===undefined){i=t.getCalendarType()}if(n.isValid(i)){return i}return n.Gregorian};e.getCalendarType=r;Object.defineProperty(e,"__esModule",{value:true})});

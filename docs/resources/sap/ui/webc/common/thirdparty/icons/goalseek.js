@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/goalseek","./v4/goalseek"],function(e,a,i){"use strict";const s=e.isThemeFamily("sap_horizon")?i:a;var o={pathData:s};return o});

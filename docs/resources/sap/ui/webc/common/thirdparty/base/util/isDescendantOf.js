@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const t=(t,e,n=false)=>{if(typeof t!=="function"||typeof e!=="function"){return false}if(n&&t===e){return true}let f=t;do{f=Object.getPrototypeOf(f)}while(f!==null&&f!==e);return f===e};return t});

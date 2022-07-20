@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/drill-up","./v4/drill-up"],function(i,a,e){"use strict";const r=i.isThemeFamily("sap_horizon")?e:a;var t={pathData:r};return t});

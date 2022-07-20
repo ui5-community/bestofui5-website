@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/resize-corner","./v4/resize-corner"],function(e,r,i){"use strict";const a=e.isThemeFamily("sap_horizon")?i:r;var n={pathData:a};return n});

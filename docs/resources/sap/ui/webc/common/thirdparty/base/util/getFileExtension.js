@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const n=n=>{const t=n.lastIndexOf(".");if(t<1){return""}return n.slice(t)};return n});

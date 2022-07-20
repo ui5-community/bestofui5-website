@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/contacts","./v4/contacts"],function(t,a,c){"use strict";const e=t.isThemeFamily("sap_horizon")?c:a;var i={pathData:e};return i});

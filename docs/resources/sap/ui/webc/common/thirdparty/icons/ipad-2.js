@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/ipad-2","./v4/ipad-2"],function(a,i,e){"use strict";const t=a.isThemeFamily("sap_horizon")?e:i;var n={pathData:t};return n});

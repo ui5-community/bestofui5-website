@@ -1,0 +1,1 @@
+sap.ui.define(["exports","./theming/CustomStyle","./theming/ThemeLoaded"],function(e,d,t){"use strict";e.addCustomCSS=d.addCustomCSS;e.attachThemeLoaded=t.attachThemeLoaded;e.detachThemeLoaded=t.detachThemeLoaded;Object.defineProperty(e,"__esModule",{value:true})});

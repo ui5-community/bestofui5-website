@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/collections-management","./v4/collections-management"],function(e,a,n){"use strict";const t=e.isThemeFamily("sap_horizon")?n:a;var i={pathData:t};return i});

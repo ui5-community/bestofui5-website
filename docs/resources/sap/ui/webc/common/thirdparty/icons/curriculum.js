@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/curriculum","./v4/curriculum"],function(i,r,u){"use strict";const a=i.isThemeFamily("sap_horizon")?u:r;var c={pathData:a};return c});

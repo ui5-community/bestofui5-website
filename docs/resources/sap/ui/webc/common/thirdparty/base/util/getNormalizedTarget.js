@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const t=t=>{let e=t;if(t.shadowRoot&&t.shadowRoot.activeElement){e=t.shadowRoot.activeElement}return e};return t});

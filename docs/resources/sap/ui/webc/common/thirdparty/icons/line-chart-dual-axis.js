@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/line-chart-dual-axis","./v4/line-chart-dual-axis"],function(a,i,e){"use strict";const t=a.isThemeFamily("sap_horizon")?e:i;var n={pathData:t};return n});

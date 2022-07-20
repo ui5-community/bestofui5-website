@@ -1,0 +1,1 @@
+sap.ui.define(["./DataType"],function(t){"use strict";class e extends t{static isValid(t){return Number.isInteger(t)}static attributeToProperty(t){return parseInt(t)}}return e});

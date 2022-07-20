@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const t=t=>{const n=t.getBoundingClientRect();return n.top>=0&&n.left>=0&&n.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&n.right<=(window.innerWidth||document.documentElement.clientWidth)};return t});

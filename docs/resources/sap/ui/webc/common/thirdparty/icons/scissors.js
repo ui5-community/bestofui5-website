@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/scissors","./v4/scissors"],function(s,i,a){"use strict";const e=s.isThemeFamily("sap_horizon")?a:i;var o={pathData:e};return o});

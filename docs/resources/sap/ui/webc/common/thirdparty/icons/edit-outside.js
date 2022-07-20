@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/edit-outside","./v4/edit-outside"],function(e,i,t){"use strict";const a=e.isThemeFamily("sap_horizon")?t:i;var s={pathData:a};return s});

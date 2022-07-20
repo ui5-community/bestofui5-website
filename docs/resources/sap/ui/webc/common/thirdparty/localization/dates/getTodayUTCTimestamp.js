@@ -1,0 +1,1 @@
+sap.ui.define(["./CalendarDate"],function(e){"use strict";const a=a=>e.fromLocalJSDate(new Date,a).valueOf()/1e3;return a});

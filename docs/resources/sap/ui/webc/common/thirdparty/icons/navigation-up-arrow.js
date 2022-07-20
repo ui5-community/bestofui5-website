@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/navigation-up-arrow","./v4/navigation-up-arrow"],function(a,i,n){"use strict";const o=a.isThemeFamily("sap_horizon")?n:i;var r={pathData:o};return r});

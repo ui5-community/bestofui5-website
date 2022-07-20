@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/LocaleData"],function(t){"use strict";function e(t){return t&&typeof t==="object"&&"default"in t?t["default"]:t}var n=e(t);const a=new Map;const u=t=>{if(!a.has(t)){a.set(t,n.getInstance(t))}return a.get(t)};return u});

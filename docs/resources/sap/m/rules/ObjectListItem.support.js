@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/support/library"],function(e){"use strict";var t=e.Categories,r=e.Severity,a=e.Audiences;var i={id:"objectListItemMarkers",audiences:[a.Control],categories:[t.Usage],enabled:true,minversion:"*",title:"ObjectListItem: markers aggregation",description:"Checks if markers aggregation is used together with deprecated properties markFlagged or markFavorite",resolution:"Use markers aggregation",resolutionurls:[{text:"API Reference: sap.m.ObjectListItem",href:"https://openui5.hana.ondemand.com/api/sap.m.ObjectListItem"}],check:function(e,t,a){a.getElementsByClassName("sap.m.ObjectListItem").forEach(function(t){var a=t.getId(),i=t.getMetadata().getElementName(),s=t.getMarkFlagged()+t.getMarkFavorite();if(t.getMarkers().length>s&&s>0){e.addIssue({severity:r.High,details:"ObjectListItem '"+i+"' ("+a+") uses both markers aggregation and deprecated properties markFlagged or markFavorite.",context:{id:a}})}})}};return[i]},true);

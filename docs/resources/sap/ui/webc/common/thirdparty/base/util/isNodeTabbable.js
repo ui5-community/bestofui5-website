@@ -1,0 +1,1 @@
+sap.ui.define(["./isNodeHidden"],function(e){"use strict";const t=t=>{if(!t){return false}const n=t.nodeName.toLowerCase();if(t.hasAttribute("data-sap-no-tab-ref")){return false}if(e(t)){return false}const r=t.getAttribute("tabindex");if(r!==null&&r!==undefined){return parseInt(r)>=0}if(n==="a"||/input|select|textarea|button|object/.test(n)){return!t.disabled}};return t});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/nutrition-activity","./v4/nutrition-activity"],function(i,t,a){"use strict";const n=i.isThemeFamily("sap_horizon")?a:t;var e={pathData:n};return e});

@@ -1,0 +1,1 @@
+sap.ui.define(function(){"use strict";const e=["disabled","title","hidden","role","draggable"];const t=t=>{if(e.includes(t)||t.startsWith("aria")){return true}const r=[HTMLElement,Element,Node];return!r.some(e=>e.prototype.hasOwnProperty(t))};return t});

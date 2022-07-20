@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/endoscopy","./v4/endoscopy"],function(e,o,a){"use strict";const i=e.isThemeFamily("sap_horizon")?a:o;var n={pathData:i};return n});

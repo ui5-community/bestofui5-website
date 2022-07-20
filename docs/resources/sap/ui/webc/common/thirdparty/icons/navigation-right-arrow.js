@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/navigation-right-arrow","./v4/navigation-right-arrow"],function(a,i,r){"use strict";const t=a.isThemeFamily("sap_horizon")?r:i;var n={pathData:t};return n});

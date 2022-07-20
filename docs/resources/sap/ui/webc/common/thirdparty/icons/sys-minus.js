@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sys-minus","./v4/sys-minus"],function(s,i,a){"use strict";const e=s.isThemeFamily("sap_horizon")?a:i;var n={pathData:e};return n});

@@ -1,0 +1,1 @@
+sap.ui.define(["./ManagedStyles","./generated/css/SystemCSSVars.css"],function(s,e){"use strict";const t=()=>{if(!s.hasStyle("data-ui5-system-css-vars")){s.createStyle(e,"data-ui5-system-css-vars")}};return t});

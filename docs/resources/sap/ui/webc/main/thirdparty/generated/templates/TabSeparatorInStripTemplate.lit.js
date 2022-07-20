@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e){"use strict";const i=(i,s,a)=>e.html`<div id="${e.ifDefined(i._id)}" data-ui5-stable="${e.ifDefined(i.stableDomRef)}" role="separator" class="${e.classMap(i.classes)}"></div>`;return i});

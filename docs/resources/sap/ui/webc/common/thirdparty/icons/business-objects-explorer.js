@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/business-objects-explorer","./v4/business-objects-explorer"],function(e,s,i){"use strict";const o=e.isThemeFamily("sap_horizon")?i:s;var r={pathData:o};return r});

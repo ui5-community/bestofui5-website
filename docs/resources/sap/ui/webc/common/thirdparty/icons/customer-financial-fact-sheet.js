@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/customer-financial-fact-sheet","./v4/customer-financial-fact-sheet"],function(a,e,t){"use strict";const i=a.isThemeFamily("sap_horizon")?t:e;var c={pathData:i};return c});

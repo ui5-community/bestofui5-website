@@ -1,0 +1,1 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/asset-registries/Illustrations","./tnt-Dialog-Lock","./tnt-Scene-Lock","./tnt-Spot-Lock"],function(t,e,s,o,n){"use strict";const i="Lock";const c="tnt";e.registerIllustration(i,{dialogSvg:s,sceneSvg:o,spotSvg:n,set:c});t.dialogSvg=s;t.sceneSvg=o;t.spotSvg=n;Object.defineProperty(t,"__esModule",{value:true})});

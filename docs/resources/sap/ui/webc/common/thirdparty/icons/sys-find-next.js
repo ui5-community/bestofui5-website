@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sys-find-next","./v4/sys-find-next"],function(e,i,n){"use strict";const s=e.isThemeFamily("sap_horizon")?n:i;var t={pathData:s};return t});

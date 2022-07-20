@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/customer-and-contacts","./v4/customer-and-contacts"],function(t,a,c){"use strict";const e=t.isThemeFamily("sap_horizon")?c:a;var n={pathData:e};return n});

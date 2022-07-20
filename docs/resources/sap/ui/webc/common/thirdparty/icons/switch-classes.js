@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/switch-classes","./v4/switch-classes"],function(s,a,e){"use strict";const i=s.isThemeFamily("sap_horizon")?e:a;var t={pathData:i};return t});

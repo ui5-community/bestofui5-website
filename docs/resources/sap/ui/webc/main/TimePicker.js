@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/webc/common/WebComponent","./library","sap/ui/core/EnabledPropagator","sap/ui/core/library","./thirdparty/TimePicker"],function(e,a,t,i){"use strict";var r=i.ValueState;var l=e.extend("sap.ui.webc.main.TimePicker",{metadata:{library:"sap.ui.webc.main",tag:"ui5-time-picker-ui5",interfaces:["sap.ui.core.IFormContent"],properties:{enabled:{type:"boolean",defaultValue:true,mapping:{type:"attribute",to:"disabled",formatter:"_mapEnabled"}},formatPattern:{type:"string",defaultValue:""},placeholder:{type:"string",defaultValue:undefined},readonly:{type:"boolean",defaultValue:false},value:{type:"string",defaultValue:undefined},valueState:{type:"sap.ui.core.ValueState",defaultValue:r.None},valueStateMessage:{type:"string",defaultValue:"",mapping:{type:"slot",to:"div"}},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},events:{change:{parameters:{}},input:{parameters:{}}},methods:["closePicker","formatValue","isOpen","isValid","openPicker"],getters:["dateValue"]}});t.call(l.prototype);return l});

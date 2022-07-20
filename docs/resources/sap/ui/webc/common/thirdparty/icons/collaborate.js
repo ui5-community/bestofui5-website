@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/collaborate","./v4/collaborate"],function(a,e,o){"use strict";const t=a.isThemeFamily("sap_horizon")?o:e;var i={pathData:t};return i});

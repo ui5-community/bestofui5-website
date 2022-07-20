@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/commission-check","./v4/commission-check"],function(i,c,e){"use strict";const s=i.isThemeFamily("sap_horizon")?e:c;var o={pathData:s};return o});

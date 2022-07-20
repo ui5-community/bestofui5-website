@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/back-to-top","./v4/back-to-top"],function(t,a,o){"use strict";const e=t.isThemeFamily("sap_horizon")?o:a;var i={pathData:e};return i});

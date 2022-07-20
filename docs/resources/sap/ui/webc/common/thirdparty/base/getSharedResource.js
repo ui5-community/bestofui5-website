@@ -1,0 +1,1 @@
+sap.ui.define(["./util/getSingletonElementInstance"],function(t){"use strict";const e=()=>t("ui5-shared-resources",document.head);const n=(t,n)=>{const s=t.split(".");let o=e();for(let t=0;t<s.length;t++){const e=s[t];const c=t===s.length-1;if(!Object.prototype.hasOwnProperty.call(o,e)){o[e]=c?n:{}}o=o[e]}return o};return n});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/folder-full","./v4/folder-full"],function(e,a,i){"use strict";const o=e.isThemeFamily("sap_horizon")?i:a;var r={pathData:o};return r});

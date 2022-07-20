@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/webc/common/WebComponent","./library","./thirdparty/DynamicSideContent"],function(e,t){"use strict";var i=t.SideContentFallDown;var n=t.SideContentPosition;var o=t.SideContentVisibility;var a=e.extend("sap.ui.webc.fiori.DynamicSideContent",{metadata:{library:"sap.ui.webc.fiori",tag:"ui5-dynamic-side-content-ui5",properties:{equalSplit:{type:"boolean",defaultValue:false},hideMainContent:{type:"boolean",defaultValue:false},hideSideContent:{type:"boolean",defaultValue:false},sideContentFallDown:{type:"sap.ui.webc.fiori.SideContentFallDown",defaultValue:i.OnMinimumWidth},sideContentPosition:{type:"sap.ui.webc.fiori.SideContentPosition",defaultValue:n.End},sideContentVisibility:{type:"sap.ui.webc.fiori.SideContentVisibility",defaultValue:o.ShowAboveS}},defaultAggregation:"content",aggregations:{content:{type:"sap.ui.core.Control",multiple:true},sideContent:{type:"sap.ui.core.Control",multiple:true,slot:"sideContent"}},events:{layoutChange:{parameters:{currentBreakpoint:{type:"string"},previousBreakpoint:{type:"string"},mainContentVisible:{type:"boolean"},sideContentVisible:{type:"boolean"}}}},methods:["toggleContents"]}});return a});

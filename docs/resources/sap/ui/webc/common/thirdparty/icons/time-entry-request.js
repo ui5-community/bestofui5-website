@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/time-entry-request","./v4/time-entry-request"],function(e,t,i){"use strict";const r=e.isThemeFamily("sap_horizon")?i:t;var a={pathData:r};return a});

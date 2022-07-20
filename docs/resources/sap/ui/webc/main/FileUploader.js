@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/webc/common/WebComponent","./library","sap/ui/core/EnabledPropagator","sap/ui/core/library","./thirdparty/FileUploader","./thirdparty/features/InputElementsFormSupport"],function(e,t,a,l){"use strict";var p=l.ValueState;var r=e.extend("sap.ui.webc.main.FileUploader",{metadata:{library:"sap.ui.webc.main",tag:"ui5-file-uploader-ui5",interfaces:["sap.ui.core.IFormContent"],properties:{accept:{type:"string",defaultValue:""},enabled:{type:"boolean",defaultValue:true,mapping:{type:"attribute",to:"disabled",formatter:"_mapEnabled"}},hideInput:{type:"boolean",defaultValue:false},multiple:{type:"boolean",defaultValue:false},name:{type:"string",defaultValue:""},placeholder:{type:"string",defaultValue:""},value:{type:"string",defaultValue:""},valueState:{type:"sap.ui.core.ValueState",defaultValue:p.None},valueStateMessage:{type:"string",defaultValue:"",mapping:{type:"slot",to:"div"}},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},defaultAggregation:"content",aggregations:{content:{type:"sap.ui.core.Control",multiple:true}},events:{change:{parameters:{files:{type:"FileList"}}}},getters:["files"]}});a.call(r.prototype);return r});

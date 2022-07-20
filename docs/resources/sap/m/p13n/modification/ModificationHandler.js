@@ -1,0 +1,6 @@
+/*
+* ! OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+*/
+sap.ui.define(["sap/ui/base/Object","sap/base/util/merge","sap/ui/core/util/reflection/JsControlTreeModifier"],function(e,n,t){"use strict";var r;var i=e.extend("sap.m.p13n.modification.ModificationHandler");i.prototype.processChanges=function(e,n){var r=[];e.forEach(function(e){var n=e.changeSpecificData.content;var i=e.selectorElement;var o=e.changeSpecificData.changeType;var a={getContent:function(){return n},getChangeType:function(){return o},getControl:function(){return i},setRevertData:function(){}};var c=new Promise(function(e){sap.ui.require(["sap/m/flexibility/EngineFlex"],function(n){var r=n[o].changeHandler.applyChange(a,i,{modifier:t});e(r)})});r.push(c)});return Promise.all(r)};i.prototype.waitForChanges=function(e,n){return Promise.resolve()};i.prototype.reset=function(e,n){return Promise.resolve()};i.prototype.isModificationSupported=function(e,n){return false};i.prototype.initialize=function(e){return Promise.resolve()};i.getInstance=function(){if(!r){r=new i}return r};return i});

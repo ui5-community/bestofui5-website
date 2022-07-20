@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sonography","./v4/sonography"],function(a,o,e){"use strict";const i=a.isThemeFamily("sap_horizon")?e:o;var n={pathData:i};return n});

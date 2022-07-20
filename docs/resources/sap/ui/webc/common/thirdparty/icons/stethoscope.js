@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/stethoscope","./v4/stethoscope"],function(e,t,s){"use strict";const o=e.isThemeFamily("sap_horizon")?s:t;var a={pathData:o};return a});

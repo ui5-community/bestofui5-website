@@ -1,0 +1,1 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/asset-registries/Illustrations","./tnt-Dialog-Unlock","./tnt-Scene-Unlock","./tnt-Spot-Unlock"],function(t,e,s,n,o){"use strict";const i="Unlock";const c="tnt";e.registerIllustration(i,{dialogSvg:s,sceneSvg:n,spotSvg:o,set:c});t.dialogSvg=s;t.sceneSvg=n;t.spotSvg=o;Object.defineProperty(t,"__esModule",{value:true})});

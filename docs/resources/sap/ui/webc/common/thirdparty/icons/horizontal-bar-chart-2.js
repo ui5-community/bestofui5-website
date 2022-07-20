@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/horizontal-bar-chart-2","./v4/horizontal-bar-chart-2"],function(a,r,t){"use strict";const i=a.isThemeFamily("sap_horizon")?t:r;var o={pathData:i};return o});

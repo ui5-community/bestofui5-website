@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/status-completed","./v4/status-completed"],function(t,e,a){"use strict";const s=t.isThemeFamily("sap_horizon")?a:e;var i={pathData:s};return i});

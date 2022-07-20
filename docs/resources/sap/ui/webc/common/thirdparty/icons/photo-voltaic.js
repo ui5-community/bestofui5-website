@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/photo-voltaic","./v4/photo-voltaic"],function(o,t,a){"use strict";const i=o.isThemeFamily("sap_horizon")?a:t;var e={pathData:i};return e});

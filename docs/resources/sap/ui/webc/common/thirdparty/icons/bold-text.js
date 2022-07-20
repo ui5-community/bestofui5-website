@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/bold-text","./v4/bold-text"],function(t,e,a){"use strict";const i=t.isThemeFamily("sap_horizon")?a:e;var o={pathData:i};return o});

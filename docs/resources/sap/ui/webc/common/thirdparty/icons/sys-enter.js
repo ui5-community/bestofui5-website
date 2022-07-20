@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sys-enter","./v4/sys-enter"],function(e,s,t){"use strict";const a=e.isThemeFamily("sap_horizon")?t:s;var i={pathData:a};return i});

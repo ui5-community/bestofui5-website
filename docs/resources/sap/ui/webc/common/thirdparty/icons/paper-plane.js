@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/paper-plane","./v4/paper-plane"],function(a,e,p){"use strict";const i=a.isThemeFamily("sap_horizon")?p:e;var n={pathData:i};return n});

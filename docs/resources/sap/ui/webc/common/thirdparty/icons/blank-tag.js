@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/blank-tag","./v4/blank-tag"],function(a,t,e){"use strict";const i=a.isThemeFamily("sap_horizon")?e:t;var n={pathData:i};return n});

@@ -1,0 +1,1 @@
+sap.ui.define(["exports"],function(e){"use strict";const t=new Map;const s=(e,s)=>{t.set(e,s)};const r=e=>t.get(e);e.getFeature=r;e.registerFeature=s;Object.defineProperty(e,"__esModule",{value:true})});

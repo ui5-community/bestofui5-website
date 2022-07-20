@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/lateness","./v4/lateness"],function(e,a,s){"use strict";const t=e.isThemeFamily("sap_horizon")?s:a;var i={pathData:t};return i});

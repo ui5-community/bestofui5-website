@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/customer-briefing","./v4/customer-briefing"],function(e,i,r){"use strict";const t=e.isThemeFamily("sap_horizon")?r:i;var a={pathData:t};return a});

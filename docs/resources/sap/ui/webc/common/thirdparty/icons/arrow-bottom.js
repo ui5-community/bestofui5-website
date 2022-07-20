@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/arrow-bottom","./v4/arrow-bottom"],function(o,t,a){"use strict";const r=o.isThemeFamily("sap_horizon")?a:t;var e={pathData:r};return e});

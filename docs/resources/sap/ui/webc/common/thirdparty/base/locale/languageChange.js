@@ -1,0 +1,1 @@
+sap.ui.define(["exports","../EventProvider"],function(e,n){"use strict";const t=new n;const a="languageChange";const c=e=>{t.attachEvent(a,e)};const g=e=>{t.detachEvent(a,e)};const s=e=>t.fireEventAsync(a,e);e.attachLanguageChange=c;e.detachLanguageChange=g;e.fireLanguageChange=s;Object.defineProperty(e,"__esModule",{value:true})});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/permission","./v4/permission"],function(i,e,s){"use strict";const a=i.isThemeFamily("sap_horizon")?s:e;var n={pathData:a};return n});

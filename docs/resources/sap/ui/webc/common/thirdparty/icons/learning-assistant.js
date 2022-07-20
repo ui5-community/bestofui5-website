@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/learning-assistant","./v4/learning-assistant"],function(a,i,n){"use strict";const s=a.isThemeFamily("sap_horizon")?n:i;var t={pathData:s};return t});

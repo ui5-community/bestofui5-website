@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/add-photo","./v4/add-photo"],function(a,o,t){"use strict";const e=a.isThemeFamily("sap_horizon")?t:o;var i={pathData:e};return i});

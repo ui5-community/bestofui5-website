@@ -1,0 +1,1 @@
+sap.ui.define(["./DataType"],function(e){"use strict";const s={Gregorian:"Gregorian",Islamic:"Islamic",Japanese:"Japanese",Buddhist:"Buddhist",Persian:"Persian"};class a extends e{static isValid(e){return!!s[e]}}a.generateTypeAccessors(s);return a});

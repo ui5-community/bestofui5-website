@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/message-information","./v4/message-information"],function(a,e,i){"use strict";const n=a.isThemeFamily("sap_horizon")?i:e;var s={pathData:n};return s});

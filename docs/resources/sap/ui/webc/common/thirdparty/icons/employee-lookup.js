@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/employee-lookup","./v4/employee-lookup"],function(e,o,a){"use strict";const i=e.isThemeFamily("sap_horizon")?a:o;var p={pathData:i};return p});

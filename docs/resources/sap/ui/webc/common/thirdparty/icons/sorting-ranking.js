@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sorting-ranking","./v4/sorting-ranking"],function(i,n,a){"use strict";const r=i.isThemeFamily("sap_horizon")?a:n;var t={pathData:r};return t});

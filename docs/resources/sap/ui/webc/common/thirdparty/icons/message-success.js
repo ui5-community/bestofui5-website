@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/message-success","./v4/message-success"],function(s,e,a){"use strict";const c=s.isThemeFamily("sap_horizon")?a:e;var i={pathData:c};return i});

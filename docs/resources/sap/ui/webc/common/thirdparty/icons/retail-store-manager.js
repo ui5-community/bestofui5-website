@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/retail-store-manager","./v4/retail-store-manager"],function(a,e,r){"use strict";const t=a.isThemeFamily("sap_horizon")?r:e;var i={pathData:t};return i});

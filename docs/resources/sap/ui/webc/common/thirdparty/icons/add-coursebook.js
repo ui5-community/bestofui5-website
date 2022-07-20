@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/add-coursebook","./v4/add-coursebook"],function(o,a,e){"use strict";const i=o.isThemeFamily("sap_horizon")?e:a;var s={pathData:i};return s});

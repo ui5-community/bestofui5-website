@@ -1,0 +1,1 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/asset-registries/Illustrations","./tnt-Dialog-Radar","./tnt-Scene-Radar","./tnt-Spot-Radar"],function(t,e,s,a,r){"use strict";const n="Radar";const o="tnt";e.registerIllustration(n,{dialogSvg:s,sceneSvg:a,spotSvg:r,set:o});t.dialogSvg=s;t.sceneSvg=a;t.spotSvg=r;Object.defineProperty(t,"__esModule",{value:true})});

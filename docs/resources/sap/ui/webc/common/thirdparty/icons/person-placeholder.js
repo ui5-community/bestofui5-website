@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/person-placeholder","./v4/person-placeholder"],function(e,a,o){"use strict";const r=e.isThemeFamily("sap_horizon")?o:a;var i={pathData:r};return i});

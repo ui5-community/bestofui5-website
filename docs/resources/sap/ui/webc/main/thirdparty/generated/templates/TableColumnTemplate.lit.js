@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e){"use strict";const r=(r,t,i)=>e.html`<th scope="col" part="column" role="columnheader" dir="${e.ifDefined(r.effectiveDir)}"><slot></slot></th>`;return r});

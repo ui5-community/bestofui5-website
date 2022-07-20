@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/projector","./v4/projector"],function(e,o,r){"use strict";const t=e.isThemeFamily("sap_horizon")?r:o;var a={pathData:t};return a});

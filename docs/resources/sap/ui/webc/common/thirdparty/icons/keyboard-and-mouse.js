@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/keyboard-and-mouse","./v4/keyboard-and-mouse"],function(a,e,o){"use strict";const i=a.isThemeFamily("sap_horizon")?o:e;var n={pathData:i};return n});

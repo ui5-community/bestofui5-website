@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/status-inactive","./v4/status-inactive"],function(t,a,i){"use strict";const e=t.isThemeFamily("sap_horizon")?i:a;var s={pathData:e};return s});

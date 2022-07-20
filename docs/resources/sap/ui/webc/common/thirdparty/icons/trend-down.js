@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/trend-down","./v4/trend-down"],function(e,n,t){"use strict";const a=e.isThemeFamily("sap_horizon")?t:n;var i={pathData:a};return i});

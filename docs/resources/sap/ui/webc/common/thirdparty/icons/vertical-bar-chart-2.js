@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/vertical-bar-chart-2","./v4/vertical-bar-chart-2"],function(a,r,t){"use strict";const e=a.isThemeFamily("sap_horizon")?t:r;var i={pathData:e};return i});

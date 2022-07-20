@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/UI5Element"],function(t){"use strict";function e(t){return t&&typeof t==="object"&&"default"in t?t["default"]:t}var a=e(t);const n={tag:"ui5-date",properties:{value:{type:String}}};class i extends a{static get metadata(){return n}}i.define();return i});

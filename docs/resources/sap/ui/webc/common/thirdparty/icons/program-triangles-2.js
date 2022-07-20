@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/program-triangles-2","./v4/program-triangles-2"],function(a,r,e){"use strict";const i=a.isThemeFamily("sap_horizon")?e:r;var t={pathData:i};return t});

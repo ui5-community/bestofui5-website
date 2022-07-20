@@ -1,0 +1,54 @@
+{
+  "_version": "1.21.0",
+  "sap.app": {
+    "id": "sap.ui.webc.common",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.104.0"
+    },
+    "title": "UI5 Web Components Retrofit Common",
+    "description": "UI5 Web Components Retrofit Common",
+    "ach": "CA-UI5-CTR",
+    "resources": "resources.json",
+    "offline": true,
+    "openSourceComponents": [
+      {
+        "name": "ui5-web-components",
+        "packagedWithMySelf": true,
+        "version": "1.1.2"
+      },
+      {
+        "name": "lit-html",
+        "packagedWithMySelf": true,
+        "version": "2.0.1"
+      }
+    ]
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "supportedThemes": []
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.104",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.104.0"
+        }
+      }
+    },
+    "library": {
+      "i18n": false,
+      "css": false,
+      "content": {
+        "controls": [
+          "sap.ui.webc.common.WebComponent"
+        ],
+        "elements": [],
+        "types": [],
+        "interfaces": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/tools-opportunity","./v4/tools-opportunity"],function(o,t,i){"use strict";const a=o.isThemeFamily("sap_horizon")?i:t;var e={pathData:a};return e});

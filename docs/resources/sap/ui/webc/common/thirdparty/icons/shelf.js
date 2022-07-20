@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/shelf","./v4/shelf"],function(e,a,i){"use strict";const s=e.isThemeFamily("sap_horizon")?i:a;var t={pathData:s};return t});

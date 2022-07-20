@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/bookmark","./v4/bookmark"],function(a,o,e){"use strict";const i=a.isThemeFamily("sap_horizon")?e:o;var r={pathData:i};return r});

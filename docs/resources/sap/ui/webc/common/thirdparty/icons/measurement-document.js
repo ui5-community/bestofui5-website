@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/measurement-document","./v4/measurement-document"],function(e,t,a){"use strict";const n=e.isThemeFamily("sap_horizon")?a:t;var m={pathData:n};return m});

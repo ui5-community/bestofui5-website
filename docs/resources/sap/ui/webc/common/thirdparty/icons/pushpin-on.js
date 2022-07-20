@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/pushpin-on","./v4/pushpin-on"],function(i,n,a){"use strict";const e=i.isThemeFamily("sap_horizon")?a:n;var s={pathData:e};return s});

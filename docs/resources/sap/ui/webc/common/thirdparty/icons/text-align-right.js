@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/text-align-right","./v4/text-align-right"],function(t,i,a){"use strict";const e=t.isThemeFamily("sap_horizon")?a:i;var n={pathData:e};return n});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/add-process","./v4/add-process"],function(a,e,s){"use strict";const i=a.isThemeFamily("sap_horizon")?s:e;var o={pathData:i};return o});

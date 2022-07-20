@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/employee-approvals","./v4/employee-approvals"],function(e,a,o){"use strict";const p=e.isThemeFamily("sap_horizon")?o:a;var i={pathData:p};return i});

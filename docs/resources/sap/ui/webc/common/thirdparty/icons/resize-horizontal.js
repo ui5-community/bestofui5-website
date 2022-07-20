@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/resize-horizontal","./v4/resize-horizontal"],function(e,i,a){"use strict";const o=e.isThemeFamily("sap_horizon")?a:i;var r={pathData:o};return r});

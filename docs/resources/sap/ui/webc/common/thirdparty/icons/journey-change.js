@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/journey-change","./v4/journey-change"],function(e,a,n){"use strict";const i=e.isThemeFamily("sap_horizon")?n:a;var o={pathData:i};return o});

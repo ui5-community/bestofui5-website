@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/electronic-medical-record","./v4/electronic-medical-record"],function(e,c,i){"use strict";const r=e.isThemeFamily("sap_horizon")?i:c;var a={pathData:r};return a});

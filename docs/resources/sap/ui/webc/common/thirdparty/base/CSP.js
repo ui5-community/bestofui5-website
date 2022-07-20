@@ -1,0 +1,1 @@
+sap.ui.define(["exports"],function(e){"use strict";const s=new Map;let t=false;let o=true;const n=(e,t)=>{s.set(e,t)};const c=(e,t)=>`${s.get(e)}${t}`;const l=e=>{t=e};const i=e=>{o=e};const r=()=>t;const u=()=>o;e.getUrl=c;e.setPackageCSSRoot=n;e.setPreloadLinks=i;e.setUseLinks=l;e.shouldPreloadLinks=u;e.shouldUseLinks=r;Object.defineProperty(e,"__esModule",{value:true})});

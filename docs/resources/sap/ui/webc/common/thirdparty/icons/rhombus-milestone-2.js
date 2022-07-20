@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/rhombus-milestone-2","./v4/rhombus-milestone-2"],function(e,i,s){"use strict";const o=e.isThemeFamily("sap_horizon")?s:i;var t={pathData:o};return t});

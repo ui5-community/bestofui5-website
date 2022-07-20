@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/soccor","./v4/soccor"],function(o,a,c){"use strict";const e=o.isThemeFamily("sap_horizon")?c:a;var i={pathData:e};return i});

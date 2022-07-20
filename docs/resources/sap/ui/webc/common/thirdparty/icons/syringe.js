@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/syringe","./v4/syringe"],function(e,i,a){"use strict";const n=e.isThemeFamily("sap_horizon")?a:i;var s={pathData:n};return s});

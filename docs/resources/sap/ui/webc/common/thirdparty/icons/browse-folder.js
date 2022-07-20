@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/browse-folder","./v4/browse-folder"],function(e,o,r){"use strict";const a=e.isThemeFamily("sap_horizon")?r:o;var i={pathData:a};return i});

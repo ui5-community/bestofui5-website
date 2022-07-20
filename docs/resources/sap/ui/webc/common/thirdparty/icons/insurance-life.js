@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/insurance-life","./v4/insurance-life"],function(e,i,a){"use strict";const n=e.isThemeFamily("sap_horizon")?a:i;var s={pathData:n};return s});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/target-group","./v4/target-group"],function(t,a,e){"use strict";const r=t.isThemeFamily("sap_horizon")?e:a;var i={pathData:r};return i});

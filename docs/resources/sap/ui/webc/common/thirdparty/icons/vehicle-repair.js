@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/vehicle-repair","./v4/vehicle-repair"],function(e,i,a){"use strict";const r=e.isThemeFamily("sap_horizon")?a:i;var t={pathData:r};return t});

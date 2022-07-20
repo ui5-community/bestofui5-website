@@ -1,0 +1,1 @@
+sap.ui.define(["./getEffectiveLinksHrefs","../util/createLinkInHead","../CSP"],function(e,s,t){"use strict";const n=new Set;const i=i=>{if(!t.shouldUseLinks()||!t.shouldPreloadLinks()){return}const r=e(i,false)||[];const a=e(i,true)||[];[...r,...a].forEach(e=>{if(!n.has(e)){s(e,{rel:"preload",as:"style"});n.add(e)}})};return i});

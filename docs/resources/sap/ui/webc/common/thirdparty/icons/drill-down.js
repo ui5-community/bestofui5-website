@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/drill-down","./v4/drill-down"],function(i,a,e){"use strict";const n=i.isThemeFamily("sap_horizon")?e:a;var o={pathData:n};return o});

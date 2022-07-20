@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/soccer","./v4/soccer"],function(e,a,c){"use strict";const i=e.isThemeFamily("sap_horizon")?c:a;var s={pathData:i};return s});

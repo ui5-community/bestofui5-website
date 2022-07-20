@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/passenger-train","./v4/passenger-train"],function(a,e,i){"use strict";const n=a.isThemeFamily("sap_horizon")?i:e;var s={pathData:n};return s});

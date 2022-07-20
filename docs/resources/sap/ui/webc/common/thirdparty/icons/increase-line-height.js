@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/increase-line-height","./v4/increase-line-height"],function(e,i,a){"use strict";const n=e.isThemeFamily("sap_horizon")?a:i;var t={pathData:n};return t});

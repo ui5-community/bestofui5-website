@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/video","./v4/video"],function(e,i,a){"use strict";const o=e.isThemeFamily("sap_horizon")?a:i;var t={pathData:o};return t});

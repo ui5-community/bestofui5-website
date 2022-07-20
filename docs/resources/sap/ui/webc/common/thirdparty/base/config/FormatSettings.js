@@ -1,0 +1,1 @@
+sap.ui.define(["exports","../InitialConfiguration"],function(e,t){"use strict";let i;const n=()=>{if(i===undefined){i=t.getFormatSettings()}return i.firstDayOfWeek};e.getFirstDayOfWeek=n;Object.defineProperty(e,"__esModule",{value:true})});

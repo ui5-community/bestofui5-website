@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/switch-views","./v4/switch-views"],function(i,e,s){"use strict";const t=i.isThemeFamily("sap_horizon")?s:e;var a={pathData:t};return a});

@@ -1,0 +1,1 @@
+sap.ui.define(["../generated/AssetParameters"],function(a){"use strict";var e=()=>{const e=navigator.languages;const n=()=>navigator.language;const r=e&&e[0]||n()||navigator.userLanguage||navigator.browserLanguage;return r||a.DEFAULT_LANGUAGE};return e});

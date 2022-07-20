@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/locate-me","./v4/locate-me"],function(e,a,t){"use strict";const i=e.isThemeFamily("sap_horizon")?t:a;var o={pathData:i};return o});

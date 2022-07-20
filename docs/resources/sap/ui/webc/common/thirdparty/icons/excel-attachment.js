@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/excel-attachment","./v4/excel-attachment"],function(e,t,a){"use strict";const c=e.isThemeFamily("sap_horizon")?a:t;var i={pathData:c};return i});

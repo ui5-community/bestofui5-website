@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/pending","./v4/pending"],function(e,i,n){"use strict";const a=e.isThemeFamily("sap_horizon")?n:i;var t={pathData:a};return t});

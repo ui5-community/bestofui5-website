@@ -1,0 +1,1 @@
+sap.ui.define(["exports","../EventProvider"],function(e,t){"use strict";const n=new t;const c="directionChange";const i=e=>{n.attachEvent(c,e)};const o=e=>{n.detachEvent(c,e)};const r=()=>n.fireEvent(c);e.attachDirectionChange=i;e.detachDirectionChange=o;e.fireDirectionChange=r;Object.defineProperty(e,"__esModule",{value:true})});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/clinical-order","./v4/clinical-order"],function(i,a,e){"use strict";const r=i.isThemeFamily("sap_horizon")?e:a;var c={pathData:r};return c});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/create-leave-request","./v4/create-leave-request"],function(e,a,t){"use strict";const r=e.isThemeFamily("sap_horizon")?t:a;var i={pathData:r};return i});

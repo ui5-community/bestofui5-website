@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/Device"],function(t){"use strict";var e={apiVersion:2};e.render=function(t,e){t.openStart("div",e);t.class("sapMTPClocksContainer");t.openEnd();this.renderButtons(t,e);this.renderClocks(t,e);t.close("div")};e.renderButtons=function(t,e){var r=e.getAggregation("_buttons"),n=e.getAggregation("_buttonAmPm"),o=e._getTimeSeparators(e._getDisplayFormatPattern()),a,i;if(r){if(n){r.push(n)}t.openStart("div");t.class("sapMTPCButtons");t.attr("dir","ltr");t.openEnd();for(i=0;i<r.length;i++){t.renderControl(r[i]);if(i<r.length-1){a=o.shift();if(!a){a=" "}t.openStart("span");t.attr("aria-hidden","true");t.openEnd();t.text(a);t.close("span")}}t.renderControl(e._getCurrentTimeButton());t.close("div")}};e.renderClocks=function(t,e){var r=e.getAggregation("_clocks"),n;if(r){t.openStart("div");t.class("sapMTPCClocks");t.attr("role","img");t.attr("aria-label",e._getAriaLabel());t.openEnd();for(n=0;n<r.length;n++){if(n===e._getActiveClock()){r[n].addStyleClass("sapMTPCActive")}t.renderControl(r[n])}t.close("div")}};return e},true);

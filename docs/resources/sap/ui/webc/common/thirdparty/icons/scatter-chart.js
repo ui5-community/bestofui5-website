@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/scatter-chart","./v4/scatter-chart"],function(t,a,e){"use strict";const r=t.isThemeFamily("sap_horizon")?e:a;var c={pathData:r};return c});

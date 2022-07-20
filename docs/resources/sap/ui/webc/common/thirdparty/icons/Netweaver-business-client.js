@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/Netweaver-business-client","./v4/Netweaver-business-client"],function(e,i,s){"use strict";const t=e.isThemeFamily("sap_horizon")?s:i;var a={pathData:t};return a});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/UI5Element"],function(t){"use strict";function e(t){return t&&typeof t==="object"&&"default"in t?t["default"]:t}var i=e(t);const n={tag:"ui5-cb-item",properties:{text:{type:String},additionalText:{type:String}}};class a extends i{static get metadata(){return n}}a.define();return a});

@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/sales-notification","./v4/sales-notification"],function(i,a,t){"use strict";const e=i.isThemeFamily("sap_horizon")?t:a;var n={pathData:e};return n});

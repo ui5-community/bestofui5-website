@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/webc/common/thirdparty/base/config/Theme","./v5/check-availability","./v4/check-availability"],function(a,i,e){"use strict";const t=a.isThemeFamily("sap_horizon")?e:i;var c={pathData:t};return c});
