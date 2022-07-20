@@ -59,6 +59,7 @@ export default class Component extends UIComponent {
 			sortOrderDecending: true,
 			headerKey: "hotPackages",
 			tagFilter: "tag",
+			timelinePanelExpanded: false,
 		});
 		this.setModel(settingsModel, "settings");
 		const scrollStateModel = new JSONModel({

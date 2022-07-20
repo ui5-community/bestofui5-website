@@ -17,6 +17,12 @@
     alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }"
     justifyContent="Start"
   >
+    <m:Button
+      type="Emphasized"
+      press=".expandPanel"
+      text="{= ${settings>/timelinePanelExpanded} === true ? 'Collapse Changelogs' : 'Expand Changelogs' }"
+      icon="{= ${settings>/timelinePanelExpanded} === true ? 'sap-icon://collapse-all' : 'sap-icon://expand-all' }"
+    />
     <Timeline items="{path: 'versions>/', sorter : { path : 'date',descending: 'false' }}">
       <TimelineItem
         titleText="{versions>version}"
@@ -37,7 +43,11 @@
         }) }"
       >
         <content>
-          <md:Markdown content="{versions>changelog}" />
+          <m:Panel expanded="{settings>/timelinePanelExpanded}" headerText="Changelog" expandable="true" width="{= ${device>/system/phone} === true ? '' : '693.547px' }" class="sapUiResponsiveMargin">
+            <m:content>
+              <md:Markdown content="{versions>changelog}" />
+            </m:content>
+          </m:Panel>
         </content>
       </TimelineItem>
     </Timeline>

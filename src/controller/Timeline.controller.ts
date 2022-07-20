@@ -20,4 +20,9 @@ export default class Timeline extends BaseController {
 		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", "timeline");
 		this.getView().getParent().getParent().getParent().scrollTo(this.getView().getModel("scrollState").getProperty("/timeline"));
 	}
+
+	private expandPanel(event: Event): void {
+		const isExpanded = (this.getView().getModel("settings") as JSONModel).getProperty("/timelinePanelExpanded");
+		(this.getView().getModel("settings") as JSONModel).setProperty("/timelinePanelExpanded", !isExpanded);
+	}
 }
