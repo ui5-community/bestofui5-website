@@ -60,6 +60,7 @@ export default class Component extends UIComponent {
 			headerKey: "hotPackages",
 			tagFilter: "tag",
 			timelinePanelExpanded: false,
+			allPackagesCount: 0,
 		});
 		this.setModel(settingsModel, "settings");
 		const scrollStateModel = new JSONModel({

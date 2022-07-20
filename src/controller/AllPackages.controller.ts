@@ -95,4 +95,9 @@ export default class AllPackages extends AppController {
 		this.sortList(sortKey);
 		this.queryUtil.setQueryParameters();
 	}
+
+	private onUpdateFinished(event: Event): void {
+		const iTotalItems = event.getParameter("total") as number;
+		(this.getView().getModel("settings") as JSONModel).setProperty("/allPackagesCount", iTotalItems);
+	}
 }
