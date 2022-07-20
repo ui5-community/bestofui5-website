@@ -20,7 +20,7 @@
     <m:Button
       type="Emphasized"
       press=".expandPanel"
-      text="{= ${settings>/timelinePanelExpanded} === true ? 'Collapse Changelogs' : 'Expand Changelogs' }"
+      text="{= ${settings>/timelinePanelExpanded} === true ? ${i18n>timeline_view_collapse} : ${i18n>timeline_view_expand} }"
       icon="{= ${settings>/timelinePanelExpanded} === true ? 'sap-icon://collapse-all' : 'sap-icon://expand-all' }"
     />
     <Timeline items="{path: 'versions>/', sorter : { path : 'date',descending: 'false' }}">
