@@ -46,12 +46,13 @@
     </FlexBox>
     <List
       id="listAllPackages"
-      headerText="{i18n>all_packages_view_header}"
+      headerText="{i18n>all_packages_view_header} ({settings>/allPackagesCount})"
       growing="true"
       growingScrollToLoad="true"
       growingThreshold="{= ${device>/system/phone} === true ? 7 : 12 }"
       mode="None"
       items="{path: 'data>/packages/'}"
+      updateFinished="onUpdateFinished"
       width="{= ${device>/system/phone} === true ? '' : '1024px' }"
     >
       <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
