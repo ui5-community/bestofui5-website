@@ -65,6 +65,7 @@
                 src="sap-icon://font-awesome-icons/github"
                 press="sapMLib.URLHelper.redirect(${data>githublink}, true)"
                 visible="{= !!${data>githublink}}"
+                tooltip="{i18n>icon_tooltips_github}"
               />
               <core:Icon
                 class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
@@ -72,6 +73,7 @@
                 src="sap-icon://font-awesome-icons/npm"
                 press="sapMLib.URLHelper.redirect(${data>npmlink}, true)"
                 visible="{= !!${data>npmlink}}"
+                tooltip="{i18n>icon_tooltips_npm}"
               />
               <core:Icon
                 class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
@@ -79,6 +81,15 @@
                 src="sap-icon://font-awesome-icons/microsoft"
                 press="sapMLib.URLHelper.redirect(${data>vscodelink}, true)"
                 visible="{= !!${data>vscodelink}}"
+                tooltip="{i18n>icon_tooltips_vsc}"
+              />
+              <core:Icon
+                class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+                core:require="{ sapMLib: 'sap/m/library' }"
+                src="sap-icon://internet-browser"
+                press="sapMLib.URLHelper.redirect(${data>liveDemoUrl}, true)"
+                visible="{= !!${data>liveDemoUrl}}"
+                tooltip="{i18n>icon_tooltips_livedemo}"
               />
             </HBox>
 
@@ -93,7 +104,7 @@
               <core:Icon visible="{= ${data>type} === 'vscode'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons/microsoft" />
               <core:Icon visible="{= ${data>type} === 'application'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/window-maximize" />
               <core:Icon visible="{= ${data>type} === 'library'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/book" />
-              <core:Icon visible="{= ${data>type} === 'terminal'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/terminal" />
+              <core:Icon visible="{= ${data>type} === 'command'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/terminal" />
               <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{data>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" />
 
               <tnt:InfoLabel
