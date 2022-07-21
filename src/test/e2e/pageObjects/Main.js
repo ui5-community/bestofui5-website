@@ -13,7 +13,7 @@ class Main extends Page {
 			selector: {
 				id: "multiInput",
 				viewName: this._viewName,
-				controlType: "sap.m.MultiInput",
+				controlType: "sap.m.Input",
 			},
 		};
 

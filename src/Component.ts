@@ -56,11 +56,20 @@ export default class Component extends UIComponent {
 			route: "",
 			selectedTab: "hotPackagesView",
 			selectKey: "downloads365",
+			sortOrderDecending: true,
 			headerKey: "hotPackages",
 			tagFilter: "tag",
+			timelinePanelExpanded: false,
+			allPackagesCount: 0,
 		});
 		this.setModel(settingsModel, "settings");
-
+		const scrollStateModel = new JSONModel({
+			packages: 0,
+			tags: 0,
+			timeline: 0,
+			contributors: 0,
+		});
+		this.setModel(scrollStateModel, "scrollState");
 		this.getRouter().attachRouteMatched(this.onBeforeRouteMatched, this);
 
 		// set the device model

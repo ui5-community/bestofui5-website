@@ -14,6 +14,7 @@ export default class Tags extends AppController {
 
 	public onPatternMatched(event: Event): void {
 		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", "tags");
+		this.getView().getParent().getParent().getParent().scrollTo(this.getView().getModel("scrollState").getProperty("/tags"));
 	}
 
 	/**
@@ -52,6 +53,7 @@ export default class Tags extends AppController {
 
 		(this.getView().getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
 		(this.getView().getModel("settings") as JSONModel).setProperty("/search", "");
+		this.getView().getModel("scrollState").setProperty(`/packages`, 0);
 		this.applySearch();
 	}
 }

@@ -33,15 +33,10 @@ export default class App extends BaseController {
 		this.applySearch();
 	}
 
-	public onUpdateToken(event: Event): void {
-		this.queryUtil.onUpdateToken(event);
-		this.applySearch();
-	}
-
 	public applySearch(): void {
 		if (!this.getRouter().getHashChanger().getHash().startsWith("packages")) {
 			this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
-			this.navTo("allPackages");
+			this.navTo("allPackages", null, null, this.getRouter().getHashChanger().getHash());
 		} else {
 			this.getOwnerComponent().byId("AllPackages").getController().applySearchFilter();
 		}

@@ -1,0 +1,25 @@
+name: Delete Static Web App on Azure
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+jobs:
+  delete:
+    if: ${{ contains( github.event.pull_request.labels.*.name, 'deploy_test') && github.repository_owner == 'ui5-community' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: format branch name
+        run: echo "branch_name_local=$( echo "$GITHUB_HEAD_REF" | tr -dc '[:alnum:]\n\r')" >> $GITHUB_ENV
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Delete Static Web App
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.37.0
+          inlineScript: |
+            az staticwebapp delete -n ${{ env.branch_name_local }} -g bestofui5 --yes  --no-wait

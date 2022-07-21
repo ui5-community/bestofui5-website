@@ -75,7 +75,7 @@
     press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&amp;labels=new%20package&amp;template=new_package.md&amp;title=Add%20new%20Package:', true)"
   >
     <layoutData>
-      <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
     </layoutData>
   </Button>
   <Button
@@ -88,7 +88,33 @@
     visible="{= ${device>/system/phone}}"
   >
     <layoutData>
-      <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
+    </layoutData>
+  </Button>
+  <Button
+    class="sapUiTinyMargin openui5headerButton"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="{i18n>app_view_gotobestofjs}"
+    type="Transparent"
+    icon="sap-icon://attachment-html"
+    press="sapMLib.URLHelper.redirect('https://bestofjs.org/', true)"
+    visible="{= ${device>/system/phone}}"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
+    </layoutData>
+  </Button>
+  <Button
+    class="sapUiTinyMargin openui5headerButton"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="{i18n>app_view_gotodotabap}"
+    type="Transparent"
+    icon="sap-icon://developer-settings"
+    press="sapMLib.URLHelper.redirect('https://dotabap.org/', true)"
+    visible="{= ${device>/system/phone}}"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
     </layoutData>
   </Button>
   <ToolbarSpacer />

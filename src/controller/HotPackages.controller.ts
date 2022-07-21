@@ -11,6 +11,7 @@ export default class HotPackages extends AppController {
 
 	public onPatternMatched(event: Event): void {
 		(this.getView().getModel("settings") as JSONModel).setProperty("/headerKey", "hotPackages");
+		this.getView().getParent().getParent().getParent().scrollTo(this.getView().getModel("scrollState").getProperty("/hot"));
 	}
 	public onPress(event: Event): void {
 		// get object name from oevent

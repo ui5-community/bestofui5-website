@@ -53,22 +53,23 @@ export default class QueryUtil {
 		const tagsFilter = new Filter(
 			"tags",
 			function (array: Array<any>) {
-				for (const valueType of valueTypes) {
-					if (array.includes(valueType.key) && valueType.type === "tag") {
-						return true;
-					}
+				let checker = (arr, target) => target.every((v) => arr.includes(v.key) && v.type === "tag");
+				if (checker(array, valueTypesTags)) {
+					return true;
 				}
 			}.bind(this)
 		);
 		// check if type machtes the package
 		const typeFilters = [];
 		for (let i = 0; i < valueTypes.length; i++) {
-			const typeFilter = new Filter({
-				path: "type",
-				operator: FilterOperator.Contains,
-				value1: valueTypes[i].key,
-			});
-			typeFilters.push(typeFilter);
+			if (valueTypes[i].type === "type") {
+				const typeFilter = new Filter({
+					path: "type",
+					operator: FilterOperator.EQ,
+					value1: valueTypes[i].key,
+				});
+				typeFilters.push(typeFilter);
+			}
 		}
 		const typeFilter = new Filter({
 			filters: typeFilters,
@@ -76,8 +77,8 @@ export default class QueryUtil {
 		});
 		// search for tags and types with or condition
 		const typesTagsFilter = new Filter({
-			filters: [tagsFilter, typeFilter],
-			and: false,
+			filters: filters,
+			and: true,
 		});
 		// search for name and description with or condition
 		const searchFilter = new Filter({
@@ -117,15 +118,15 @@ export default class QueryUtil {
 				type: keyArray[1],
 			};
 			tokenArray.push(tokenObject);
-		} else if (addOrRemove === "removed") {
-			const keyArray = event.getParameter("removedTokens")[0].getProperty("key").split(";");
+		} else {
+			const keyArray = event.getParameter("changedItem").getKey().split(";");
 			const tokenObject = {
 				key: keyArray[0],
 				type: keyArray[1],
 			};
 			// filter token object array with key and type values
 			tokenArray = tokenArray.filter(function (obj) {
-				return obj.key !== tokenObject.key && obj.type !== tokenObject.type;
+				return !(obj.key === tokenObject.key && obj.type === tokenObject.type);
 			});
 		}
 		(this.view.getModel("settings") as JSONModel).setProperty("/tokens", tokenArray);
@@ -153,6 +154,10 @@ export default class QueryUtil {
 		if ("sort" in eventArguments) {
 			(this.view.getModel("settings") as JSONModel).setProperty("/selectKey", eventArguments.sort);
 		}
+		if ("order" in eventArguments) {
+			const order = eventArguments.order === "asc" ? false : true;
+			(this.view.getModel("settings") as JSONModel).setProperty("/sortOrderDecending", order);
+		}
 	}
 
 	/**
@@ -162,6 +167,7 @@ export default class QueryUtil {
 		const searchParameter: string = (this.view.getModel("settings") as JSONModel).getProperty("/search");
 		const tokens: any = (this.view.getModel("settings") as JSONModel).getProperty("/tokens");
 		let sortKey: string = (this.view.getModel("settings") as JSONModel).getProperty("/selectKey");
+		let sortOrder = (this.view.getModel("settings") as JSONModel).getProperty("/sortOrderDecending") as boolean;
 		// dont set 'downloads365' in query because it is default value
 		if (sortKey === "downloads365") {
 			sortKey = "";
@@ -177,6 +183,7 @@ export default class QueryUtil {
 			search: searchParameter,
 			tokens: tokenString,
 			sort: sortKey,
+			order: sortOrder ? "" : "asc",
 		};
 		// remove empty values from queries
 		Object.keys(queries).forEach(function (key) {

@@ -3,6 +3,8 @@ import Sorter from "sap/ui/model/Sorter";
 import Event from "sap/ui/base/Event";
 import Log from "sap/base/Log";
 import ResourceBundle from "sap/base/i18n/ResourceBundle";
+import MultiComboBox from "sap/m/MultiComboBox";
+import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -10,57 +12,92 @@ import ResourceBundle from "sap/base/i18n/ResourceBundle";
 export default class AllPackages extends AppController {
 	public onInit(): void {
 		super.onInit();
-		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
 		this.getRouter().getRoute("allPackages").attachEventOnce("patternMatched", this.onPatternMatchedOnce, this);
 	}
 
 	public onPatternMatchedOnce(event: Event): void {
+		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
+		this.getRouter().getRoute("allPackages").attachPatternMatched(this.onPatternMatched, this);
 		try {
-			let routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
-			this.queryUtil.getParameterFromQuery(routerArgsObject);
-			this.filterFromQuery(routerArgsObject);
-			this.applySearchFilter();
+			const routerArgsObject = event.getParameter("arguments")["?query"] ? event.getParameter("arguments")["?query"] : ({} as any);
+			// check if object is empty
+			if (!(routerArgsObject && Object.keys(routerArgsObject).length === 0 && Object.getPrototypeOf(routerArgsObject) === Object.prototype)) {
+				this.queryUtil.getParameterFromQuery(routerArgsObject);
+				this.filterFromQuery(routerArgsObject);
+			}
 		} catch (error) {
 			Log.error((this.getResourceBundle() as ResourceBundle).getText("all_packages_controller_queryparsing"));
 		}
+		this.applySearchFilter();
+		this.sortList((this.getView().getModel("settings") as JSONModel).getProperty("/selectKey"), true);
 	}
 
 	public onPatternMatched(event: Event): void {
+		this.getView().getParent().getParent().getParent().scrollTo(this.getView().getModel("scrollState").getProperty("/packages"));
 		this.getView().getModel("settings").setProperty("/headerKey", "allPackages");
 		this.applySearchFilter();
 	}
 
 	public applySearchFilter(): void {
 		this.queryUtil.applySearchFilter();
+		this.setSelectedItems();
+	}
+	private setSelectedItems() {
+		const multiComboBox = this.byId("multiComboBox") as MultiComboBox;
+		const selectedItems = this.getView().getModel("settings").getProperty("/tokens");
+		let keyArray = [];
+		for (let i = 0; i < selectedItems.length; i++) {
+			keyArray.push(`${selectedItems[i].key};${selectedItems[i].type}`);
+		}
+
+		multiComboBox.setSelectedKeys(keyArray);
 	}
 
 	public onPress(event: Event): void {
 		// get object name from oevent
 		const objectName = event.getSource().getBindingContext("data").getObject().name;
 		//route to object view
-		this.navTo("RouteObjectView", {
-			name: objectName,
-		});
+		this.navTo("RouteObjectView", { name: objectName }, null, "object");
 	}
 
 	public onSortSelectChange(event: Event): void {
-		const selectKey = event.getParameter("selectedItem").getKey();
+		const selectKey = event.getParameter("selectedItem").getKey() as string;
 		this.sortList(selectKey);
 		this.queryUtil.setQueryParameters();
 	}
 
 	private sortList(sortKey: string): void {
+		const sortOrderDecending = this.getView().getModel("settings").getProperty("/sortOrderDecending") as boolean;
 		const binding = this.getView().byId("listAllPackages").getBinding("items");
 		const oSorter = new Sorter({
 			path: sortKey,
-			descending: true,
+			descending: sortOrderDecending,
 		});
 		binding.sort(oSorter);
+		this.getView().getModel("settings").setProperty("/selectKey", sortKey);
 	}
 
 	private filterFromQuery(eventArguments: any): void {
 		if ("sort" in eventArguments) {
 			this.sortList(eventArguments.sort);
 		}
+	}
+
+	private onSelectionChange(event: Event): void {
+		this.queryUtil.onSelectionChange(event);
+		this.applySearchFilter();
+	}
+
+	private changeSortOrder(event: Event): void {
+		const sortOrderDecending = this.getView().getModel("settings").getProperty("/sortOrderDecending") as boolean;
+		const sortKey = this.getView().getModel("settings").getProperty("/selectKey") as string;
+		(this.getView().getModel("settings") as JSONModel).setProperty("/sortOrderDecending", !sortOrderDecending);
+		this.sortList(sortKey);
+		this.queryUtil.setQueryParameters();
+	}
+
+	private onUpdateFinished(event: Event): void {
+		const iTotalItems = event.getParameter("total") as number;
+		(this.getView().getModel("settings") as JSONModel).setProperty("/allPackagesCount", iTotalItems);
 	}
 }
