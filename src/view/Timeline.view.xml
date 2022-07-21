@@ -27,6 +27,7 @@
       <TimelineItem
         titleText="{versions>version}"
         name="{versions>name}"
+        icon="sap-icon://font-awesome-icons/server"
         nameClickable="true"
         nameClick=".onNameClick($event, 'mycustomString')"
         subtitleText="{= ${i18n>list_item_tag_updated}.replace('{0}', ${
