@@ -68,6 +68,7 @@ export default class Component extends UIComponent {
 			tags: 0,
 			timeline: 0,
 			contributors: 0,
+			applications: 0,
 		});
 		this.setModel(scrollStateModel, "scrollState");
 		this.getRouter().attachRouteMatched(this.onBeforeRouteMatched, this);

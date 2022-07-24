@@ -1,0 +1,184 @@
+<mvc:View
+  xmlns:commons="sap.suite.ui.commons"
+  xmlns:core="sap.ui.core"
+  controllerName="org.openui5.bestofui5.controller.Applications"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  height="100%"
+>
+  <FlexBox
+    id="contributorsFlexBox"
+    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+    height="100%"
+    alignItems="Start"
+    justifyContent="Start"
+    direction="Column"
+    wrap="{contributorsView>/wrap}"
+  >
+    <items>
+      <FlexBox class="flexboxContributor" width="100%">
+        <VBox alignItems="Center">
+          <Avatar
+            src="./img/hacking-away-sampleapp.png"
+            displaySize="XL"
+            displayShape="Square"
+            showBorder="true"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            press="sapMLib.URLHelper.redirect('https://hacking-away-sampleapp.bestofui5.org/index.html', true)"
+          />
+          <Link
+            text="{contributors>name}"
+            press="sapMLib.URLHelper.redirect('https://hacking-away-sampleapp.bestofui5.org/index.html', true)"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            class="sapUiNoMarginTop contributorOverflowText"
+          />
+        </VBox>
+        <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
+          <Title text="hacking.away.sampleapp" />
+          <Text text="Description: TypeScript UI5 sample application show-casing the latest!" class="sapUiSmallMarginTop" visible="{= ${contributorsView>/direction} === 'Column'}" />
+        </VBox>
+      </FlexBox>
+      <FlexBox class="flexboxContributor" width="100%">
+        <VBox alignItems="Center">
+          <Avatar
+            src="./img/openui5-sample-app.png"
+            displaySize="XL"
+            displayShape="Square"
+            showBorder="true"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            press="sapMLib.URLHelper.redirect('https://openui5-sample-app.bestofui5.org/', true)"
+          />
+          <Link
+            text="{contributors>name}"
+            press="sapMLib.URLHelper.redirect('https://openui5-sample-app.bestofui5.org/', true)"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            class="sapUiNoMarginTop contributorOverflowText"
+          />
+        </VBox>
+        <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
+          <Title text="openui5-sample-app" />
+          <Text text="Description: Sample of an OpenUI5 app" class="sapUiSmallMarginTop" visible="{= ${contributorsView>/direction} === 'Column'}" />
+        </VBox>
+      </FlexBox>
+      <FlexBox class="flexboxContributor" width="100%">
+        <VBox alignItems="Center">
+          <Avatar
+            src="./img/ui5-typescript-helloworld.png"
+            displaySize="XL"
+            displayShape="Square"
+            showBorder="true"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            press="sapMLib.URLHelper.redirect('https://ui5-typescript-helloworld.bestofui5.org/', true)"
+          />
+          <Link
+            text="{contributors>name}"
+            press="sapMLib.URLHelper.redirect('https://ui5-typescript-helloworld.bestofui5.org/', true)"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            class="sapUiNoMarginTop contributorOverflowText"
+          />
+        </VBox>
+        <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
+          <Title text="ui5-typescript-helloworld" />
+          <Text text="Description: Showcase of a TypeScript setup for developing UI5 applications" class="sapUiSmallMarginTop" visible="{= ${contributorsView>/direction} === 'Column'}" />
+        </VBox>
+      </FlexBox>
+      <FlexBox class="flexboxContributor" width="100%">
+        <VBox alignItems="Center">
+          <Avatar
+            src="./img/bestofui5-website.png"
+            displaySize="XL"
+            displayShape="Square"
+            showBorder="true"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            press="sapMLib.URLHelper.redirect('https://bestofui5.org/', true)"
+          />
+          <Link
+            text="{contributors>name}"
+            press="sapMLib.URLHelper.redirect('https://bestofui5.org/', true)"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            class="sapUiNoMarginTop contributorOverflowText"
+          />
+        </VBox>
+        <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
+          <Title text="bestofui5-website" />
+          <Text text="Description: bestofui5-website - UI5 Application" class="sapUiSmallMarginTop" visible="{= ${contributorsView>/direction} === 'Column'}" />
+        </VBox>
+      </FlexBox>
+      <FlexBox class="flexboxContributor" width="100%">
+        <VBox alignItems="Center">
+          <Avatar
+            src="./img/capire-sflight.png"
+            displaySize="XL"
+            displayShape="Square"
+            showBorder="true"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            press="sapMLib.URLHelper.redirect('https://cap-sflight.bestofui5.org/travel_processor/webapp/index.html', true)"
+          />
+          <Link
+            text="{contributors>name}"
+            press="sapMLib.URLHelper.redirect('https://cap-sflight.bestofui5.org/travel_processor/webapp/index.html', true)"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            class="sapUiNoMarginTop contributorOverflowText"
+          />
+        </VBox>
+        <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
+          <Title text="@capire/sflight" />
+          <Text text="Description: CAP flight demo scenario" class="sapUiSmallMarginTop" visible="{= ${contributorsView>/direction} === 'Column'}" />
+        </VBox>
+      </FlexBox>
+      <FlexBox class="flexboxContributor" width="100%">
+        <VBox alignItems="Center">
+          <Avatar
+            src="./img/capire-fiori.png"
+            displaySize="XL"
+            displayShape="Square"
+            showBorder="true"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            press="sapMLib.URLHelper.redirect('https://cloud-cap-samples-fiori.bestofui5.org/fiori-apps.html#Shell-home', true)"
+          />
+          <Link
+            text="{contributors>name}"
+            press="sapMLib.URLHelper.redirect('https://cloud-cap-samples-fiori.bestofui5.org/fiori-apps.html#Shell-home', true)"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            class="sapUiNoMarginTop contributorOverflowText"
+          />
+        </VBox>
+        <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
+          <Title text="@capire/fiori" />
+          <Text
+            text="Description: This project contains sample applications for SAP Cloud Application Programming Model."
+            class="sapUiSmallMarginTop"
+            visible="{= ${contributorsView>/direction} === 'Column'}"
+          />
+        </VBox>
+      </FlexBox>
+      <FlexBox class="flexboxContributor" width="100%">
+        <VBox alignItems="Center">
+          <Avatar
+            src="./img/capire-orders.png"
+            displaySize="XL"
+            displayShape="Square"
+            showBorder="true"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            press="sapMLib.URLHelper.redirect('https://cloud-cap-samples-orders.bestofui5.org/orders/index.html#Shell-home', true)"
+          />
+          <Link
+            text="{contributors>name}"
+            press="sapMLib.URLHelper.redirect('https://cloud-cap-samples-orders.bestofui5.org/orders/index.html#Shell-home', true)"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            class="sapUiNoMarginTop contributorOverflowText"
+          />
+        </VBox>
+        <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
+          <Title text="@capire/orders" />
+          <Text
+            text="Description: This project contains sample applications for SAP Cloud Application Programming Model."
+            class="sapUiSmallMarginTop"
+            visible="{= ${contributorsView>/direction} === 'Column'}"
+          />
+        </VBox>
+      </FlexBox>
+    </items>
+  </FlexBox>
+</mvc:View>
