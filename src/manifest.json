@@ -137,6 +137,11 @@
           "target": "TargetTagsView"
         },
         {
+          "name": "applications",
+          "pattern": "applications",
+          "target": "TargetApplicationsView"
+        },
+        {
           "name": "RouteObjectView",
           "pattern": "packages/{name}",
           "target": ["TargetObjectView"]
@@ -173,6 +178,13 @@
           "viewLevel": 1,
           "viewId": "Tags",
           "viewName": "Tags"
+        },
+        "TargetApplicationsView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 1,
+          "viewId": "Applications",
+          "viewName": "Applications"
         },
         "TargetObjectView": {
           "viewType": "XML",

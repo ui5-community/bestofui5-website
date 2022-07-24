@@ -40,6 +40,19 @@
     </layoutData>
   </Button>
   <Button
+    text="{i18n>linkheader_fragment_applications}"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'applications')"
+    type="{= ${settings>/headerKey} === 'applications' ? 'Emphasized' : 'Transparent' }"
+  >
+    <customData>
+      <core:CustomData key="headerKey" value="applications" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="Low" group="2" />
+    </layoutData>
+  </Button>
+  <Button
     text="{i18n>linkheader_fragment_timeline}"
     class="sapUiNoMarginBegin sapUiNoMarginEnd"
     press=".onButtonHeaderSelect($event, 'timeline')"
