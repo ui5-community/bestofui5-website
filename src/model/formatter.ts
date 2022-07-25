@@ -128,4 +128,31 @@ export default {
 			return "Error";
 		}
 	},
+
+	formatTimelineIcon(type: string): string {
+		switch (type) {
+			case "module":
+				return "sap-icon://font-awesome-icons/code";
+			case "middleware":
+				return "sap-icon://font-awesome-icons/server";
+			case "task":
+				return "sap-icon://font-awesome-icons/list-check";
+			case "customControl":
+				return "sap-icon://font-awesome-icons/gamepad";
+			case "generator":
+				return "sap-icon://font-awesome-icons/robot";
+			case "tooling":
+				return "sap-icon://font-awesome-icons/screwdriver";
+			case "vscode":
+				return "sap-icon://font-awesome-icons/microsoft";
+			case "application":
+				return "sap-icon://font-awesome-icons/window-maximize";
+			case "library":
+				return "sap-icon://font-awesome-icons/book";
+			case "command":
+				return "sap-icon://font-awesome-icons/terminal";
+			default:
+				return "";
+		}
+	},
 };
