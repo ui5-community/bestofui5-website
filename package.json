@@ -63,7 +63,7 @@
     "@wdio/mocha-framework": "^7.19.5",
     "@wdio/spec-reporter": "^7.19.5",
     "babel-preset-transform-ui5": "^7.0.5",
-    "chromedriver": "^102.0.0",
+    "chromedriver": "^104.0.0",
     "conventional-changelog-cli": "^2.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.14.0",
