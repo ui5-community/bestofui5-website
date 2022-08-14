@@ -27,6 +27,10 @@
       <TimelineItem
         titleText="{versions>version}"
         name="{versions>name}"
+        icon="{
+          parts: ['versions>sourceType'],
+          formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatTimelineIcon'
+        }"
         nameClickable="true"
         nameClick=".onNameClick($event, 'mycustomString')"
         subtitleText="{= ${i18n>list_item_tag_updated}.replace('{0}', ${
