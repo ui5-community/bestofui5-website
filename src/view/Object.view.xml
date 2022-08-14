@@ -113,6 +113,15 @@
           </ObjectPageSubSection>
         </subSections>
       </ObjectPageSection>
+      <ObjectPageSection id="changelogSection" visible="{= !!${data>changelog} }">
+        <subSections>
+          <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_changelog}" id="changelog" titleUppercase="true">
+            <blocks>
+              <md:Markdown id="changelogMarkdown" content="{data>changelog}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" class="wrapCodeText" />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
       <ObjectPageSection id="versionsSection" visible="{= !!${data>versions} }">
         <subSections>
           <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_versions}" id="versions" titleUppercase="true">
