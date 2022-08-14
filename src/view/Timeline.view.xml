@@ -47,7 +47,14 @@
         }) }"
       >
         <content>
-          <m:Panel expanded="{settings>/timelinePanelExpanded}" headerText="Changelog" expandable="true" width="{= ${device>/system/phone} === true ? '' : '693.547px' }" class="sapUiResponsiveMargin">
+          <m:Panel
+            expanded="{settings>/timelinePanelExpanded}"
+            visible="{= !!${versions>changelog} }"
+            headerText="Changelog"
+            expandable="true"
+            width="{= ${device>/system/phone} === true ? '' : '693.547px' }"
+            class="sapUiResponsiveMargin"
+          >
             <m:content>
               <md:Markdown content="{versions>changelog}" />
             </m:content>
