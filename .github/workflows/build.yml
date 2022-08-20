@@ -25,9 +25,6 @@ jobs:
       - name: build ui
         run: |
           npm run build
-      # - name: create sitemap
-      #   run: |
-      #     npm run sitemap:build
       - name: Commit/Push build to docs branch
         run: |
           git config --global user.name 'marianfoo'

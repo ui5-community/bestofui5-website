@@ -32,12 +32,10 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "hooks:pre-commit": "npm-run-all --sequential prettier:staged lint:staged",
     "hooks:pre-push": "npm-run-all --sequential lint:commit",
-    "test": "wdio run wdio.conf.js",
-    "sitemap:build": "ts-node -O '{\"module\":\"commonjs\",\"target\":\"esnext\"}'  sitemap/create_sitemap.ts"
+    "test": "wdio run wdio.conf.js"
   },
   "dependencies": {
     "chart.js": "^3.9.1",
-    "ts-node": "^10.9.1",
     "ui5-cc-md": "^0.0.6"
   },
   "devDependencies": {
