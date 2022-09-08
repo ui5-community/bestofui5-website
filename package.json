@@ -46,7 +46,7 @@
     "@babel/register": "^7.18.9",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@openui5/ts-types-esm": "1.105.0",
+    "@openui5/ts-types-esm": "1.106.0",
     "@prettier/plugin-xml": "^2.2.0",
     "@types/chart.js": "2.9.37",
     "@types/jquery": "3.5.14",
