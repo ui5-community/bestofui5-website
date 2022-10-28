@@ -25,7 +25,6 @@
             displayShape="Square"
             showBorder="true"
             core:require="{ sapMLib: 'sap/m/library' }"
-            press="sapMLib.URLHelper.redirect('https://hacking-away-sampleapp.bestofui5.org/index.html', true)"
           />
         </VBox>
         <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
@@ -42,7 +41,6 @@
             displayShape="Square"
             showBorder="true"
             core:require="{ sapMLib: 'sap/m/library' }"
-            press="sapMLib.URLHelper.redirect('https://openui5-sample-app.bestofui5.org/', true)"
           />
         </VBox>
         <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
@@ -59,7 +57,6 @@
             displayShape="Square"
             showBorder="true"
             core:require="{ sapMLib: 'sap/m/library' }"
-            press="sapMLib.URLHelper.redirect('https://ui5-typescript-helloworld.bestofui5.org/', true)"
           />
         </VBox>
         <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
@@ -76,7 +73,6 @@
             displayShape="Square"
             showBorder="true"
             core:require="{ sapMLib: 'sap/m/library' }"
-            press="sapMLib.URLHelper.redirect('https://bestofui5.org/', true)"
           />
         </VBox>
         <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
@@ -93,7 +89,6 @@
             displayShape="Square"
             showBorder="true"
             core:require="{ sapMLib: 'sap/m/library' }"
-            press="sapMLib.URLHelper.redirect('https://cap-sflight.bestofui5.org/travel_processor/webapp/index.html', true)"
           />
         </VBox>
         <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
@@ -110,7 +105,6 @@
             displayShape="Square"
             showBorder="true"
             core:require="{ sapMLib: 'sap/m/library' }"
-            press="sapMLib.URLHelper.redirect('https://cloud-cap-samples-fiori.bestofui5.org/fiori-apps.html#Shell-home', true)"
           />
         </VBox>
         <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
@@ -131,7 +125,6 @@
             displayShape="Square"
             showBorder="true"
             core:require="{ sapMLib: 'sap/m/library' }"
-            press="sapMLib.URLHelper.redirect('https://cloud-cap-samples-orders.bestofui5.org/orders/index.html#Shell-home', true)"
           />
         </VBox>
         <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
