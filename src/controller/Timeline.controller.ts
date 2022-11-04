@@ -1,7 +1,8 @@
 import Event from "sap/ui/base/Event";
 import JSONModel from "sap/ui/model/json/JSONModel";
 import BaseController from "./BaseController";
-import { registerIconLoader } from "sap/ui/webc/common/thirdparty/base/AssetRegistry";
+import { registerIconLoader } from "sap/ui/webc/common/thirdparty/base/asset-registries/Icons";
+import IconCollection from "org/openui5/bestofui5/resources/font-awesome/fa-brands-sap";
 
 /**
  * @namespace org.openui5.bestofui5.controller
@@ -9,16 +10,9 @@ import { registerIconLoader } from "sap/ui/webc/common/thirdparty/base/AssetRegi
 export default class Timeline extends BaseController {
 	public onInit(): void {
 		this.getRouter().getRoute("timeline").attachPatternMatched(this.onPatternMatched, this);
-		const loadIconsBundle = async (collection) => {
-			let iconData = null;
-			iconData = (
-				await new Promise(function (resolve, reject) {
-					sap.ui.require(["org/openui5/bestofui5/resources/font-awesome/fa-brands-sap"], resolve, reject);
-				})
-			).default;
-			return iconData;
-		};
-		registerIconLoader("font-awesome-icons", loadIconsBundle);
+		registerIconLoader("font-awesome-icons", () => {
+			return IconCollection;
+		});
 	}
 
 	public onNameClick(event: Event): void {
