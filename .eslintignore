@@ -12,7 +12,9 @@ CNAME
 # Ignore files by extension
 /**/*.svg
 /**/*.png
+/**/*.ico
 /**/*.md
+/**/*.webmanifest
 
 # Ignore files by folders
 /src/resources/font-awesome/**
