@@ -32,7 +32,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "hooks:pre-commit": "npm-run-all --sequential prettier:staged lint:staged",
     "hooks:pre-push": "npm-run-all --sequential lint:commit",
-    "test": "wdio run wdio.conf.js"
+    "test": "wait-on tcp:8080 && wdio run wdio.conf.js"
   },
   "dependencies": {
     "chart.js": "^4.3.3",
@@ -76,6 +76,7 @@
     "typescript": "^5.1.6",
     "ui5-middleware-livereload": "^3.0.0",
     "ui5-tooling-modules": "^3.0.0",
+    "wait-on": "^7.0.1",
     "wdio-chromedriver-service": "^8.1.1",
     "wdio-ui5-service": "^1.5.1",
     "xml-formatter": "^3.5.0"
