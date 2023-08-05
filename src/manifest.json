@@ -163,14 +163,16 @@
           "transition": "slide",
           "viewLevel": 1,
           "viewId": "AllPackages",
-          "viewName": "AllPackages"
+          "viewName": "AllPackages",
+          "clearControlAggregation": true
         },
         "TargetHotPackagesView": {
           "viewType": "XML",
           "transition": "slide",
           "viewLevel": 1,
           "viewId": "HotPackages",
-          "viewName": "HotPackages"
+          "viewName": "HotPackages",
+          "clearControlAggregation": true
         },
         "TargetTagsView": {
           "viewType": "XML",
