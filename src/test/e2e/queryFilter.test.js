@@ -7,7 +7,7 @@ describe("ui5 query filter", () => {
 		try {
 			await $("filtekuzfutkfk424214").waitForExist({ timeout: 1000 });
 		} catch (error) {}
-		const firstItemInfolabelType = await $("#__component0---AllPackages--trend-item-type-__clone19");
+		const firstItemInfolabelType = await $("[id^=__component0---AllPackages--_IDGenCustomListItem1-__]");
 		const firstItemInfolabelTypeSpan = await firstItemInfolabelType.$(".sapTntInfoLabelText");
 		const infolabelInnerText = await firstItemInfolabelTypeSpan.getText();
 

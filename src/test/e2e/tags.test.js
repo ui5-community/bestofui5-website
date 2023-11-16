@@ -14,10 +14,10 @@ describe("ui5 tags", () => {
 		const item2 = await itemsTags[2];
 		await item2.press(); // press the second item `task`
 		try {
-			await $("#__component0---AllPackages--trend-item-type-__clone0").waitForExist({ timeout: 1500 });
+			await $("#__component0---AllPackages--trend-item-type-__clone0").waitForExist({ timeout: 2000 });
 		} catch (error) {}
 		// get type infolabel
-		const firstItemInfolabelType = await $("#__component0---AllPackages--trend-item-type-__clone19");
+		const firstItemInfolabelType = await $("[id^=__component0---AllPackages--_IDGenCustomListItem1-__]");
 		const firstItemInfolabelTypeSpan = await firstItemInfolabelType.$(".sapTntInfoLabelText");
 		const infolabelInnerText = await firstItemInfolabelTypeSpan.getText();
 

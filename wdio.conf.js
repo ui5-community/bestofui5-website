@@ -24,7 +24,6 @@ exports.config = {
 		screenshotPath: require("path").join("some", "dir", "for", "screenshots"), // [optional] {string}, default: ""
 		screenshotsDisabled: false, // [optional] {boolean}, default: false; if set to true, screenshots won't be taken and not written to file system
 		logLevel: "error", // [optional] error | verbose | silent, default: "error"
-		url: "mockServer.html", // [mandatory] {string} name of your bootstrap html file. If your server autoredirects to a 'domain:port/'-like root url, use empty string ''
 		skipInjectUI5OnStart: false, // [optional] {boolean}, default: false; true when UI5 is not on the start page, you need to later call <wdioUI5service>.injectUI5() manually
 		waitForUI5Timeout: 15000, // [optional] {number}, default: 15000; maximum waiting time in milliseconds while checking for UI5 availability
 	},
@@ -105,7 +104,7 @@ exports.config = {
 	// with `/`, the base url gets prepended, not including the path portion of your baseUrl.
 	// If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
 	// gets prepended directly.
-	baseUrl: "http://localhost:8080",
+	baseUrl: "http://localhost:8080/mockServer.html",
 	//
 	// Default timeout for all waitFor* commands.
 	waitforTimeout: 10000,
