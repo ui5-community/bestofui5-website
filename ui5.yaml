@@ -4,7 +4,7 @@ metadata:
 type: application
 framework:
   name: OpenUI5
-  version: "1.116.0"
+  version: "1.120.3"
   libraries:
     - name: sap.ui.core
     - name: sap.ui.layout
