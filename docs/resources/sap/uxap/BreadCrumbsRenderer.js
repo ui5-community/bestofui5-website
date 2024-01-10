@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(function(){"use strict";var e={apiVersion:2};e.render=function(e,r){e.openStart("div",r).class("sapUxAPBreadCrumbs").attr("role","navigation").attr("aria-labelledby",r._getAriaLabelledBy().getId()).openEnd();this._renderOverflowSelect(e,r);if(!r._bOnPhone){this._renderBreadcrumbTrail(e,r)}e.close("div")};e._renderBreadcrumbTrail=function(e,r){var n=r.getLinks(),t=r.getCurrentLocation(),o=r._getTubeIcon(),a=r.getShowCurrentLocation();e.openStart("ul",r.getId()+"-breadcrumbs").openEnd();n.forEach(function(r){e.openStart("li").openEnd();e.renderControl(r);e.renderControl(o);e.close("li")});if(a){e.openStart("li").openEnd();e.renderControl(t);e.close("li")}e.close("ul")};e._renderOverflowSelect=function(e,r){var n=r._getTubeIcon();e.openStart("div",r.getId()+"-select");e.class("sapUiHidden");e.openEnd();e.openStart("span").class("sapUxAPBreadCrumbsDots").openEnd().text("...").close("span");e.renderControl(n);e.renderControl(r._getOverflowSelect());e.close("div")};return e},true);
+//# sourceMappingURL=BreadCrumbsRenderer.js.map

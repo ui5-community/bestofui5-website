@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/thirdparty/jquery","sap/ui/base/Object"],function(jQuery,i){"use strict";var t=i.extend("sap.uxap.ThrottledTask",{constructor:function(i,t,s){this._fnTask=i;this._iDelay=t;this._oContext=s;this._oPromise=null;this._fnResolvePromise=null;this._fnRejectPromise=null;this._iTimer=null;this._oTaskOptions=null},reSchedule:function(i,t){var s=this._getPromise();if(this._iTimer){clearTimeout(this._iTimer);this._iTimer=null}this._oTaskOptions=this._mergeOptions(this._oTaskOptions||{},t);if(i){var e=this._fnTask.call(this._oContext,this._oTaskOptions);this._completePromise(e);return s}this._iTimer=setTimeout(function(){if(this._oPromise){var i=this._fnTask.call(this._oContext,this._oTaskOptions);this._completePromise(i)}}.bind(this),this._iDelay);return s},isPending:function(){return this._iTimer!=null},_getPromise:function(){if(!this._oPromise){this._oPromise=new Promise(function(i,t){this._fnResolvePromise=i;this._fnRejectPromise=t}.bind(this))}return this._oPromise},_completePromise:function(i){var t=i?this._fnResolvePromise:this._fnRejectPromise;t();this._oPromise=null;this._fnResolvePromise=null;this._fnRejectPromise=null;this._oTaskOptions=null},_mergeOptions:function(i,t){var s=jQuery.extend({},i,t);jQuery.each(s,function(e){s[e]=i[e]||t[e]});return s}});return t});
+//# sourceMappingURL=ThrottledTaskHelper.js.map

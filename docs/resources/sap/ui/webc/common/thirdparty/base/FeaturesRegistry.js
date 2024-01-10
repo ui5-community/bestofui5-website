@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.registerFeature=e.getFeature=void 0;const t=new Map;const r=(e,r)=>{t.set(e,r)};e.registerFeature=r;const s=e=>t.get(e);e.getFeature=s});
+//# sourceMappingURL=FeaturesRegistry.js.map

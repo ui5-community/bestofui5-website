@@ -1,0 +1,2 @@
+sap.ui.define(["exports","./CalendarDate"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;t=n(t);function n(e){return e&&e.__esModule?e:{default:e}}const u=e=>{const n=new t.default(e);n.setDate(1);n.setMonth(n.getMonth()+1);n.setDate(0);return n.getDate()};var a=u;e.default=a});
+//# sourceMappingURL=getDaysInMonth.js.map

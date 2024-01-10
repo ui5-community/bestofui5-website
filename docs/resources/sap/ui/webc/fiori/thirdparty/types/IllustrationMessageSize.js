@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var t;(function(e){e["Auto"]="Auto";e["Base"]="Base";e["Spot"]="Spot";e["Dialog"]="Dialog";e["Scene"]="Scene"})(t||(t={}));var o=t;e.default=o});
+//# sourceMappingURL=IllustrationMessageSize.js.map

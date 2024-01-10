@@ -1,0 +1,138 @@
+{
+  "_version": "1.21.0",
+  "sap.app": {
+    "id": "sap.uxap",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.120.3"
+    },
+    "title": "SAP UxAP",
+    "description": "SAP UxAP",
+    "ach": "CA-UI5-CTR",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "supportedThemes": [
+      "base",
+      "sap_hcb"
+    ]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.120",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.120.3"
+        },
+        "sap.m": {
+          "minVersion": "1.120.3"
+        },
+        "sap.ui.layout": {
+          "minVersion": "1.120.3"
+        },
+        "sap.f": {
+          "minVersion": "1.120.3",
+          "lazy": true
+        }
+      }
+    },
+    "library": {
+      "i18n": {
+        "bundleUrl": "messagebundle.properties",
+        "supportedLocales": [
+          "",
+          "ar",
+          "bg",
+          "ca",
+          "cnr",
+          "cs",
+          "cy",
+          "da",
+          "de",
+          "el",
+          "en",
+          "en-GB",
+          "en-US-sappsd",
+          "en-US-saprigi",
+          "en-US-saptrc",
+          "es",
+          "es-MX",
+          "et",
+          "fi",
+          "fr",
+          "fr-CA",
+          "hi",
+          "hr",
+          "hu",
+          "id",
+          "it",
+          "iw",
+          "ja",
+          "kk",
+          "ko",
+          "lt",
+          "lv",
+          "mk",
+          "ms",
+          "nl",
+          "no",
+          "pl",
+          "pt",
+          "pt-PT",
+          "ro",
+          "ru",
+          "sh",
+          "sk",
+          "sl",
+          "sv",
+          "th",
+          "tr",
+          "uk",
+          "vi",
+          "zh-CN",
+          "zh-TW"
+        ]
+      },
+      "content": {
+        "controls": [
+          "sap.uxap.AnchorBar",
+          "sap.uxap.BlockBase",
+          "sap.uxap.BreadCrumbs",
+          "sap.uxap.HierarchicalSelect",
+          "sap.uxap.ObjectPageHeader",
+          "sap.uxap.ObjectPageDynamicHeaderTitle",
+          "sap.uxap.ObjectPageDynamicHeaderContent",
+          "sap.uxap.ObjectPageHeaderActionButton",
+          "sap.uxap.ObjectPageHeaderContent",
+          "sap.uxap.ObjectPageLayout",
+          "sap.uxap.ObjectPageSection",
+          "sap.uxap.ObjectPageSectionBase",
+          "sap.uxap.ObjectPageSubSection"
+        ],
+        "elements": [
+          "sap.uxap.ModelMapping",
+          "sap.uxap.ObjectPageAccessibleLandmarkInfo",
+          "sap.uxap.ObjectPageHeaderLayoutData",
+          "sap.uxap.ObjectPageLazyLoader"
+        ],
+        "types": [
+          "sap.uxap.BlockBaseColumnLayout",
+          "sap.uxap.BlockBaseFormAdjustment",
+          "sap.uxap.Importance",
+          "sap.uxap.ObjectPageConfigurationMode",
+          "sap.uxap.ObjectPageHeaderDesign",
+          "sap.uxap.ObjectPageHeaderPictureShape",
+          "sap.uxap.ObjectPageSubSectionLayout",
+          "sap.uxap.ObjectPageSubSectionMode"
+        ],
+        "interfaces": [
+          "sap.uxap.IHeaderTitle",
+          "sap.uxap.IHeaderContent"
+        ]
+      }
+    }
+  }
+}

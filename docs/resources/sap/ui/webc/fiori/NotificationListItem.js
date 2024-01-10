@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","sap/ui/webc/main/library","./thirdparty/NotificationListItem"],function(e,t,i){"use strict";var a=i.Priority;var o=i.WrappingType;var s=e.extend("sap.ui.webc.fiori.NotificationListItem",{metadata:{library:"sap.ui.webc.fiori",tag:"ui5-li-notification-ui5",interfaces:["sap.ui.webc.fiori.INotificationListItem","sap.ui.webc.main.IListItem"],properties:{busy:{type:"boolean",defaultValue:false},busyDelay:{type:"int",defaultValue:1e3},description:{type:"string",defaultValue:"",mapping:"textContent"},priority:{type:"sap.ui.webc.main.Priority",defaultValue:a.None},read:{type:"boolean",defaultValue:false},selected:{type:"boolean",defaultValue:false},showClose:{type:"boolean",defaultValue:false},titleText:{type:"string",defaultValue:""},wrappingType:{type:"sap.ui.webc.main.WrappingType",defaultValue:o.None}},aggregations:{actions:{type:"sap.ui.webc.fiori.INotificationAction",multiple:true,slot:"actions"},avatar:{type:"sap.ui.webc.main.IAvatar",multiple:false,slot:"avatar"},footnotes:{type:"sap.ui.core.Control",multiple:true,slot:"footnotes"}},events:{close:{parameters:{item:{type:"HTMLElement"}}}},designtime:"sap/ui/webc/fiori/designtime/NotificationListItem.designtime"}});return s});
+//# sourceMappingURL=NotificationListItem.js.map

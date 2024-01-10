@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const t=()=>{let e=document.activeElement;while(e&&e.shadowRoot&&e.shadowRoot.activeElement){e=e.shadowRoot.activeElement}return e};var o=t;e.default=o});
+//# sourceMappingURL=getActiveElement.js.map

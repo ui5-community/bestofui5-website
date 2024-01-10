@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(t){"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var e;(function(t){t["Left"]="Left";t["Right"]="Right";t["Top"]="Top";t["Bottom"]="Bottom"})(e||(e={}));var o=e;t.default=o});
+//# sourceMappingURL=PopoverPlacementType.js.map

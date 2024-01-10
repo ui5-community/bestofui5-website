@@ -1,0 +1,182 @@
+<mvc:View
+  controllerName="org.openui5.bestofui5.controller.Object"
+  xmlns:m="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:md="cc.md"
+  xmlns="sap.uxap"
+  xmlns:layout="sap.ui.layout"
+  xmlns:tnt="sap.tnt"
+  xmlns:cc="org.openui5.bestofui5.control"
+  xmlns:core="sap.ui.core"
+  displayBlock="true"
+  height="100%"
+>
+  <ObjectPageLayout id="ObjectPageLayout" showAnchorBar="true" upperCaseAnchorBar="false" height="100%" class="fixImageWidth">
+    <headerTitle>
+      <ObjectPageHeader id="headerForTest" objectTitle="{data>name}" objectSubtitle="{data>description}" />
+    </headerTitle>
+    <headerContent>
+      <m:VBox>
+        <m:ObjectStatus title="{i18n>object_view_header_author}" text="{data>author}" />
+        <m:ObjectStatus title="{i18n>object_view_header_license}" text="{data>license}" />
+        <m:HBox>
+          <core:Icon src="sap-icon://font-awesome-icons/github" class="sapUiSmallMarginEnd" />
+          <m:Link text="{i18n>object_view_header_github}" href="{data>githublink}" target="_blank" />
+        </m:HBox>
+        <m:HBox visible="{= !!${data>npmlink}}">
+          <core:Icon src="sap-icon://font-awesome-icons/npm" class="sapUiSmallMarginEnd" />
+          <m:Link text="{i18n>object_view_header_npm}" href="{data>npmlink}" target="_blank" />
+        </m:HBox>
+        <m:HBox visible="{= !!${data>vscodelink}}">
+          <core:Icon src="sap-icon://font-awesome-icons/microsoft" class="sapUiSmallMarginEnd" />
+          <m:Link text="{i18n>object_view_header_microsoft}" href="{data>vscodelink}" target="_blank" />
+        </m:HBox>
+        <m:HBox visible="{= !!${data>liveDemoUrl}}">
+          <core:Icon src="sap-icon://internet-browser" class="sapUiSmallMarginEnd" />
+          <m:Link text="{i18n>object_view_header_livedemo}" href="{data>liveDemoUrl}" target="_blank" />
+        </m:HBox>
+        <m:layoutData>
+          <m:FlexItemData growFactor="1" />
+        </m:layoutData>
+      </m:VBox>
+      <m:VBox>
+        <tnt:InfoLabel id="downloads365" text="{i18n>object_view_header_downloads365} {data>downloads365}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloads365} >= 0}" />
+        <tnt:InfoLabel id="downloads30" text="{i18n>object_view_header_downloads30} {data>downloadsCurrentMonth}" renderMode="Loose" colorScheme="5" visible="{= ${data>downloadsCurrentMonth} >= 0}" />
+        <tnt:InfoLabel
+          id="downloads14"
+          text="{i18n>object_view_header_downloads14} {data>downloadsCurrentFortnight}"
+          renderMode="Loose"
+          colorScheme="5"
+          visible="{= ${data>downloadsCurrentFortnight} >= 0}"
+        />
+        <tnt:InfoLabel id="installs" text="{i18n>object_view_header_vscodeInstalls} {data>vscodeInstalls}" renderMode="Loose" colorScheme="5" visible="{= ${data>vscodeInstalls} >= 0}" />
+        <tnt:InfoLabel id="version" text="{i18n>object_view_header_version} {data>version}" renderMode="Loose" colorScheme="3" visible="{= !!${data>version}}" />
+        <m:layoutData>
+          <m:FlexItemData growFactor="1" />
+        </m:layoutData>
+      </m:VBox>
+      <m:VBox>
+        <m:ObjectStatus
+          title="{i18n>object_view_header_created_at}"
+          text="{
+            path: 'data>createdAt',
+            type: 'sap.ui.model.type.DateTime',
+            formatOptions: {
+              source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
+              pattern: 'dd.MM.yyyy'
+            }
+          }"
+        />
+        <m:ObjectStatus
+          icon="{
+          parts: ['data>updatedAt'],
+          formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatUpdatedAtIcon'
+        }"
+          state="{
+          parts: ['data>updatedAt'],
+          formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatUpdatedAtState'
+        }"
+          title="{i18n>object_view_header_updated_at}"
+          text="{
+            path: 'data>updatedAt',
+            type: 'sap.ui.model.type.DateTime',
+            formatOptions: {
+              source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
+              pattern: 'dd.MM.yyyy'
+            }
+          }"
+        />
+        <m:layoutData>
+          <m:FlexItemData growFactor="1" />
+        </m:layoutData>
+      </m:VBox>
+    </headerContent>
+    <sections>
+      <ObjectPageSection id="npmSection" visible="{= !!${data>downloadsHistory} }">
+        <subSections>
+          <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_npm}" titleUppercase="true" id="npmDownloadsSection">
+            <blocks>
+              <cc:BarChart title="{i18n>object_view_section_npm_chart_header}" color="#288bff" records="{data>downloadsHistory}">
+                <cc:ChartRecord label='{data>yearMonth}' value="{data>downloads}" />
+              </cc:BarChart>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection id="readmeSection" visible="{= !!${data>readme} }">
+        <subSections>
+          <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_readme}" id="readme" titleUppercase="true">
+            <blocks>
+              <md:Markdown id="test2" content="{data>readme}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" class="wrapCodeText" />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection id="changelogSection" visible="{= !!${data>changelog} }">
+        <subSections>
+          <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_changelog}" id="changelog" titleUppercase="true">
+            <blocks>
+              <md:Markdown id="changelogMarkdown" content="{data>changelog}" baseURL="https://raw.githubusercontent.com/{data>gitHubOwner}/{data>gitHubRepo}/main///" class="wrapCodeText" />
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+      <ObjectPageSection id="versionsSection" visible="{= !!${data>versions} }">
+        <subSections>
+          <ObjectPageSubSection mode="Expanded" title="{i18n>object_view_section_versions}" id="versions" titleUppercase="true">
+            <blocks>
+              <m:List
+                items="{
+                path: 'data>versions/',
+                sorter: {
+                  path: 'date',
+                  descending: true
+                },
+                filters: [
+                {
+                  filters: [
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: 'created'
+                    },
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: 'modified'
+                    },
+                    {
+                      path: 'version',
+                      operator: 'NE',
+                      value1: '0.0.1-security'
+                    }
+                  ],
+                  and: true
+                }
+                ]
+              }"
+                id="listVersions"
+              >
+                <m:StandardListItem
+                  type="Navigation"
+                  press=".onPressStandardListItemNpmLink"
+                  id="listVersionsItem"
+                  title="{data>version}"
+                  description="{
+                  path: 'data>date',
+                  type: 'sap.ui.model.type.DateTime',
+                  formatOptions: {
+                    source: {pattern: 'yyyy-MM-ddTHH:mm:ss.SSSX'},
+                    pattern: 'dd.MM.yyyy'
+                  }
+                }"
+                />
+              </m:List>
+            </blocks>
+          </ObjectPageSubSection>
+        </subSections>
+      </ObjectPageSection>
+    </sections>
+  </ObjectPageLayout>
+</mvc:View>

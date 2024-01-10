@@ -1,0 +1,119 @@
+{
+  "_version": "1.21.0",
+  "sap.app": {
+    "id": "sap.ui.webc.fiori",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.120.3"
+    },
+    "title": "UI5 Web Components Retrofit Fiori Components",
+    "description": "UI5 Web Components Retrofit Fiori Components",
+    "ach": "CA-UI5-CTR",
+    "resources": "resources.json",
+    "offline": true,
+    "openSourceComponents": [
+      {
+        "name": "ui5-web-components",
+        "packagedWithMySelf": true,
+        "version": "1.18.0"
+      },
+      {
+        "name": "ZXing",
+        "packagedWithMySelf": true,
+        "version": "0.17.1"
+      }
+    ]
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "supportedThemes": []
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.120",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.120.3"
+        },
+        "sap.ui.webc.common": {
+          "minVersion": "1.120.3"
+        },
+        "sap.ui.webc.main": {
+          "minVersion": "1.120.3"
+        }
+      }
+    },
+    "library": {
+      "i18n": false,
+      "css": false,
+      "content": {
+        "controls": [
+          "sap.ui.webc.fiori.Bar",
+          "sap.ui.webc.fiori.BarcodeScannerDialog",
+          "sap.ui.webc.fiori.DynamicSideContent",
+          "sap.ui.webc.fiori.FilterItem",
+          "sap.ui.webc.fiori.FilterItemOption",
+          "sap.ui.webc.fiori.FlexibleColumnLayout",
+          "sap.ui.webc.fiori.IllustratedMessage",
+          "sap.ui.webc.fiori.MediaGallery",
+          "sap.ui.webc.fiori.MediaGalleryItem",
+          "sap.ui.webc.fiori.NotificationAction",
+          "sap.ui.webc.fiori.NotificationListGroupItem",
+          "sap.ui.webc.fiori.NotificationListItem",
+          "sap.ui.webc.fiori.Page",
+          "sap.ui.webc.fiori.ProductSwitch",
+          "sap.ui.webc.fiori.ProductSwitchItem",
+          "sap.ui.webc.fiori.ShellBar",
+          "sap.ui.webc.fiori.ShellBarItem",
+          "sap.ui.webc.fiori.SideNavigation",
+          "sap.ui.webc.fiori.SideNavigationItem",
+          "sap.ui.webc.fiori.SideNavigationSubItem",
+          "sap.ui.webc.fiori.SortItem",
+          "sap.ui.webc.fiori.Timeline",
+          "sap.ui.webc.fiori.TimelineItem",
+          "sap.ui.webc.fiori.UploadCollection",
+          "sap.ui.webc.fiori.UploadCollectionItem",
+          "sap.ui.webc.fiori.ViewSettingsDialog",
+          "sap.ui.webc.fiori.Wizard",
+          "sap.ui.webc.fiori.WizardStep"
+        ],
+        "elements": [],
+        "types": [
+          "sap.ui.webc.fiori.BarDesign",
+          "sap.ui.webc.fiori.FCLLayout",
+          "sap.ui.webc.fiori.IllustrationMessageSize",
+          "sap.ui.webc.fiori.IllustrationMessageType",
+          "sap.ui.webc.fiori.MediaGalleryItemLayout",
+          "sap.ui.webc.fiori.MediaGalleryLayout",
+          "sap.ui.webc.fiori.MediaGalleryMenuHorizontalAlign",
+          "sap.ui.webc.fiori.MediaGalleryMenuVerticalAlign",
+          "sap.ui.webc.fiori.PageBackgroundDesign",
+          "sap.ui.webc.fiori.SideContentFallDown",
+          "sap.ui.webc.fiori.SideContentPosition",
+          "sap.ui.webc.fiori.SideContentVisibility",
+          "sap.ui.webc.fiori.TimelineLayout",
+          "sap.ui.webc.fiori.UploadState",
+          "sap.ui.webc.fiori.ViewSettingsDialogMode",
+          "sap.ui.webc.fiori.WizardContentLayout"
+        ],
+        "interfaces": [
+          "sap.ui.webc.fiori.IBar",
+          "sap.ui.webc.fiori.IFilterItem",
+          "sap.ui.webc.fiori.IFilterItemOption",
+          "sap.ui.webc.fiori.IMediaGalleryItem",
+          "sap.ui.webc.fiori.INotificationAction",
+          "sap.ui.webc.fiori.INotificationListItem",
+          "sap.ui.webc.fiori.IProductSwitchItem",
+          "sap.ui.webc.fiori.IShellBarItem",
+          "sap.ui.webc.fiori.ISideNavigationItem",
+          "sap.ui.webc.fiori.ISideNavigationSubItem",
+          "sap.ui.webc.fiori.ISortItem",
+          "sap.ui.webc.fiori.ITimelineItem",
+          "sap.ui.webc.fiori.IUploadCollectionItem",
+          "sap.ui.webc.fiori.IWizardStep"
+        ]
+      }
+    }
+  }
+}

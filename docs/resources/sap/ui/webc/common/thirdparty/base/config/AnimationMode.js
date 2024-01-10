@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../InitialConfiguration","../types/AnimationMode"],function(e,t,n){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.setAnimationMode=e.getAnimationMode=void 0;n=i(n);function i(e){return e&&e.__esModule?e:{default:e}}let o;const d=()=>{if(o===undefined){o=(0,t.getAnimationMode)()}return o};e.getAnimationMode=d;const u=e=>{if(e in n.default){o=e}};e.setAnimationMode=u});
+//# sourceMappingURL=AnimationMode.js.map

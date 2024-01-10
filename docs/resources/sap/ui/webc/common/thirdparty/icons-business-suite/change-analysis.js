@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v1/change-analysis","./v2/change-analysis"],function(e,a,t,n){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return t.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return t.ltr}});e.pathData=void 0;const r=(0,a.isLegacyThemeFamily)()?t.pathData:n.pathData;e.pathData=r;var i="business-suite/change-analysis";e.default=i});
+//# sourceMappingURL=change-analysis.js.map

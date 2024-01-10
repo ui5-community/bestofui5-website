@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var n;(function(e){e["Solid"]="Solid";e["Transparent"]="Transparent";e["Translucent"]="Translucent"})(n||(n={}));var t=n;e.default=t});
+//# sourceMappingURL=BackgroundDesign.js.map

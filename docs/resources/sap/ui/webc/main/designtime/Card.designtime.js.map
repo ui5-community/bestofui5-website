@@ -1,0 +1,1 @@
+{"version":3,"file":"Card.designtime.js","names":["sap","ui","define","name","singular","plural","actions","remove","changeType","reveal"],"sources":["Card-dbg.designtime.js"],"mappings":";;;;;AAOAA,IAAIC,GAAGC,OAAO,GACb,WACC,aAEA,MAAO,CACNC,KAAM,CACLC,SAAU,YACVC,OAAQ,oBAETC,QAAS,CACRC,OAAQ,CACPC,WAAY,eAEbC,OAAQ,CACPD,WAAY,kBAIhB"}

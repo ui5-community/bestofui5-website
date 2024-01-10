@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var i;(function(e){e["Information"]="Information";e["Positive"]="Positive";e["Negative"]="Negative";e["Warning"]="Warning"})(i||(i={}));var t=i;e.default=t});
+//# sourceMappingURL=MessageStripDesign.js.map

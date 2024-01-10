@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v1/thumb-up-filled","./v2/thumb-up-filled"],function(e,t,a,u){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return a.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return a.ltr}});e.pathData=void 0;const r=(0,t.isLegacyThemeFamily)()?a.pathData:u.pathData;e.pathData=r;var i="business-suite/thumb-up-filled";e.default=i});
+//# sourceMappingURL=thumb-up-filled.js.map

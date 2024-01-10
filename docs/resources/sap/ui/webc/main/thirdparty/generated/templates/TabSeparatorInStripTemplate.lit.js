@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e,r){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;function t(e,t,i){return(0,r.html)`<div id="${(0,r.ifDefined)(this._id)}" role="separator" class="${(0,r.classMap)(this.classes.root)}"></div>`}var i=t;e.default=i});
+//# sourceMappingURL=TabSeparatorInStripTemplate.lit.js.map

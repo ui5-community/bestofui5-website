@@ -1,0 +1,1 @@
+{"version":3,"file":"library.config.js","names":["sap","ui","define","CSP","setPackageCSSRoot","require","toUrl"],"sources":["library.config-dbg.js"],"mappings":";;;;;AAMAA,IAAIC,GAAGC,OAAO,CACb,0CACE,SAASC,GACX,aAGAA,EAAIC,kBAAkB,qBAAsBJ,IAAIC,GAAGI,QAAQC,MAAM,oCAClE"}

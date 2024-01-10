@@ -1,0 +1,224 @@
+<mvc:View controllerName="org.openui5.bestofui5.controller.AllPackages" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+  <mvc:content>
+    <FlexBox alignItems="Center" wrap="{= ${device>/system/phone} === true ? 'Wrap' : 'NoWrap' }">
+      <HBox alignItems="Center">
+        <core:Icon src="sap-icon://sort" class="{= ${device>/system/phone} === true ? sapUiTinyMarginBeginEnd : sapUiTinyMarginEnd }" />
+        <Select width="100%" id="selectSort" forceSelection="true" change=".onSortSelectChange" selectedKey="{settings>/selectKey}">
+          <core:Item key="downloadsCurrentFortnight" text="{i18n>all_packages_view_select_downloadsCurrentFortnight}" />
+          <core:Item key="downloadsCurrentMonth" text="{i18n>all_packages_view_select_downloadsCurrentMonth}" />
+          <core:Item key="downloads365" text="{i18n>all_packages_view_select_downloads365}" />
+          <core:Item key="vscodeInstalls" text="{i18n>all_packages_view_select_vscodeInstalls}" />
+          <core:Item key="updatedAt" text="{i18n>all_packages_view_select_updatedAt}" />
+          <core:Item key="createdAt" text="{i18n>all_packages_view_select_createdAt}" />
+          <core:Item key="addedToBoUI5" text="{i18n>all_packages_view_select_addedToBoUI5}" />
+          <layoutData>
+            <FlexItemData growFactor="1" />
+          </layoutData>
+        </Select>
+        <Button press=".changeSortOrder" icon="{= ${settings>/sortOrderDecending} ? 'sap-icon://sort-descending' : 'sap-icon://sort-ascending' }" />
+        <layoutData>
+          <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? '100%' : '0' }" />
+        </layoutData>
+      </HBox>
+      <HBox alignItems="Center">
+        <core:Icon src="sap-icon://filter" class="sapUiTinyMarginBeginEnd" />
+        <MultiComboBox
+          id="multiComboBox"
+          selectionChange="onSelectionChange"
+          items="{
+          path: 'data>/tags',
+          sorter: [
+            {path: 'type',descending: true,group: true},
+            {path: 'count',descending: true}]
+			    }"
+        >
+          <items>
+            <core:Item key="{data>name};{data>type}" text="{data>name} ({data>count})" />
+          </items>
+          <layoutData>
+            <FlexItemData growFactor="1" />
+          </layoutData>
+        </MultiComboBox>
+        <layoutData>
+          <FlexItemData growFactor="1" baseSize="{= ${device>/system/phone} === true ? '100%' : '0' }" />
+        </layoutData>
+      </HBox>
+    </FlexBox>
+    <List
+      id="listAllPackages"
+      headerText="{i18n>all_packages_view_header} ({settings>/allPackagesCount})"
+      growing="true"
+      growingScrollToLoad="true"
+      growingThreshold="{= ${device>/system/phone} === true ? 7 : 12 }"
+      mode="None"
+      items="{path: 'data>/packages/'}"
+      updateFinished="onUpdateFinished"
+      width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+    >
+      <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
+        <FlexBox id="trend-item-box" class="item-box" alignItems="Center" justifyContent="SpaceBetween">
+          <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
+            <HBox id="trend-item-tags-box2" class="sapUiTinyMarginTop" wrap="Wrap">
+              <Title level="H3" text="{data>name}" />
+              <core:Icon
+                class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+                core:require="{ sapMLib: 'sap/m/library' }"
+                src="sap-icon://font-awesome-icons/github"
+                press="sapMLib.URLHelper.redirect(${data>githublink}, true)"
+                visible="{= !!${data>githublink}}"
+                tooltip="{i18n>icon_tooltips_github}"
+              />
+              <core:Icon
+                class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+                core:require="{ sapMLib: 'sap/m/library' }"
+                src="sap-icon://font-awesome-icons/npm"
+                press="sapMLib.URLHelper.redirect(${data>npmlink}, true)"
+                visible="{= !!${data>npmlink}}"
+                tooltip="{i18n>icon_tooltips_npm}"
+              />
+              <core:Icon
+                class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+                core:require="{ sapMLib: 'sap/m/library' }"
+                src="sap-icon://font-awesome-icons/microsoft"
+                press="sapMLib.URLHelper.redirect(${data>vscodelink}, true)"
+                visible="{= !!${data>vscodelink}}"
+                tooltip="{i18n>icon_tooltips_vsc}"
+              />
+              <core:Icon
+                class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+                core:require="{ sapMLib: 'sap/m/library' }"
+                src="sap-icon://internet-browser"
+                press="sapMLib.URLHelper.redirect(${data>liveDemoUrl}, true)"
+                visible="{= !!${data>liveDemoUrl}}"
+                tooltip="{i18n>icon_tooltips_livedemo}"
+              />
+            </HBox>
+
+            <FormattedText id="trend-desc" htmlText="{data>description}" />
+            <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
+              <core:Icon visible="{= ${data>type} === 'module'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/code" />
+              <core:Icon visible="{= ${data>type} === 'middleware' }" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/server" />
+              <core:Icon visible="{= ${data>type} === 'task'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/list-check" />
+              <core:Icon visible="{= ${data>type} === 'customControl'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/gamepad" />
+              <core:Icon visible="{= ${data>type} === 'generator'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/robot" />
+              <core:Icon visible="{= ${data>type} === 'tooling'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/screwdriver" />
+              <core:Icon visible="{= ${data>type} === 'vscode'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons/microsoft" />
+              <core:Icon visible="{= ${data>type} === 'application'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/window-maximize" />
+              <core:Icon visible="{= ${data>type} === 'library'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/book" />
+              <core:Icon visible="{= ${data>type} === 'command'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/terminal" />
+              <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{data>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" />
+
+              <tnt:InfoLabel
+                id="downloads14"
+                class="sapUiTinyMarginEnd"
+                text="Downloads {data>downloadsCurrentFortnight}"
+                tooltip="Downloads last 14 days"
+                renderMode="Narrow"
+                colorScheme="5"
+                displayOnly="false"
+                visible="{= ${data>downloadsCurrentFortnight} >= 0 &amp;&amp; ${settings>/selectKey} === 'downloadsCurrentFortnight'}"
+              />
+
+              <tnt:InfoLabel
+                id="downloads30"
+                class="sapUiTinyMarginEnd"
+                text="Downloads {data>downloadsCurrentMonth}"
+                tooltip="Downloads last 30 days"
+                renderMode="Narrow"
+                colorScheme="5"
+                displayOnly="false"
+                visible="{= ${data>downloadsCurrentMonth} >= 0 &amp;&amp; ${settings>/selectKey} === 'downloadsCurrentMonth'}"
+              />
+
+              <tnt:InfoLabel
+                id="downloads365"
+                class="sapUiTinyMarginEnd"
+                text="Downloads {data>downloads365}"
+                tooltip="Downloads last 365 days"
+                renderMode="Narrow"
+                colorScheme="5"
+                displayOnly="false"
+                visible="{= ${data>downloads365} >= 0 &amp;&amp; ${settings>/selectKey} === 'downloads365'}"
+              />
+
+              <tnt:InfoLabel
+                id="installs"
+                class="sapUiTinyMarginEnd"
+                text="VSC installs {data>vscodeInstalls}"
+                tooltip="Total VSC installs"
+                renderMode="Narrow"
+                colorScheme="5"
+                displayOnly="false"
+                visible="{= ${data>vscodeInstalls} >= 0 &amp;&amp; ${settings>/selectKey} === 'vscodeInstalls'}"
+              />
+
+              <tnt:InfoLabel
+                id="trend-item-last-update"
+                class="sapUiTinyMarginEnd"
+                renderMode="Narrow"
+                colorScheme="6"
+                displayOnly="false"
+                text="{= ${i18n>list_item_tag_updated}.replace('{0}', ${
+                        path: 'data>updatedAt',
+                        type: 'sap.ui.model.type.Date',
+                        formatOptions: {
+                          source : {
+                            pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ'
+                          },
+                          relative: true,
+                          relativeScale: 'auto',
+                          relativeStyle: 'wide'
+                        }
+                      }) }"
+                visible="{= ${settings>/selectKey} === 'updatedAt'}"
+              />
+
+              <tnt:InfoLabel
+                id="added-to-bestofui5"
+                class="sapUiTinyMarginEnd"
+                renderMode="Narrow"
+                colorScheme="6"
+                displayOnly="false"
+                text="{= ${i18n>added_to_best_of_ui5}.replace('{0}', ${
+                      path: 'data>addedToBoUI5',
+                      type: 'sap.ui.model.type.Date',
+                      formatOptions: {
+                        source : {
+                          pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ'
+                        },
+                        relative: true,
+                        relativeScale: 'auto',
+                        relativeStyle: 'wide'
+                      }
+                    }) }"
+                visible="{= ${settings>/selectKey} === 'addedToBoUI5'}"
+              />
+
+              <tnt:InfoLabel
+                id="trend-item-created"
+                class="sapUiTinyMarginEnd"
+                renderMode="Narrow"
+                colorScheme="6"
+                displayOnly="false"
+                text="{= ${i18n>list_item_tag_created}.replace('{0}', ${
+                        path: 'data>createdAt',
+                        type:'sap.ui.model.type.Date',
+                        formatOptions: {
+                          source : {
+                            pattern: 'yyyy-MM-ddTHH:mm:ss X'
+                          },
+                          relative: true,
+                          relativeScale: 'auto',
+                          relativeStyle: 'wide'
+                        }
+                      }) }"
+                visible="{= ${settings>/selectKey} === 'createdAt'}"
+              />
+              <tnt:InfoLabel id="trend-item-license" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="7" displayOnly="false" text="{data>licenseSource}" />
+            </HBox>
+          </VBox>
+        </FlexBox>
+      </CustomListItem>
+    </List>
+  </mvc:content>
+</mvc:View>

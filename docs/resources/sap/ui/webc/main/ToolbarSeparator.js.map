@@ -1,0 +1,1 @@
+{"version":3,"file":"ToolbarSeparator.js","names":["sap","ui","define","WebComponent","library","ToolbarSeparator","extend","metadata","tag","interfaces"],"sources":["ToolbarSeparator-dbg.js"],"mappings":";;;;;AAOAA,IAAIC,GAAGC,OAAO,CACb,gCACA,YACA,iCACE,SAASC,EAAcC,GACzB,aAuBA,IAAIC,EAAmBF,EAAaG,OAAO,oCAAqC,CAC/EC,SAAU,CACTH,QAAS,mBACTI,IAAK,4BACLC,WAAY,CACX,oCAQH,OAAOJ,CACR"}

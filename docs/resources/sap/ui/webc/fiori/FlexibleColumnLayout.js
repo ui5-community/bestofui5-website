@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","./thirdparty/FlexibleColumnLayout"],function(e,t){"use strict";var l=t.FCLLayout;var o=e.extend("sap.ui.webc.fiori.FlexibleColumnLayout",{metadata:{library:"sap.ui.webc.fiori",tag:"ui5-flexible-column-layout-ui5",properties:{accessibilityRoles:{type:"object",defaultValue:{}},accessibilityTexts:{type:"object",defaultValue:{}},height:{type:"sap.ui.core.CSSSize",mapping:"style"},hideArrows:{type:"boolean",defaultValue:false},layout:{type:"sap.ui.webc.fiori.FCLLayout",defaultValue:l.OneColumn},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},aggregations:{endColumn:{type:"sap.ui.core.Control",multiple:false,slot:"endColumn"},midColumn:{type:"sap.ui.core.Control",multiple:false,slot:"midColumn"},startColumn:{type:"sap.ui.core.Control",multiple:false,slot:"startColumn"}},events:{layoutChange:{parameters:{layout:{type:"sap.ui.webc.fiori.FCLLayout"},columnLayout:{type:"array"},startColumnVisible:{type:"boolean"},midColumnVisible:{type:"boolean"},endColumnVisible:{type:"boolean"},arrowsUsed:{type:"boolean"},resize:{type:"boolean"}}}},getters:["columnLayout","endColumnVisible","midColumnVisible","startColumnVisible","visibleColumns"]}});return o});
+//# sourceMappingURL=FlexibleColumnLayout.js.map

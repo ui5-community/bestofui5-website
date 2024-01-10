@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","sap/ui/core/EnabledPropagator","sap/ui/core/library","./thirdparty/TimePicker"],function(e,a,t,r){"use strict";var i=r.ValueState;var l=e.extend("sap.ui.webc.main.TimePicker",{metadata:{library:"sap.ui.webc.main",tag:"ui5-time-picker-ui5",interfaces:["sap.ui.core.IFormContent"],properties:{enabled:{type:"boolean",defaultValue:true,mapping:{type:"property",to:"disabled",formatter:"_mapEnabled"}},formatPattern:{type:"string",defaultValue:""},placeholder:{type:"string",defaultValue:undefined},readonly:{type:"boolean",defaultValue:false},value:{type:"string",defaultValue:undefined},valueState:{type:"sap.ui.core.ValueState",defaultValue:i.None},valueStateMessage:{type:"string",defaultValue:"",mapping:{type:"slot",to:"div"}},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},events:{change:{parameters:{value:{type:"string"},valid:{type:"boolean"}}},input:{parameters:{value:{type:"string"},valid:{type:"boolean"}}}},methods:["closePicker","formatValue","isOpen","isValid","openPicker"],getters:["dateValue"]}});t.call(l.prototype);return l});
+//# sourceMappingURL=TimePicker.js.map

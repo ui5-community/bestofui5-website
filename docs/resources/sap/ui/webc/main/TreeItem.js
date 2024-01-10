@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","sap/ui/core/library","./thirdparty/TreeItem"],function(e,t,a){"use strict";var i=a.ValueState;var l=t.ListItemType;var u=e.extend("sap.ui.webc.main.TreeItem",{metadata:{library:"sap.ui.webc.main",tag:"ui5-tree-item-ui5",interfaces:["sap.ui.webc.main.ITreeItem"],properties:{accessibilityAttributes:{type:"object",defaultValue:{}},accessibleName:{type:"string"},additionalText:{type:"string",defaultValue:""},additionalTextState:{type:"sap.ui.core.ValueState",defaultValue:i.None},expanded:{type:"boolean",defaultValue:false},hasChildren:{type:"boolean",defaultValue:false},icon:{type:"string",defaultValue:""},indeterminate:{type:"boolean",defaultValue:false},navigated:{type:"boolean"},selected:{type:"boolean",defaultValue:false},text:{type:"string",defaultValue:""},type:{type:"sap.ui.webc.main.ListItemType",defaultValue:l.Active}},defaultAggregation:"items",aggregations:{deleteButton:{type:"sap.ui.webc.main.IButton",multiple:false,slot:"deleteButton"},items:{type:"sap.ui.webc.main.ITreeItem",multiple:true}},events:{detailClick:{parameters:{}}},methods:["toggle"]}});return u});
+//# sourceMappingURL=TreeItem.js.map

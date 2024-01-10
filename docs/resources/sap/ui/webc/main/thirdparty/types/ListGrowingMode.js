@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var t;(function(e){e["Button"]="Button";e["Scroll"]="Scroll";e["None"]="None"})(t||(t={}));var o=t;e.default=o});
+//# sourceMappingURL=ListGrowingMode.js.map

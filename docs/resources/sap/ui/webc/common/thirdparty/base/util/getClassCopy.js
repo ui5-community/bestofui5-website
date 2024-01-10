@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const t=(e,t)=>class s extends e{constructor(){super();t&&t()}};var s=t;e.default=s});
+//# sourceMappingURL=getClassCopy.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../InitialConfiguration","../FeaturesRegistry"],function(e,t,a){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;let i;class r{static getLegacyDateCalendarCustomizing(){if(i===undefined){i=(0,t.getFormatSettings)()}return i.legacyDateCalendarCustomizing||[]}}(0,a.registerFeature)("LegacyDateFormats",r);var n=r;e.default=n});
+//# sourceMappingURL=LegacyDateFormats.js.map

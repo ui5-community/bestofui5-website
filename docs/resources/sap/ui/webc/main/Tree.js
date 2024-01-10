@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","./thirdparty/Tree"],function(e,t){"use strict";var a=t.ListMode;var r=e.extend("sap.ui.webc.main.Tree",{metadata:{library:"sap.ui.webc.main",tag:"ui5-tree-ui5",properties:{accessibleName:{type:"string"},footerText:{type:"string",defaultValue:""},headerText:{type:"string",defaultValue:""},height:{type:"sap.ui.core.CSSSize",mapping:"style"},mode:{type:"sap.ui.webc.main.ListMode",defaultValue:a.None},noDataText:{type:"string",defaultValue:""},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},defaultAggregation:"items",aggregations:{header:{type:"sap.ui.core.Control",multiple:true,slot:"header"},items:{type:"sap.ui.webc.main.ITreeItem",multiple:true}},associations:{ariaLabelledBy:{type:"sap.ui.core.Control",multiple:true,mapping:{type:"property",to:"accessibleNameRef",formatter:"_getAriaLabelledByForRendering"}}},events:{itemClick:{allowPreventDefault:true,parameters:{item:{type:"HTMLElement"}}},itemDelete:{parameters:{item:{type:"HTMLElement"}}},itemMouseout:{parameters:{item:{type:"HTMLElement"}}},itemMouseover:{parameters:{item:{type:"HTMLElement"}}},itemToggle:{allowPreventDefault:true,parameters:{item:{type:"HTMLElement"}}},selectionChange:{parameters:{selectedItems:{type:"Array"},previouslySelectedItems:{type:"Array"},targetItem:{type:"HTMLElement"}}}},methods:["walk"]}});return r});
+//# sourceMappingURL=Tree.js.map

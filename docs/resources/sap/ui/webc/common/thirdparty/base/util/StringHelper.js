@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.kebabToCamelCase=e.camelToKebabCase=void 0;const a=new Map;const s=new Map;const t=e=>{if(!a.has(e)){const s=n(e.split("-"));a.set(e,s)}return a.get(e)};e.kebabToCamelCase=t;const o=e=>{if(!s.has(e)){const a=e.replace(/([a-z])([A-Z])/g,"$1-$2").toLowerCase();s.set(e,a)}return s.get(e)};e.camelToKebabCase=o;const n=e=>e.map((e,a)=>a===0?e.toLowerCase():e.charAt(0).toUpperCase()+e.slice(1).toLowerCase()).join("")});
+//# sourceMappingURL=StringHelper.js.map

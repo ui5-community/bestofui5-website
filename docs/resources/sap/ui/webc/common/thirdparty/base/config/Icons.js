@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.setDefaultIconCollection=e.getDefaultIconCollection=void 0;const t=new Map;const o=(e,o)=>{t.set(e,o)};e.setDefaultIconCollection=o;const n=e=>t.get(e);e.getDefaultIconCollection=n});
+//# sourceMappingURL=Icons.js.map

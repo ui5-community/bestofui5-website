@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","sap/ui/core/EnabledPropagator","sap/ui/core/library","./thirdparty/ToolbarSelect"],function(e,a,t,r){"use strict";var i=r.CSSSize;var l=r.ValueState;var o=e.extend("sap.ui.webc.main.ToolbarSelect",{metadata:{library:"sap.ui.webc.main",tag:"ui5-toolbar-select-ui5",interfaces:["sap.ui.webc.main.IToolbarItem"],properties:{accessibleName:{type:"string",defaultValue:""},enabled:{type:"boolean",defaultValue:true,mapping:{type:"property",to:"disabled",formatter:"_mapEnabled"}},valueState:{type:"sap.ui.core.ValueState",defaultValue:l.None},width:{type:"sap.ui.core.CSSSize",defaultValue:i.undefined}},defaultAggregation:"options",aggregations:{options:{type:"sap.ui.webc.main.ISelectOption",multiple:true}},associations:{ariaLabelledBy:{type:"sap.ui.core.Control",multiple:true,mapping:{type:"property",to:"accessibleNameRef",formatter:"_getAriaLabelledByForRendering"}}},events:{change:{allowPreventDefault:true,parameters:{selectedOption:{type:"HTMLElement"}}},close:{parameters:{}},open:{parameters:{}}}}});t.call(o.prototype);return o});
+//# sourceMappingURL=ToolbarSelect.js.map

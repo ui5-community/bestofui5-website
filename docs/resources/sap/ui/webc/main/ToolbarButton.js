@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","sap/ui/core/EnabledPropagator","sap/ui/core/library","./thirdparty/ToolbarButton"],function(e,a,t,i){"use strict";var r=i.CSSSize;var l=a.ButtonDesign;var o=e.extend("sap.ui.webc.main.ToolbarButton",{metadata:{library:"sap.ui.webc.main",tag:"ui5-toolbar-button-ui5",interfaces:["sap.ui.webc.main.IToolbarItem"],properties:{accessibilityAttributes:{type:"object",defaultValue:{}},accessibleName:{type:"string",defaultValue:undefined},design:{type:"sap.ui.webc.main.ButtonDesign",defaultValue:l.Default},enabled:{type:"boolean",defaultValue:true,mapping:{type:"property",to:"disabled",formatter:"_mapEnabled"}},icon:{type:"string",defaultValue:""},iconEnd:{type:"boolean",defaultValue:false},text:{type:"string",defaultValue:""},width:{type:"sap.ui.core.CSSSize",defaultValue:r.undefined}},associations:{ariaLabelledBy:{type:"sap.ui.core.Control",multiple:true,mapping:{type:"property",to:"accessibleNameRef",formatter:"_getAriaLabelledByForRendering"}}},events:{click:{parameters:{}}}}});t.call(o.prototype);return o});
+//# sourceMappingURL=ToolbarButton.js.map

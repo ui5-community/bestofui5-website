@@ -1,0 +1,87 @@
+<!DOCTYPE html><html><head>
+		<meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Best of UI5 is the new entry page for the ui5-community which shows the best of community projects, be it applications, libraries, custom controls, tooling extensions, middlewares, tasks or Easy UI5 generators.">
+		<meta property="og:title" content="Best of UI5">
+		<meta property="og:description" content="Best of UI5 is the new entry page for the ui5-community which shows the best of community projects, be it applications, libraries, custom controls, tooling extensions, middlewares, tasks or Easy UI5 generators.">
+		<meta name="keywords" content="UI5, SAPUI5, OpenUI5, SAP, NPM, GitHub, BestofUI5, Best of UI5">
+		<meta property="og:url" content="https://bestofui5.org/">
+		<meta property="og:image" content="https://bestofui5.org/img/B_UI5_V.png">
+		<meta property="og:type" content="website">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="bestofui5.org">
+		<meta property="twitter:url" content="https://bestofui5.org/">
+		<meta name="twitter:title" content="Best of UI5">
+		<meta name="twitter:description" content="Best of UI5 is the new entry page for the ui5-community which shows the best of community projects, be it applications, libraries, custom controls, tooling extensions, middlewares, tasks or Easy UI5 generators.">
+		<meta name="twitter:image" content="https://bestofui5.org/img/B_UI5_V.png">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="resources/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="resources/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="resources/favicon/favicon-16x16.png">
+		<link rel="manifest" href="resources/favicon/site.webmanifest">
+		<link rel="mask-icon" href="resources/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+
+		<title>Best of UI5</title>
+
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
+			body.splash {
+				display: inline-block;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+			@media (prefers-color-scheme: dark) {
+				body.splash {
+					background-image: url("img/O_UI5_V.svg");
+					background-color: #12171d;
+				}
+			}
+			@media (prefers-color-scheme: light) {
+				body.splash {
+					background-image: url("img/B_UI5_V.svg");
+					background-color: white;
+				}
+			}
+			body.splash > div {
+				visibility: hidden;
+			}
+		</style>
+
+		<script>
+			window["sap-ui-config"] = {};
+			// determine the proper theme for UI5 from current color scheme
+			window["sap-ui-config"]["theme"] = (function () {
+				try {
+					return window.matchMedia("(prefers-color-scheme: dark)").matches ? "sap_horizon_dark" : "sap_horizon";
+				} catch (ex) {
+					console.warn("window.matchMedia not supported - keep default theme");
+					return "sap_horizon";
+				}
+			})();
+		</script>
+
+		<script id="sap-ui-bootstrap" src="resources/sap-ui-custom.js" data-sap-ui-resourceroots="{
+				&quot;org.openui5.bestofui5&quot;: &quot;./&quot;
+			}" data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" data-sap-ui-compatversion="edge" data-sap-ui-async="true" data-sap-ui-language="en" data-sap-ui-frameoptions="trusted" data-sap-ui-xx-waitfortheme="true" data-sap-ui-xx-supportedlanguages="en" data-sap-ui-theme-roots="{
+				&quot;sap_horizon&quot; : &quot;https://openui5.hana.ondemand.com/1.120.3/resources/&quot;,
+				&quot;sap_horizon_dark&quot; : &quot;https://openui5.hana.ondemand.com/1.120.3/resources/&quot;
+			}"></script>
+	</head>
+
+	<body class="sapUiBody splash">
+		<div data-sap-ui-component="" data-name="org.openui5.bestofui5" data-id="container"></div>
+	
+
+</body></html>

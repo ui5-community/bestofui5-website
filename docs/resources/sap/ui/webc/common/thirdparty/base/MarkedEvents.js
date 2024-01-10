@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.markEvent=e.getEventMark=void 0;const t=new WeakMap;const n=(e,n)=>{t.set(e,n)};e.markEvent=n;const r=e=>t.get(e);e.getEventMark=r});
+//# sourceMappingURL=MarkedEvents.js.map

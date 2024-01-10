@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","sap/ui/core/EnabledPropagator","sap/ui/core/library","./thirdparty/Button"],function(e,t,a,i){"use strict";var n=i.TextDirection;var r=t.ButtonDesign;var p=t.ButtonType;var o=e.extend("sap.ui.webc.main.Button",{metadata:{library:"sap.ui.webc.main",tag:"ui5-button-ui5",interfaces:["sap.ui.webc.main.IButton","sap.ui.core.IFormContent"],properties:{accessibilityAttributes:{type:"object",defaultValue:{}},accessibleName:{type:"string",defaultValue:undefined},design:{type:"sap.ui.webc.main.ButtonDesign",defaultValue:r.Default},enabled:{type:"boolean",defaultValue:true,mapping:{type:"property",to:"disabled",formatter:"_mapEnabled"}},icon:{type:"string",defaultValue:""},iconEnd:{type:"boolean",defaultValue:false},text:{type:"string",defaultValue:"",mapping:"textContent"},textDirection:{type:"sap.ui.core.TextDirection",defaultValue:n.Inherit,mapping:{type:"property",to:"dir",formatter:"_mapTextDirection"}},type:{type:"sap.ui.webc.main.ButtonType",defaultValue:p.Button},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},associations:{ariaLabelledBy:{type:"sap.ui.core.Control",multiple:true,mapping:{type:"property",to:"accessibleNameRef",formatter:"_getAriaLabelledByForRendering"}}},events:{click:{parameters:{}}},designtime:"sap/ui/webc/main/designtime/Button.designtime"}});a.call(o.prototype);return o});
+//# sourceMappingURL=Button.js.map

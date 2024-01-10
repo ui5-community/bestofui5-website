@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.markAsRtlAware=e.isRtlAware=void 0;const t=new Set;const s=e=>{t.add(e)};e.markAsRtlAware=s;const r=e=>t.has(e);e.isRtlAware=r});
+//# sourceMappingURL=RTLAwareRegistry.js.map

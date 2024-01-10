@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../CustomElementsScopeUtils"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const o=(e,o)=>{const n=s(o);const u=(0,t.getCustomElementsScopingSuffix)();return e.call(o,o,n,u)};const s=e=>{const o=e.constructor;const s=o.getMetadata().getPureTag();const n=o.getUniqueDependencies().map(e=>e.getMetadata().getPureTag()).filter(t.shouldScopeCustomElement);if((0,t.shouldScopeCustomElement)(s)){n.push(s)}return n};var n=o;e.default=n});
+//# sourceMappingURL=executeTemplate.js.map

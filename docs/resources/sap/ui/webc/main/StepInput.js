@@ -1,0 +1,7 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2024 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/webc/WebComponent","./library","sap/ui/core/EnabledPropagator","sap/ui/core/library","./thirdparty/features/InputElementsFormSupport","./thirdparty/StepInput"],function(e,a,t,p){"use strict";var l=p.ValueState;var r=e.extend("sap.ui.webc.main.StepInput",{metadata:{library:"sap.ui.webc.main",tag:"ui5-step-input-ui5",interfaces:["sap.ui.core.IFormContent"],properties:{accessibleName:{type:"string"},enabled:{type:"boolean",defaultValue:true,mapping:{type:"property",to:"disabled",formatter:"_mapEnabled"}},max:{type:"float"},min:{type:"float"},name:{type:"string",defaultValue:""},placeholder:{type:"string",defaultValue:undefined},readonly:{type:"boolean",defaultValue:false},required:{type:"boolean",defaultValue:false},step:{type:"float",defaultValue:1},value:{type:"float",defaultValue:0},valuePrecision:{type:"int",defaultValue:0},valueState:{type:"sap.ui.core.ValueState",defaultValue:l.None},valueStateMessage:{type:"string",defaultValue:"",mapping:{type:"slot",to:"div"}},width:{type:"sap.ui.core.CSSSize",mapping:"style"}},associations:{ariaLabelledBy:{type:"sap.ui.core.Control",multiple:true,mapping:{type:"property",to:"accessibleNameRef",formatter:"_getAriaLabelledByForRendering"}}},events:{change:{parameters:{}}}}});t.call(r.prototype);return r});
+//# sourceMappingURL=StepInput.js.map

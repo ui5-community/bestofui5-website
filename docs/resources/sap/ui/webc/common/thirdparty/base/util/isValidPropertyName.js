@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const t=["disabled","title","hidden","role","draggable"];const r=e=>{if(t.includes(e)||e.startsWith("aria")){return true}const r=[HTMLElement,Element,Node];return!r.some(t=>t.prototype.hasOwnProperty(e))};var n=r;e.default=n});
+//# sourceMappingURL=isValidPropertyName.js.map

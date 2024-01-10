@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var t;(function(e){e["Content"]="Content";e["Navigation"]="Navigation"})(t||(t={}));var n=t;e.default=n});
+//# sourceMappingURL=CarouselArrowsPlacement.js.map

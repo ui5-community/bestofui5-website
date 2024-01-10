@@ -1,0 +1,2 @@
+"use strict";describe("ui5 query filter",()=>{before(async()=>{await browser.goTo({sHash:"#/packages?tokens=task:type"})});it("filter from url query hash",async()=>{try{await $("filtekuzfutkfk424214").waitForExist({timeout:1e3})}catch(t){}const t=await $("[id^=__component0---AllPackages--_IDGenCustomListItem1-__]");const e=await t.$(".sapTntInfoLabelText");const a=await e.getText();expect(a).toEqual("TASK")})});
+//# sourceMappingURL=queryFilter.test.js.map
