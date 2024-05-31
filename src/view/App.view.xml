@@ -43,6 +43,15 @@
             />
             <Button
               visible="{= ${device>/system/desktop}}"
+              text="bestofcapjs"
+              class="openui5headerButton sapUiNoMargin textColorWhite"
+              icon="sap-icon://cloud"
+              type="Transparent"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              press="sapMLib.URLHelper.redirect('https://bestofcapjs.org/', true)"
+            />
+            <Button
+              visible="{= ${device>/system/desktop}}"
               text="dotabap"
               class="openui5headerButton sapUiNoMargin textColorWhite"
               type="Transparent"
