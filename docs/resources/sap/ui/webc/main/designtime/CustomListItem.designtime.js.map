@@ -1,0 +1,1 @@
+{"version":3,"file":"CustomListItem.designtime.js","names":["sap","ui","define","actions","remove","changeType","reveal","aggregations","content","move"],"sources":["CustomListItem-dbg.designtime.js"],"mappings":";;;;;AAOAA,IAAIC,GAAGC,OAAO,GACb,WACA,aAEA,MAAO,CACNC,QAAS,CACRC,OAAQ,CACPC,WAAY,eAEbC,OAAQ,CACPD,WAAY,kBAGdE,aAAc,CACbC,QAAS,CACRL,QAAS,CACRM,KAAM,CACLJ,WAAY,mBAOlB"}

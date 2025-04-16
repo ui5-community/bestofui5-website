@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../generated/AssetParameters"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var a=()=>{const e=navigator.languages;const a=()=>navigator.language;const n=e&&e[0]||a();return n||t.DEFAULT_LANGUAGE};e.default=a});
+//# sourceMappingURL=detectNavigatorLanguage.js.map

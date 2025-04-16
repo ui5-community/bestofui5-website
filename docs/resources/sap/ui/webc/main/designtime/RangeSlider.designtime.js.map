@@ -1,0 +1,1 @@
+{"version":3,"file":"RangeSlider.designtime.js","names":["sap","ui","define","name","singular","plural","actions","remove","changeType","reveal"],"sources":["RangeSlider-dbg.designtime.js"],"mappings":";;;;;AAOAA,IAAIC,GAAGC,OAAO,GACb,WACA,aAEA,MAAO,CACNC,KAAM,CACLC,SAAU,mBACVC,OAAQ,2BAETC,QAAS,CACRC,OAAQ,CACPC,WAAY,eAEbC,OAAQ,CACPD,WAAY,kBAIhB"}

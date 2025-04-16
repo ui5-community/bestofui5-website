@@ -1,0 +1,2 @@
+sap.ui.define(["exports","./getEffectiveLinksHrefs","../util/createLinkInHead","../CSP"],function(e,t,s,u){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;t=a(t);s=a(s);function a(e){return e&&e.__esModule?e:{default:e}}const d=new Set;const n=e=>{if(!(0,u.shouldUseLinks)()||!(0,u.shouldPreloadLinks)()){return}const a=(0,t.default)(e,false)||[];const n=(0,t.default)(e,true)||[];[...a,...n].forEach(e=>{if(!d.has(e)){(0,s.default)(e,{rel:"preload",as:"style"});d.add(e)}})};var f=n;e.default=f});
+//# sourceMappingURL=preloadLinks.js.map

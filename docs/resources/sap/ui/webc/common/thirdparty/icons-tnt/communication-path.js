@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v2/communication-path","./v3/communication-path"],function(t,e,a,n){"use strict";Object.defineProperty(t,"__esModule",{value:true});Object.defineProperty(t,"accData",{enumerable:true,get:function(){return a.accData}});t.default=void 0;Object.defineProperty(t,"ltr",{enumerable:true,get:function(){return a.ltr}});t.pathData=void 0;const c=(0,e.isLegacyThemeFamily)()?a.pathData:n.pathData;t.pathData=c;var i="tnt/communication-path";t.default=i});
+//# sourceMappingURL=communication-path.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["exports","./theming/CustomStyle","./theming/ThemeLoaded"],function(e,t,r){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"addCustomCSS",{enumerable:true,get:function(){return t.addCustomCSS}});Object.defineProperty(e,"attachThemeLoaded",{enumerable:true,get:function(){return r.attachThemeLoaded}});Object.defineProperty(e,"detachThemeLoaded",{enumerable:true,get:function(){return r.detachThemeLoaded}})});
+//# sourceMappingURL=Theming.js.map

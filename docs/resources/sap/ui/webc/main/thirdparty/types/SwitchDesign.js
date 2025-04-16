@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var a;(function(e){e["Textual"]="Textual";e["Graphical"]="Graphical"})(a||(a={}));var t=a;e.default=t});
+//# sourceMappingURL=SwitchDesign.js.map

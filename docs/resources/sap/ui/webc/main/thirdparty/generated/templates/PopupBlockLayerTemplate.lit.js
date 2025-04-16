@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;function r(e,r,i){return(0,t.html)`<div class="ui5-block-layer" ?hidden=${this._blockLayerHidden} tabindex="0" style="${(0,t.styleMap)(this.styles.blockLayer)}" @keydown="${this._preventBlockLayerFocus}" @mousedown="${this._preventBlockLayerFocus}"></div>`}var i=r;e.default=i});
+//# sourceMappingURL=PopupBlockLayerTemplate.lit.js.map

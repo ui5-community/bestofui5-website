@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;function r(e,r,o){return(0,t.html)`<th scope="col" part="column" role="columnheader"><slot></slot></th>`}var o=r;e.default=o});
+//# sourceMappingURL=TableColumnTemplate.lit.js.map

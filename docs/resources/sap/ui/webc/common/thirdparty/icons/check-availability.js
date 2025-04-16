@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v4/check-availability","./v5/check-availability"],function(e,a,t,i){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return t.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return t.ltr}});e.pathData=void 0;const c=(0,a.isLegacyThemeFamily)()?t.pathData:i.pathData;e.pathData=c;var r="check-availability";e.default=r});
+//# sourceMappingURL=check-availability.js.map

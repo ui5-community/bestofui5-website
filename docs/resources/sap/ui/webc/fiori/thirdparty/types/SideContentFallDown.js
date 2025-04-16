@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var i;(function(e){e["BelowXL"]="BelowXL";e["BelowL"]="BelowL";e["BelowM"]="BelowM";e["OnMinimumWidth"]="OnMinimumWidth"})(i||(i={}));var o=i;e.default=o});
+//# sourceMappingURL=SideContentFallDown.js.map

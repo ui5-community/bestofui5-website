@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v1/top-recipe","./v2/top-recipe"],function(e,t,a,r){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return a.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return a.ltr}});e.pathData=void 0;const i=(0,t.isLegacyThemeFamily)()?a.pathData:r.pathData;e.pathData=i;var c="business-suite/top-recipe";e.default=c});
+//# sourceMappingURL=top-recipe.js.map

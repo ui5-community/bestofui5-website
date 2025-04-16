@@ -1,0 +1,223 @@
+{
+  "_version": "1.12.0",
+
+  "sap.app": {
+    "id": "org.openui5.bestofui5",
+    "type": "application",
+    "title": "{{app_title}}",
+    "description": "{{app_description}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "i18n": {
+      "bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": ["en"],
+      "fallbackLocale": "en"
+    },
+    "dataSources": {
+      "data": {
+        "uri": "https://raw.githubusercontent.com/ui5-community/bestofui5-data/live-data/data/data.json",
+        "type": "JSON"
+      },
+      "versions": {
+        "uri": "https://raw.githubusercontent.com/ui5-community/bestofui5-data/live-data/data/versions.json",
+        "type": "JSON"
+      },
+      "contributors": {
+        "uri": "https://raw.githubusercontent.com/ui5-community/bestofui5-data/live-data/data/contributors.json",
+        "type": "JSON"
+      }
+    }
+  },
+
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {},
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+
+  "sap.ui5": {
+    "flexEnabled": false,
+    "rootView": {
+      "viewName": "org.openui5.bestofui5.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "rootView"
+    },
+
+    "dependencies": {
+      "minUI5Version": "1.101.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.ui.layout": {},
+        "sap.ui.unified": {},
+        "sap.m": {},
+        "sap.ui.webc.main": {},
+        "sap.ui.webc.fiori": {}
+      }
+    },
+
+    "handleValidation": true,
+
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        },
+        {
+          "uri": "/resources/font-awesome/font.css"
+        }
+      ]
+    },
+
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "org.openui5.bestofui5.i18n.i18n",
+          "supportedLocales": ["en"],
+          "fallbackLocale": "en"
+        }
+      },
+      "data": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "data"
+      },
+      "versions": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "versions"
+      },
+      "contributors": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "contributors"
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "org.openui5.bestofui5.view",
+        "controlId": "pageContainer",
+        "transition": "show",
+        "controlAggregation": "pages",
+        "bypassed": {
+          "target": ["notFound"]
+        },
+        "async": true
+      },
+      "routes": [
+        {
+          "name": "default",
+          "pattern": "",
+          "target": "TargetHotPackagesView"
+        },
+        {
+          "name": "hotPackages",
+          "pattern": "",
+          "target": "TargetHotPackagesView"
+        },
+        {
+          "name": "allPackages",
+          "pattern": "packages:?query:",
+          "target": "TargetAllPackagesView"
+        },
+        {
+          "name": "tags",
+          "pattern": "tags",
+          "target": "TargetTagsView"
+        },
+        {
+          "name": "applications",
+          "pattern": "applications",
+          "target": "TargetApplicationsView"
+        },
+        {
+          "name": "RouteObjectView",
+          "pattern": "packages/{name}",
+          "target": ["TargetObjectView"]
+        },
+        {
+          "name": "timeline",
+          "pattern": "timeline",
+          "target": ["TargetTimelineView"]
+        },
+        {
+          "name": "contributors",
+          "pattern": "contributors",
+          "target": ["TargetContributorsView"]
+        }
+      ],
+      "targets": {
+        "TargetAllPackagesView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 1,
+          "viewId": "AllPackages",
+          "viewName": "AllPackages",
+          "clearControlAggregation": true
+        },
+        "TargetHotPackagesView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 1,
+          "viewId": "HotPackages",
+          "viewName": "HotPackages",
+          "clearControlAggregation": true
+        },
+        "TargetTagsView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 1,
+          "viewId": "Tags",
+          "viewName": "Tags"
+        },
+        "TargetApplicationsView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 1,
+          "viewId": "Applications",
+          "viewName": "Applications"
+        },
+        "TargetObjectView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 2,
+          "viewId": "Object",
+          "viewName": "Object"
+        },
+        "TargetTimelineView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 1,
+          "viewId": "Timeline",
+          "viewName": "Timeline"
+        },
+        "TargetContributorsView": {
+          "viewType": "XML",
+          "transition": "slide",
+          "viewLevel": 1,
+          "viewId": "Contributors",
+          "viewName": "Contributors"
+        },
+        "objectNotFound": {
+          "viewName": "ObjectNotFound",
+          "viewId": "objectNotFound"
+        },
+        "notFound": {
+          "viewName": "NotFound",
+          "viewId": "notFound"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+"use strict";sap.ui.define(["sap/ui/core/Element"],function(t){const e=t.extend("org.openui5.bestofui5.control.ChartRecord",{metadata:{properties:{label:"string",value:"int"}},constructor:function e(o,r){t.prototype.constructor.call(this,o,r)}});return e});
+//# sourceMappingURL=ChartRecord.js.map

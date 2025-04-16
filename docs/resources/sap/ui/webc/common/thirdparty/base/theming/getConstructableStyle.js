@@ -1,0 +1,2 @@
+sap.ui.define(["exports","./getEffectiveStyle","./CustomStyle"],function(e,t,a){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;t=n(t);function n(e){return e&&e.__esModule?e:{default:e}}const s=new Map;(0,a.attachCustomCSSChange)(e=>{s.delete(`${e}_normal`)});const o=(e,a=false)=>{const n=e.getMetadata().getTag();const o=`${n}_${a?"static":"normal"}`;if(!s.has(o)){const n=(0,t.default)(e,a);const u=new CSSStyleSheet;u.replaceSync(n);s.set(o,[u])}return s.get(o)};var u=o;e.default=u});
+//# sourceMappingURL=getConstructableStyle.js.map

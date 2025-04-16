@@ -1,0 +1,252 @@
+@media (min-width: 600px) {
+	html:not(.sap-phone) .openui5header > :first-child {
+		height: 7rem;
+		background-color: #1366a2;
+	}
+	html:not(.sap-phone) .openui5header > :first-child div {
+		background-color: transparent;
+	}
+
+	html:not(.sap-phone) .openui5header > :first-child:before {
+		content: "";
+		background-image: url(../img/Header.svg);
+		background-repeat: no-repeat;
+		background-size: 1920px 1398px;
+		background-position: -500px 50%;
+		opacity: 0.5;
+		display: inline-block;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+	}
+
+	html:not(.sap-phone) .openui5header > :first-child .sapMLnk {
+		position: absolute;
+		top: 2.5rem;
+		height: 5rem;
+	}
+	html:not(.sap-phone) .openui5header > :first-child .sapMLnk {
+		font-size: 4rem;
+		font-weight: bolder;
+		line-height: 4rem;
+		color: white;
+		/* remove link styles */
+		text-decoration: none;
+		outline: none;
+	}
+	html:not(.sap-phone) .openui5header > section {
+		top: 9.6rem !important;
+	}
+
+	@media (max-width: 1440px) {
+		html:not(.sap-phone) .openui5header > :first-child:before {
+			background-size: 1800px 1311px;
+			background-position: -700px 50%;
+		}
+	}
+
+	@media (max-width: 980px) {
+		html:not(.sap-phone) .openui5header > :first-child:before {
+			background-size: 1700px 1238px;
+			background-position: -900px 50%;
+		}
+	}
+
+	@media (max-width: 767px) {
+		html:not(.sap-phone) .openui5header > :first-child:before {
+			background-size: 1200px 874px;
+			background-position: -600px 50%;
+		}
+	}
+
+	html:not(.sap-phone) .openui5headerButton .sapUiIcon,
+	html:not(.sap-phone) .openui5headerButton .sapMBtnContent > bdi,
+	html:not(.sap-phone) .openui5headerButton:hover .sapMBtnContent > bdi {
+		color: white !important;
+	}
+	html:not(.sap-phone) .openui5headerButton:hover * {
+		background-color: transparent !important;
+	}
+	html:not(.sap-phone) .openui5headerButton:hover .sapMBtnInner {
+		border-color: white !important;
+	}
+	html:not(.sap-phone) .openui5headerButton:hover .sapMBtnInner:before,
+	html:not(.sap-phone) .openui5headerButton:focus .sapMBtnInner:before {
+		border: none !important;
+	}
+	html[data-sap-ui-browser^="ff"].sap-desktop .sapMBarPH.sapMBarContainer {
+		display: unset;
+		position: relative !important;
+	}
+	html[data-sap-ui-browser^="ff"].sap-desktop .sapMLnk.sapMLnkMaxWidth.headerLink.sapMBarChild {
+		position: relative;
+	}
+}
+
+/* Header Styles */
+.headerLink.sapMLnk:link {
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+.headerLink.sapMLnk:visited {
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+.headerLink.sapMLnk {
+	text-shadow: none;
+	font-weight: bold;
+	font-size: inherit;
+	/* remove link styles */
+	text-decoration: none;
+	outline: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.headerLink.sapMLnk:link {
+		color: white;
+	}
+	.headerLink.sapMLnk:visited {
+		color: white;
+	}
+	.headerLink.sapMLnk {
+		color: white;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.headerLink.sapMLnk:link {
+		color: #1d2d3e;
+	}
+	.headerLink.sapMLnk:visited {
+		color: #1d2d3e;
+	}
+	.headerLink.sapMLnk {
+		color: #1d2d3e;
+	}
+}
+
+.fixOverflow.sapMNav {
+	overflow: inherit;
+}
+
+.doNotRoundMyToolBar.sapMTB:not(.sapMTB-Info-CTX) {
+	border-top-right-radius: 0;
+	border-top-left-radius: 0;
+}
+.fixImageWidth.sapUxAPObjectPageLayout img {
+	max-width: 100%;
+}
+
+.sapUxAPObjectPageSection .sapUxAPObjectPageSectionContainer .sapUxAPObjectPageSubSection .sapUxAPBlockContainer {
+	margin-left: 0rem !important;
+	margin-right: 0rem !important;
+}
+
+/*
+ * Fix scrollbar issue with ObjectPageLayout
+ */
+/* .sapUxAPObjectPageWrapperTransform {
+	overflow: inherit !important;
+}
+
+.sapMScrollBarOuterDiv {
+	display: none;
+} */
+
+/*
+ * wrap code text in markdown
+ */
+.wrapCodeText code {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.chartPadding {
+	padding: 0em;
+}
+
+@media only screen and (min-width: 1000px) {
+	.chartPadding {
+		padding: 2em;
+	}
+}
+/*
+ * higlight description on search
+ */
+.sapMFT > em {
+	background: rgb(130, 106, 226, 0.5);
+}
+/*
+ * remove focus outline on ObjectPage Subsections and Header
+ */
+.sapUxAPObjectPageSubSection:focus,
+.sapUxAPObjectPageSection:focus {
+	box-shadow: none !important;
+}
+/*
+ * style type icons
+ */
+.typeIconsLineItem {
+	color: #d11212;
+}
+
+.textColorWhite .sapMBtnTransparent,
+.textColorWhite .sapMBtnTransparent > .sapMBtnIcon {
+	color: white;
+}
+
+/*
+ * style contributors sections
+ */
+
+@media (prefers-color-scheme: dark) {
+	.flexboxContributor {
+		background-color: #1d232a;
+	}
+	.contributorsLinks a:visited {
+		color: #8a2ddf;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.flexboxContributor {
+		background-color: white;
+	}
+}
+
+.flexboxContributor {
+	padding: 1rem 0;
+	margin-right: 0.2rem;
+	margin-left: 0.2rem;
+	margin-bottom: 0.4rem;
+	border-radius: 25px;
+	padding: 0.8rem;
+}
+
+.contributorsLinks {
+	line-height: 1.4;
+	padding: 0 1.5rem;
+}
+
+.contributorsLinks a {
+	display: inline-block;
+	transition: 0.3s;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: 1.4;
+}
+
+.contributorOverflowText {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 110px;
+}

@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var t;(function(e){e["Top"]="Top";e["Bottom"]="Bottom"})(t||(t={}));var o=t;e.default=o});
+//# sourceMappingURL=TabContainerTabsPlacement.js.map

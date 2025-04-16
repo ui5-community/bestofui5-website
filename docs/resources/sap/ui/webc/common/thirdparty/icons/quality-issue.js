@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v4/quality-issue","./v5/quality-issue"],function(e,t,a,u){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return a.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return a.ltr}});e.pathData=void 0;const i=(0,t.isLegacyThemeFamily)()?a.pathData:u.pathData;e.pathData=i;var r="quality-issue";e.default=r});
+//# sourceMappingURL=quality-issue.js.map

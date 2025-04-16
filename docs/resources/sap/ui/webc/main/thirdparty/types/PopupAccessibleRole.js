@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var o;(function(e){e["None"]="None";e["Dialog"]="Dialog";e["AlertDialog"]="AlertDialog"})(o||(o={}));var t=o;e.default=t});
+//# sourceMappingURL=PopupAccessibleRole.js.map

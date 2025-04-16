@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v4/functional-location","./v5/functional-location"],function(t,e,a,n){"use strict";Object.defineProperty(t,"__esModule",{value:true});Object.defineProperty(t,"accData",{enumerable:true,get:function(){return a.accData}});t.default=void 0;Object.defineProperty(t,"ltr",{enumerable:true,get:function(){return a.ltr}});t.pathData=void 0;const o=(0,e.isLegacyThemeFamily)()?a.pathData:n.pathData;t.pathData=o;var c="functional-location";t.default=c});
+//# sourceMappingURL=functional-location.js.map

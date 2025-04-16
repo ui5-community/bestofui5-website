@@ -1,0 +1,1 @@
+{"version":3,"file":"RatingIndicator.designtime.js","names":["sap","ui","define","name","singular","plural","actions","remove","changeType","reveal"],"sources":["RatingIndicator-dbg.designtime.js"],"mappings":";;;;;AAOAA,IAAIC,GAAGC,OAAO,GACb,WACC,aAEA,MAAO,CACNC,KAAM,CACLC,SAAU,uBACVC,OAAQ,+BAETC,QAAS,CACRC,OAAQ,CACPC,WAAY,eAEbC,OAAQ,CACPD,WAAY,kBAIjB"}

@@ -1,0 +1,2 @@
+sap.ui.define(["../generated/js-imports/Illustrations","../generated/js-imports/IllustrationsTNT","../generated/js-imports/IllustrationsV5TNT","../generated/js-imports/IllustrationsV5TNTHC"],function(s,t,e,r){"use strict"});
+//# sourceMappingURL=AllIllustrations.js.map

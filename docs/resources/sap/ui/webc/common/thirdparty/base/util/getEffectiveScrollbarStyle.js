@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const t="ui5-content-native-scrollbars";const s=()=>document.body.classList.contains(t);var n=s;e.default=n});
+//# sourceMappingURL=getEffectiveScrollbarStyle.js.map

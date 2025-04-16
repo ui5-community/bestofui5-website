@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.getIconCollectionByAlias=e.default=void 0;var n;(function(e){e["SAP-icons"]="SAP-icons-v4";e["horizon"]="SAP-icons-v5";e["SAP-icons-TNT"]="tnt";e["BusinessSuiteInAppSymbols"]="business-suite"})(n||(n={}));const i=e=>{if(n[e]){return n[e]}return e};e.getIconCollectionByAlias=i;var t=n;e.default=t});
+//# sourceMappingURL=IconCollectionsAlias.js.map

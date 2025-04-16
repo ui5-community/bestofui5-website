@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var o;(function(e){e["Header"]="Header";e["Subheader"]="Subheader";e["Footer"]="Footer";e["FloatingFooter"]="FloatingFooter"})(o||(o={}));var t=o;e.default=t});
+//# sourceMappingURL=BarDesign.js.map

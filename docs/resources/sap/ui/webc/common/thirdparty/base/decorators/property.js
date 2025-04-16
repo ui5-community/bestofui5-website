@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(t){"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;const e=t=>(e,r)=>{const o=e.constructor;if(!Object.prototype.hasOwnProperty.call(o,"metadata")){o.metadata={}}const a=o.metadata;if(!a.properties){a.properties={}}const s=a.properties;if(!s[r]){s[r]=t||{type:String}}};var r=e;t.default=r});
+//# sourceMappingURL=property.js.map

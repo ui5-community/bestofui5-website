@@ -1,0 +1,7 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/lit-html/lit-html","sap/ui/webc/common/thirdparty/lit-html/directive"],function(e,t,r){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.styleMap=void 0;
+/**
+   * @license
+   * Copyright 2018 Google LLC
+   * SPDX-License-Identifier: BSD-3-Clause
+   */class i extends r.Directive{constructor(e){var t;super(e);if(e.type!==r.PartType.ATTRIBUTE||e.name!=="style"||((t=e.strings)===null||t===void 0?void 0:t.length)>2){throw new Error("The `styleMap` directive must be used in the `style` attribute "+"and must be the only part in the attribute.")}}render(e){return""}update(e,[r]){const{style:i}=e.element;if(this._previousStyleProperties===undefined){this._previousStyleProperties=new Set;for(const e in r){this._previousStyleProperties.add(e)}}this._previousStyleProperties.forEach(e=>{if(r[e]==null){this._previousStyleProperties.delete(e);if(e.includes("-")){i.removeProperty(e)}else{i[e]=""}}});for(const e in r){const t=r[e];if(t!=null){this._previousStyleProperties.add(e);if(e.includes("-")){i.setProperty(e,t)}else{i[e]=t}}}return t.noChange}}const s=(0,r.directive)(i);e.styleMap=s});
+//# sourceMappingURL=style-map.js.map

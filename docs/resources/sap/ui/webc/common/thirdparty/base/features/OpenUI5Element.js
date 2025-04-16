@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../UI5Element"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;t=u(t);function u(e){return e&&e.__esModule?e:{default:e}}class d extends t.default{}var l=d;e.default=l});
+//# sourceMappingURL=OpenUI5Element.js.map

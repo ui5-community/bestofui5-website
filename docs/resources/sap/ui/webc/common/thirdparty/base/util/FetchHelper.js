@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.fetchTextOnce=e.fetchJsonOnce=void 0;const t=new Map;const n=new Map;const c=new Map;const s=async e=>{if(!t.get(e)){t.set(e,fetch(e))}const n=await t.get(e);if(n&&!c.get(e)){c.set(e,n.text())}return c.get(e)};e.fetchTextOnce=s;const o=async e=>{if(!t.get(e)){t.set(e,fetch(e))}const c=await t.get(e);if(c&&!n.get(e)){n.set(e,c.json())}return n.get(e)};e.fetchJsonOnce=o});
+//# sourceMappingURL=FetchHelper.js.map

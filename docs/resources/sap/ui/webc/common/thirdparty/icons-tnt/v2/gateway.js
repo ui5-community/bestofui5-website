@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/asset-registries/Icons"],function(t,a){"use strict";Object.defineProperty(t,"__esModule",{value:true});t.pathData=t.ltr=t.default=t.accData=void 0;const e="gateway";const c="M511.5 256l-256 254-254-254 254-255zm-256 199l200-199-200-200-199 200z";t.pathData=c;const s=false;t.ltr=s;const n=null;t.accData=n;const o="tnt-v2";const r="@ui5/webcomponents-icons-tnt";(0,a.registerIcon)(e,{pathData:c,ltr:s,collection:o,packageName:r});var i="tnt-v2/gateway";t.default=i});
+//# sourceMappingURL=gateway.js.map

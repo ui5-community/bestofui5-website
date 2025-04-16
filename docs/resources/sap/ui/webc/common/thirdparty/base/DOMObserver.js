@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.unobserveDOMNode=e.observeDOMNode=void 0;const o=new WeakMap;const s=(e,s,t)=>{const n=new MutationObserver(s);o.set(e,n);n.observe(e,t)};e.observeDOMNode=s;const t=e=>{const s=o.get(e);if(s){s.disconnect();o.delete(e)}};e.unobserveDOMNode=t});
+//# sourceMappingURL=DOMObserver.js.map

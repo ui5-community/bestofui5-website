@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var u;(function(e){e["Small"]="Small";e["Medium"]="Medium";e["Large"]="Large"})(u||(u={}));var a=u;e.default=a});
+//# sourceMappingURL=BusyIndicatorSize.js.map
