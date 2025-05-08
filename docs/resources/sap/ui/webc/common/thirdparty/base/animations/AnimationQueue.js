@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const t=new WeakMap;class s{static get tasks(){return t}static enqueue(e,s){if(!t.has(e)){t.set(e,[])}t.get(e).push(s)}static run(e,u){if(!t.has(e)){t.set(e,[])}return u().then(()=>{const u=t.get(e);if(u.length>0){return s.run(e,u.shift())}t.delete(e)})}static push(e,u){const n=t.get(e);if(n){s.enqueue(e,u)}else{s.run(e,u)}}}var u=s;e.default=u});
+//# sourceMappingURL=AnimationQueue.js.map

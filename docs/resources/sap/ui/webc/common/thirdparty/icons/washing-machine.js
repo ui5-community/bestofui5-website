@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v4/washing-machine","./v5/washing-machine"],function(e,a,t,n){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return t.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return t.ltr}});e.pathData=void 0;const i=(0,a.isLegacyThemeFamily)()?t.pathData:n.pathData;e.pathData=i;var r="washing-machine";e.default=r});
+//# sourceMappingURL=washing-machine.js.map

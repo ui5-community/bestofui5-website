@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v1/checklist-item","./v2/checklist-item"],function(e,t,a,i){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return a.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return a.ltr}});e.pathData=void 0;const c=(0,t.isLegacyThemeFamily)()?a.pathData:i.pathData;e.pathData=c;var r="business-suite/checklist-item";e.default=r});
+//# sourceMappingURL=checklist-item.js.map

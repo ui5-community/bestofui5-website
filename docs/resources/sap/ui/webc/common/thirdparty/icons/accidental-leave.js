@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v4/accidental-leave","./v5/accidental-leave"],function(e,a,t,c){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return t.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return t.ltr}});e.pathData=void 0;const r=(0,a.isLegacyThemeFamily)()?t.pathData:c.pathData;e.pathData=r;var n="accidental-leave";e.default=n});
+//# sourceMappingURL=accidental-leave.js.map

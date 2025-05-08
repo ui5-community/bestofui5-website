@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var l;(function(e){e["None"]="None";e["SingleSelect"]="SingleSelect";e["SingleSelectBegin"]="SingleSelectBegin";e["SingleSelectEnd"]="SingleSelectEnd";e["SingleSelectAuto"]="SingleSelectAuto";e["MultiSelect"]="MultiSelect";e["Delete"]="Delete"})(l||(l={}));var t=l;e.default=t});
+//# sourceMappingURL=ListMode.js.map

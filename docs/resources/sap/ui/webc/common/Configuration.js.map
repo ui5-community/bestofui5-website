@@ -1,0 +1,1 @@
+{"version":3,"file":"Configuration.js","names":["sap","ui","define","Theme","Language","Configuration","getTheme","setTheme","getLanguage","setLanguage"],"sources":["Configuration-dbg.js"],"mappings":";;;;;AAMAA,IAAIC,GAAGC,OAAO,CACb,iCACA,qCACE,SAASC,EAAOC,GAClB,aAEA,IAAIC,EAAgB,CACnBC,SAAUH,EAAMG,SAChBC,SAAUJ,EAAMI,SAChBC,YAAaJ,EAASI,YACtBC,YAAaL,EAASK,aAGvB,OAAOJ,CACR"}

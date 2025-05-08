@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../../config/Theme","../../config/Icons","./IconCollectionsAlias","./IconCollectionsByTheme"],function(e,o,t,n,c){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const i=e=>{const i=(0,t.getDefaultIconCollection)((0,o.getTheme)());if(!e&&i){return(0,n.getIconCollectionByAlias)(i)}if(!e){return(0,c.getIconCollectionForTheme)("SAP-icons")}return(0,c.getIconCollectionForTheme)(e)};var l=i;e.default=l});
+//# sourceMappingURL=getIconCollectionByTheme.js.map

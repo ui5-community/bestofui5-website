@@ -1,0 +1,1 @@
+{"version":3,"file":"Carousel.designtime.js","names":["sap","ui","define","name","singular","plural","actions","remove","changeType","reveal"],"sources":["Carousel-dbg.designtime.js"],"mappings":";;;;;AAOAA,IAAIC,GAAGC,OAAO,GACb,WACC,aAEA,MAAO,CACNC,KAAM,CACLC,SAAU,gBACVC,OAAQ,wBAETC,QAAS,CACRC,OAAQ,CACPC,WAAY,eAEbC,OAAQ,CACPD,WAAY,kBAIhB"}

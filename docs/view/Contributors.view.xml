@@ -1,0 +1,41 @@
+<mvc:View
+  xmlns:commons="sap.suite.ui.commons"
+  xmlns:core="sap.ui.core"
+  controllerName="org.openui5.bestofui5.controller.Contributors"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  height="100%"
+>
+  <Button text="{= ${contributorsView>/direction} === 'Column' ? 'Collapse Details' : 'Expand Details'}" press=".onExpandDetails" />
+  <FlexBox
+    id="contributorsFlexBox"
+    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+    height="100%"
+    direction="{contributorsView>/direction}"
+    alignItems="Start"
+    wrap="{contributorsView>/wrap}"
+    justifyContent="Start"
+    items="{path: 'contributors>/', sorter : { path : 'contributions',descending: 'false' }}"
+  >
+    <items>
+      <FlexBox class="flexboxContributor" width="{= ${contributorsView>/direction} === 'Column' ? '100%' : 'auto'}">
+        <VBox alignItems="Center">
+          <Avatar
+            src="{contributors>avatar_url}"
+            displaySize="XL"
+            showBorder="true"
+            tooltip="{contributors>name}"
+            core:require="{ sapMLib: 'sap/m/library' }"
+            press="sapMLib.URLHelper.redirect(${contributors>url}, true)"
+          />
+          <Link text="{contributors>name}" press="sapMLib.URLHelper.redirect(${contributors>url}, true)" core:require="{ sapMLib: 'sap/m/library' }" class="sapUiNoMarginTop contributorOverflowText" />
+        </VBox>
+        <VBox class="contributorsLinks sapMText " visible="{= ${contributorsView>/direction} === 'Column'}">
+          <Text text="Contributions: {contributors>contributions}" class="sapUiSmallMarginTop" visible="{= ${contributorsView>/direction} === 'Column'}" />
+          <core:HTML content="{contributors>packagesFrontend}" preferDOM="false" visible="{= ${contributorsView>/direction} === 'Column'}" />
+        </VBox>
+      </FlexBox>
+    </items>
+  </FlexBox>
+</mvc:View>

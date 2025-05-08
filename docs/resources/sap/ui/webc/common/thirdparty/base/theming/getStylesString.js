@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(t){"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;const e=10;const r=t=>{if(Array.isArray(t)){return t.filter(t=>!!t).flat(e).map(t=>typeof t==="string"?t:t.content).join(" ")}return typeof t==="string"?t:t.content};var n=r;t.default=n});
+//# sourceMappingURL=getStylesString.js.map

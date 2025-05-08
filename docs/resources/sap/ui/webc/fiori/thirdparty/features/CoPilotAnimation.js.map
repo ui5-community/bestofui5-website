@@ -1,0 +1,1 @@
+{"version":3,"file":"CoPilotAnimation.js","names":["sap","ui","define","_FeaturesRegistry","CoPilotAnimation","animated","animationValues","registerFeature"],"sources":["CoPilotAnimation-dbg.js"],"mappings":"AAAAA,IAAIC,GAAGC,OAAO,CAAC,uDAAwD,SAAUC,GAC/E,aAEA,MAAMC,EAAmB,CACvBC,SAAU,KACVC,gBAAiB,4kMAElB,EAAGH,EAAkBI,iBAAiB,mBAAoBH,EAC7D"}

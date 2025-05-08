@@ -1,0 +1,7 @@
+sap.ui.define(["exports","../lit-html","../directive"],function(t,e,s){"use strict";Object.defineProperty(t,"__esModule",{value:true});t.classMap=void 0;
+/**
+   * @license
+   * Copyright 2018 Google LLC
+   * SPDX-License-Identifier: BSD-3-Clause
+   */const i=(0,s.directive)(class extends s.Directive{constructor(t){var e;if(super(t),t.type!==s.PartType.ATTRIBUTE||"class"!==t.name||(null===(e=t.strings)||void 0===e?void 0:e.length)>2)throw Error("`classMap()` can only be used in the `class` attribute and must be the only part in the attribute.")}render(t){return" "+Object.keys(t).filter(e=>t[e]).join(" ")+" "}update(t,[s]){var i,r;if(void 0===this.et){this.et=new Set,void 0!==t.strings&&(this.st=new Set(t.strings.join(" ").split(/\s/).filter(t=>""!==t)));for(const t in s)s[t]&&!(null===(i=this.st)||void 0===i?void 0:i.has(t))&&this.et.add(t);return this.render(s)}const n=t.element.classList;this.et.forEach(t=>{t in s||(n.remove(t),this.et.delete(t))});for(const t in s){const e=!!s[t];e===this.et.has(t)||(null===(r=this.st)||void 0===r?void 0:r.has(t))||(e?(n.add(t),this.et.add(t)):(n.remove(t),this.et.delete(t)))}return e.noChange}});t.classMap=i});
+//# sourceMappingURL=class-map.js.map

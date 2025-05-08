@@ -1,0 +1,15 @@
+@font-face {
+	font-family: "Font Awesome 6 Free";
+	font-style: normal;
+	font-weight: 400;
+	font-display: block;
+	src: url("fa-brands.woff2") format("woff2"), url("fa-brands.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: 'Font Awesome 5 Free';
+	font-style: normal;
+	font-weight: 900;
+	font-display: block;
+	src: url("fa-solid.woff2") format("woff2"), url("fa-solid.ttf") format("truetype")}
+  

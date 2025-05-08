@@ -1,0 +1,101 @@
+<mvc:View controllerName="org.openui5.bestofui5.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:ui5cc="org.openui5.bestofui5.control" xmlns:core="sap.ui.core">
+  <App>
+    <Page id="page" titleAlignment="Center" class="openui5header">
+      <customHeader>
+        <Bar>
+          <contentMiddle>
+            <Link class="headerLink" text="{i18n>title}" href="/#" />
+          </contentMiddle>
+          <contentRight>
+            <Button
+              class="sapUiNoMargin openui5headerButton"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              text="{i18n>app_view_addyourpackage}"
+              visible="{= ${device>/system/desktop}}"
+              type="Transparent"
+              icon="sap-icon://add-product"
+              press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&amp;labels=new%20package&amp;template=new_package.md&amp;title=Add%20new%20Package:', true)"
+            >
+              <layoutData>
+                <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
+              </layoutData>
+            </Button>
+            <Button
+              class="sapUiNoMargin openui5headerButton"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              type="Transparent"
+              visible="{= ${device>/system/desktop}}"
+              icon="sap-icon://font-awesome-icons/github"
+              press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-website#readme', true)"
+            >
+              <layoutData>
+                <OverflowToolbarLayoutData priority="{= ${device>/system/phone} === true ? 'AlwaysOverflow' : 'NeverOverflow' }" />
+              </layoutData>
+            </Button>
+            <Button
+              visible="{= ${device>/system/desktop}}"
+              text="bestofjs"
+              class="openui5headerButton sapUiNoMargin textColorWhite"
+              icon="sap-icon://lightbulb"
+              type="Transparent"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              press="sapMLib.URLHelper.redirect('https://bestofjs.org/', true)"
+            />
+            <Button
+              visible="{= ${device>/system/desktop}}"
+              text="bestofcapjs"
+              class="openui5headerButton sapUiNoMargin textColorWhite"
+              icon="sap-icon://cloud"
+              type="Transparent"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              press="sapMLib.URLHelper.redirect('https://bestofcapjs.org/', true)"
+            />
+            <Button
+              visible="{= ${device>/system/desktop}}"
+              text="dotabap"
+              class="openui5headerButton sapUiNoMargin textColorWhite"
+              type="Transparent"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              press="sapMLib.URLHelper.redirect('https://dotabap.org/', true)"
+            />
+          </contentRight>
+        </Bar>
+      </customHeader>
+      <subHeader>
+        <OverflowToolbar class="doNotRoundMyToolBar">
+          <core:Fragment id="LinkHeader" fragmentName="org.openui5.bestofui5.view.LinkHeader" type="XML" />
+        </OverflowToolbar>
+      </subHeader>
+      <content>
+        <FlexBox width="100%" height="100%" id="_IDGenFlexBox2" direction="Column" alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }" justifyContent="Start">
+          <HBox alignItems="Center" class="sapUiDemoFlexBoxSizeAdjustments">
+            <Input
+              placeholder="{i18n>app_view_search_placeholder}"
+              class="sapUiMediumMarginTopBottom"
+              id="multiInput"
+              width="100%"
+              liveChange=".liveSearch"
+              showSuggestion="false"
+              showValueHelp="false"
+              showTableSuggestionValueHelp="false"
+              value="{settings>/search}"
+              visible="{= ${settings>/route} !== 'RouteObjectView'}"
+            >
+              <core:ListItem key="{data>name};{data>type}" text="{data>name}" additionalText="{data>type}" />
+              <layoutData>
+                <FlexItemData minWidth="{= ${device>/system/phone} === true ? '' : '500px' }" growFactor="1" />
+              </layoutData>
+            </Input>
+            <Button visible="{= ${settings>/route} !== 'RouteObjectView'}" tooltip="{i18n>app_view_link_share_tooltip}" icon="sap-icon://share" press=".copyLinkToClipboard" type="Emphasized" />
+          </HBox>
+
+          <NavContainer width="{= ${device>/system/phone} === true ? '' : '1024px' }" id="pageContainer" class="fixOverflow">
+            <layoutData>
+              <FlexItemData minHeight="100%" maxWidth="{= ${device>/system/phone} === true ? '' : '1024px' }" />
+            </layoutData>
+          </NavContainer>
+        </FlexBox>
+      </content>
+    </Page>
+  </App>
+</mvc:View>

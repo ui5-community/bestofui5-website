@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;function i(e,i,r){return(0,t.html)`<div class="ui5-tb-separator ui5-tb-item" data-ui5-external-action-item-id="${(0,t.ifDefined)(this._id)}"></div>`}var r=i;e.default=r});
+//# sourceMappingURL=ToolbarSeparatorTemplate.lit.js.map

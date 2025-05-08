@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var t;(function(e){e["Text"]="Text";e["Email"]="Email";e["Number"]="Number";e["Password"]="Password";e["Tel"]="Tel";e["URL"]="URL"})(t||(t={}));var r=t;e.default=r});
+//# sourceMappingURL=InputType.js.map

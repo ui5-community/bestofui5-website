@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(t){"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var e;(function(t){t["Contrast"]="Contrast";t["Critical"]="Critical";t["Default"]="Default";t["Information"]="Information";t["Negative"]="Negative";t["Neutral"]="Neutral";t["NonInteractive"]="NonInteractive";t["Positive"]="Positive"})(e||(e={}));var i=e;t.default=i});
+//# sourceMappingURL=IconDesign.js.map

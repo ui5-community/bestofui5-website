@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.setCaretPosition=e.getCaretPosition=void 0;const t=e=>{let t=0;if(e.selectionStart||e.selectionStart===0){t=e.selectionDirection==="backward"?e.selectionStart:e.selectionEnd}return t};e.getCaretPosition=t;const i=(e,t)=>{if(e.selectionStart){e.focus();e.setSelectionRange(t,t)}else{e.focus()}};e.setCaretPosition=i});
+//# sourceMappingURL=Caret.js.map

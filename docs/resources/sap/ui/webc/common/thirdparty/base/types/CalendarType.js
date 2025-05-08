@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var a;(function(e){e["Gregorian"]="Gregorian";e["Islamic"]="Islamic";e["Japanese"]="Japanese";e["Buddhist"]="Buddhist";e["Persian"]="Persian"})(a||(a={}));var i=a;e.default=i});
+//# sourceMappingURL=CalendarType.js.map

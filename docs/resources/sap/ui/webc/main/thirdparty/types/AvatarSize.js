@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var t;(function(e){e["XS"]="XS";e["S"]="S";e["M"]="M";e["L"]="L";e["XL"]="XL"})(t||(t={}));var u=t;e.default=u});
+//# sourceMappingURL=AvatarSize.js.map

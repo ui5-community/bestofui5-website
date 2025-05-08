@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/renderer/LitRenderer"],function(e,i){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;function t(e,t,r){return(0,i.html)`<div class="ui5-tb-separator-in-overflow ui5-tb-popover-item" data-ui5-external-action-item-id="${(0,i.ifDefined)(this._id)}" ?visible="${this.visible}"></div>`}var r=t;e.default=r});
+//# sourceMappingURL=ToolbarPopoverSeparatorTemplate.lit.js.map

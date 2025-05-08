@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var t;(function(e){e["Button"]="Button";e["Submit"]="Submit";e["Reset"]="Reset"})(t||(t={}));var u=t;e.default=u});
+//# sourceMappingURL=ButtonType.js.map

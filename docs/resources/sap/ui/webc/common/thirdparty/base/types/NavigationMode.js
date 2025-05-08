@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var t;(function(e){e["Auto"]="Auto";e["Vertical"]="Vertical";e["Horizontal"]="Horizontal";e["Paging"]="Paging"})(t||(t={}));var i=t;e.default=i});
+//# sourceMappingURL=NavigationMode.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var r;(function(e){e["Complete"]="Complete";e["Error"]="Error";e["Ready"]="Ready";e["Uploading"]="Uploading"})(r||(r={}));var o=r;e.default=o});
+//# sourceMappingURL=UploadState.js.map

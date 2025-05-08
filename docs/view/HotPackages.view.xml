@@ -1,0 +1,112 @@
+<mvc:View height="100%" controllerName="org.openui5.bestofui5.controller.HotPackages" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+  <List
+    id="listHotPackages"
+    headerText="{i18n>hot_packages_view_header}"
+    mode="None"
+    growing="true"
+    growingScrollToLoad="true"
+    growingThreshold="{= ${device>/system/phone} === true ? 7 : 12 }"
+    items="{
+      path: 'data>/packages/', 
+      sorter : { path : 'downloadsFortnightGrowth',descending: 'false' },
+      filters: [{
+          filters : [
+              { path : 'type', operator : 'NE', value1 : 'generator'},
+              { path : 'type', operator : 'NE', value1 : 'application'},
+              { path : 'type', operator : 'NE', value1 : 'vscode'}
+          ], 
+          and :true
+      }]
+    }"
+    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+  >
+    <CustomListItem id="_IDGenCustomListItem1" type="Navigation" press="onPress">
+      <FlexBox id="trend-item-box" class="item-box" alignItems="Center" justifyContent="SpaceBetween">
+        <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
+          <HBox id="trend-item-tags-box2" class="sapUiTinyMarginTop" wrap="Wrap">
+            <Title level="H3" text="{data>name}" />
+            <core:Icon
+              class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              src="sap-icon://font-awesome-icons/github"
+              press="sapMLib.URLHelper.redirect(${data>githublink}, true)"
+              visible="{= !!${data>githublink}}"
+              tooltip="{i18n>icon_tooltips_github}"
+            />
+            <core:Icon
+              class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              src="sap-icon://font-awesome-icons/npm"
+              press="sapMLib.URLHelper.redirect(${data>npmlink}, true)"
+              visible="{= !!${data>npmlink}}"
+              tooltip="{i18n>icon_tooltips_npm}"
+            />
+            <core:Icon
+              class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              src="sap-icon://font-awesome-icons/microsoft"
+              press="sapMLib.URLHelper.redirect(${data>vscodelink}, true)"
+              visible="{= !!${data>vscodelink}}"
+              tooltip="{i18n>icon_tooltips_vsc}"
+            />
+            <core:Icon
+              class="sapUiSmallMarginBegin sapUiResponsiveContentPadding"
+              core:require="{ sapMLib: 'sap/m/library' }"
+              src="sap-icon://internet-browser"
+              press="sapMLib.URLHelper.redirect(${data>liveDemoUrl}, true)"
+              visible="{= !!${data>liveDemoUrl}}"
+              tooltip="{i18n>icon_tooltips_livedemo}"
+            />
+          </HBox>
+
+          <FormattedText id="trend-desc" htmlText="{data>description}" />
+          <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
+            <core:Icon visible="{= ${data>type} === 'module'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/code" />
+            <core:Icon visible="{= ${data>type} === 'middleware' }" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/server" />
+            <core:Icon visible="{= ${data>type} === 'task'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/list-check" />
+            <core:Icon visible="{= ${data>type} === 'customControl'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/gamepad" />
+            <core:Icon visible="{= ${data>type} === 'generator'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/robot" />
+            <core:Icon visible="{= ${data>type} === 'tooling'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/screwdriver" />
+            <core:Icon visible="{= ${data>type} === 'vscode'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons/microsoft" />
+            <core:Icon visible="{= ${data>type} === 'application'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/window-maximize" />
+            <core:Icon visible="{= ${data>type} === 'library'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/book" />
+            <core:Icon visible="{= ${data>type} === 'command'}" class="sapUiTinyMarginEnd typeIconsLineItem" src="sap-icon://font-awesome-icons-solid/terminal" />
+            <tnt:InfoLabel id="trend-item-type" class="sapUiTinyMarginEnd" text="{data>type}" renderMode="Narrow" colorScheme="2" displayOnly="false" />
+
+            <tnt:InfoLabel
+              id="downloads14"
+              class="sapUiTinyMarginEnd"
+              text="Downloads {data>downloadsCurrentFortnight}"
+              tooltip="Downloads last 14 days"
+              renderMode="Narrow"
+              colorScheme="5"
+              displayOnly="false"
+            />
+
+            <tnt:InfoLabel
+              id="trend-item-last-update"
+              class="sapUiTinyMarginEnd"
+              renderMode="Narrow"
+              colorScheme="6"
+              displayOnly="false"
+              text="{= ${i18n>list_item_tag_updated}.replace('{0}', ${
+                        path: 'data>updatedAt',
+                        type: 'sap.ui.model.type.Date',
+                        formatOptions: {
+                          source : {
+                            pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ'
+                          },
+                          relative: true,
+                          relativeScale: 'auto',
+                          relativeStyle: 'wide'
+                        }
+                      }) }"
+            />
+
+            <tnt:InfoLabel id="trend-item-license" class="sapUiTinyMarginEnd" renderMode="Narrow" colorScheme="7" displayOnly="false" text="{data>licenseSource}" />
+          </HBox>
+        </VBox>
+      </FlexBox>
+    </CustomListItem>
+  </List>
+</mvc:View>

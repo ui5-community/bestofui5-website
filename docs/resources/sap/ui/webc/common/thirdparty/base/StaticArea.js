@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;class t extends HTMLElement{}if(!customElements.get("ui5-static-area")){customElements.define("ui5-static-area",t)}var s=t;e.default=s});
+//# sourceMappingURL=StaticArea.js.map

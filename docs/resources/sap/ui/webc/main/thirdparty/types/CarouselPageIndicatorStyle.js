@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var u;(function(e){e["Default"]="Default";e["Numeric"]="Numeric"})(u||(u={}));var t=u;e.default=t});
+//# sourceMappingURL=CarouselPageIndicatorStyle.js.map

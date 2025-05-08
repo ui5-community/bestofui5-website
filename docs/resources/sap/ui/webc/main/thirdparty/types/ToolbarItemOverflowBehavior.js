@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;var r;(function(e){e["Default"]="Default";e["NeverOverflow"]="NeverOverflow";e["AlwaysOverflow"]="AlwaysOverflow"})(r||(r={}));var f=r;e.default=f});
+//# sourceMappingURL=ToolbarItemOverflowBehavior.js.map

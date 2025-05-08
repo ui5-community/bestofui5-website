@@ -1,0 +1,30 @@
+<mvc:View controllerName="org.openui5.bestofui5.controller.Tags" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:tnt="sap.tnt">
+  <SegmentedButton selectedKey="kids" selectionChange=".onSelectionChange" width="100%">
+    <items>
+      <SegmentedButtonItem text="{i18n>tags_view_all}" key="all" />
+      <SegmentedButtonItem text="{i18n>tags_view_tags}" key="tag" />
+      <SegmentedButtonItem text="{i18n>tags_view_types}" key="type" />
+      <SegmentedButtonItem text="{i18n>tags_view_license}" key="license" />
+    </items>
+  </SegmentedButton>
+  <List
+    id="tagsLits"
+    headerText="{i18n>tags_view_header}"
+    mode="None"
+    items="{path: 'data>/tags/', sorter : [{ path : 'type',descending: 'false', group: true },{ path : 'count',descending: 'false' }]}"
+    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+  >
+    <CustomListItem type="Navigation" press="onPress" counter="{data>count}">
+      <FlexBox id="trend-item-box" class="item-box" alignItems="Start">
+        <VBox id="trend-item-inner-box" class="sapUiSmallMargin min-width-zero">
+          <Title level="H3" text="{data>name}" />
+          <HBox id="trend-item-tags-box" class="sapUiTinyMarginTop" wrap="Wrap">
+            <tnt:InfoLabel id="type" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'tag' }" renderMode="Narrow" colorScheme="2" displayOnly="false" />
+            <tnt:InfoLabel id="tag" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'type' }" renderMode="Loose" colorScheme="4" displayOnly="false" />
+            <tnt:InfoLabel id="license" class="sapUiTinyMarginEnd" text="{data>type}" visible="{= ${data>type} === 'license' }" renderMode="Loose" colorScheme="7" displayOnly="false" />
+          </HBox>
+        </VBox>
+      </FlexBox>
+    </CustomListItem>
+  </List>
+</mvc:View>

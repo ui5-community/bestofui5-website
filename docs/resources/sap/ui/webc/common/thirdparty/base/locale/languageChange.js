@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../EventProvider"],function(e,a){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.fireLanguageChange=e.detachLanguageChange=e.attachLanguageChange=void 0;a=n(a);function n(e){return e&&e.__esModule?e:{default:e}}const t=new a.default;const g="languageChange";const u=e=>{t.attachEvent(g,e)};e.attachLanguageChange=u;const c=e=>{t.detachEvent(g,e)};e.detachLanguageChange=c;const h=e=>t.fireEventAsync(g,e);e.fireLanguageChange=h});
+//# sourceMappingURL=languageChange.js.map

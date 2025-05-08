@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(c){"use strict";Object.defineProperty(c,"__esModule",{value:true});c.default=void 0;var e;(function(c){c["Accent1"]="Accent1";c["Accent2"]="Accent2";c["Accent3"]="Accent3";c["Accent4"]="Accent4";c["Accent5"]="Accent5";c["Accent6"]="Accent6";c["Accent7"]="Accent7";c["Accent8"]="Accent8";c["Accent9"]="Accent9";c["Accent10"]="Accent10";c["Placeholder"]="Placeholder"})(e||(e={}));var t=e;c.default=t});
+//# sourceMappingURL=AvatarColorScheme.js.map

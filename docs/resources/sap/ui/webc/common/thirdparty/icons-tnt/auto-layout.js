@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v2/auto-layout","./v3/auto-layout"],function(t,e,a,u){"use strict";Object.defineProperty(t,"__esModule",{value:true});Object.defineProperty(t,"accData",{enumerable:true,get:function(){return a.accData}});t.default=void 0;Object.defineProperty(t,"ltr",{enumerable:true,get:function(){return a.ltr}});t.pathData=void 0;const r=(0,e.isLegacyThemeFamily)()?a.pathData:u.pathData;t.pathData=r;var o="tnt/auto-layout";t.default=o});
+//# sourceMappingURL=auto-layout.js.map

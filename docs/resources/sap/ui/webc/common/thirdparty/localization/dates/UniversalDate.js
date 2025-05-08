@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/core/date/UniversalDate"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;t=u(t);function u(e){return e&&e.__esModule?e:{default:e}}const a=t.default;var d=a;e.default=d});
+//# sourceMappingURL=UniversalDate.js.map

@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v4/commission-check","./v5/commission-check"],function(e,t,a,c){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return a.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return a.ltr}});e.pathData=void 0;const i=(0,t.isLegacyThemeFamily)()?a.pathData:c.pathData;e.pathData=i;var r="commission-check";e.default=r});
+//# sourceMappingURL=commission-check.js.map

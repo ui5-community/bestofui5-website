@@ -1,0 +1,2 @@
+"use strict";sap.ui.define(["org/openui5/bestofui5/localService/mockserver"],function(e){"use strict";e.init();sap.ui.require(["sap/ui/core/ComponentSupport"])});
+//# sourceMappingURL=initMockServer.js.map

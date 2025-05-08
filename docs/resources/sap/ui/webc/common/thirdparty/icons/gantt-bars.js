@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v4/gantt-bars","./v5/gantt-bars"],function(t,e,a,r){"use strict";Object.defineProperty(t,"__esModule",{value:true});Object.defineProperty(t,"accData",{enumerable:true,get:function(){return a.accData}});t.default=void 0;Object.defineProperty(t,"ltr",{enumerable:true,get:function(){return a.ltr}});t.pathData=void 0;const n=(0,e.isLegacyThemeFamily)()?a.pathData:r.pathData;t.pathData=n;var u="gantt-bars";t.default=u});
+//# sourceMappingURL=gantt-bars.js.map

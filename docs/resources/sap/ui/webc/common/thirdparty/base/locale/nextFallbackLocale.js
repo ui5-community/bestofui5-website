@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../generated/AssetParameters"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const r=e=>{if(!e){return t.DEFAULT_LOCALE}if(e==="zh_HK"){return"zh_TW"}const r=e.lastIndexOf("_");if(r>=0){return e.slice(0,r)}return e!==t.DEFAULT_LOCALE?t.DEFAULT_LOCALE:""};var n=r;e.default=n});
+//# sourceMappingURL=nextFallbackLocale.js.map

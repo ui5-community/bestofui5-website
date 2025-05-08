@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const t=e=>{if(!e){e=(new Date).getTime()}const t=e-e%(24*60*60*1e3);return t/1e3};var u=t;e.default=u});
+//# sourceMappingURL=getRoundedTimestamp.js.map

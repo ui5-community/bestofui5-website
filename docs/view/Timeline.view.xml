@@ -1,0 +1,55 @@
+<mvc:View controllerName="org.openui5.bestofui5.controller.Timeline" xmlns:m="sap.m" xmlns="sap.ui.webc.fiori" xmlns:md="cc.md" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" height="100%">
+  <m:FlexBox
+    width="{= ${device>/system/phone} === true ? '' : '1024px' }"
+    height="100%"
+    direction="Column"
+    alignItems="{= ${device>/system/phone} === true ? 'Inherit' : 'Center' }"
+    justifyContent="Start"
+  >
+    <m:Button
+      type="Emphasized"
+      press=".expandPanel"
+      text="{= ${settings>/timelinePanelExpanded} === true ? ${i18n>timeline_view_collapse} : ${i18n>timeline_view_expand} }"
+      icon="{= ${settings>/timelinePanelExpanded} === true ? 'sap-icon://collapse-all' : 'sap-icon://expand-all' }"
+    />
+    <Timeline items="{path: 'versions>/', sorter : { path : 'date',descending: 'false' }}">
+      <TimelineItem
+        titleText="{versions>version}"
+        name="{versions>name}"
+        icon="{
+          parts: ['versions>sourceType'],
+          formatter: 'org.openui5.bestofui5.controller.BaseController.formatter.formatTimelineIcon'
+        }"
+        nameClickable="true"
+        nameClick=".onNameClick"
+        subtitleText="{= ${i18n>list_item_tag_updated}.replace('{0}', ${
+          path: 'versions>date',
+          type: 'sap.ui.model.type.Date',
+          formatOptions: {
+            source : {
+              pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ'
+            },
+            relative: true,
+            relativeScale: 'auto',
+            relativeStyle: 'wide'
+          }
+        }) }"
+      >
+        <content>
+          <m:Panel
+            expanded="{settings>/timelinePanelExpanded}"
+            visible="{= !!${versions>changelog} }"
+            headerText="Changelog"
+            expandable="true"
+            width="{= ${device>/system/phone} === true ? '' : '693.547px' }"
+            class="sapUiResponsiveMargin"
+          >
+            <m:content>
+              <md:Markdown content="{versions>changelog}" />
+            </m:content>
+          </m:Panel>
+        </content>
+      </TimelineItem>
+    </Timeline>
+  </m:FlexBox>
+</mvc:View>

@@ -1,0 +1,2 @@
+sap.ui.define(["exports","../InitialConfiguration"],function(e,t){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.setTimezone=e.getTimezone=void 0;let i;const n=()=>{if(i===undefined){i=(0,t.getTimezone)()}return i};e.getTimezone=n;const o=e=>{if(i===e){return}i=e};e.setTimezone=o});
+//# sourceMappingURL=Timezone.js.map

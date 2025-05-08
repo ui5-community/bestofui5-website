@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(e){"use strict";Object.defineProperty(e,"__esModule",{value:true});e.default=void 0;const t=e=>{if(e.nodeName==="SLOT"){return false}return e.offsetWidth<=0&&e.offsetHeight<=0||e.style&&e.style.visibility==="hidden"};var i=t;e.default=i});
+//# sourceMappingURL=isElementHidden.js.map

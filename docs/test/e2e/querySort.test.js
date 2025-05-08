@@ -1,0 +1,2 @@
+"use strict";describe("ui5 query sort",()=>{before(async()=>{await browser.goTo({sHash:"#/packages?sort=createdAt&order=asc"})});it("sort from url query hash",async()=>{try{await $("#__component0---AllPackages--listAllPackages-listUl li").waitForExist({timeout:5e3})}catch(t){}const t=await $$("#__component0---AllPackages--listAllPackages-listUl li");const a=await t[0];const s=await a.$("h3");const e=await s.getText();expect(e).toEqual("openui5-sample-app")})});
+//# sourceMappingURL=querySort.test.js.map

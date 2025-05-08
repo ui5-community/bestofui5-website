@@ -1,0 +1,2 @@
+sap.ui.define(["exports","sap/ui/webc/common/thirdparty/base/config/Theme","./v4/sound-loud","./v5/sound-loud"],function(e,t,a,u){"use strict";Object.defineProperty(e,"__esModule",{value:true});Object.defineProperty(e,"accData",{enumerable:true,get:function(){return a.accData}});e.default=void 0;Object.defineProperty(e,"ltr",{enumerable:true,get:function(){return a.ltr}});e.pathData=void 0;const r=(0,t.isLegacyThemeFamily)()?a.pathData:u.pathData;e.pathData=r;var n="sound-loud";e.default=n});
+//# sourceMappingURL=sound-loud.js.map

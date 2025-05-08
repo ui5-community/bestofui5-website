@@ -1,0 +1,2 @@
+sap.ui.define(["exports"],function(t){"use strict";Object.defineProperty(t,"__esModule",{value:true});t.default=void 0;var e;(function(t){t["StartsWithPerTerm"]="StartsWithPerTerm";t["StartsWith"]="StartsWith";t["Contains"]="Contains";t["None"]="None"})(e||(e={}));var r=e;t.default=r});
+//# sourceMappingURL=ComboBoxFilter.js.map

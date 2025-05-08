@@ -1,0 +1,147 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <ToolbarSpacer />
+  <Button
+    text="{i18n>linkheader_fragment_hot}"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'hotPackages')"
+    type="{= ${settings>/headerKey} === 'hotPackages' ? 'Emphasized' : 'Transparent' }"
+  >
+    <customData>
+      <core:CustomData key="headerKey" value="hotPackages" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="High" group="1" />
+    </layoutData>
+  </Button>
+  <Button
+    text="{i18n>linkheader_fragment_all}"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'allPackages')"
+    type="{= ${settings>/headerKey} === 'allPackages' ? 'Emphasized' : 'Transparent' }"
+  >
+    <customData>
+      <core:CustomData key="headerKey" value="allPackages" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="High" group="1" />
+    </layoutData>
+  </Button>
+  <Button
+    text="{i18n>linkheader_fragment_tags}"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'tags')"
+    type="{= ${settings>/headerKey} === 'tags' ? 'Emphasized' : 'Transparent' }"
+  >
+    <customData>
+      <core:CustomData key="headerKey" value="tags" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="High" group="1" />
+    </layoutData>
+  </Button>
+  <Button
+    text="{i18n>linkheader_fragment_applications}"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'applications')"
+    type="{= ${settings>/headerKey} === 'applications' ? 'Emphasized' : 'Transparent' }"
+  >
+    <customData>
+      <core:CustomData key="headerKey" value="applications" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="Low" group="2" />
+    </layoutData>
+  </Button>
+  <Button
+    text="{i18n>linkheader_fragment_timeline}"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'timeline')"
+    type="{= ${settings>/headerKey} === 'timeline' ? 'Emphasized' : 'Transparent' }"
+  >
+    <customData>
+      <core:CustomData key="headerKey" value="timeline" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="Low" group="2" />
+    </layoutData>
+  </Button>
+  <Button
+    text="{i18n>linkheader_fragment_contributors}"
+    class="sapUiNoMarginBegin sapUiNoMarginEnd"
+    press=".onButtonHeaderSelect($event, 'contributors')"
+    type="{= ${settings>/headerKey} === 'contributors' ? 'Emphasized' : 'Transparent' }"
+  >
+    <customData>
+      <core:CustomData key="headerKey" value="contributors" />
+    </customData>
+    <layoutData>
+      <OverflowToolbarLayoutData priority="Low" group="2" />
+    </layoutData>
+  </Button>
+  <Button
+    class="sapUiTinyMargin openui5headerButton"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="{i18n>app_view_addyourpackage}"
+    type="Transparent"
+    icon="sap-icon://add-product"
+    visible="{= ${device>/system/phone}}"
+    press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-data/issues/new?assignees=marianfoo&amp;labels=new%20package&amp;template=new_package.md&amp;title=Add%20new%20Package:', true)"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
+    </layoutData>
+  </Button>
+  <Button
+    class="sapUiTinyMargin openui5headerButton"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="{i18n>app_view_gotogithub}"
+    type="Transparent"
+    icon="sap-icon://font-awesome-icons/github"
+    press="sapMLib.URLHelper.redirect('https://github.com/ui5-community/bestofui5-website#readme', true)"
+    visible="{= ${device>/system/phone}}"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
+    </layoutData>
+  </Button>
+  <Button
+    class="sapUiTinyMargin openui5headerButton"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="{i18n>app_view_gotobestofjs}"
+    type="Transparent"
+    icon="sap-icon://attachment-html"
+    press="sapMLib.URLHelper.redirect('https://bestofjs.org/', true)"
+    visible="{= ${device>/system/phone}}"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
+    </layoutData>
+  </Button>
+  <Button
+    class="sapUiTinyMargin openui5headerButton"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="{i18n>app_view_gotobestofcap}"
+    type="Transparent"
+    icon="sap-icon://cloud"
+    press="sapMLib.URLHelper.redirect('https://bestofcapjs.org/', true)"
+    visible="{= ${device>/system/phone}}"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
+    </layoutData>
+  </Button>
+  <Button
+    class="sapUiTinyMargin openui5headerButton"
+    core:require="{ sapMLib: 'sap/m/library' }"
+    text="{i18n>app_view_gotodotabap}"
+    type="Transparent"
+    icon="sap-icon://developer-settings"
+    press="sapMLib.URLHelper.redirect('https://dotabap.org/', true)"
+    visible="{= ${device>/system/phone}}"
+  >
+    <layoutData>
+      <OverflowToolbarLayoutData priority="AlwaysOverflow" />
+    </layoutData>
+  </Button>
+  <ToolbarSpacer />
+</core:FragmentDefinition>
