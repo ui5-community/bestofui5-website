@@ -69,5 +69,11 @@ export default class App extends BaseController {
 	 */
 	public onAfterRendering(): void {
 		document.body.classList.remove("splash");
+
+		// Focus the search input field on startup
+		const multiInput = this.byId("multiInput");
+		if (multiInput && this.getView().getModel("settings").getProperty("/route") !== "RouteObjectView") {
+			multiInput.focus();
+		}
 	}
 }
